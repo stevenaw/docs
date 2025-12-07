@@ -65,6 +65,18 @@
       href: NUnit1031.md
     - name: NUnit1032
       href: NUnit1032.md
+    - name: NUnit1033
+      href: NUnit1033.md
+    - name: NUnit1034
+      href: NUnit1034.md
+    - name: NUnit1035
+      href: NUnit1035.md
+    - name: NUnit1036
+      href: NUnit1036.md
+    - name: NUnit1037
+      href: NUnit1037.md
+    - name: NUnit1038
+      href: NUnit1038.md
     - name: NUnit2001
       href: NUnit2001.md
     - name: NUnit2002
@@ -165,6 +177,18 @@
       href: NUnit2049.md
     - name: NUnit2050
       href: NUnit2050.md
+    - name: NUnit2051
+      href: NUnit2051.md
+    - name: NUnit2052
+      href: NUnit2052.md
+    - name: NUnit2053
+      href: NUnit2053.md
+    - name: NUnit2054
+      href: NUnit2054.md
+    - name: NUnit2055
+      href: NUnit2055.md
+    - name: NUnit2056
+      href: NUnit2056.md
     - name: NUnit3001
       href: NUnit3001.md
     - name: NUnit3002
@@ -173,3 +197,7 @@
       href: NUnit3003.md
     - name: NUnit3004
       href: NUnit3004.md
+    - name: NUnit4001
+      href: NUnit4001.md
+    - name: NUnit4002
+      href: NUnit4002.md

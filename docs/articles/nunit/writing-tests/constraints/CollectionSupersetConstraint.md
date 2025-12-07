@@ -18,7 +18,17 @@ Is.SupersetOf(IEnumerable)
 ## Modifiers
 
 ```csharp
+...Using(IEqualityComparer comparer)
+...Using(IComparer comparer)
+...Using<T>(IEqualityComparer<T> comparer)
+...Using<T>(IComparer<T> comparer)
+...Using<T>(Comparison<T> comparer)
+...Using<T>(Func<T, T, bool> comparer)
+...Using<TSupersetElement, TSubsetElement>(Func<TSupersetElement, TSubsetElement, bool> comparison)
 ...UsingPropertiesComparer()  // From version 4.1
+...UsingPropertiesComparer(
+      Func<PropertiesComparerConfiguration,
+           PropertiesComparerConfiguration> configure) // From version 4.4
 ```
 
 ## Example of Use

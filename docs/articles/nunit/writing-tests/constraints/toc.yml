@@ -16,8 +16,6 @@
   href: AttributeExistsConstraint.md
 - name: BinarySerializableConstraint
   href: BinarySerializableConstraint.md
-- name: CollectionContainsConstraint
-  href: CollectionContainsConstraint.md
 - name: CollectionEquivalentConstraint
   href: CollectionEquivalentConstraint.md
 - name: CollectionOrderedConstraint
@@ -26,6 +24,8 @@
   href: CollectionSubsetConstraint.md
 - name: CollectionSupersetConstraint
   href: CollectionSupersetConstraint.md
+- name: DefaultConstraint
+  href: DefaultConstraint.md
 - name: DelayedConstraint
   href: DelayedConstraint.md
 - name: DictionaryContainsKeyConstraint

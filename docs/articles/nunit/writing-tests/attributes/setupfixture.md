@@ -6,7 +6,7 @@ uid: setupfixture-attribute
 
 This is the attribute that marks a class that contains the one-time
 setup or teardown methods for all the test fixtures in a given
-namespace including nested namespaces below.
+namespace including nested namespaces below, within an assembly.
 
 The class may contain at most one method marked with the
 OneTimeSetUpAttribute and one method marked with the OneTimeTearDownAttribute.
@@ -28,8 +28,9 @@ of such fixtures is indeterminate.
 
 ## Notes
 
+* The scope of a SetUpFixture is limited to an assembly.
+* A SetUpFixture in a namespace will apply to all tests in that namespace and all contained namespaces within the assembly.
 * A SetUpFixture outside of any namespace provides SetUp and TearDown for the entire assembly.
-* A SetUpFixture in a namespace will apply tests to that namespace and all contained namespaces.
 
 ## Example
 
@@ -77,17 +78,16 @@ The defined order is as follows...
 [Items 6 and 7 rarely come into play but the features are available for situations like code generation, where it may
  be more convenient to have multiple setup fixtures and/or methods.]
 
-> [!NOTE]
-> Filtering on `SetUpFixture`s
+## Notes
 
-A `SetUpFixture` is normally not used for filtering tests.  However, if that is done, one should be aware that a
- `SetUpFixture` encapsulates all tests to which it belongs.
- If placed in a namespace it will encapsulate all tests in that namespace and contained namespaces.
- If placed on the assembly level, it will encapsulate all tests in the assembly.
+1. About filtering on `SetUpFixture`s:
+   A `SetUpFixture` is normally not used for filtering tests.  However, if that is done, one should be aware that a
+   `SetUpFixture` encapsulates all tests to which it belongs.
+   If placed in a namespace it will encapsulate all tests in that namespace and contained namespaces.
+   If placed on the assembly level, it will encapsulate all tests in the assembly.
 
-> [!NOTE]
-> Prior to NUnit 3.0, `SetUpFixture` used the `SetUp` and `TearDown` attributes rather than `OneTimeSetUp` and `OneTimeTearDown`.
-The older attributes are no longer supported in SetUpFixtures in NUnit 3.0 and later.
+2. Prior to NUnit 3.0, `SetUpFixture` used the `SetUp` and `TearDown` attributes rather than `OneTimeSetUp` and
+   `OneTimeTearDown`. The older attributes are no longer supported in SetUpFixtures in NUnit 3.0 and later.
 
 ## See also
 

@@ -1,4 +1,248 @@
-# Adapter V4 Release Notes
+---
+uid: adapterreleasenotes
+---
+
+<!-- markdownlint-disable-file MD013 -->
+<!-- markdownlint-disable-file MD033 -->
+
+# Adapter Release Notes
+
+## NUnit3 Test Adapter for Visual Studio and Dotnet - Version 6.0.0 - December 6, 2025
+
+This version supports MTP version 2.  Further the lowest .net version is .net 8.0, so netcore 3.1 is no longer supported.
+
+See the migration guide for [MTP v1 to v2](https://learn.microsoft.com/en-us/dotnet/core/testing/microsoft-testing-platform-migration-from-v1-to-v2) for details on moving up to version 2.
+
+There are 6 issues fixed in this release.
+
+### Enhancements
+
+* [1328](https://github.com/nunit/nunit3-vs-adapter/issues/1328) NUnit compatible version for MTP 2.0.0. Thanks to [Youssef Victor](https://github.com/Youssef1313) and NUnit Team member [Terje Sandstrom](https://github.com/OsirisTerje) for [PR 1329](https://github.com/nunit/nunit3-vs-adapter/pull/1329)
+* [1335](https://github.com/nunit/nunit3-vs-adapter/issues/1335) Update to net 8,  remove netcore 3.1. Thanks to [Youssef Victor](https://github.com/Youssef1313) and NUnit Team member [Terje Sandstrom](https://github.com/OsirisTerje) for [PR 1329](https://github.com/nunit/nunit3-vs-adapter/pull/1329)
+
+### Bug fixes
+
+* [1347](https://github.com/nunit/nunit3-vs-adapter/issues/1347) Test Cases With Strings That Contain Escaped Double-Quotes are Not Run.
+* [1334](https://github.com/nunit/nunit3-vs-adapter/issues/1334) Attempting to execute a native assembly crashes the runner. Thanks to NUnit Team member [Terje Sandstrom](https://github.com/OsirisTerje) for [PR 1333](https://github.com/nunit/nunit3-vs-adapter/pull/1333)
+* [1332](https://github.com/nunit/nunit3-vs-adapter/issues/1332) [MTP] OutOfMemoryException in VS Test Explorer from TestFilterConverter.Tokenizer. Thanks to NUnit Team member [Terje Sandstrom](https://github.com/OsirisTerje) for [PR 1341](https://github.com/nunit/nunit3-vs-adapter/pull/1341)
+* [1241](https://github.com/nunit/nunit3-vs-adapter/issues/1241) VS Test Explorer NUnit error: "TestPlatformFormatException: Filter string ... includes unrecognized escape sequence".
+
+### The following issues are marked as breaking changes
+
+* [1328](https://github.com/nunit/nunit3-vs-adapter/issues/1328) NUnit compatible version for MTP 2.0.0. Thanks to [Youssef Victor](https://github.com/Youssef1313) and NUnit Team member [Terje Sandstrom](https://github.com/OsirisTerje) for [PR 1329](https://github.com/nunit/nunit3-vs-adapter/pull/1329)
+* [1335](https://github.com/nunit/nunit3-vs-adapter/issues/1335) Update to net 8,  remove netcore 3.1. Thanks to [Youssef Victor](https://github.com/Youssef1313) and NUnit Team member [Terje Sandstrom](https://github.com/OsirisTerje) for [PR 1329](https://github.com/nunit/nunit3-vs-adapter/pull/1329)
+
+### Acknowledgements
+
+We want to express our heartfelt gratitude to everyone who has contributed to this release
+by reporting bugs, suggesting enhancements, and providing valuable feedback.
+Your efforts help make NUnit better for the entire community.
+
+A special thank you to the following reporters for identifying issues:
+
+<table>
+<tr>
+<td><a href="https://github.com/Evangelink">Amaury Levé</a></td>
+<td><a href="https://github.com/agray">Andrew Gray</a></td>
+<td><a href="https://github.com/cbersch">Christoph Bersch</a></td>
+<td><a href="https://github.com/JasonBock">Jason Bock</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/OsirisTerje">Terje Sandstrom</a></td>
+</tr>
+</table>
+
+and to the commenters who engaged in discussions and offered further insights:
+
+<table>
+<tr>
+<td><a href="https://github.com/cbersch">Christoph Bersch</a></td>
+<td><a href="https://github.com/danstur">Daniel Sturm</a></td>
+<td><a href="https://github.com/RussKie">Igor Velikorossov</a></td>
+<td><a href="https://github.com/JasonBock">Jason Bock</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/joschmo80">joschmo80</a></td>
+<td><a href="https://github.com/lennartb-">Lennart Brüggemann</a></td>
+<td><a href="https://github.com/mikkelbu">Mikkel Nylander Bundgaard</a></td>
+<td><a href="https://github.com/moh-hassan">Mohamed Hassan</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/OsirisTerje">Terje Sandstrom</a></td>
+<td><a href="https://github.com/Youssef1313">Youssef Victor</a></td>
+</tr>
+</table>
+
+## NUnit3 Test Adapter for Visual Studio and Dotnet - Version 5.2.0 - October 6, 2025
+
+There are 2 issues fixed in this release.
+
+In addition, the MTP version have been updated to 1.9.0.
+
+### Enhancements
+
+* [1111](https://github.com/nunit/nunit3-vs-adapter/issues/1111) New Mode that completely excludes explicit tests. Thanks to NUnit Team member [Terje Sandstrom](https://github.com/OsirisTerje) for [PR 1323](https://github.com/nunit/nunit3-vs-adapter/pull/1323)
+
+### Bug fixes
+
+* [1292](https://github.com/nunit/nunit3-vs-adapter/issues/1292) (Apparently) inconsistent version requirements of Microsoft.Testing.Extensions.VSTestBridge and Microsoft.Testing.Platform.MSBuild. Thanks to NUnit Team member [Terje Sandstrom](https://github.com/OsirisTerje) for [PR 1296](https://github.com/nunit/nunit3-vs-adapter/pull/1296)
+
+### Acknowledgements
+
+We want to express our heartfelt gratitude to everyone who has contributed to this release
+by reporting bugs, suggesting enhancements, and providing valuable feedback.
+Your efforts help make NUnit better for the entire community.
+
+A special thank you to the following reporters for identifying issues:
+
+<table>
+<tr>
+<td><a href="https://github.com/dmurty">dmurty</a></td>
+<td><a href="https://github.com/lennartb-">Lennart Brggemann</a></td>
+<td><a href="https://github.com/OsirisTerje">Terje Sandstrom</a></td>
+</tr>
+</table>
+
+and to the commenters who engaged in discussions and offered further insights:
+
+<table>
+<tr>
+<td><a href="https://github.com/dmurty">dmurty</a></td>
+<td><a href="https://github.com/manfred-brands">Manfred Brands</a></td>
+<td><a href="https://github.com/moh-hassan">Mohamed Hassan</a></td>
+<td><a href="https://github.com/OsirisTerje">Terje Sandstrom</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/Youssef1313">Youssef Victor</a></td>
+</tr>
+</table>
+
+## NUnit3 Test Adapter for Visual Studio and Dotnet - Version 5.1.0 - August 6, 2025
+
+There are 10 issues fixed in this release.
+
+### Enhancements
+
+* [1266](https://github.com/nunit/nunit3-vs-adapter/issues/1266) Unable to pass test parameters via command line argument when using MTP. Thanks to NUnit Team member [Terje Sandstrom](https://github.com/OsirisTerje) for [PR 1272](https://github.com/nunit/nunit3-vs-adapter/pull/1272)
+* [1248](https://github.com/nunit/nunit3-vs-adapter/issues/1248) How to completely suppress the Stack Trace in Test Results?. Thanks to NUnit Team member [Terje Sandstrom](https://github.com/OsirisTerje) for [PR 1249](https://github.com/nunit/nunit3-vs-adapter/pull/1249)
+
+### Bug fixes
+
+* [1267](https://github.com/nunit/nunit3-vs-adapter/issues/1267) Incompatibility with MTP mode in .NET 10 SDK. Thanks to [Youssef Victor](https://github.com/Youssef1313) for [PR 1262](https://github.com/nunit/nunit3-vs-adapter/pull/1262)
+* [1261](https://github.com/nunit/nunit3-vs-adapter/issues/1261) Retry extension - no tests discovered with NUnit runner. Thanks to [Youssef Victor](https://github.com/Youssef1313) for [PR 1260](https://github.com/nunit/nunit3-vs-adapter/pull/1260)
+* [1258](https://github.com/nunit/nunit3-vs-adapter/issues/1258) Categories aren't shown in Visual Studio when MTP is on. Thanks to [Youssef Victor](https://github.com/Youssef1313) for [PR 1273](https://github.com/nunit/nunit3-vs-adapter/pull/1273)
+* [1251](https://github.com/nunit/nunit3-vs-adapter/issues/1251) Condition on TestingPlatformBuilderHook doesn't look correct. Thanks to [Youssef Victor](https://github.com/Youssef1313) for [PR 1253](https://github.com/nunit/nunit3-vs-adapter/pull/1253)
+* [1247](https://github.com/nunit/nunit3-vs-adapter/issues/1247) is there any way to treat an unhandled exception in a tear down as an error instead of a warning?. Thanks to [Simon Cropp](https://github.com/SimonCropp) for [PR 1246](https://github.com/nunit/nunit3-vs-adapter/pull/1246)
+* [1170](https://github.com/nunit/nunit3-vs-adapter/issues/1170) Version 5-beta crashes with nullref exception. Thanks to [Amaury Levé](https://github.com/Evangelink) for [PR 1171](https://github.com/nunit/nunit3-vs-adapter/pull/1171)
+
+### Deprecated features
+
+None
+
+### The following issues are marked as breaking changes
+
+None
+
+### Acknowledgements
+
+We want to express our heartfelt gratitude to everyone who has contributed to this release
+by reporting bugs, suggesting enhancements, and providing valuable feedback.
+Your efforts help make NUnit better for the entire community.
+
+A special thank you to the following reporters for identifying issues:
+
+<table>
+<tr>
+<td><a href="https://github.com/Erlifant">Jonas Erler</a></td>
+<td><a href="https://github.com/philipp-naused">Philipp Naused</a></td>
+<td><a href="https://github.com/SimonCropp">Simon Cropp</a></td>
+<td><a href="https://github.com/softworkz">softworkz</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/OsirisTerje">Terje Sandstrom</a></td>
+<td><a href="https://github.com/victorburckel">victorburckel</a></td>
+<td><a href="https://github.com/Youssef1313">Youssef Victor</a></td>
+</tr>
+</table>
+
+and to the commenters who engaged in discussions and offered further insights:
+
+<table>
+<tr>
+<td><a href="https://github.com/Evangelink">Amaury Levé</a></td>
+<td><a href="https://github.com/CharliePoole">CharliePoole</a></td>
+<td><a href="https://github.com/errarr">errarr</a></td>
+<td><a href="https://github.com/nohwnd">Jakub Jares</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/Erlifant">Jonas Erler</a></td>
+<td><a href="https://github.com/viceice">Michael Kriese</a></td>
+<td><a href="https://github.com/philipp-naused">Philipp Naused</a></td>
+<td><a href="https://github.com/SimonCropp">Simon Cropp</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/softworkz">softworkz</a></td>
+<td><a href="https://github.com/OsirisTerje">Terje Sandstrom</a></td>
+<td><a href="https://github.com/victorburckel">victorburckel</a></td>
+<td><a href="https://github.com/Youssef1313">Youssef Victor</a></td>
+</tr>
+</table>
+
+## NUnit3 Test Adapter for Visual Studio and Dotnet - Version 5.0.0 - February 7, 2025
+
+This major release introduce support for the new Microsoft Testing Platform.
+
+### Enhancements
+
+* [1152](https://github.com/nunit/nunit3-vs-adapter/issues/1152) Microsoft Testing Platform for NUnit
+
+You can find more information [at this article on NUnit and Microsoft Testing Platform](https://docs.nunit.org/articles/vs-test-adapter/NUnit-And-Microsoft-Test-Platform.html)
+
+### Breaking changes
+
+Althought this is a major version, there is no direct breaking changes when using it without enabling the MTP.
+Using it **with** MTP enabled will change some parts of how to use it, see the documentation for details.
+
+## NUnit3 Test Adapter for Visual Studio and Dotnet - Version 4.6.0 - July 26, 2024
+
+There are 10 issues fixed in this release.
+
+### Enhancements
+
+* [1138](https://github.com/nunit/nunit3-vs-adapter/issues/1138) Add partition filter parsing to the adapter.
+* [1114](https://github.com/nunit/nunit3-vs-adapter/issues/1114) Is test result file creation now supported by NUnit
+using dotnet test?.
+* [1188](https://github.com/nunit/nunit3-vs-adapter/issues/1188) Add support for ThrowOnEachFailureUnderDebugger setting
+
+### Bug fixes
+
+* [1186](https://github.com/nunit/nunit3-vs-adapter/issues/1186) Failure during unit test discovery doesn't cause
+entire test suite to fail.
+* [1110](https://github.com/nunit/nunit3-vs-adapter/issues/1110) ConsoleOut=1 should be default.
+* [1109](https://github.com/nunit/nunit3-vs-adapter/issues/1109) ConsoleOut=0 should turn off console output but doesn't.
+
+### Refactorings
+
+* [1115](https://github.com/nunit/nunit3-vs-adapter/issues/1115) Use mutex for file determination in TestOutputXml.
+
+### Internal fixes
+
+* [1163](https://github.com/nunit/nunit3-vs-adapter/issues/1163) Update packages and clean up new warnings.
+* [1159](https://github.com/nunit/nunit3-vs-adapter/issues/1159) Remove azure pipeline and appveyor builds.
+* [1158](https://github.com/nunit/nunit3-vs-adapter/issues/1158) Acceptance tests not working after NUnit 4 was released.
+
+### Deprecated features
+
+None
+
+### Others
+
+* [1122](https://github.com/nunit/nunit3-vs-adapter/issues/1122) testcentric.engine.metadata (vulnerable dependency).
+
+### The following issues are marked as breaking changes
+
+* [1110](https://github.com/nunit/nunit3-vs-adapter/issues/1110) ConsoleOut=1 should be default. Change from former
+where ConsoleOut=2 was default.
 
 ## NUnit3 Test Adapter for Visual Studio and Dotnet - Version 4.5.0 - May 30, 2023
 

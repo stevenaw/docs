@@ -25,7 +25,7 @@ Assert.That(dictionary, new DictionaryContainsKeyValuePairConstraint("Hi", "Univ
 Assert.That(dictionary, Does.ContainKey("Hola").WithValue("Mundo"));
 Assert.That(dictionary, Does.Not.ContainKey("Hello").WithValue("NotValue"));
 Assert.That(dictionary, new DictionaryContainsKeyValuePairConstraint("HI", "UNIVERSE").IgnoreCase);
-Assert.That(dictionary, new DictionaryContainsKeyValuePairConstraint("HI", "UNIVERSE").Using<string>((x, y) => StringUtil.Compare(x, y, true)));
+Assert.That(dictionary, new DictionaryContainsKeyValuePairConstraint("HI", "UNIVERSE").Using<string>((x, y) => string.Compare(x, y, StringComparison.CurrentCultureIgnoreCase)));
 ```
 
 ## Modifiers
@@ -40,6 +40,9 @@ Assert.That(dictionary, new DictionaryContainsKeyValuePairConstraint("HI", "UNIV
 ...Using<T>(Func<T, T, bool> comparer)
 ...Using<T>(IEqualityComparer<T> comparer)
 ...UsingPropertiesComparer()  // From version 4.1
+...UsingPropertiesComparer(
+      Func<PropertiesComparerConfiguration,
+           PropertiesComparerConfiguration> configure) // From version 4.4
 ```
 
 ## See also

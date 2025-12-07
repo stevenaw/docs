@@ -55,6 +55,12 @@ Rules which enforce structural requirements on the test code.
 | [NUnit1030](NUnit1030.md) | The type of parameter provided by the TestCaseSource does not match the type of the parameter in the Test method | :white_check_mark: | :exclamation: | :x: |
 | [NUnit1031](NUnit1031.md) | The individual arguments provided by a ValuesAttribute must match the type of the corresponding parameter of the method | :white_check_mark: | :exclamation: | :x: |
 | [NUnit1032](NUnit1032.md) | An IDisposable field/property should be Disposed in a TearDown method | :white_check_mark: | :exclamation: | :x: |
+| [NUnit1033](NUnit1033.md) | The Write methods on TestContext will be marked as Obsolete and eventually removed | :white_check_mark: | :warning: | :white_check_mark: |
+| [NUnit1034](NUnit1034.md) | Base TestFixtures should be abstract | :white_check_mark: | :warning: | :white_check_mark: |
+| [NUnit1035](NUnit1035.md) | The 'step' parameter to Range cannot be zero | :white_check_mark: | :exclamation: | :x: |
+| [NUnit1036](NUnit1036.md) | The value for 'from' must be less than 'to' when 'step' is positive | :white_check_mark: | :exclamation: | :x: |
+| [NUnit1037](NUnit1037.md) | The value for 'from' must be greater than 'to' when 'step' is negative | :white_check_mark: | :exclamation: | :x: |
+| [NUnit1038](NUnit1038.md) | The type of the attribute values doesn't match the parameter type | :white_check_mark: | :exclamation: | :x: |
 
 ## Assertion Rules (NUnit2001 - )
 
@@ -106,12 +112,18 @@ Rules which improve assertions in the test code.
 | [NUnit2042](NUnit2042.md) | Comparison constraint on object | :white_check_mark: | :information_source: | :x: |
 | [NUnit2043](NUnit2043.md) | Use ComparisonConstraint for better assertion messages in case of failure | :white_check_mark: | :information_source: | :white_check_mark: |
 | [NUnit2044](NUnit2044.md) | Non-delegate actual parameter | :white_check_mark: | :exclamation: | :white_check_mark: |
-| [NUnit2045](NUnit2045.md) | Use Assert.Multiple | :white_check_mark: | :information_source: | :white_check_mark: |
+| [NUnit2045](NUnit2045.md) | Use Assert.EnterMultipleScope or Assert.Multiple | :white_check_mark: | :information_source: | :white_check_mark: |
 | [NUnit2046](NUnit2046.md) | Use CollectionConstraint for better assertion messages in case of failure | :white_check_mark: | :information_source: | :white_check_mark: |
 | [NUnit2047](NUnit2047.md) | Incompatible types for Within constraint | :white_check_mark: | :warning: | :white_check_mark: |
 | [NUnit2048](NUnit2048.md) | Consider using Assert.That(...) instead of StringAssert(...) | :white_check_mark: | :warning: | :white_check_mark: |
 | [NUnit2049](NUnit2049.md) | Consider using Assert.That(...) instead of CollectionAssert(...) | :white_check_mark: | :warning: | :white_check_mark: |
 | [NUnit2050](NUnit2050.md) | NUnit 4 no longer supports string.Format specification | :white_check_mark: | :exclamation: | :white_check_mark: |
+| [NUnit2051](NUnit2051.md) | Consider using Assert.That(expr, Is.Positive) instead of ClassicAssert.Positive(expr) | :white_check_mark: | :information_source: | :white_check_mark: |
+| [NUnit2052](NUnit2052.md) | Consider using Assert.That(expr, Is.Negative) instead of ClassicAssert.Negative(expr) | :white_check_mark: | :information_source: | :white_check_mark: |
+| [NUnit2053](NUnit2053.md) | Consider using Assert.That(actual, Is.AssignableFrom(expected)) instead of ClassicAssert.IsAssignableFrom(expected, actual) | :white_check_mark: | :information_source: | :white_check_mark: |
+| [NUnit2054](NUnit2054.md) | Consider using Assert.That(actual, Is.Not.AssignableFrom(expected)) instead of ClassicAssert.IsNotAssignableFrom(expected, actual) | :white_check_mark: | :information_source: | :white_check_mark: |
+| [NUnit2055](NUnit2055.md) | Consider using Is.InstanceOf\<T> constraint instead of an 'is T' expression | :white_check_mark: | :information_source: | :white_check_mark: |
+| [NUnit2056](NUnit2056.md) | Consider using Assert.EnterMultipleScope statement instead of Assert.Multiple/Assert.MultipleAsync | :white_check_mark: | :information_source: | :white_check_mark: |
 
 ## Suppressor Rules (NUnit3001 - )
 
@@ -124,3 +136,12 @@ builds (version 3.0.0 and above) which require Visual Studio 2019 (version 16.3)
 | [NUnit3002](NUnit3002.md) | Field/Property is initialized in SetUp or OneTimeSetUp method | :white_check_mark: | :information_source: | :x: |
 | [NUnit3003](NUnit3003.md) | Class is an NUnit TestFixture and is instantiated using reflection | :white_check_mark: | :information_source: | :x: |
 | [NUnit3004](NUnit3004.md) | Field should be Disposed in TearDown or OneTimeTearDown method | :white_check_mark: | :information_source: | :x: |
+
+## Style Rules (NUnit4001 - )
+
+Rules which help you write concise and readable NUnit test code.
+
+| Id       | Title       | :mag: | :memo: | :bulb: |
+| :--      | :--         | :--:  | :--:   | :--:   |
+| [NUnit4001](NUnit4001.md) | Simplify the Values attribute | :white_check_mark: | :information_source: | :white_check_mark: |
+| [NUnit4002](NUnit4002.md) | Use Specific constraint | :white_check_mark: | :information_source: | :white_check_mark: |

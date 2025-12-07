@@ -2,8 +2,465 @@
 uid: frameworkreleasenotes
 ---
 <!-- markdownlint-disable-file MD013 -->
+<!-- markdownlint-disable-file MD033 -->
 
 # Framework Release
+
+## NUnit 4.4.0 - Aug 6, 2025
+
+This release contains bug fixes and smaller enhancements, with 26 issues fixed.
+
+### Enhancements
+
+* [4975](https://github.com/nunit/nunit/issues/4975) Support ignoring line ending format when comparing strings. Thanks to [Jihoon Park](https://github.com/Bartleby2718) for [PR 4976](https://github.com/nunit/nunit/pull/4976)
+* [4968](https://github.com/nunit/nunit/issues/4968) Asserts with UsingPropertiesComparer and Tolerance crashes unxpectedly if using TimeSpan and the class contains Properties with different types. Thanks to NUnit Team member [Manfred Brands](https://github.com/manfred-brands) for [PR 4972](https://github.com/nunit/nunit/pull/4972)
+* [4945](https://github.com/nunit/nunit/issues/4945) Integer `Assert.That(i, Is.Even);`/`Assert.That(i, Is.Odd);` and `Assert.That(i, Is.MultipleOf(step));`. Thanks to NUnit Team member [Manfred Brands](https://github.com/manfred-brands) for [PR 4946](https://github.com/nunit/nunit/pull/4946)
+* [4935](https://github.com/nunit/nunit/issues/4935) [Feature Request] PropertiesComparer for different types. Thanks to NUnit Team member [Manfred Brands](https://github.com/manfred-brands) for [PR 4925](https://github.com/nunit/nunit/pull/4925)
+* [4909](https://github.com/nunit/nunit/issues/4909) Assertion failures with PropertiesComparer are hard to debug when combined with other modifiers. Thanks to NUnit Team member [Manfred Brands](https://github.com/manfred-brands) for [PR 4922](https://github.com/nunit/nunit/pull/4922)
+* [4687](https://github.com/nunit/nunit/issues/4687) Value equality on subset of object properties. Thanks to NUnit Team member [Manfred Brands](https://github.com/manfred-brands) for [PR 4925](https://github.com/nunit/nunit/pull/4925)
+* [4244](https://github.com/nunit/nunit/issues/4244) [Feature request] EquivalentTo that compares similar objects of different types. Thanks to NUnit Team member [Manfred Brands](https://github.com/manfred-brands) for [PR 4925](https://github.com/nunit/nunit/pull/4925)
+
+### Bug fixes
+
+* [5011](https://github.com/nunit/nunit/issues/5011) Breaking change in version 4.4.0-beta.1. Thanks to NUnit Team member [Manfred Brands](https://github.com/manfred-brands) for [PR 5013](https://github.com/nunit/nunit/pull/5013)
+* [4998](https://github.com/nunit/nunit/issues/4998) `PropertyConstraint` Causes Unexpected Behavior Because the Property's Value Is `object` Instead of the Property's Actual Type. Thanks to [LeQuackers](https://github.com/LeQuackers) for [PR 5003](https://github.com/nunit/nunit/pull/5003)
+* [4981](https://github.com/nunit/nunit/issues/4981) ContainsKey doesn't support IgnoreCase, IgnoreWhiteSpace, or IgnoreLineEndingFormat. Thanks to NUnit Team member [Manfred Brands](https://github.com/manfred-brands) for [PR 4989](https://github.com/nunit/nunit/pull/4989)
+* [4964](https://github.com/nunit/nunit/issues/4964) Is.Not.EqualTo does not work correctly with Using comparer. Thanks to NUnit Team member [Manfred Brands](https://github.com/manfred-brands) for [PR 4965](https://github.com/nunit/nunit/pull/4965)
+* [4954](https://github.com/nunit/nunit/issues/4954) Regression in `Is.EqualTo(DateTime)` constraint in 4.3.x for types that implement `IEquatable&lt;DateTime&gt;`. Thanks to NUnit Team member [Manfred Brands](https://github.com/manfred-brands) for [PR 4957](https://github.com/nunit/nunit/pull/4957)
+* [4937](https://github.com/nunit/nunit/issues/4937) `PartitionFilter.ComputeHasValue` throws exception when test name is greater than 4096 characters. Thanks to [Will Ray](https://github.com/WillRayAtPropertyMe) for [PR 4941](https://github.com/nunit/nunit/pull/4941)
+* [4933](https://github.com/nunit/nunit/issues/4933) Dictionary assertion falsely passes with PropertiesComparer when subtypes are involved. Thanks to [Oleksandr Liakhevych](https://github.com/Dreamescaper) for [PR 4934](https://github.com/nunit/nunit/pull/4934)
+* [4919](https://github.com/nunit/nunit/issues/4919) Assert.ThatAsync doesn't work correctly if calling nested Asserts. Thanks to NUnit Team member [Manfred Brands](https://github.com/manfred-brands) for [PR 4922](https://github.com/nunit/nunit/pull/4922)
+* [4917](https://github.com/nunit/nunit/issues/4917) Multiple unannounced breaking changes in minor version. Thanks to NUnit Team member [Manfred Brands](https://github.com/manfred-brands) for [PR 4927](https://github.com/nunit/nunit/pull/4927)
+* [4916](https://github.com/nunit/nunit/issues/4916) Is.EqualTo(double).Using(EqualityComparer&lt;double&gt;) causes overload ambiguity error. Thanks to NUnit Team member [Manfred Brands](https://github.com/manfred-brands) for [PR 4951](https://github.com/nunit/nunit/pull/4951)
+* [4545](https://github.com/nunit/nunit/issues/4545) DelegatingConstraintResult does not use its `_innerResult` for `WriteMessageTo` . Thanks to NUnit Team member [Manfred Brands](https://github.com/manfred-brands) for [PR 4922](https://github.com/nunit/nunit/pull/4922)
+* [4537](https://github.com/nunit/nunit/issues/4537) AssertException in TearDown hides Exception in Test. Thanks to NUnit Team member [Manfred Brands](https://github.com/manfred-brands) for [PR 4979](https://github.com/nunit/nunit/pull/4979)
+* [2841](https://github.com/nunit/nunit/issues/2841) DelayedConstraint calls delegate twice. Thanks to NUnit Team member [Manfred Brands](https://github.com/manfred-brands) for [PR 4929](https://github.com/nunit/nunit/pull/4929)
+
+### Refactorings
+
+* [4930](https://github.com/nunit/nunit/issues/4930) What to do with `IConstraint.Apply&lt;TActual&gt;(ref TActual)`. Thanks to NUnit Team member [Manfred Brands](https://github.com/manfred-brands) for [PR 4944](https://github.com/nunit/nunit/pull/4944)
+
+### Internal fixes
+
+* [5014](https://github.com/nunit/nunit/issues/5014) Use span-based APIs to construct random GUIDs on non-framework codepath. Thanks to [zaidonolsen](https://github.com/zaidonolsen) for [PR 5015](https://github.com/nunit/nunit/pull/5015)
+* [4995](https://github.com/nunit/nunit/issues/4995) Check and fix properties for sideeffects. Thanks to NUnit Team member [Manfred Brands](https://github.com/manfred-brands) for [PR 5001](https://github.com/nunit/nunit/pull/5001)
+* [4994](https://github.com/nunit/nunit/issues/4994) Fix or remove ToString in class ConstraintExpression. Thanks to NUnit Team member [Manfred Brands](https://github.com/manfred-brands) for [PR 5001](https://github.com/nunit/nunit/pull/5001)
+* [4990](https://github.com/nunit/nunit/issues/4990) FileLoadException for NUnit 4.3.2: System.Buffers 4.0.4 missing. Thanks to NUnit Team member [Manfred Brands](https://github.com/manfred-brands) for [PR 4991](https://github.com/nunit/nunit/pull/4991)
+
+### Deprecated features
+
+None
+
+### Others
+
+* [4906](https://github.com/nunit/nunit/issues/4906) Test error in TestContextOneTimeTearDownTests. Thanks to NUnit Team member [Steven Weerdenburg](https://github.com/stevenaw) for [PR 4928](https://github.com/nunit/nunit/pull/4928)
+
+### The following issues are marked as breaking changes
+
+* [4930](https://github.com/nunit/nunit/issues/4930) What to do with `IConstraint.Apply&lt;TActual&gt;(ref TActual)`. Thanks to NUnit Team member [Manfred Brands](https://github.com/manfred-brands) for [PR 4944](https://github.com/nunit/nunit/pull/4944)
+
+This is technically breaking, and is marked as obsolete. It is not used by NUnit code, but some externals may use it.  If you do, please read the issue, and move away from this.  It will be removed in next version.
+
+### Acknowledgements
+
+We want to express our heartfelt gratitude to everyone who has contributed to this release
+by reporting bugs, suggesting enhancements, and providing valuable feedback.
+Your efforts help make NUnit better for the entire community.
+
+A special thank you to the following reporters for identifying issues:
+
+<table>
+<tr>
+<td><a href="https://github.com/Taron-art">Artur Kharin</a></td>
+<td><a href="https://github.com/KrzysFR">Christophe Chevalier</a></td>
+<td><a href="https://github.com/metoule">Christophe PLAT</a></td>
+<td><a href="https://github.com/Rabadash8820">Dan Vicarel</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/Edgaras91">Edgaras</a></td>
+<td><a href="https://github.com/verdie-g">Gr‚goire</a></td>
+<td><a href="https://github.com/IgorVyatkin">Igor Vyatkin</a></td>
+<td><a href="https://github.com/Bartleby2718">Jihoon Park</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/appel1">Johan Appelgren</a></td>
+<td><a href="https://github.com/killergege">Julien Nigay</a></td>
+<td><a href="https://github.com/juergstaub">Jrg Staub</a></td>
+<td><a href="https://github.com/LeQuackers">LeQuackers</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/maettu-this">maettu-this</a></td>
+<td><a href="https://github.com/manfred-brands">Manfred Brands</a></td>
+<td><a href="https://github.com/Dreamescaper">Oleksandr Liakhevych</a></td>
+<td><a href="https://github.com/Sputnik24">Sputnik24</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/SFrank1966">Stefan Frank</a></td>
+<td><a href="https://github.com/stevenaw">Steven Weerdenburg</a></td>
+<td><a href="https://github.com/OsirisTerje">Terje Sandstrom</a></td>
+<td><a href="https://github.com/WillRayAtPropertyMe">Will Ray</a></td>
+</tr>
+</table>
+
+and to the commenters who engaged in discussions and offered further insights:
+
+<table>
+<tr>
+<td><a href="https://github.com/anders9ustafsson">Anders Gustafsson</a></td>
+<td><a href="https://github.com/agray">Andrew Gray</a></td>
+<td><a href="https://github.com/CharliePoole">CharliePoole</a></td>
+<td><a href="https://github.com/cfuerbachersparks">Christoph</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/metoule">Christophe PLAT</a></td>
+<td><a href="https://github.com/Rabadash8820">Dan Vicarel</a></td>
+<td><a href="https://github.com/schrufygroovy">David Schruf</a></td>
+<td><a href="https://github.com/Edgaras91">Edgaras</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/glassesarms">ethan</a></td>
+<td><a href="https://github.com/verdie-g">Gr‚goire</a></td>
+<td><a href="https://github.com/IgorVyatkin">Igor Vyatkin</a></td>
+<td><a href="https://github.com/Bartleby2718">Jihoon Park</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/appel1">Johan Appelgren</a></td>
+<td><a href="https://github.com/jnm2">Joseph Musser</a></td>
+<td><a href="https://github.com/killergege">Julien Nigay</a></td>
+<td><a href="https://github.com/juergstaub">Jrg Staub</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/LeQuackers">LeQuackers</a></td>
+<td><a href="https://github.com/maettu-this">maettu-this</a></td>
+<td><a href="https://github.com/manfred-brands">Manfred Brands</a></td>
+<td><a href="https://github.com/mikkelbu">Mikkel Nylander Bundgaard</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/Dreamescaper">Oleksandr Liakhevych</a></td>
+<td><a href="https://github.com/pembebiri">pembebiri</a></td>
+<td><a href="https://github.com/SeanKilleen">Sean Killeen</a></td>
+<td><a href="https://github.com/siva1160github">Sivasubramanian T</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/Sputnik24">Sputnik24</a></td>
+<td><a href="https://github.com/Star62enis">Star62enis</a></td>
+<td><a href="https://github.com/SFrank1966">Stefan Frank</a></td>
+<td><a href="https://github.com/stevenaw">Steven Weerdenburg</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/OsirisTerje">Terje Sandstrom</a></td>
+<td><a href="https://github.com/vvidetta-gearset">Vito Videtta</a></td>
+<td><a href="https://github.com/WillRayAtPropertyMe">Will Ray</a></td>
+<td><a href="https://github.com/zaidonolsen">zaidonolsen</a></td>
+</tr>
+</table>
+
+## NUnit 4.3.2 - Dec 28, 2024
+
+This is a hotfix release for a regression bug, and also fixes the version numbers of the assembly DLLs.
+
+There are 2 issues fixed in this release.
+
+### Bug fixes
+
+* [4910](https://github.com/nunit/nunit/issues/4910) Versioning for .NET Framework 4.6.2 version of NUnit v4.3.1 inconsistent in `.csproj` file.
+* [4907](https://github.com/nunit/nunit/issues/4907) Assert.ThatAsync fail to catch expected exception. Thanks to NUnit Team member [Manfred Brands](https://github.com/manfred-brands) for [PR 4908](https://github.com/nunit/nunit/pull/4908)
+
+### Acknowledgements
+
+We want to express our heartfelt gratitude to everyone who has contributed to this release
+by reporting bugs, suggesting enhancements, and providing valuable feedback.
+Your efforts help make NUnit better for the entire community.
+
+A special thank you to the following reporters for identifying issues:
+
+<table>
+<tr>
+<td><a href="https://github.com/astrohart">Brian</a></td>
+<td><a href="https://github.com/shlomi-borovitz-greenroad">shlomi-borovitz-greenroad</a></td>
+</tr>
+</table>
+
+and to the commenters who engaged in discussions and offered further insights:
+
+<table>
+<tr>
+<td><a href="https://github.com/manfred-brands">Manfred Brands</a></td>
+<td><a href="https://github.com/Dreamescaper">Oleksandr Liakhevych</a></td>
+<td><a href="https://github.com/shlomi-borovitz-greenroad">shlomi-borovitz-greenroad</a></td>
+<td><a href="https://github.com/stevenaw">Steven Weerdenburg</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/OsirisTerje">Terje Sandstrom</a></td>
+</tr>
+</table>
+
+## NUnit 4.3.1 -  Dec 21. 2024
+
+This is a hotfix release to address a type safety issue that broke when some classes had implicit conversion operators.
+
+We had 3 bugs reported, they are all fixed by the same Pull Request.
+
+In addition, a small internal build issue was fixed.
+
+### Bug fixes
+
+* [4903](https://github.com/nunit/nunit/issues/4903) Strange null reference after updating to v4.3.0. Thanks to NUnit Team member [Manfred Brands](https://github.com/manfred-brands) for [PR 4899](https://github.com/nunit/nunit/pull/4899)
+* [4902](https://github.com/nunit/nunit/issues/4902) Regression in 4.3.0 comparing class that override equals and implicit string conversion. Thanks to NUnit Team member [Manfred Brands](https://github.com/manfred-brands) for [PR 4899](https://github.com/nunit/nunit/pull/4899)
+* [4898](https://github.com/nunit/nunit/issues/4898) Assert(..., Is.EqualTo(...)) issues since 4.3.0. Thanks to NUnit Team member [Manfred Brands](https://github.com/manfred-brands) for [PR 4899](https://github.com/nunit/nunit/pull/4899)
+
+### Internal fixes
+
+* [4806](https://github.com/nunit/nunit/issues/4806) Benchmarks fail to run. Thanks to NUnit Team member [Steven Weerdenburg](https://github.com/stevenaw) for [PR 4897](https://github.com/nunit/nunit/pull/4897)
+
+### Acknowledgements
+
+We want to express our heartfelt gratitude to everyone who has contributed to this release
+by reporting bugs, suggesting enhancements, and providing valuable feedback.
+Your efforts help make NUnit better for the entire community.
+
+A special thank you to the following reporters for identifying issues:
+
+* [Gian Maria](https://github.com/alkampfergit)
+* [MaxKot](https://github.com/MaxKot)
+* [moshekar](https://github.com/moshekar)
+* [Thomas Haughland Rudfoss](https://github.com/rudfoss-rr)
+
+and to the commenters who engaged in discussions and offered further insights:
+
+* [Jeremy Pritts](https://github.com/ds5678)
+* [Manfred Brands](https://github.com/manfred-brands)
+* [Martin Gasser](https://github.com/m-gasser)
+* [moshekar](https://github.com/moshekar)
+* [Ole Gunnar Borstad](https://github.com/ogborstad)
+* [Oleksii Ruban](https://github.com/ORuban)
+* [smdn](https://github.com/smdn)
+* [Steven Weerdenburg](https://github.com/stevenaw)
+* [Tadija Bagaric](https://github.com/TadijaB)
+* [Terje Sandstrom](https://github.com/OsirisTerje)
+* [Thomas Haugland Rudfoss](https://github.com/rudfoss-rr)
+
+## NUnit 4.3.0 -  Dec 15. 2024
+
+This release includes a series of enhancements and bug fixes. Notably, some of the bug fixes address issues related to a lack of type safety in NUnit. See issues [4877](https://github.com/nunit/nunit/issues/4877),
+[4876](https://github.com/nunit/nunit/issues/4876), [4875](https://github.com/nunit/nunit/issues/4875), [4874](https://github.com/nunit/nunit/issues/4874) and [150](https://github.com/nunit/nunit/issues/150).  
+
+Be aware that this might cause compile errors in cases where the code was previously ignored. These errors can be safely resolved by removing the affected code.
+
+There are 29 issues fixed in this release.
+
+### Enhancements
+
+* [4890](https://github.com/nunit/nunit/issues/4890) Add .net 8 as a target framework in the package. Thanks to NUnit Team member [Manfred Brands](https://github.com/manfred-brands) for [PR 4884](https://github.com/nunit/nunit/pull/4884)
+* [4886](https://github.com/nunit/nunit/issues/4886) Optimize ToArray()[0] with First() in TestAssert class in TestAssert.cs. Thanks to [Saurav-shres](https://github.com/Saurav-shres) for [PR 4888](https://github.com/nunit/nunit/pull/4888)
+* [4862](https://github.com/nunit/nunit/issues/4862) PropertiesComparer 32 Property Limit Error Message. Thanks to [Cincidial](https://github.com/Cincidial) for [PR 4870](https://github.com/nunit/nunit/pull/4870)
+* [4861](https://github.com/nunit/nunit/issues/4861) Always repeat Test x times. Thanks to [Christoph](https://github.com/cfuerbachersparks) for [PR 4864](https://github.com/nunit/nunit/pull/4864)
+* [4852](https://github.com/nunit/nunit/issues/4852) Expand the usability of `Contains.Key(...).WithValue(...)`. Thanks to [Michael Render](https://github.com/RenderMichael) for [PR 4854](https://github.com/nunit/nunit/pull/4854)
+* [4846](https://github.com/nunit/nunit/issues/4846) Add NET9 target for the framework tests. Thanks to [Leon Lux](https://github.com/Lachstec) for [PR 4851](https://github.com/nunit/nunit/pull/4851)
+* [4839](https://github.com/nunit/nunit/issues/4839) Allow to use collection expressions with collection constraints. Thanks to [Oleksandr Liakhevych](https://github.com/Dreamescaper) for [PR 4840](https://github.com/nunit/nunit/pull/4840)
+* [4832](https://github.com/nunit/nunit/issues/4832) Setting thread names to make debugging easier. Thanks to NUnit Team member [Terje Sandstrom](https://github.com/OsirisTerje) for [PR 4835](https://github.com/nunit/nunit/pull/4835)
+* [4811](https://github.com/nunit/nunit/issues/4811) Assert.ThatAsync does not support polling. Thanks to [Oleksandr Liakhevych](https://github.com/Dreamescaper) for [PR 4813](https://github.com/nunit/nunit/pull/4813)
+* [4771](https://github.com/nunit/nunit/issues/4771) Support tuples in inline data. Thanks to [MaxKot](https://github.com/MaxKot) for [PR 4772](https://github.com/nunit/nunit/pull/4772)
+* [2492](https://github.com/nunit/nunit/issues/2492) EqualConstraint.Using(StringComparer.*) causes overload ambiguity error. Thanks to NUnit Team member [Manfred Brands](https://github.com/manfred-brands) for [PR 4882](https://github.com/nunit/nunit/pull/4882)
+
+### Bug fixes
+
+* [4887](https://github.com/nunit/nunit/issues/4887) FileLoadException for NUnit 4.2.2 when upgrade the System.Buffers to 4.6.0. Thanks to NUnit Team member [Terje Sandstrom](https://github.com/OsirisTerje) for [PR 4891](https://github.com/nunit/nunit/pull/4891)
+* [4877](https://github.com/nunit/nunit/issues/4877) Fix EqualTo modifiers for DateTime. Thanks to NUnit Team member [Manfred Brands](https://github.com/manfred-brands) for [PR 4882](https://github.com/nunit/nunit/pull/4882)
+* [4876](https://github.com/nunit/nunit/issues/4876) Equal.Within Fails With Negative Tolerance. Thanks to [Raffael Botschen](https://github.com/RaffaelCH) for [PR 4881](https://github.com/nunit/nunit/pull/4881)
+* [4875](https://github.com/nunit/nunit/issues/4875) String constraints should not allow using Within. Thanks to NUnit Team member [Manfred Brands](https://github.com/manfred-brands) for [PR 4882](https://github.com/nunit/nunit/pull/4882)
+* [4874](https://github.com/nunit/nunit/issues/4874) IgnoreCase, Seconds and Minutes can be used on numerical constraints. Thanks to NUnit Team member [Manfred Brands](https://github.com/manfred-brands) for [PR 4882](https://github.com/nunit/nunit/pull/4882)
+* [4868](https://github.com/nunit/nunit/issues/4868) TestCase- and TestCaseSourceAttribute cannot handle generic test methods where method parameter is Nullable&lt;T&gt;. Thanks to NUnit Team member [Manfred Brands](https://github.com/manfred-brands) for [PR 4872](https://github.com/nunit/nunit/pull/4872)
+* [4836](https://github.com/nunit/nunit/issues/4836) PropertiesComparer doesn't work well with records. Thanks to [Oleksandr Liakhevych](https://github.com/Dreamescaper) for [PR 4837](https://github.com/nunit/nunit/pull/4837)
+* [4807](https://github.com/nunit/nunit/issues/4807) Is.EqualTo with empty ValueTuple throws System.NotSupportedException "Specified Tolerance not supported for instances of type 'System.ValueTuple' and 'System.ValueTuple'" after updating to NUnit 4.2.2. Thanks to NUnit Team member [Manfred Brands](https://github.com/manfred-brands) for [PR 4809](https://github.com/nunit/nunit/pull/4809)
+* [4281](https://github.com/nunit/nunit/issues/4281) Throws and Delayed (.After) Constraints do not cooperate, resulting in incorrectly failing test. Thanks to [Oleksandr Liakhevych](https://github.com/Dreamescaper) for [PR 4815](https://github.com/nunit/nunit/pull/4815)
+* [4110](https://github.com/nunit/nunit/issues/4110) Support running single-threaded async tests on Linux. Thanks to NUnit Team member [Manfred Brands](https://github.com/manfred-brands) for [PR 4883](https://github.com/nunit/nunit/pull/4883)
+* [3772](https://github.com/nunit/nunit/issues/3772) IsEquivalent on default ImmutableArray throws exception. Thanks to [Sergio L.](https://github.com/mr-sergito) for [PR 4850](https://github.com/nunit/nunit/pull/4850)
+* [3713](https://github.com/nunit/nunit/issues/3713) Description of --where=EXPRESSION missing from Notes section. Thanks to [rsjackson3](https://github.com/rsjackson3) for [PR 4817](https://github.com/nunit/nunit/pull/4817)
+* [150](https://github.com/nunit/nunit/issues/150) Improve inference of type arguments in generic test methods. Thanks to NUnit Team member [Steven Weerdenburg](https://github.com/stevenaw) for [PR 4873](https://github.com/nunit/nunit/pull/4873)
+
+### Refactorings
+
+None
+
+### Internal fixes
+
+* [4865](https://github.com/nunit/nunit/issues/4865) Increase Legacy NUnit so at least all methods are covered. Thanks to NUnit Team member [Manfred Brands](https://github.com/manfred-brands) for [PR 4871](https://github.com/nunit/nunit/pull/4871)
+* [4841](https://github.com/nunit/nunit/issues/4841) MacOS test failure. Thanks to NUnit Team member [Manfred Brands](https://github.com/manfred-brands) for [PR 4842](https://github.com/nunit/nunit/pull/4842)
+* [4819](https://github.com/nunit/nunit/issues/4819) Remove `StringUtil.Compare()` and update references in the tests. Thanks to [Sergio L.](https://github.com/mr-sergito) for [PR 4827](https://github.com/nunit/nunit/pull/4827)
+* [4798](https://github.com/nunit/nunit/issues/4798) Add a test to ensure direct framework dependencies in csproj are reflected in nuspec. Thanks to NUnit Team member [Terje Sandstrom](https://github.com/OsirisTerje) for [PR 4799](https://github.com/nunit/nunit/pull/4799)
+
+### Deprecated features
+
+None
+
+### Others
+
+### The following issues are marked as breaking changes
+
+None
+
+### Acknowledgements
+
+First and foremost, we want to recognize the exceptional contributions of team members [Manfred Brands](https://github.com/manfred-brands) and [Steven Weerdenburg](https://github.com/stevenaw) for their dedicated efforts on this release, particularly their work on improving type safety.
+
+We also express our heartfelt gratitude to everyone who has contributed to this release
+by reporting bugs, suggesting enhancements, and providing valuable feedback.
+Your efforts help make NUnit better for the entire community.
+
+A special thank you to the following reporters for identifying issues:
+
+<table>
+<tr>
+<td><a href="https://github.com/cfuerbachersparks">Christoph</a></td>
+<td><a href="https://github.com/KrzysFR">Christophe Chevalier</a></td>
+<td><a href="https://github.com/Cincidial">Cincidial</a></td>
+<td><a href="https://github.com/jnm2">Joseph Musser</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/Lachstec">Leon Lux</a></td>
+<td><a href="https://github.com/manfred-brands">Manfred Brands</a></td>
+<td><a href="https://github.com/MaxKot">MaxKot</a></td>
+<td><a href="https://github.com/MCMrARM">MCMrARM</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/RenderMichael">Michael Render</a></td>
+<td><a href="https://github.com/michaelamaura">Michaela Maura Elschner</a></td>
+<td><a href="https://github.com/mzh3511">mzh3511</a></td>
+<td><a href="https://github.com/Dreamescaper">Oleksandr Liakhevych</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/RaffaelCH">Raffael Botschen</a></td>
+<td><a href="https://github.com/biocoder-frodo">Sander</a></td>
+<td><a href="https://github.com/Saurav-shres">Saurav-shres</a></td>
+<td><a href="https://github.com/seesharks">seesharks</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/stevenaw">Steven Weerdenburg</a></td>
+<td><a href="https://github.com/OsirisTerje">Terje Sandstrom</a></td>
+<td><a href="https://github.com/wimvangool">Wim van Gool</a></td>
+</tr>
+</table>
+
+and to the commenters who engaged in discussions and offered further insights:
+
+<table>
+<tr>
+<td><a href="https://github.com/CharliePoole">CharliePoole</a></td>
+<td><a href="https://github.com/ChrisMaddock">Chris Maddock</a></td>
+<td><a href="https://github.com/cfuerbachersparks">Christoph</a></td>
+<td><a href="https://github.com/KrzysFR">Christophe Chevalier</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/Cincidial">Cincidial</a></td>
+<td><a href="https://github.com/Kooddammn">Harsh Jain</a></td>
+<td><a href="https://github.com/jnm2">Joseph Musser</a></td>
+<td><a href="https://github.com/Lachstec">Leon Lux</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/manfred-brands">Manfred Brands</a></td>
+<td><a href="https://github.com/MaxKot">MaxKot</a></td>
+<td><a href="https://github.com/RenderMichael">Michael Render</a></td>
+<td><a href="https://github.com/michaelamaura">Michaela Maura Elschner</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/mikkelbu">Mikkel Nylander Bundgaard</a></td>
+<td><a href="https://github.com/Dreamescaper">Oleksandr Liakhevych</a></td>
+<td><a href="https://github.com/PicNet">PicNet</a></td>
+<td><a href="https://github.com/RaffaelCH">Raffael Botschen</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/rprouse">Rob Prouse</a></td>
+<td><a href="https://github.com/rsjackson3">rsjackson3</a></td>
+<td><a href="https://github.com/sba-schleupen">Sascha Bartl</a></td>
+<td><a href="https://github.com/Saurav-shres">Saurav-shres</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/mr-sergito">Sergio L.</a></td>
+<td><a href="https://github.com/stevenaw">Steven Weerdenburg</a></td>
+<td><a href="https://github.com/OsirisTerje">Terje Sandstrom</a></td>
+<td><a href="https://github.com/wimvangool">Wim van Gool</a></td>
+</tr>
+</table>
+
+## NUnit 4.2.2 - August 31. 2024
+
+This hotfix addresses an issue with asynchronous behavior introduced in version 4.2.0. It resolves a regression bug that affected the release.
+
+* [4802](https://github.com/nunit/nunit/issues/4802) System.NotSupportedException when using AsyncEnumerable test cases for `TestCaseSourceAttribute`. Fixed by [PR 4804](https://github.com/nunit/nunit/pull/4804.)
+
+## NUnit 4.2.1 - August 23. 2024
+
+This is a hotfix release for 4.2.0, fixing issues related to .NET Framework.
+
+### Bug fixes
+
+* [4795](https://github.com/nunit/nunit/issues/4795) NUnit 4.2.0 is missing System.Buffers on .NET Framework.
+* [4794](https://github.com/nunit/nunit/issues/4794) `EqualConstraint` fails with missing assembly references on .NET Framework since NUnit 4.2.
+
+## NUnit 4.2 - August 22. 2024
+
+There are 37 issues fixed in this release.
+
+### Enhancements
+
+* [4777](https://github.com/nunit/nunit/issues/4777) Publicly expose `IgnoreAttribute.Reason`. Thanks to [Michael Render](https://github.com/RenderMichael) for [PR 4781](https://github.com/nunit/nunit/pull/4781)
+* [4738](https://github.com/nunit/nunit/issues/4738) QoL suggestion: fail fast in Assert.Multiple under debugger. Thanks to [MaceWindu](https://github.com/MaceWindu) for [PR 4749](https://github.com/nunit/nunit/pull/4749)
+* [4710](https://github.com/nunit/nunit/issues/4710) Improve PropertiesComparer diagnostics. Fixed by team [PR 4712](https://github.com/nunit/nunit/pull/4712)
+* [4686](https://github.com/nunit/nunit/issues/4686) Provide a ProgressTraceListener to redirect Trace output to the NUnit Progress output. Thanks to [maettu-this](https://github.com/maettu-this) for [PR 4709](https://github.com/nunit/nunit/pull/4709)
+* [4632](https://github.com/nunit/nunit/issues/4632) Generic TestCase and TestCaseParameter support. Fixed by team [PR 4755](https://github.com/nunit/nunit/pull/4755)
+* [4353](https://github.com/nunit/nunit/issues/4353) TestContext.AddTestAttachment with long file paths. Thanks to [Rohit Aggarwal](https://github.com/Meet2rohit99) for [PR 4665](https://github.com/nunit/nunit/pull/4665)
+* [4134](https://github.com/nunit/nunit/issues/4134) NUnit 3 console does not display logs from background thread from a library. Thanks to [maettu-this](https://github.com/maettu-this) for [PR 4709](https://github.com/nunit/nunit/pull/4709)
+* [3918](https://github.com/nunit/nunit/issues/3918) String comparison without whitespace. Fixed by team [PR 4664](https://github.com/nunit/nunit/pull/4664)
+* [3829](https://github.com/nunit/nunit/issues/3829) Consider optimizing `StreamsComparer` for happy path. Thanks to [Mithilesh Zavar](https://github.com/mithileshz) for [PR 4668](https://github.com/nunit/nunit/pull/4668)
+* [3767](https://github.com/nunit/nunit/issues/3767) Incorrect number of items listed in failure message. Thanks to [Dmitrij](https://github.com/iamdmitrij) for [PR 4702](https://github.com/nunit/nunit/pull/4702)
+* [1396](https://github.com/nunit/nunit/issues/1396) Class Level Category Missing from TestContext. Fixed by team [PR 4757](https://github.com/nunit/nunit/pull/4757)
+* [796](https://github.com/nunit/nunit/issues/796) `TestContext.CurrentContext.Test.Properties` from TestFixture should be available from `TestContext` for Test. Fixed by team [PR 4757](https://github.com/nunit/nunit/pull/4757)
+* [548](https://github.com/nunit/nunit/issues/548) Properties set on a parameterized method are not accessible to TestContext. Fixed by team [PR 4757](https://github.com/nunit/nunit/pull/4757)
+* [4587](https://github.com/nunit/nunit/issues/4587) Feature request: Assert.Multiple() could return an IDisposable, avoiding passing an Action around.. Fixed by team [PR 4758](https://github.com/nunit/nunit/pull/4758)
+
+### Bug fixes
+
+* [4782](https://github.com/nunit/nunit/issues/4782) Bug report: [ValueSource] doesn't play nice with [CancelAfter]. Fixed by team [PR 4783](https://github.com/nunit/nunit/pull/4783)
+* [4770](https://github.com/nunit/nunit/issues/4770) Bug report: [Values] doesn't play nice with [CancelAfter]. Fixed by team [PR 4774](https://github.com/nunit/nunit/pull/4774)
+* [4750](https://github.com/nunit/nunit/issues/4750) `DefaultFloatingPointTolerance` ignored for `TestCaseData`. Fixed by team [PR 4754](https://github.com/nunit/nunit/pull/4754)
+* [4723](https://github.com/nunit/nunit/issues/4723) CurrentContext.Result.Outcome.Status is inconclusive in TearDown if Timeout attribute is used in 4.x. Fixed by team [PR 4727](https://github.com/nunit/nunit/pull/4727)
+* [4705](https://github.com/nunit/nunit/issues/4705) The dll's in the release 4.1 has version 4.0.1. Fixed by team [PR 4706](https://github.com/nunit/nunit/pull/4706)
+* [4670](https://github.com/nunit/nunit/issues/4670) `.ContainKey().WithValue()` and `.Or`/`.And` interact incorrectly. Fixed by team [PR 4672](https://github.com/nunit/nunit/pull/4672)
+* [4659](https://github.com/nunit/nunit/issues/4659) TestCaseSource that contains Exception with InnerException - not running tests. Fixed by team [PR 4663](https://github.com/nunit/nunit/pull/4663)
+* [4651](https://github.com/nunit/nunit/issues/4651) After upgrade from version 3.14.0 to 4.* running multiple test categories in parentheses separated with 'OR' stopped working. Fixed by team [PR 4760](https://github.com/nunit/nunit/pull/4760)
+* [4639](https://github.com/nunit/nunit/issues/4639) `ValueTask` is not being properly consumed by the `AwaitAdapter`. Fixed by team [PR 4640](https://github.com/nunit/nunit/pull/4640)
+* [4598](https://github.com/nunit/nunit/issues/4598) DefaultTimeout in .runsettings + TearDown method seems to break test output. Fixed by team [PR 4692](https://github.com/nunit/nunit/pull/4692)
+* [4589](https://github.com/nunit/nunit/issues/4589) Exception when using test filters from .runsettings or --filter argument from dotnet test. Fixed by team [PR 4760](https://github.com/nunit/nunit/pull/4760)
+* [4584](https://github.com/nunit/nunit/issues/4584) Nunit 4.0.x Test case selection is incorrect with certain test data. Fixed by team [PR 4773](https://github.com/nunit/nunit/pull/4773)
+* [1358](https://github.com/nunit/nunit/issues/1358) TestContext.CurrentContext.Test.Properties does not contain value(s) from PropertyAttribute when using TestCaseAttribute. Fixed by team [PR 4757](https://github.com/nunit/nunit/pull/4757)
+
+### Refactorings
+
+* [4577](https://github.com/nunit/nunit/issues/4577) Remove some version hard-coding in the OSPlatformTranslator. Fixed by team [PR 4756](https://github.com/nunit/nunit/pull/4756)
+
+### Internal fixes
+
+* [4735](https://github.com/nunit/nunit/issues/4735) StreamComparer - Pool allocating the byte array reduces memory allocation by 96%. Thanks to [Mithilesh Zavar](https://github.com/mithileshz) for [PR 4737](https://github.com/nunit/nunit/pull/4737)
+* [4733](https://github.com/nunit/nunit/issues/4733) Improve speed of Randomizer.GetString. Fixed by team [PR 4512](https://github.com/nunit/nunit/pull/4512)
+* [3981](https://github.com/nunit/nunit/issues/3981) Switch default branch to main. Fixed by team [PR 4753](https://github.com/nunit/nunit/pull/4753)
+* [4649](https://github.com/nunit/nunit/issues/4649) Switch to using MacOS 14 in GitHub Actions. Fixed by team [PR 4648](https://github.com/nunit/nunit/pull/4648)
+* [3757](https://github.com/nunit/nunit/issues/3757) Re-Add WinForms and WPF based tests. Fixed by team [PR 4776](https://github.com/nunit/nunit/pull/4776)
+
+### Deprecated features
+
+None
+
+### Others
+
+* [4765](https://github.com/nunit/nunit/issues/4765) Document ThrowOnEachFailurUnderDebugger.
+* [4730](https://github.com/nunit/nunit/issues/4730) Remove reference to the mailing list from CONTRIBUTING.md. Fixed by team [PR 4752](https://github.com/nunit/nunit/pull/4752)
+* [4726](https://github.com/nunit/nunit/issues/4726) `Using&lt;TCollectionType, TMemberType&gt;` is unclear. Thanks to [Michael Render](https://github.com/RenderMichael) for [PR 4729](https://github.com/nunit/nunit/pull/4729)
+* [4684](https://github.com/nunit/nunit/issues/4684) Increment StreamsComparer by 'Actual bytes read' rather than the buffer size. Fixed by team [PR 4671](https://github.com/nunit/nunit/pull/4671)
+
+### The following issues are marked as breaking changes
+
+None
 
 ## NUnit 4.1 - February 23. 2024
 
@@ -154,6 +611,7 @@ There are 112 issues fixed in this release.
 * [3215](https://github.com/nunit/nunit/issues/3215) Better error message for generic test where type parameter cannot be determined. Thanks to [Ove Bastiansen](https://github.com/ovebastiansen) for [PR 4382](https://github.com/nunit/nunit/pull/4382)
 * [2870](https://github.com/nunit/nunit/issues/2870) CollectionTally (EquivalentTo) should throw for non-transitive comparisons. Thanks to [Russell Smith](https://github.com/mr-russ) for [PR 4312](https://github.com/nunit/nunit/pull/4312)
 * [2841](https://github.com/nunit/nunit/issues/2841) DelayedConstraint calls delegate twice. Fixed by team [PR 4488](https://github.com/nunit/nunit/pull/4488)
+* [2835](https://github.com/nunit/nunit/issues/2835) Control character encoding is inconsistent between TestCase[Source] and TestFixture[Source]. Fixed by team [PR 4498](https://github.com/nunit/nunit/pull/4498)
 * [2436](https://github.com/nunit/nunit/issues/2436) Properties on System.Type cannot be used with either property constraint. Fixed by team [PR 4259](https://github.com/nunit/nunit/pull/4259)
 * [1428](https://github.com/nunit/nunit/issues/1428) NUnitLite package always installs both Program.cs and Program.vb. Fixed by team [PR 3952](https://github.com/nunit/nunit/pull/3952)
 

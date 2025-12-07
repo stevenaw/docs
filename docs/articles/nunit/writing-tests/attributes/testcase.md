@@ -38,8 +38,46 @@ TestCaseAttribute supports a number of additional named parameters:
 * **Reason** specifies the reason for not running this test case. Use in conjunction with **Explicit**.
 * **TestName** provides a name for the test. If not specified, a name is generated based on the method name and the
   arguments provided. See [Template Based Test Naming](xref:templatebasedtestnaming).
-* **TestOf** specifies the Type that this test is testing
+* **TestOf** specifies the Type that this test is testing (this is not used within NUnit during test execution,
+  but may serve a purpose for the test author)
 * **TypeArgs** specifies the `Type`s to be used when targeting a generic test method. (_NUnit 4.1+_)
+
+## Be aware of mixing the syntax for named parameters and attributes with the same name
+
+### Correct `Ignore` Attribute Usage, by Example
+
+> [!WARNING]
+> When using the `Ignore` parameter (and others, see below), note that this has to be a named parameter. It is easy to accidentally add another `Ignore` attribute after the `TestCase` attribute. That will be the same as adding it separately, and it will apply to the complete fixture. This may apply to other named parameters, with names equal to other attributes, like the `Explicit` and `Category` parameters.
+
+Correct example usage:
+
+[!code-csharp[TestCaseWithIgnore](~/snippets/Snippets.NUnit/Attributes/TestCaseAttributeExamples.cs#TestCaseWithIgnore)]
+
+![TestCaseIgnoreDoneCorrect](../../../../images/TestCaseIgnoreDoneCorrect.png)
+
+> [!WARNING]
+> **Wrong way!** Below, we demonstrate an incorrect approach.
+>
+> (1) Adding it on the same line is the same as adding it on a separate line (3), both results in the fixture being ignored (2).
+
+![TestCaseIgnoreGoneWrong](../../../../images/TestCaseIgnoreGoneWrong.png)
+
+<!-- cspell:disable-next-line -->
+_Thanks to [Geir Marius Gjul](https://github.com/GeirMG) for raising this question again._
+
+### Correct `Explicit` Attribute Usage, by Example
+
+`Explicit`, used correctly, looks like the following:
+
+[!code-csharp[TestCaseWithExplicit](~/snippets/Snippets.NUnit/Attributes/TestCaseAttributeExamples.cs#TestCaseWithExplicit)]
+
+Note that adding the `Reason` is optional, and Visual Studio TestExplorer will not even show it.
+
+### Correct `Category` Attribute Usage, by Example
+
+Categories can be applied to a single `TestCase` the same way, as a named parameter. Otherwise, it will apply to the whole fixture. Be sure what you're asking for!
+
+[!code-csharp[TestCaseWithCategory](~/snippets/Snippets.NUnit/Attributes/TestCaseAttributeExamples.cs#TestCaseWithCategory)]
 
 ## Order of Execution
 

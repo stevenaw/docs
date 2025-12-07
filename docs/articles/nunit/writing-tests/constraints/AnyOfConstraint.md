@@ -4,7 +4,7 @@
 
 > [!NOTE]
 > Values provided must be as parameters to the method, not as e.g. a separate array. If you are instead looking
-> to see if a collection contains a value, see the [CollectionContains Constraint](xref:collectioncontainsconstraint).
+> to see if a collection contains a value, see the [SomeItems Constraint](xref:someitemsconstraint).
 
 ## Constructor
 
@@ -30,6 +30,9 @@ Is.AnyOf(object[] expected)
 ...Using<T>(Comparison<T> comparer)
 ...Using<T>(Func<T, T, bool> comparer)
 ...UsingPropertiesComparer()  // From version 4.1
+...UsingPropertiesComparer(
+      Func<PropertiesComparerConfiguration,
+           PropertiesComparerConfiguration> configure) // From version 4.4
 ```
 
 ## Examples of Use

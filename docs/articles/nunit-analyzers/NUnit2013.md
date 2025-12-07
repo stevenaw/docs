@@ -8,7 +8,7 @@
 | Severity | Info
 | Enabled  | True
 | Category | Assertion
-| Code     | [StringConstraintUsageAnalyzer](https://github.com/nunit/nunit.analyzers/blob/4.1.0/src/nunit.analyzers/ConstraintUsage/StringConstraintUsageAnalyzer.cs)
+| Code     | [StringConstraintUsageAnalyzer](https://github.com/nunit/nunit.analyzers/blob/4.9.2/src/nunit.analyzers/ConstraintUsage/StringConstraintUsageAnalyzer.cs)
 
 ## Description
 
@@ -43,6 +43,7 @@ public void Test()
     string expected = "...";
     Assert.That(actual, Does.EndWith(expected));
 }
+```
 
 <!-- start generated config severity -->
 ## Configure severity

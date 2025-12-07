@@ -32,7 +32,7 @@ Certain NUnit Test Adapter settings are configurable using a .runsettings file. 
 | [Where](#where)                                                       | string | NUnit Filter expression                                                       |                               |
 | [UseParentFQNForParametrizedTests](#useparentfqnforparametrizedtests) | bool   | Enable parent as FQN for parametrized tests                                   | false                         |
 | [UseNUnitIdforTestCaseId](#usenunitidfortestcaseid)                   | bool   | Uses NUnit test id as VSTest Testcase Id, instead of FullyQualifiedName       | false                         |
-| [ConsoleOut](#consoleout)                                             | int    | Sends standard console output to the output window                            | 2                             |
+| [ConsoleOut](#consoleout)                                             | int    | Sends standard console output to the output window                            | 1                             |
 | [UseTestNameInConsoleOutput](#usetestnameinconsoleoutput)             | bool   | Adds name of test as a prefix in the output window for console output         | true                          |
 | [StopOnError](#stoponerror)                                           | bool   | Stops on first error                                                          | false                         |
 | [SkipNonTestAssemblies](#skipnontestassemblies)                       | bool   | Adapter supports NonTestAssemblyAttribute                                     | true                          |
@@ -42,10 +42,12 @@ Certain NUnit Test Adapter settings are configurable using a .runsettings file. 
 | [DiscoveryMethod](#discoverymethod)                                   | enum   | How execution discovery is done, options are `Legacy` or `Current`            | Current                       |
 | [AssemblySelectLimit](#assemblyselectlimit)                           | int    | Number of tests accepted before filters are turned off                        | 2000                          |
 | [NewOutputXmlFileForEachRun](#newoutputxmlfileforeachrun)             | bool   | Creates a new file for each test run                                          | false                         |
-| [IncludeStackTraceForSuites](#includestacktraceforsuites)             | bool   | Includes stack trace for failures in suites, like exceptions in OneTimeSetup  | true                          |
-| [ExplicitMode](#explicitmode)                                         | enum   | Changes handling of explicit tests, options are `Strict` or `Relaxed`         | Strict                        |
+| [IncludeStackTraceForSuites](#includestacktraceforsuites)             | bool   | Includes stack trace for failures in suites, like exceptions in OneTimeSetup and OneTimeTearDown | true                          |
+| [IncludeStackTrace](#includestacktrace)             | bool   | Includes stack trace for all failures | true                          |
+| [ExplicitMode](#explicitmode)                                         | enum   | Changes handling of explicit tests, options are `Strict`, `Relaxed` or `None`     | Strict                        |
 | [SkipExecutionWhenNoTests](#skipexecutionwhennotests)                 | bool   | Skip execution if no tests are found                                          | false                         |
 | [AllowParallelWithDebugger](#allowparallelwithdebugger)               | bool   | Allow parallel execution when debugger is attached                            | false                         |
+| [ThrowOnEachFailureUnderDebugger](#throwoneachfailureunderdebugger)   | bool   | | false |
 
 ### Visual Studio templates for runsettings
 
@@ -226,8 +228,11 @@ However, it has been seen to also have adverse effects, so use with caution.
 
 #### ConsoleOut
 
-When set to 1 or 2 (2 is default), will send Console standard output to the Visual Studio Output/Test window, and also
+When set to 1 or 2 (1 is default), will send Console standard output to the Visual Studio Output/Test window, and also
 with dotnet test, it will appear in the output.
+
+> [!NOTE]
+> The `ConsoleOut` default changed from `2` to `1` in `v4.6.0`
 
 Disable this by setting it to 0, which is also the default for version earlier than 3.17.0.
 
@@ -346,13 +351,20 @@ run.*"
 Exceptions outside test cases are reported with its stack trace included in the message.  One example here is exceptions
 in OneTimeSetUp and OneTimeTearDown. They belong to the outer suite, and their exceptions are reported as part of the
 message. This option includes the stack trace in that message.  If this becomes too much information, this option turns
-the stack trace reporting off.
+the stack trace reporting off.  Default is true.
 
 (From version 4.0.0)
 
+#### IncludeStackTrace
+
+This is default true.  If turned off (false) it will stop outputting any stacktraces.  This is in cases where you just
+ want to reduce the total output and don't need the stacktrace information.
+
+(From version 5.1.0)
+
 #### ExplicitMode
 
-This setting can be either ```Strict``` or ```Relaxed```.  The default is ```Strict```, which means that ```Explicit```
+This setting can be either ```Strict```, ```Relaxed``` or ```None```.  The default is ```Strict```, which means that ```Explicit```
 tests can only be run with other Explicit tests, and not mixed with non-Explicit tests.  The ```Relaxed``` mode is the
 original NUnit mode, where if you select a category, a class or a set of tests, both explicit and non-explicit tests
 will be run.  From Visual Studio Test Explorer there are no longer (since VS2019) any way of separating between a
@@ -360,6 +372,10 @@ will be run.  From Visual Studio Test Explorer there are no longer (since VS2019
 line tests, dependent upon how your tests are set up and run.
 
 (From version 4.2.0)
+
+When using `None`, no explicit tests will be run at all.  This can be useful for CI scenarios.
+
+(From version 5.2.0)
 
 #### SkipExecutionWhenNoTests
 
@@ -374,6 +390,14 @@ files. The default is false.
 If set, this setting will allow parallel execution of tests even if the debugger is attached.  The default is `false`.
 
 (From version 4.5.0)
+
+#### ThrowOnEachFailureUnderDebugger
+
+If set, this setting will surface an assertion exception for each failure in an `Assert.Multiple` block if the debugger
+is attached. The default is `false`.  
+[See docs for more info](https://docs.nunit.org/articles/nunit/technical-notes/usage/Debugging-Support.html#throwoneachfailureunderdebugger-setting).
+
+(From version 4.6, require NUnit from 4.2)
 
 ---
 
