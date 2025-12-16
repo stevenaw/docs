@@ -1,47 +1,36 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <!--[if IE]><![endif]-->
-<html>
-  
+<html lang="en">
+
   <head>
-    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-PCB5BYBNM2"></script>
+    <meta charset="utf-8">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PCB5BYBNM2"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+      function gtag() { dataLayer.push(arguments); }
       gtag('js', new Date());
-  
       gtag('config', 'G-PCB5BYBNM2');
     </script>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Repeat | NUnit Docs </title>
-    <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Repeat | NUnit Docs ">
-    <meta name="generator" content="docfx 2.58.9.0">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Repeat | NUnit Docs </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Repeat | NUnit Docs ">
     
-  
-    <link rel="apple-touch-icon" sizes="180x180" href="../../../../favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../../../../favicons/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../../../../favicons/favicon-32x32.png">
-    <link rel="shortcut icon" type="image/x-icon" href="../../../../favicon.ico">
-    <link rel="manifest" href="../../../../favicons/manifest.json">
-    <link rel="mask-icon" href="../../../../favicons/safari-pinned-tab.svg" color="#222222">
-    <meta name="msapplication-config" content="../../../../favicons/browserconfig.xml">
-    <meta name="msapplication-TileColor" content="#222222">
-    <meta name="theme-color" content="#222222">
-  
-    <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
-    <link rel="stylesheet" href="../../../../styles/docfx.css">
-    <link rel="stylesheet" href="../../../../styles/main.css">
-    <meta property="docfx:navrel" content="../../../../toc.html">
-    <meta property="docfx:tocrel" content="../../../toc.html">
+    
+      <link rel="shortcut icon" href="../../../../favicon.ico">
+      <link rel="stylesheet" href="../../../../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../../../../styles/docfx.css">
+      <link rel="stylesheet" href="../../../../styles/main.css">
+      <meta property="docfx:navrel" content="../../../../toc.html">
+      <meta property="docfx:tocrel" content="../../../toc.html">
     
     <meta property="docfx:rel" content="../../../../">
     
   </head>
-  `  <body data-spy="scroll" data-target="#affix" data-offset="120">
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
-        
+
         <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
           <div class="container">
             <div class="navbar-header">
@@ -51,7 +40,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              
+
               <a class="navbar-brand" href="../../../../index.html">
                 <img id="logo" class="svg" src="../../../../logo.svg" alt="">
               </a>
@@ -65,7 +54,7 @@
             </div>
           </div>
         </nav>
-        
+
         <div class="subnav navbar navbar-default">
           <div class="container hide-when-search" id="breadcrumb">
             <ul class="breadcrumb">
@@ -75,17 +64,17 @@
         </div>
       </header>
       <div class="container body-content">
-        
+
         <div id="search-results">
           <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+          <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
-        
+
         <div class="sidenav hide-when-search">
           <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
           <div class="sidetoggle collapse" id="sidetoggle">
@@ -98,44 +87,61 @@
 <h1 id="repeat">Repeat</h1>
 
 <p><strong>RepeatAttribute</strong> is used on a test method to specify that it should be
-executed multiple times. If any repetition fails, the remaining ones are
-not run and a failure is reported.</p>
-<h2 id="notes">Notes</h2>
-<ol>
-<li>If RepeatAttribute is used on a parameterized method, each individual
-test case created for that method is repeated.</li>
-<li>It is not currently possible to use RepeatAttribute on a TestFixture
-or any higher level suite. Only test cases may be repeated.</li>
-</ol>
+executed multiple times.</p>
+<p>By default, the test is repeated until a failure occurs. If no failures occur, it runs for the specified number of repetitions.</p>
+<p>You can change this behavior in case of a failure, so that it continues to run after the failure by setting the property <code>StopOnFailure</code> to <code>false</code>.  (From version 4.3.0)</p>
 <h2 id="examples">Examples</h2>
-<pre><code class="lang-csharp">[Test]
-[Repeat(25)]
-public void MyTest()
+<h3 id="the-default-behavior">The default behavior</h3>
+<pre><code class="lang-csharp" name="RepeatDefaultAttributeExample">[Test]
+[Repeat(5)]
+public void TestMethod1()
 {
-    /* The contents of this test will be run 25 times. */
+    Assert.Pass();
+}
+</code></pre><h3 id="run-all-regardless-of-failures">Run all regardless of failures</h3>
+<pre><code class="lang-csharp" name="RepeatWithFaultAttributeExample">
+private int count2 = 0;
+
+[Test,Explicit]  // Marking the test as Explicit to avoid failing our doc build. You can skip this.
+[Repeat(5, StopOnFailure = false)]
+public void TestMethod3()
+{
+    count2++;
+    Assert.That(count2, Is.Not.EqualTo(3)); // Intentional failure on 3rd iteration
 }
 </code></pre>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>There is currently (as of 4.4.0) a <a href="https://github.com/nunit/nunit/issues/5031">bug</a> which causes only the last successful console statement to be output.  Also, in case of failures, only the latest failure is shown.</p>
+</div>
+<div class="NOTE">
+<h5>Note</h5>
+<p>If RepeatAttribute is used on a parameterized method,
+each individual test case created for that method is repeated.
+It is not currently possible to use RepeatAttribute on a TestFixture or any higher level suite. Only test cases may be repeated.</p>
+</div>
+
 </article>
           </div>
-          
+
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/nunit/docs/blob/master/docs/articles/nunit/writing-tests/attributes/repeat.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/stevenaw/docs/blob/master/docs/articles/nunit/writing-tests/attributes/repeat.md/#L1" class="contribution-link">Edit this page</a>
                   </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-                <h5>In This Article</h5>
+                <h5>In this article</h5>
                 <div></div>
               </nav>
             </div>
           </div>
         </div>
       </div>
-      
+
       <footer>
         <div class="grad-bottom"></div>
         <div class="footer">
@@ -143,14 +149,14 @@ public void MyTest()
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            
-            <span>Generated by <strong>DocFX</strong></span> | Copyright (c) 2018-<span id="currentYear"></span> The NUnit Project - Licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>
+      <span>Generated by <strong>DocFX</strong></span> | Copyright (c) 2018-<span id="currentYear"></span> The NUnit Project - Licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>
+      
           </div>
         </div>
       </footer>
     </div>
-    
-    <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
+
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.min.js"></script>
     <script type="text/javascript" src="../../../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../../../styles/main.js"></script>
   </body>

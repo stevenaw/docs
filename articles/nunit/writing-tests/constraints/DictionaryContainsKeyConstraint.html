@@ -1,47 +1,36 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <!--[if IE]><![endif]-->
-<html>
-  
+<html lang="en">
+
   <head>
-    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-PCB5BYBNM2"></script>
+    <meta charset="utf-8">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PCB5BYBNM2"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+      function gtag() { dataLayer.push(arguments); }
       gtag('js', new Date());
-  
       gtag('config', 'G-PCB5BYBNM2');
     </script>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>DictionaryContainsKey Constraint | NUnit Docs </title>
-    <meta name="viewport" content="width=device-width">
-    <meta name="title" content="DictionaryContainsKey Constraint | NUnit Docs ">
-    <meta name="generator" content="docfx 2.58.9.0">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>DictionaryContainsKey Constraint | NUnit Docs </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="DictionaryContainsKey Constraint | NUnit Docs ">
     
-  
-    <link rel="apple-touch-icon" sizes="180x180" href="../../../../favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../../../../favicons/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../../../../favicons/favicon-32x32.png">
-    <link rel="shortcut icon" type="image/x-icon" href="../../../../favicon.ico">
-    <link rel="manifest" href="../../../../favicons/manifest.json">
-    <link rel="mask-icon" href="../../../../favicons/safari-pinned-tab.svg" color="#222222">
-    <meta name="msapplication-config" content="../../../../favicons/browserconfig.xml">
-    <meta name="msapplication-TileColor" content="#222222">
-    <meta name="theme-color" content="#222222">
-  
-    <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
-    <link rel="stylesheet" href="../../../../styles/docfx.css">
-    <link rel="stylesheet" href="../../../../styles/main.css">
-    <meta property="docfx:navrel" content="../../../../toc.html">
-    <meta property="docfx:tocrel" content="../../../toc.html">
+    
+      <link rel="shortcut icon" href="../../../../favicon.ico">
+      <link rel="stylesheet" href="../../../../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../../../../styles/docfx.css">
+      <link rel="stylesheet" href="../../../../styles/main.css">
+      <meta property="docfx:navrel" content="../../../../toc.html">
+      <meta property="docfx:tocrel" content="../../../toc.html">
     
     <meta property="docfx:rel" content="../../../../">
     
   </head>
-  `  <body data-spy="scroll" data-target="#affix" data-offset="120">
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
-        
+
         <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
           <div class="container">
             <div class="navbar-header">
@@ -51,7 +40,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              
+
               <a class="navbar-brand" href="../../../../index.html">
                 <img id="logo" class="svg" src="../../../../logo.svg" alt="">
               </a>
@@ -65,7 +54,7 @@
             </div>
           </div>
         </nav>
-        
+
         <div class="subnav navbar navbar-default">
           <div class="container hide-when-search" id="breadcrumb">
             <ul class="breadcrumb">
@@ -75,17 +64,17 @@
         </div>
       </header>
       <div class="container body-content">
-        
+
         <div id="search-results">
           <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+          <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
-        
+
         <div class="sidenav hide-when-search">
           <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
           <div class="sidetoggle collapse" id="sidetoggle">
@@ -108,50 +97,59 @@ Does.ContainKey(object)
 Does.Not.ContainKey(object)
 </code></pre>
 <h2 id="modifiers">Modifiers</h2>
-<pre><code class="lang-csharp">...Using(IComparer comparer)
-...Using(IEqualityComparer comparer)
-...Using&lt;T&gt;(IComparer&lt;T&gt; comparer)
-...Using&lt;T&gt;(Comparison&lt;T&gt; comparer)
-...Using&lt;T&gt;(Func&lt;T, T, bool&gt; comparer)
-...Using&lt;T&gt;(IEqualityComparer&lt;T&gt; comparer)
-...Using&lt;TCollectionType, TMemberType&gt;(Func&lt;TCollectionType, TMemberType, bool&gt; comparison)
-...WithValue(object expectedValue)
+<pre><code class="lang-csharp">...WithValue(object expectedValue)
 </code></pre>
+<p>As of version 4.4.0 of NUnit the other modifiers were removed as they were non-functional.
+NUnit's <code>ContainKey</code> works the same as the <code>ContainsKey</code> method on <code>Dictionary</code>
+It uses the comparer specified when the dictionary was created.</p>
 <h2 id="examples-of-use">Examples of Use</h2>
-<pre><code class="lang-csharp">IDictionary&lt;int, int&gt; idict = new IDictionary&lt;int, string&gt; { { 1, 4 }, { 2, 5 } };
+<pre><code class="lang-csharp">var caseSensitiveDictionary = new Dictionary&lt;string, string&gt;(StringComparer.Ordinal)
+{
+    [&quot;Hello&quot;] = &quot;World&quot;,
+};
 
-Assert.That(idict, Contains.Key(1));
-Assert.That(idict, Does.ContainKey(2));
-Assert.That(idict, Does.Not.ContainKey(3));
-Assert.That(mydict, Contains.Key(myOwnObject).Using(myComparer));
-Assert.That(mydict, Does.ContainKey(&quot;Hello&quot;).WithValue(&quot;World&quot;));
+Assert.That(caseSensitiveDictionary, Does.ContainKey(&quot;Hello&quot;));
+Assert.That(caseSensitiveDictionary, Does.Not.ContainKey(&quot;hello&quot;));
+
+var caseInsensitiveDictionary = new Dictionary&lt;string, string&gt;(StringComparer.OrdinalIgnoreCase)
+{
+    [&quot;Hello&quot;] = &quot;World&quot;,
+};
+
+Assert.That(caseInsensitiveDictionary, Does.ContainKey(&quot;Hello&quot;));
+Assert.That(caseInsensitiveDictionary, Does.ContainKey(&quot;hello&quot;));
+Assert.That(caseInsensitiveDictionary, Does.Not.ContainKey(&quot;hallo&quot;));
+
+// Note that the 'IgnoreCase' here is on the Value part, not the Key.
+Assert.That(caseInsensitiveDictionary, Does.ContainKey(&quot;hello&quot;).WithValue(&quot;world&quot;).IgnoreCase);
 </code></pre>
 <h2 id="see-also">See also</h2>
 <ul>
 <li><a href="DictionaryContainsValueConstraint.html">DictionaryContainsValueConstraint</a></li>
 <li><a href="DictionaryContainsKeyValuePairConstraint.html">DictionaryContainsKeyValuePairConstraint</a></li>
 </ul>
+
 </article>
           </div>
-          
+
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/nunit/docs/blob/master/docs/articles/nunit/writing-tests/constraints/DictionaryContainsKeyConstraint.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/stevenaw/docs/blob/master/docs/articles/nunit/writing-tests/constraints/DictionaryContainsKeyConstraint.md/#L1" class="contribution-link">Edit this page</a>
                   </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-                <h5>In This Article</h5>
+                <h5>In this article</h5>
                 <div></div>
               </nav>
             </div>
           </div>
         </div>
       </div>
-      
+
       <footer>
         <div class="grad-bottom"></div>
         <div class="footer">
@@ -159,14 +157,14 @@ Assert.That(mydict, Does.ContainKey(&quot;Hello&quot;).WithValue(&quot;World&quo
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            
-            <span>Generated by <strong>DocFX</strong></span> | Copyright (c) 2018-<span id="currentYear"></span> The NUnit Project - Licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>
+      <span>Generated by <strong>DocFX</strong></span> | Copyright (c) 2018-<span id="currentYear"></span> The NUnit Project - Licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>
+      
           </div>
         </div>
       </footer>
     </div>
-    
-    <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
+
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.min.js"></script>
     <script type="text/javascript" src="../../../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../../../styles/main.js"></script>
   </body>

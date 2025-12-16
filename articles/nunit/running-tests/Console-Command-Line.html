@@ -1,47 +1,36 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <!--[if IE]><![endif]-->
-<html>
-  
+<html lang="en">
+
   <head>
-    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-PCB5BYBNM2"></script>
+    <meta charset="utf-8">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PCB5BYBNM2"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+      function gtag() { dataLayer.push(arguments); }
       gtag('js', new Date());
-  
       gtag('config', 'G-PCB5BYBNM2');
     </script>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Console Command Line | NUnit Docs </title>
-    <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Console Command Line | NUnit Docs ">
-    <meta name="generator" content="docfx 2.58.9.0">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Console Command Line | NUnit Docs </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Console Command Line | NUnit Docs ">
     
-  
-    <link rel="apple-touch-icon" sizes="180x180" href="../../../favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../../../favicons/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../../../favicons/favicon-32x32.png">
-    <link rel="shortcut icon" type="image/x-icon" href="../../../favicon.ico">
-    <link rel="manifest" href="../../../favicons/manifest.json">
-    <link rel="mask-icon" href="../../../favicons/safari-pinned-tab.svg" color="#222222">
-    <meta name="msapplication-config" content="../../../favicons/browserconfig.xml">
-    <meta name="msapplication-TileColor" content="#222222">
-    <meta name="theme-color" content="#222222">
-  
-    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
-    <link rel="stylesheet" href="../../../styles/docfx.css">
-    <link rel="stylesheet" href="../../../styles/main.css">
-    <meta property="docfx:navrel" content="../../../toc.html">
-    <meta property="docfx:tocrel" content="../../toc.html">
+    
+      <link rel="shortcut icon" href="../../../favicon.ico">
+      <link rel="stylesheet" href="../../../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../../../styles/docfx.css">
+      <link rel="stylesheet" href="../../../styles/main.css">
+      <meta property="docfx:navrel" content="../../../toc.html">
+      <meta property="docfx:tocrel" content="../../toc.html">
     
     <meta property="docfx:rel" content="../../../">
     
   </head>
-  `  <body data-spy="scroll" data-target="#affix" data-offset="120">
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
-        
+
         <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
           <div class="container">
             <div class="navbar-header">
@@ -51,7 +40,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              
+
               <a class="navbar-brand" href="../../../index.html">
                 <img id="logo" class="svg" src="../../../logo.svg" alt="">
               </a>
@@ -65,7 +54,7 @@
             </div>
           </div>
         </nav>
-        
+
         <div class="subnav navbar navbar-default">
           <div class="container hide-when-search" id="breadcrumb">
             <ul class="breadcrumb">
@@ -75,17 +64,17 @@
         </div>
       </header>
       <div class="container body-content">
-        
+
         <div id="search-results">
           <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+          <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
-        
+
         <div class="sidenav hide-when-search">
           <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
           <div class="sidetoggle collapse" id="sidetoggle">
@@ -100,19 +89,16 @@
 <p>The console interface runner is invoked by a command in the form</p>
 <pre><code class="lang-cmd">    NUNIT3-CONSOLE [inputfiles] [options]
 </code></pre>
-<p>where <strong>inputfiles</strong> is one or more assemblies or test projects of
-a type that NUnit can process and <strong>options</strong> is zero or more options.
-Input files and options may be mixed in any order.</p>
+<p>where <strong>inputfiles</strong> is one or more assemblies or test projects of a type that NUnit can process and <strong>options</strong> is zero
+or more options. Input files and options may be mixed in any order.</p>
 <h2 id="input-files">Input Files</h2>
-<p>The console program must always have an assembly or project specified.
-Assemblies are specified by file name or path, which may be absolute or
-relative. Relative paths are interpreted based on the current directory.</p>
-<p>In addition to assemblies, you may specify any project type that is
-understood by NUnit. Out of the box, this includes various
-Visual Studio project types as well as NUnit (.nunit) test projects (see <a class="xref" href="NUnit-Test-Projects.html">NUnit Test Projects</a> for a description of NUnit test projects).</p>
-<p>If the NUnit V2 framework driver is installed, test assemblies may
-be run based on any version of the NUnit framework beginning with 2.0.
-Without the V2 driver, only version 3.0 and higher tests may be run.</p>
+<p>The console program must always have an assembly or project specified. Assemblies are specified by file name or path,
+which may be absolute or relative. Relative paths are interpreted based on the current directory.</p>
+<p>In addition to assemblies, you may specify any project type that is understood by NUnit. Out of the box, this includes
+various Visual Studio project types as well as NUnit (.nunit) test projects (see <a class="xref" href="NUnit-Test-Projects.html">NUnit Test
+Projects</a> for a description of NUnit test projects).</p>
+<p>If the NUnit V2 framework driver is installed, test assemblies may be run based on any version of the NUnit framework
+beginning with 2.0. Without the V2 driver, only version 3.0 and higher tests may be run.</p>
 <h2 id="options">Options</h2>
 <table>
 <thead>
@@ -124,7 +110,7 @@ Without the V2 driver, only version 3.0 and higher tests may be run.</p>
 <tbody>
 <tr>
 <td><code>@FILE</code></td>
-<td>Specifies the name (or path) of a FILE containing additional command-line arguments to be interpolated at the point where the @FILE expression appears. Each line in the file represents a separate command-line argument.</td>
+<td>Specifies the name (or path) of a FILE containing additional command-line arguments to be inserted at the point where the @FILE expression appears. Each line in the file represents one argument to the console runner. If an option takes a value, that value must appear on the same line.</td>
 </tr>
 <tr>
 <td><code>--test=FULLNAMES</code></td>
@@ -132,7 +118,7 @@ Without the V2 driver, only version 3.0 and higher tests may be run.</p>
 </tr>
 <tr>
 <td><code>--testlist=FILE</code></td>
-<td>The name (or path) of a FILE containing a list of tests to run or explore, one per line.</td>
+<td>The name (or path) of a FILE containing a list of tests to run or explore, one per line. May also include comment lines, indicated by <code>#</code> in the first column.</td>
 </tr>
 <tr>
 <td><code>--where=EXPRESSION</code></td>
@@ -240,7 +226,7 @@ Without the V2 driver, only version 3.0 and higher tests may be run.</p>
 </tr>
 <tr>
 <td><code>--labels=VALUE</code></td>
-<td>Specify whether to write test case names to the output. Values: Off, On, Before, After, or All. <strong>Off</strong>: No labeling is used. Both normal and immediate output appear in the order produced - i.e. immediate first. <strong>On</strong>: A label appears before each sequence of output lines from the same test. Since tests may be run in parallel, output from different tests may be intermixed. <strong>Before</strong>: A label appears at the start of every test, whether it produces output or not. Additional labels are produced as needed if interspersed output takes place, just as for <code>--labels=On</code>. Synonym for <code>--labels=All</code>. <strong>labels=After</strong>: A label appears at the end of every test, whether it produced output or not. This label includes the pass/fail status of the test in addition to its name. Additional labels are produced as needed if there is any output, just as for <code>--labels=On</code>. <strong>All</strong>: A label appears at the start of every test, whether it produces output or not. Additional labels are produced as needed if interspersed output takes place, just as for <code>--labels=On</code>. Synonym for <code>--labels=Before</code>.</td>
+<td>Specify whether to write test case names to the output. Values: Off, OnOutputOnly, Before, After, BeforeAndAfter, On, or All. If not specified, defaults to Off. <strong>Off</strong>: No labeling is used. Both normal and immediate output appear in the order produced - i.e. immediate first. <strong>OnOutputOnly</strong>: A label appears before each sequence of output lines from the same test. Since tests may be run in parallel, output from different tests may be intermixed. <strong>Before</strong>: A label appears at the start of every test, whether it produces output or not. Additional labels are produced as needed if interspersed output takes place, just as for <code>--labels=OnOutputOnly</code>. <strong>labels=After</strong>: A label appears at the end of every test, whether it produced output or not. This label includes the pass/fail status of the test in addition to its name. Additional labels are produced as needed if there is any output, just as for <code>--labels=OnOutputOnly</code>. <strong>BeforeAndAfter</strong> A label appears at the start and end of every test, whether it produced output or not. The label at the end of the test includes the pass/fail status of the test in addition to its name. Additional labels are produced as needed if interspersed output takes place, just as for <code>--labels=OnOutputOnly</code>. <strong>On</strong>. Synonym for <code>--labels=OnOutputOnly</code>, now deprecated (will be removed in a future release). <strong>All</strong>: Synonym for <code>--labels=Before</code>, now deprecated (will be removed in a future release).</td>
 </tr>
 <tr>
 <td><code>--test-name-format=VALUE</code></td>
@@ -285,18 +271,16 @@ Without the V2 driver, only version 3.0 and higher tests may be run.</p>
 </tbody>
 </table>
 <h3 id="description">Description</h3>
-<p>By default, this command runs the tests contained in the
-assemblies and projects specified. If the <strong>--explore</strong> option
-is used, no tests are executed but a description of the tests
-is saved in the specified or default format.</p>
-<p>Several options that specify processing of XML output take
-an output specification as a value. A SPEC may take one of
+<p>By default, this command runs the tests contained in the assemblies and projects specified. If the <strong>--explore</strong> option
+is used, no tests are executed but a description of the tests is saved in the specified or default format.</p>
+<p>Several options that specify processing of XML output take an output specification as a value. A SPEC may take one of
 the following forms:</p>
 <ul>
 <li><code>--OPTION:filename</code></li>
 <li><code>--OPTION:filename;format=formatname</code></li>
 <li><code>--OPTION:filename;transform=xsltfile</code></li>
 </ul>
+<p>Be aware that the semicolon (;) might need escaping in some terminals.</p>
 <p>The --result option may use any of the following formats:</p>
 <ul>
 <li>nunit3 - the native XML format for NUnit 3</li>
@@ -307,32 +291,31 @@ the following forms:</p>
 <li>nunit3 - the native XML format for NUnit 3</li>
 <li>cases  - a text file listing the full names of all test cases.</li>
 </ul>
-<p>If --explore is used without any specification following, a list of
-test cases is output to the console.</p>
-<p>If neither --result nor --explore is used,
-NUnit saves the results to TestResult.xml in nunit3 format.</p>
+<p>If --explore is used without any specification following, a list of test cases is output to the console.</p>
+<p>If neither --result nor --explore is used, NUnit saves the results to TestResult.xml in nunit3 format.</p>
 <p>Any transforms provided must handle input in the native nunit3 format.</p>
+
 </article>
           </div>
-          
+
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/nunit/docs/blob/master/docs/articles/nunit/running-tests/Console-Command-Line.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/stevenaw/docs/blob/master/docs/articles/nunit/running-tests/Console-Command-Line.md/#L1" class="contribution-link">Edit this page</a>
                   </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-                <h5>In This Article</h5>
+                <h5>In this article</h5>
                 <div></div>
               </nav>
             </div>
           </div>
         </div>
       </div>
-      
+
       <footer>
         <div class="grad-bottom"></div>
         <div class="footer">
@@ -340,14 +323,14 @@ NUnit saves the results to TestResult.xml in nunit3 format.</p>
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            
-            <span>Generated by <strong>DocFX</strong></span> | Copyright (c) 2018-<span id="currentYear"></span> The NUnit Project - Licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>
+      <span>Generated by <strong>DocFX</strong></span> | Copyright (c) 2018-<span id="currentYear"></span> The NUnit Project - Licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>
+      
           </div>
         </div>
       </footer>
     </div>
-    
-    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+
+    <script type="text/javascript" src="../../../styles/docfx.vendor.min.js"></script>
     <script type="text/javascript" src="../../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../../styles/main.js"></script>
   </body>

@@ -1,47 +1,36 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <!--[if IE]><![endif]-->
-<html>
-  
+<html lang="en">
+
   <head>
-    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-PCB5BYBNM2"></script>
+    <meta charset="utf-8">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PCB5BYBNM2"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+      function gtag() { dataLayer.push(arguments); }
       gtag('js', new Date());
-  
       gtag('config', 'G-PCB5BYBNM2');
     </script>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Explicit | NUnit Docs </title>
-    <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Explicit | NUnit Docs ">
-    <meta name="generator" content="docfx 2.58.9.0">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Explicit | NUnit Docs </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Explicit | NUnit Docs ">
     
-  
-    <link rel="apple-touch-icon" sizes="180x180" href="../../../../favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../../../../favicons/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../../../../favicons/favicon-32x32.png">
-    <link rel="shortcut icon" type="image/x-icon" href="../../../../favicon.ico">
-    <link rel="manifest" href="../../../../favicons/manifest.json">
-    <link rel="mask-icon" href="../../../../favicons/safari-pinned-tab.svg" color="#222222">
-    <meta name="msapplication-config" content="../../../../favicons/browserconfig.xml">
-    <meta name="msapplication-TileColor" content="#222222">
-    <meta name="theme-color" content="#222222">
-  
-    <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
-    <link rel="stylesheet" href="../../../../styles/docfx.css">
-    <link rel="stylesheet" href="../../../../styles/main.css">
-    <meta property="docfx:navrel" content="../../../../toc.html">
-    <meta property="docfx:tocrel" content="../../../toc.html">
+    
+      <link rel="shortcut icon" href="../../../../favicon.ico">
+      <link rel="stylesheet" href="../../../../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../../../../styles/docfx.css">
+      <link rel="stylesheet" href="../../../../styles/main.css">
+      <meta property="docfx:navrel" content="../../../../toc.html">
+      <meta property="docfx:tocrel" content="../../../toc.html">
     
     <meta property="docfx:rel" content="../../../../">
     
   </head>
-  `  <body data-spy="scroll" data-target="#affix" data-offset="120">
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
-        
+
         <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
           <div class="container">
             <div class="navbar-header">
@@ -51,7 +40,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              
+
               <a class="navbar-brand" href="../../../../index.html">
                 <img id="logo" class="svg" src="../../../../logo.svg" alt="">
               </a>
@@ -65,7 +54,7 @@
             </div>
           </div>
         </nav>
-        
+
         <div class="subnav navbar navbar-default">
           <div class="container hide-when-search" id="breadcrumb">
             <ul class="breadcrumb">
@@ -75,17 +64,17 @@
         </div>
       </header>
       <div class="container body-content">
-        
+
         <div id="search-results">
           <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+          <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
-        
+
         <div class="sidenav hide-when-search">
           <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
           <div class="sidetoggle collapse" id="sidetoggle">
@@ -97,25 +86,22 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="explicit">Explicit</h1>
 
-<p>The Explicit attribute causes a test or test fixture to be skipped unless it is
-explicitly selected for running. The test or fixture will be run if it is
-selected by name or if it is included by use of a filter. A <strong>not</strong>
-filter, which excludes certain tests, is not treated as an explicit selection
-and never causes an explicit test to be run. All other filters are considered
-to explicitly select the tests that they match. See examples below.</p>
-<p>An optional string argument may be used to give the reason for marking
-the test Explicit.</p>
-<p>If a test or fixture with the Explicit attribute is encountered in the course of
-running tests, it is skipped unless it has been specifically selected by one
-of the above means. The test does not affect the overall result of the test run.
+<p>The Explicit attribute causes a test or test fixture to be skipped unless it is explicitly selected for running. The
+test or fixture will be run if it is selected by name or if it is included by use of a filter. A <strong>not</strong> filter, which
+excludes certain tests, is not treated as an explicit selection and never causes an explicit test to be run. All other
+filters are considered to explicitly select the tests that they match. See examples below.</p>
+<p>An optional string argument may be used to give the reason for marking the test Explicit.</p>
+<p>If a test or fixture with the Explicit attribute is encountered in the course of running tests, it is skipped unless it
+has been specifically selected by one of the above means. The test does not affect the overall result of the test run.
 Explicit tests are displayed in the gui as skipped.</p>
 <div class="WARNING">
 <h5>Warning</h5>
-<p>While the C# syntax allows you to place an Explicit attribute on a SetUpFixture class, the attribute is ignored by NUnit and has no effect in current releases.</p>
+<p>While the C# syntax allows you to place an Explicit attribute on a SetUpFixture class, the attribute is
+ignored by NUnit and has no effect in current releases.</p>
 </div>
 <h2 id="examples-of-use">Examples of Use</h2>
-<p>Using the console command-line to select tests, the following options will include any
-explicit tests that fall under the selection.</p>
+<p>Using the console command-line to select tests, the following options will include any explicit tests that fall under
+the selection.</p>
 <pre><code class="lang-none">    --test=My.Namespace.Fixture.Method
     --test=My.Namespace.Fixture
     --test=My.Namespace
@@ -129,8 +115,30 @@ explicit tests that fall under the selection.</p>
 <pre><code class="lang-none">    --where test!=My.Namespace.Fixture
     --where cat!=X
 </code></pre>
+<h2 id="trap">TRAP</h2>
+<p>If a project contains only explicit tests, running the test project will execute all tests, as  it is treated as an
+explicit test run. To prevent this, ensure the project includes at least one non-explicit test, even if it's just a
+dummy test.</p>
+<p>From <a href="https://github.com/nunit/nunit3-vs-adapter/issues/1223">this issue</a>, the following comment explains how the
+adapter works with explicit tests:</p>
+<p><em>&quot;When the adapter is called from the testhost, it receives a list of tests to run. It doesn't know HOW the Test
+Explorer is being used. And thus it has no knowledge if there are other tests present that are not selected, OR if the
+tests it receives are all the tests in the solution.</em></p>
+<p><em>If all the tests are Explicit it will assume that this is an explicit testrun. When you only have one test, and that
+test is explicit, it will be an explicit test run.</em></p>
+<p><em>When you add the second test, which is not explicit, it will see both tests, and since there is a non-explicit test
+included, the test is a non-explicit testrun, and all explicit tests will be ignored.</em></p>
+<p><em>If you have a situation with only one explicit test, the work around is to just add another non-explicit test, which
+can be empty, or even have a false Assume statement, which will make the test be inconclusive, thus not part of your
+results.&quot;</em></p>
+<h2 id="trick">TRICK</h2>
+<p>If you want to ensure NO Explicit tests are being run, e.g. a CI build, you can change the ExplicitMode to None.
+You can do this either in a .runsettings file, or as a command line parameter</p>
+<pre><code class="lang-cmd">dotnet test -- NUnit.ExplicitMode=None
+</code></pre>
+<p>(From version 5.2.0)</p>
 <h2 id="test-fixture-syntax">Test Fixture Syntax</h2>
-<h3 id="c"><code>C#</code></h3>
+<p>C#:</p>
 <pre><code class="lang-csharp">namespace NUnit.Tests
 {
   using System;
@@ -143,7 +151,7 @@ explicit tests that fall under the selection.</p>
   }
 }
 </code></pre>
-<h3 id="visual-basic">Visual Basic</h3>
+<p>Visual Basic:</p>
 <pre><code class="lang-VB">Imports System
 Imports NUnit.Framework
 
@@ -155,7 +163,7 @@ Namespace NUnit.Tests
   End Class
 End Namespace
 </code></pre>
-<h3 id="c-1">C++</h3>
+<p>C++:</p>
 <pre><code class="lang-cpp">using namespace System;
 using namespace NUnit::Framework;
 
@@ -176,7 +184,7 @@ namespace NUnitTests {
 }
 </code></pre>
 <h2 id="test-syntax">Test Syntax</h2>
-<h3 id="c-2"><code>C#</code></h3>
+<p>C#:</p>
 <pre><code class="lang-csharp">namespace NUnit.Tests
 {
   using System;
@@ -190,7 +198,7 @@ namespace NUnitTests {
     { /* ... */ }
 }
 </code></pre>
-<h3 id="visual-basic-1">Visual Basic</h3>
+<p>Visual Basic:</p>
 <pre><code class="lang-vb">Imports System
 Imports NUnit.Framework
 
@@ -203,7 +211,7 @@ Namespace NUnit.Tests
   End Class
 End Namespace
 </code></pre>
-<h3 id="c-3">C++</h3>
+<p>C++:</p>
 <pre><code class="lang-cpp"># using &lt;NUnit.Framework.dll&gt;
 using namespace System;
 using namespace NUnit::Framework;
@@ -223,27 +231,28 @@ namespace NUnitTests {
   // ...
 }
 </code></pre>
+
 </article>
           </div>
-          
+
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/nunit/docs/blob/master/docs/articles/nunit/writing-tests/attributes/explicit.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/stevenaw/docs/blob/master/docs/articles/nunit/writing-tests/attributes/explicit.md/#L1" class="contribution-link">Edit this page</a>
                   </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-                <h5>In This Article</h5>
+                <h5>In this article</h5>
                 <div></div>
               </nav>
             </div>
           </div>
         </div>
       </div>
-      
+
       <footer>
         <div class="grad-bottom"></div>
         <div class="footer">
@@ -251,14 +260,14 @@ namespace NUnitTests {
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            
-            <span>Generated by <strong>DocFX</strong></span> | Copyright (c) 2018-<span id="currentYear"></span> The NUnit Project - Licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>
+      <span>Generated by <strong>DocFX</strong></span> | Copyright (c) 2018-<span id="currentYear"></span> The NUnit Project - Licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>
+      
           </div>
         </div>
       </footer>
     </div>
-    
-    <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
+
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.min.js"></script>
     <script type="text/javascript" src="../../../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../../../styles/main.js"></script>
   </body>

@@ -1,47 +1,36 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <!--[if IE]><![endif]-->
-<html>
-  
+<html lang="en">
+
   <head>
-    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-PCB5BYBNM2"></script>
+    <meta charset="utf-8">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PCB5BYBNM2"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+      function gtag() { dataLayer.push(arguments); }
       gtag('js', new Date());
-  
       gtag('config', 'G-PCB5BYBNM2');
     </script>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Getting Started with the NUnit Engine | NUnit Docs </title>
-    <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Getting Started with the NUnit Engine | NUnit Docs ">
-    <meta name="generator" content="docfx 2.58.9.0">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Getting Started with the NUnit Engine | NUnit Docs </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Getting Started with the NUnit Engine | NUnit Docs ">
     
-  
-    <link rel="apple-touch-icon" sizes="180x180" href="../../favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../../favicons/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../../favicons/favicon-32x32.png">
-    <link rel="shortcut icon" type="image/x-icon" href="../../favicon.ico">
-    <link rel="manifest" href="../../favicons/manifest.json">
-    <link rel="mask-icon" href="../../favicons/safari-pinned-tab.svg" color="#222222">
-    <meta name="msapplication-config" content="../../favicons/browserconfig.xml">
-    <meta name="msapplication-TileColor" content="#222222">
-    <meta name="theme-color" content="#222222">
-  
-    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
-    <link rel="stylesheet" href="../../styles/docfx.css">
-    <link rel="stylesheet" href="../../styles/main.css">
-    <meta property="docfx:navrel" content="../../toc.html">
-    <meta property="docfx:tocrel" content="../toc.html">
+    
+      <link rel="shortcut icon" href="../../favicon.ico">
+      <link rel="stylesheet" href="../../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../../styles/docfx.css">
+      <link rel="stylesheet" href="../../styles/main.css">
+      <meta property="docfx:navrel" content="../../toc.html">
+      <meta property="docfx:tocrel" content="../toc.html">
     
     <meta property="docfx:rel" content="../../">
     
   </head>
-  `  <body data-spy="scroll" data-target="#affix" data-offset="120">
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
-        
+
         <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
           <div class="container">
             <div class="navbar-header">
@@ -51,7 +40,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              
+
               <a class="navbar-brand" href="../../index.html">
                 <img id="logo" class="svg" src="../../logo.svg" alt="">
               </a>
@@ -65,7 +54,7 @@
             </div>
           </div>
         </nav>
-        
+
         <div class="subnav navbar navbar-default">
           <div class="container hide-when-search" id="breadcrumb">
             <ul class="breadcrumb">
@@ -75,17 +64,17 @@
         </div>
       </header>
       <div class="container body-content">
-        
+
         <div id="search-results">
           <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+          <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
-        
+
         <div class="sidenav hide-when-search">
           <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
           <div class="sidetoggle collapse" id="sidetoggle">
@@ -99,15 +88,27 @@
 
 <p>Building your own test runner? This guide covers the basics of getting up and running.</p>
 <h2 id="fundamentals">Fundamentals</h2>
-<p>The engine is designed to be accessed through the methods exposed in the <code>nunit.engine.api</code> assembly - which is the only assembly which should be referenced by runners wishing to use the engine. The API exposed through this assembly will be maintained in a backwards-compatible way wherever possible.</p>
-<p>The actual engine itself is contained within the <code>nunit.engine</code> assembly, and its dependencies. This assembly should <strong>not</strong> be referenced by the runners, as methods exposed here could be subject to changes in future versions. Instead, the API should be used to locate and load an appropriate version of the engine, which will return an instance of the <code>ITestEngine</code> interface to the runner.</p>
+<p>The engine is designed to be accessed through the methods exposed in the <code>nunit.engine.api</code> assembly - which is the only
+assembly which should be referenced by runners wishing to use the engine. The API exposed through this assembly will be
+maintained in a backwards-compatible way wherever possible.</p>
+<p>The actual engine itself is contained within the <code>nunit.engine</code> assembly, and its dependencies. This assembly should
+<strong>not</strong> be referenced by the runners, as methods exposed here could be subject to changes in future versions. Instead,
+the API should be used to locate and load an appropriate version of the engine, which will return an instance of the
+<code>ITestEngine</code> interface to the runner.</p>
 <h2 id="packages">Packages</h2>
-<p>The NUnit Engine can be found in the <a href="https://www.nuget.org/packages/NUnit.Engine/">NUnit.Engine NuGet Package</a>. It is also included within the .zip file found in <a href="https://github.com/nunit/nunit-console/releases%5D">nunit-console repository</a> releases.</p>
+<p>The NUnit Engine can be found in the <a href="https://www.nuget.org/packages/NUnit.Engine/">NUnit.Engine NuGet Package</a>. It is
+also included within the .zip file found in <a href="https://github.com/nunit/nunit-console/releases">nunit-console repository</a>
+releases.</p>
 <h2 id="using-the-api">Using the API</h2>
-<p>The <code>TestEngineActivator</code> class is first used to obtain an instance of the engine. Tests are specified inside a <code>TestPackage</code>, which can contain one or many different test assemblies. Settings related to how the tests should be run are attached to the test package.</p>
-<p>Once a test package has been created, the engine can generate an instance of an <code>ITestRunner</code>, which will be constructed to reflect the structure of your test package.</p>
-<p>Finally, <code>Run</code> can be called on the <code>ITestRunner</code>, to run tests in the specified package. This will return an <code>XmlNode</code> which contains the results of the test run, in the standard <a class="xref" href="../nunit/technical-notes/usage/Test-Result-XML-Format.html">NUnit Test Results</a> format.</p>
-<p>The following example shows the simplest path of how to get a copy of the engine, create a runner and run tests using the interfaces:</p>
+<p>The <code>TestEngineActivator</code> class is first used to obtain an instance of the engine. Tests are specified inside a
+<code>TestPackage</code>, which can contain one or many different test assemblies. Settings related to how the tests should be run
+are attached to the test package.</p>
+<p>Once a test package has been created, the engine can generate an instance of an <code>ITestRunner</code>, which will be constructed
+to reflect the structure of your test package.</p>
+<p>Finally, <code>Run</code> can be called on the <code>ITestRunner</code>, to run tests in the specified package. This will return an <code>XmlNode</code>
+which contains the results of the test run, in the standard <a class="xref" href="../nunit/technical-notes/usage/Test-Result-XML-Format.html">NUnit Test Results</a> format.</p>
+<p>The following example shows the simplest path of how to get a copy of the engine, create a runner and run tests using
+the interfaces:</p>
 <pre><code class="lang-csharp">// Get an interface to the engine
 ITestEngine engine = TestEngineActivator.CreateInstance();
 
@@ -121,27 +122,28 @@ ITestRunner runner = engine.GetRunner(package);
 XmlNode testResult = runner.Run(listener: null, TestFilter.Empty);
 </code></pre>
 <p>For further details of what can be achieved with the Engine, see the <a class="xref" href="Test-Engine-API.html">Test Engine API Page</a>.</p>
+
 </article>
           </div>
-          
+
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/nunit/docs/blob/master/docs/articles/nunit-engine/Getting-Started.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/stevenaw/docs/blob/master/docs/articles/nunit-engine/Getting-Started.md/#L1" class="contribution-link">Edit this page</a>
                   </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-                <h5>In This Article</h5>
+                <h5>In this article</h5>
                 <div></div>
               </nav>
             </div>
           </div>
         </div>
       </div>
-      
+
       <footer>
         <div class="grad-bottom"></div>
         <div class="footer">
@@ -149,14 +151,14 @@ XmlNode testResult = runner.Run(listener: null, TestFilter.Empty);
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            
-            <span>Generated by <strong>DocFX</strong></span> | Copyright (c) 2018-<span id="currentYear"></span> The NUnit Project - Licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>
+      <span>Generated by <strong>DocFX</strong></span> | Copyright (c) 2018-<span id="currentYear"></span> The NUnit Project - Licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>
+      
           </div>
         </div>
       </footer>
     </div>
-    
-    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+
+    <script type="text/javascript" src="../../styles/docfx.vendor.min.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../styles/main.js"></script>
   </body>

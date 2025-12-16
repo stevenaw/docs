@@ -1,47 +1,36 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <!--[if IE]><![endif]-->
-<html>
-  
+<html lang="en">
+
   <head>
-    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-PCB5BYBNM2"></script>
+    <meta charset="utf-8">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PCB5BYBNM2"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+      function gtag() { dataLayer.push(arguments); }
       gtag('js', new Date());
-  
       gtag('config', 'G-PCB5BYBNM2');
     </script>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Visual Studio Test Generator | NUnit Docs </title>
-    <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Visual Studio Test Generator | NUnit Docs ">
-    <meta name="generator" content="docfx 2.58.9.0">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Visual Studio Test Generator | NUnit Docs </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Visual Studio Test Generator | NUnit Docs ">
     
-  
-    <link rel="apple-touch-icon" sizes="180x180" href="../../favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../../favicons/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../../favicons/favicon-32x32.png">
-    <link rel="shortcut icon" type="image/x-icon" href="../../favicon.ico">
-    <link rel="manifest" href="../../favicons/manifest.json">
-    <link rel="mask-icon" href="../../favicons/safari-pinned-tab.svg" color="#222222">
-    <meta name="msapplication-config" content="../../favicons/browserconfig.xml">
-    <meta name="msapplication-TileColor" content="#222222">
-    <meta name="theme-color" content="#222222">
-  
-    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
-    <link rel="stylesheet" href="../../styles/docfx.css">
-    <link rel="stylesheet" href="../../styles/main.css">
-    <meta property="docfx:navrel" content="../../toc.html">
-    <meta property="docfx:tocrel" content="../toc.html">
+    
+      <link rel="shortcut icon" href="../../favicon.ico">
+      <link rel="stylesheet" href="../../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../../styles/docfx.css">
+      <link rel="stylesheet" href="../../styles/main.css">
+      <meta property="docfx:navrel" content="../../toc.html">
+      <meta property="docfx:tocrel" content="../toc.html">
     
     <meta property="docfx:rel" content="../../">
     
   </head>
-  `  <body data-spy="scroll" data-target="#affix" data-offset="120">
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
-        
+
         <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
           <div class="container">
             <div class="navbar-header">
@@ -51,7 +40,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              
+
               <a class="navbar-brand" href="../../index.html">
                 <img id="logo" class="svg" src="../../logo.svg" alt="">
               </a>
@@ -65,7 +54,7 @@
             </div>
           </div>
         </nav>
-        
+
         <div class="subnav navbar navbar-default">
           <div class="container hide-when-search" id="breadcrumb">
             <ul class="breadcrumb">
@@ -75,17 +64,17 @@
         </div>
       </header>
       <div class="container body-content">
-        
+
         <div id="search-results">
           <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+          <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
-        
+
         <div class="sidenav hide-when-search">
           <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
           <div class="sidetoggle collapse" id="sidetoggle">
@@ -97,46 +86,47 @@
             <article class="content wrap" id="_content" data-uid="vstestgenerator">
 <h1 id="visual-studio-test-generator">Visual Studio Test Generator</h1>
 
-<p>This is an extension for Visual Studio 2015 and 2017 that extends
-the test functionality to allow you to create unit tests and IntelliTests.
-This extension extends the built in test generator functionality allowing
-developers to generate tests using NUnit 2.6.x or NUnit 3.X.</p>
-<p>Please note that IntelliTest is only available in Visual
-Studio Enterprise edition. Other versions of Visual Studio
-only have the <code>Create Unit Tests</code> menu option.</p>
+<p>This is an extension for Visual Studio 2015, 2017/2019 and 2022 that extends the test functionality to allow you to
+create unit tests and IntelliTests. This extension extends the built in test generator functionality allowing developers
+to generate tests using NUnit 2.6.x (not for VS2022) or NUnit 3.X.</p>
+<p>Please note that IntelliTest is only available in Visual Studio Enterprise edition. Other versions of Visual Studio only
+have the <code>Create Unit Tests</code> menu option.</p>
 <h2 id="download">Download</h2>
 <p>You can download this extension in Visual Studio using <strong>Tools | Extensions and Updates...</strong>
-and searching for <strong>Test Generator NUnit Extension</strong>. You can also download from the
-<a href="https://visualstudiogallery.msdn.microsoft.com/bd30bf3f-4183-4b00-a245-1875316b8cd3">Visual Studio Gallery</a> for VS 2015 and <a href="https://marketplace.visualstudio.com/items?itemName=NUnitDevelopers.TestGeneratorNUnitextension-18371">here for VS 2017</a>,
-or from the <a href="https://github.com/nunit/nunit-vs-testgenerator/releases">GitHub Releases Page</a>.</p>
+and searching for <strong>Test Generator NUnit Extension</strong>. You can also download from the <a href="https://marketplace.visualstudio.com/items?itemName=NUnitDevelopers.TestGeneratorNUnitextension">Visual Studio
+Gallery</a> for VS 2015
+and <a href="https://marketplace.visualstudio.com/items?itemName=NUnitDevelopers.TestGeneratorNUnitextension-18371">here for VS
+2017</a>, or from
+the <a href="https://github.com/nunit/nunit-vs-testgenerator/releases">GitHub Releases Page</a>.</p>
 <h3 id="how-to-use">How to Use</h3>
-<p>For more information on using IntelliTest and this extension, please
-see the <a href="https://msdn.microsoft.com/en-us/library/dn823749.aspx">Microsoft documentation</a>.</p>
+<p>For more information on using IntelliTest and this extension, please see the <a href="https://learn.microsoft.com/en-us/previous-versions/visualstudio/visual-studio-2015/test/generate-unit-tests-for-your-code-with-intellitest?view=vs-2015&amp;redirectedfrom=MSDN">Microsoft
+documentation</a>.</p>
 <h4 id="right-click-to-create-tests">Right-Click to Create Tests</h4>
 <p><img src="../../images/right-click-create-tests.png" alt="Right-Click to Create Tests"></p>
 <h4 id="select-nunit-from-the-test-framework-dropdown">Select NUnit from the Test Framework dropdown</h4>
-<p><img src="../../images/right-click-create-tests.png" alt="Selecting NUnit"></p>
+<p><img src="../../images/right-click-create-tests-select-nunit.png" alt="Selecting NUnit"></p>
+
 </article>
           </div>
-          
+
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/nunit/docs/blob/master/docs/articles/vs-test-generator/Visual-Studio-Test-Generator.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/stevenaw/docs/blob/master/docs/articles/vs-test-generator/Visual-Studio-Test-Generator.md/#L1" class="contribution-link">Edit this page</a>
                   </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-                <h5>In This Article</h5>
+                <h5>In this article</h5>
                 <div></div>
               </nav>
             </div>
           </div>
         </div>
       </div>
-      
+
       <footer>
         <div class="grad-bottom"></div>
         <div class="footer">
@@ -144,14 +134,14 @@ see the <a href="https://msdn.microsoft.com/en-us/library/dn823749.aspx">Microso
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            
-            <span>Generated by <strong>DocFX</strong></span> | Copyright (c) 2018-<span id="currentYear"></span> The NUnit Project - Licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>
+      <span>Generated by <strong>DocFX</strong></span> | Copyright (c) 2018-<span id="currentYear"></span> The NUnit Project - Licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>
+      
           </div>
         </div>
       </footer>
     </div>
-    
-    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+
+    <script type="text/javascript" src="../../styles/docfx.vendor.min.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../styles/main.js"></script>
   </body>

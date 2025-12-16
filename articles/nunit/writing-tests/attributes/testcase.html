@@ -1,47 +1,36 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <!--[if IE]><![endif]-->
-<html>
-  
+<html lang="en">
+
   <head>
-    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-PCB5BYBNM2"></script>
+    <meta charset="utf-8">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PCB5BYBNM2"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+      function gtag() { dataLayer.push(arguments); }
       gtag('js', new Date());
-  
       gtag('config', 'G-PCB5BYBNM2');
     </script>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>TestCase | NUnit Docs </title>
-    <meta name="viewport" content="width=device-width">
-    <meta name="title" content="TestCase | NUnit Docs ">
-    <meta name="generator" content="docfx 2.58.9.0">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>TestCase | NUnit Docs </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="TestCase | NUnit Docs ">
     
-  
-    <link rel="apple-touch-icon" sizes="180x180" href="../../../../favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../../../../favicons/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../../../../favicons/favicon-32x32.png">
-    <link rel="shortcut icon" type="image/x-icon" href="../../../../favicon.ico">
-    <link rel="manifest" href="../../../../favicons/manifest.json">
-    <link rel="mask-icon" href="../../../../favicons/safari-pinned-tab.svg" color="#222222">
-    <meta name="msapplication-config" content="../../../../favicons/browserconfig.xml">
-    <meta name="msapplication-TileColor" content="#222222">
-    <meta name="theme-color" content="#222222">
-  
-    <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
-    <link rel="stylesheet" href="../../../../styles/docfx.css">
-    <link rel="stylesheet" href="../../../../styles/main.css">
-    <meta property="docfx:navrel" content="../../../../toc.html">
-    <meta property="docfx:tocrel" content="../../../toc.html">
+    
+      <link rel="shortcut icon" href="../../../../favicon.ico">
+      <link rel="stylesheet" href="../../../../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../../../../styles/docfx.css">
+      <link rel="stylesheet" href="../../../../styles/main.css">
+      <meta property="docfx:navrel" content="../../../../toc.html">
+      <meta property="docfx:tocrel" content="../../../toc.html">
     
     <meta property="docfx:rel" content="../../../../">
     
   </head>
-  `  <body data-spy="scroll" data-target="#affix" data-offset="120">
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
-        
+
         <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
           <div class="container">
             <div class="navbar-header">
@@ -51,7 +40,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              
+
               <a class="navbar-brand" href="../../../../index.html">
                 <img id="logo" class="svg" src="../../../../logo.svg" alt="">
               </a>
@@ -65,7 +54,7 @@
             </div>
           </div>
         </nav>
-        
+
         <div class="subnav navbar navbar-default">
           <div class="container hide-when-search" id="breadcrumb">
             <ul class="breadcrumb">
@@ -75,17 +64,17 @@
         </div>
       </header>
       <div class="container body-content">
-        
+
         <div id="search-results">
           <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+          <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
-        
+
         <div class="sidenav hide-when-search">
           <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
           <div class="sidetoggle collapse" id="sidetoggle">
@@ -97,37 +86,35 @@
             <article class="content wrap" id="_content" data-uid="testcaseattribute">
 <h1 id="testcase">TestCase</h1>
 
-<p><code>TestCaseAttribute</code> serves the dual purpose of marking a method with
-parameters as a test method and providing inline data to be used when
-invoking that method. Here is an example of a test being run three
-times, with three different sets of data:</p>
-<pre><code class="lang-csharp">[TestCase(12, 3, 4)]
+<p><code>TestCaseAttribute</code> serves the dual purpose of marking a method with parameters as a test method and providing inline
+data to be used when invoking that method. Here is an example of a test being run three times, with three different sets
+of data:</p>
+<pre><code class="lang-csharp" name="BasicTestCase">[TestCase(12, 3, 4)]
 [TestCase(12, 2, 6)]
 [TestCase(12, 4, 3)]
 public void DivideTest(int n, int d, int q)
 {
-    Assert.AreEqual(q, n / d);
+    Assert.That(n / d, Is.EqualTo(q));
 }
 </code></pre>
 <div class="NOTE">
 <h5>Note</h5>
-<p>Because arguments to .NET attributes are limited in terms of the Types that may be used, NUnit will make some attempt to convert the supplied values using <code>Convert.ChangeType()</code> before supplying it to the test.</p>
+<p>Because arguments to .NET attributes are limited in terms of the Types that may be used, NUnit will make some
+attempt to convert the supplied values using <code>Convert.ChangeType()</code> before supplying it to the test.</p>
 </div>
-<p><strong>TestCaseAttribute</strong> may appear one or more times on a test method,
-which may also carry other attributes providing test data.
-The method may optionally be marked with the <a href="test.html">Test Attribute</a> as well.</p>
-<p>By using the named parameter <code>ExpectedResult</code> this test set may be simplified
-further:</p>
-<pre><code class="lang-csharp">[TestCase(12, 3, ExpectedResult=4)]
-[TestCase(12, 2, ExpectedResult=6)]
-[TestCase(12, 4, ExpectedResult=3)]
+<p><strong>TestCaseAttribute</strong> may appear one or more times on a test method, which may also carry other attributes providing
+test data. The method may optionally be marked with the <a href="test.html">Test Attribute</a> as well.</p>
+<p>By using the named parameter <code>ExpectedResult</code> this test set may be simplified further:</p>
+<pre><code class="lang-csharp" name="TestCaseWithExpectedResult">[TestCase(12, 3, ExpectedResult = 4)]
+[TestCase(12, 2, ExpectedResult = 6)]
+[TestCase(12, 4, ExpectedResult = 3)]
 public int DivideTest(int n, int d)
 {
     return n / d;
 }
 </code></pre>
-<p>In the above example, NUnit checks that the return
-value of the method is equal to the expected result provided on the attribute.</p>
+<p>In the above example, NUnit checks that the return value of the method is equal to the expected result provided on the
+attribute.</p>
 <p>TestCaseAttribute supports a number of additional named parameters:</p>
 <ul>
 <li><strong>Author</strong> sets the author of the test.</li>
@@ -140,37 +127,87 @@ value of the method is equal to the expected result provided on the attribute.</
 <li><strong>IgnoreReason</strong> causes this test case to be ignored and specifies the reason.</li>
 <li><strong>IncludePlatform</strong> specifies a comma-delimited list of platforms on which the test should run.</li>
 <li><strong>Reason</strong> specifies the reason for not running this test case. Use in conjunction with <strong>Explicit</strong>.</li>
-<li><strong>TestName</strong> provides a name for the test. If not specified, a name is generated based on the method name and the arguments provided. See <a class="xref" href="../../running-tests/Template-Based-Test-Naming.html">Template Based Test Naming</a>.</li>
-<li><strong>TestOf</strong> specifies the Type that this test is testing</li>
+<li><strong>TestName</strong> provides a name for the test. If not specified, a name is generated based on the method name and the
+arguments provided. See <a class="xref" href="../../running-tests/Template-Based-Test-Naming.html">Template Based Test Naming</a>.</li>
+<li><strong>TestOf</strong> specifies the Type that this test is testing (this is not used within NUnit during test execution,
+but may serve a purpose for the test author)</li>
+<li><strong>TypeArgs</strong> specifies the <code>Type</code>s to be used when targeting a generic test method. (<em>NUnit 4.1+</em>)</li>
 </ul>
-<h2 id="order-of-execution">Order of Execution</h2>
-<p>Individual test cases are executed in the order in which NUnit discovers them.
-This order does <strong>not</strong> necessarily follow the lexical order of the attributes
-and will often vary between different compilers or different versions of the CLR.</p>
-<p>As a result, when <strong>TestCaseAttribute</strong> appears multiple times on a method
-or when other data-providing attributes are used in combination with
-<strong>TestCaseAttribute</strong>, the order of the test cases is undefined.</p>
+<h2 id="be-aware-of-mixing-the-syntax-for-named-parameters-and-attributes-with-the-same-name">Be aware of mixing the syntax for named parameters and attributes with the same name</h2>
+<h3 id="correct-ignore-attribute-usage-by-example">Correct <code>Ignore</code> Attribute Usage, by Example</h3>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>When using the <code>Ignore</code> parameter (and others, see below), note that this has to be a named parameter. It is easy to accidentally add another <code>Ignore</code> attribute after the <code>TestCase</code> attribute. That will be the same as adding it separately, and it will apply to the complete fixture. This may apply to other named parameters, with names equal to other attributes, like the <code>Explicit</code> and <code>Category</code> parameters.</p>
+</div>
+<p>Correct example usage:</p>
+<pre><code class="lang-csharp" name="TestCaseWithIgnore">[TestCase(1, 1)]
+[TestCase(0, 0, Ignore = &quot;Only ignore this&quot;)]
+[TestCase(1, 3)]
+public void AddTestWithIgnore(int a, int b)
+{
+    var result = a + b;
+    Assert.That(result, Is.GreaterThan(1));
+}
+</code></pre>
+<p><img src="../../../../images/TestCaseIgnoreDoneCorrect.png" alt="TestCaseIgnoreDoneCorrect"></p>
+<div class="WARNING">
+<h5>Warning</h5>
+<p><strong>Wrong way!</strong> Below, we demonstrate an incorrect approach.</p>
+<p>(1) Adding it on the same line is the same as adding it on a separate line (3), both results in the fixture being ignored (2).</p>
+</div>
+<p><img src="../../../../images/TestCaseIgnoreGoneWrong.png" alt="TestCaseIgnoreGoneWrong"></p>
+<!-- cspell:disable-next-line -->
+<p><em>Thanks to <a href="https://github.com/GeirMG">Geir Marius Gjul</a> for raising this question again.</em></p>
+<h3 id="correct-explicit-attribute-usage-by-example">Correct <code>Explicit</code> Attribute Usage, by Example</h3>
+<p><code>Explicit</code>, used correctly, looks like the following:</p>
+<pre><code class="lang-csharp" name="TestCaseWithExplicit">[TestCase(1, 1)]
+[TestCase(0, 0, Explicit = true, Reason = &quot;This will fail so only run explicitly&quot;)]
+[TestCase(1, 3)]
+public void AddTestWithExplicit(int a, int b)
+{
+    var result = a + b;
+    Assert.That(result, Is.GreaterThan(1));
+}
+</code></pre>
+<p>Note that adding the <code>Reason</code> is optional, and Visual Studio TestExplorer will not even show it.</p>
+<h3 id="correct-category-attribute-usage-by-example">Correct <code>Category</code> Attribute Usage, by Example</h3>
+<p>Categories can be applied to a single <code>TestCase</code> the same way, as a named parameter. Otherwise, it will apply to the whole fixture. Be sure what you're asking for!</p>
+<pre><code class="lang-csharp" name="TestCaseWithCategory">[TestCase(1, 1)]
+[TestCase(2, 0, Category = &quot;Crazy&quot;)]
+[TestCase(1, 3)]
+public void AddTestWithCategory(int a, int b)
+{
+    var result = a + b;
+    Assert.That(result, Is.GreaterThan(1));
+}
+</code></pre><h2 id="order-of-execution">Order of Execution</h2>
+<p>Individual test cases are executed in the order in which NUnit discovers them. This order does <strong>not</strong> necessarily
+follow the lexical order of the attributes and will often vary between different compilers or different versions of the
+CLR.</p>
+<p>As a result, when <strong>TestCaseAttribute</strong> appears multiple times on a method or when other data-providing attributes are
+used in combination with <strong>TestCaseAttribute</strong>, the order of the test cases is undefined.</p>
+
 </article>
           </div>
-          
+
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/nunit/docs/blob/master/docs/articles/nunit/writing-tests/attributes/testcase.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/stevenaw/docs/blob/master/docs/articles/nunit/writing-tests/attributes/testcase.md/#L1" class="contribution-link">Edit this page</a>
                   </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-                <h5>In This Article</h5>
+                <h5>In this article</h5>
                 <div></div>
               </nav>
             </div>
           </div>
         </div>
       </div>
-      
+
       <footer>
         <div class="grad-bottom"></div>
         <div class="footer">
@@ -178,14 +215,14 @@ or when other data-providing attributes are used in combination with
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            
-            <span>Generated by <strong>DocFX</strong></span> | Copyright (c) 2018-<span id="currentYear"></span> The NUnit Project - Licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>
+      <span>Generated by <strong>DocFX</strong></span> | Copyright (c) 2018-<span id="currentYear"></span> The NUnit Project - Licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>
+      
           </div>
         </div>
       </footer>
     </div>
-    
-    <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
+
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.min.js"></script>
     <script type="text/javascript" src="../../../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../../../styles/main.js"></script>
   </body>

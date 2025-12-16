@@ -1,47 +1,36 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <!--[if IE]><![endif]-->
-<html>
-  
+<html lang="en">
+
   <head>
-    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-PCB5BYBNM2"></script>
+    <meta charset="utf-8">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PCB5BYBNM2"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+      function gtag() { dataLayer.push(arguments); }
       gtag('js', new Date());
-  
       gtag('config', 'G-PCB5BYBNM2');
     </script>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Adapter Source Stepping | NUnit Docs </title>
-    <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Adapter Source Stepping | NUnit Docs ">
-    <meta name="generator" content="docfx 2.58.9.0">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Adapter Source Stepping | NUnit Docs </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Adapter Source Stepping | NUnit Docs ">
     
-  
-    <link rel="apple-touch-icon" sizes="180x180" href="../../favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../../favicons/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../../favicons/favicon-32x32.png">
-    <link rel="shortcut icon" type="image/x-icon" href="../../favicon.ico">
-    <link rel="manifest" href="../../favicons/manifest.json">
-    <link rel="mask-icon" href="../../favicons/safari-pinned-tab.svg" color="#222222">
-    <meta name="msapplication-config" content="../../favicons/browserconfig.xml">
-    <meta name="msapplication-TileColor" content="#222222">
-    <meta name="theme-color" content="#222222">
-  
-    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
-    <link rel="stylesheet" href="../../styles/docfx.css">
-    <link rel="stylesheet" href="../../styles/main.css">
-    <meta property="docfx:navrel" content="../../toc.html">
-    <meta property="docfx:tocrel" content="../toc.html">
+    
+      <link rel="shortcut icon" href="../../favicon.ico">
+      <link rel="stylesheet" href="../../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../../styles/docfx.css">
+      <link rel="stylesheet" href="../../styles/main.css">
+      <meta property="docfx:navrel" content="../../toc.html">
+      <meta property="docfx:tocrel" content="../toc.html">
     
     <meta property="docfx:rel" content="../../">
     
   </head>
-  `  <body data-spy="scroll" data-target="#affix" data-offset="120">
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
-        
+
         <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
           <div class="container">
             <div class="navbar-header">
@@ -51,7 +40,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              
+
               <a class="navbar-brand" href="../../index.html">
                 <img id="logo" class="svg" src="../../logo.svg" alt="">
               </a>
@@ -65,7 +54,7 @@
             </div>
           </div>
         </nav>
-        
+
         <div class="subnav navbar navbar-default">
           <div class="container hide-when-search" id="breadcrumb">
             <ul class="breadcrumb">
@@ -75,17 +64,17 @@
         </div>
       </header>
       <div class="container body-content">
-        
+
         <div id="search-results">
           <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+          <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
-        
+
         <div class="sidenav hide-when-search">
           <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
           <div class="sidetoggle collapse" id="sidetoggle">
@@ -97,8 +86,11 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="adapter-source-stepping">Adapter Source Stepping</h1>
 
-<p>As of version 3.10, the NUnit3TestAdapter NuGet package and VSIX contain source-indexed PDBs for the adapter. Debuggers can step into the source code, set breakpoints, watch variables, etc. It’s easy to drop into NUnit adapter code any time you want to understand what’s going on.</p>
-<p>If you’re getting ready to report a bug in the adapter, figuring out how to create a minimal repro is much easier since you aren’t dealing with a black box!</p>
+<p>As of version 3.10, the NUnit3TestAdapter NuGet package and VSIX contain source-indexed PDBs for the adapter. Debuggers
+can step into the source code, set breakpoints, watch variables, etc. It’s easy to drop into NUnit adapter code any time
+you want to understand what’s going on.</p>
+<p>If you’re getting ready to report a bug in the adapter, figuring out how to create a minimal repro is much easier since
+you aren’t dealing with a black box!</p>
 <h2 id="how-to-step-into-adapter-source-in-the-visual-studio-debugger">How to step into adapter source in the Visual Studio debugger</h2>
 <p>The NUnit adapter PDBs are source-linked and work with Visual Studio 2017 or later.</p>
 <ul>
@@ -106,40 +98,44 @@
 </ul>
 <div class="NOTE">
 <h5>Note</h5>
-<p>This is something you’ll want to leave on and only turn off when you want to step into source that isn’t contained in your solution.</p>
+<p>This is something you’ll want to leave on and only turn off when you want to step into source that isn’t
+contained in your solution.</p>
 </div>
 <p><img src="../../images/disable-just-my-code.png" alt="Screenshot of how to disable just my code in Visual Studio"></p>
-<p>(Next time you can make this faster by installing the excellent extension
-<a href="https://marketplace.visualstudio.com/items?itemName=SamHarwell.JustMyCodeToggle">Just My Code Toggle</a>.
-This allows you to set a keyboard shortcut along with adding a toolbar button and call stack context menu item.)</p>
+<p>(Next time you can make this faster by installing the excellent extension <a href="https://marketplace.visualstudio.com/items?itemName=SamHarwell.JustMyCodeToggle">Just My Code
+Toggle</a>. This allows you to set a
+keyboard shortcut along with adding a toolbar button and call stack context menu item.)</p>
 <ul>
 <li>If needed, turn <strong>on</strong> Debug &gt; Options &gt; ‘Enable Source Link support.’ This can usually be left on.</li>
 </ul>
 <p><img src="../../images/enable-source-link-support.png" alt="Screenshot of how to enable source link support in Visual Studio"></p>
 <ul>
-<li>Congratulations! You can now use the debugger to step into method calls to the NUnit adapter and to set breakpoints and watch variables in the source! Keep in mind that it’s still a release build of the adapter, so variables and sequence points may not be available depending on runtime optimizations.</li>
+<li>Congratulations! You can now use the debugger to step into method calls to the NUnit adapter and to set breakpoints
+and watch variables in the source! Keep in mind that it’s still a release build of the adapter, so variables and
+sequence points may not be available depending on runtime optimizations.</li>
 </ul>
+
 </article>
           </div>
-          
+
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/nunit/docs/blob/master/docs/articles/vs-test-adapter/Adapter-Source-Stepping.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/stevenaw/docs/blob/master/docs/articles/vs-test-adapter/Adapter-Source-Stepping.md/#L1" class="contribution-link">Edit this page</a>
                   </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-                <h5>In This Article</h5>
+                <h5>In this article</h5>
                 <div></div>
               </nav>
             </div>
           </div>
         </div>
       </div>
-      
+
       <footer>
         <div class="grad-bottom"></div>
         <div class="footer">
@@ -147,14 +143,14 @@ This allows you to set a keyboard shortcut along with adding a toolbar button an
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            
-            <span>Generated by <strong>DocFX</strong></span> | Copyright (c) 2018-<span id="currentYear"></span> The NUnit Project - Licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>
+      <span>Generated by <strong>DocFX</strong></span> | Copyright (c) 2018-<span id="currentYear"></span> The NUnit Project - Licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>
+      
           </div>
         </div>
       </footer>
     </div>
-    
-    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+
+    <script type="text/javascript" src="../../styles/docfx.vendor.min.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../styles/main.js"></script>
   </body>

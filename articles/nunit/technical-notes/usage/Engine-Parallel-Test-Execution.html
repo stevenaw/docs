@@ -1,47 +1,36 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <!--[if IE]><![endif]-->
-<html>
-  
+<html lang="en">
+
   <head>
-    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-PCB5BYBNM2"></script>
+    <meta charset="utf-8">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PCB5BYBNM2"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+      function gtag() { dataLayer.push(arguments); }
       gtag('js', new Date());
-  
       gtag('config', 'G-PCB5BYBNM2');
     </script>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Engine Parallel Test Execution | NUnit Docs </title>
-    <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Engine Parallel Test Execution | NUnit Docs ">
-    <meta name="generator" content="docfx 2.58.9.0">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Engine Parallel Test Execution | NUnit Docs </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Engine Parallel Test Execution | NUnit Docs ">
     
-  
-    <link rel="apple-touch-icon" sizes="180x180" href="../../../../favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../../../../favicons/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../../../../favicons/favicon-32x32.png">
-    <link rel="shortcut icon" type="image/x-icon" href="../../../../favicon.ico">
-    <link rel="manifest" href="../../../../favicons/manifest.json">
-    <link rel="mask-icon" href="../../../../favicons/safari-pinned-tab.svg" color="#222222">
-    <meta name="msapplication-config" content="../../../../favicons/browserconfig.xml">
-    <meta name="msapplication-TileColor" content="#222222">
-    <meta name="theme-color" content="#222222">
-  
-    <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
-    <link rel="stylesheet" href="../../../../styles/docfx.css">
-    <link rel="stylesheet" href="../../../../styles/main.css">
-    <meta property="docfx:navrel" content="../../../../toc.html">
-    <meta property="docfx:tocrel" content="../../../toc.html">
+    
+      <link rel="shortcut icon" href="../../../../favicon.ico">
+      <link rel="stylesheet" href="../../../../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../../../../styles/docfx.css">
+      <link rel="stylesheet" href="../../../../styles/main.css">
+      <meta property="docfx:navrel" content="../../../../toc.html">
+      <meta property="docfx:tocrel" content="../../../toc.html">
     
     <meta property="docfx:rel" content="../../../../">
     
   </head>
-  `  <body data-spy="scroll" data-target="#affix" data-offset="120">
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
-        
+
         <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
           <div class="container">
             <div class="navbar-header">
@@ -51,7 +40,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              
+
               <a class="navbar-brand" href="../../../../index.html">
                 <img id="logo" class="svg" src="../../../../logo.svg" alt="">
               </a>
@@ -65,7 +54,7 @@
             </div>
           </div>
         </nav>
-        
+
         <div class="subnav navbar navbar-default">
           <div class="container hide-when-search" id="breadcrumb">
             <ul class="breadcrumb">
@@ -75,17 +64,17 @@
         </div>
       </header>
       <div class="container body-content">
-        
+
         <div id="search-results">
           <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+          <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
-        
+
         <div class="sidenav hide-when-search">
           <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
           <div class="sidetoggle collapse" id="sidetoggle">
@@ -97,43 +86,56 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="engine-parallel-test-execution">Engine Parallel Test Execution</h1>
 
-<p>The NUnit test engine is able to offer a certain degree of parallelization by running the tests in each test assembly in a different <code>Process</code>. This is a separate facility from <a href="Framework-Parallel-Test-Execution.html">Framework Parallel Test Execution</a> although the two may be used concurrently.</p>
-<p>If tests are already split across multiple assemblies, this is the simplest way to improve performance through parallel execution. By running in separate processes, the tests in each assembly are independent of one another so long as they do not use any common external resources such as files or databases. <strong>Parallel execution is the default behavior</strong> when running multiple assemblies together using the <code>nunit3-console</code> runner.</p>
-<p>Normally, <strong>all</strong> the test processes run simultaneously. If you need to reduce the number of processes allowed to run at one time, you may specify a value for the <code>--agents</code> option on the <code>nunit3-console</code> command-line. For example, if you are running tests in 10 different processes, a setting of <code>--agents=3</code> will allow no more than three of them to execute simultaneously.</p>
+<p>The NUnit test engine is able to offer a certain degree of parallelization by running the tests in each test assembly in
+a different <code>Process</code>. This is a separate facility from <a href="Framework-Parallel-Test-Execution.html">Framework Parallel Test
+Execution</a> although the two may be used concurrently.</p>
+<p>If tests are already split across multiple assemblies, this is the simplest way to improve performance through parallel
+execution. By running in separate processes, the tests in each assembly are independent of one another so long as they
+do not use any common external resources such as files or databases. <strong>Parallel execution is the default behavior</strong> when
+running multiple assemblies together using the <code>nunit3-console</code> runner.</p>
+<p>Normally, <strong>all</strong> the test processes run simultaneously. If you need to reduce the number of processes allowed to run at
+one time, you may specify a value for the <code>--agents</code> option on the <code>nunit3-console</code> command-line. For example, if you
+are running tests in 10 different processes, a setting of <code>--agents=3</code> will allow no more than three of them to execute
+simultaneously.</p>
 <div class="NOTE">
 <h5>Note</h5>
-<p>This facility does not depend on the test framework used in any way. Test assemblies that use older versions of NUnit may be run in parallel processes just as easily as those using NUnit 3. If extensions are created to support additional frameworks, the NUnit engine will run those assemblies in parallel as well.</p>
+<p>This facility does not depend on the test framework used in any way. Test assemblies that use older versions
+of NUnit may be run in parallel processes just as easily as those using NUnit 3. If extensions are created to support
+additional frameworks, the NUnit engine will run those assemblies in parallel as well.</p>
 </div>
 <h2 id="process-model">Process Model</h2>
-<p>NUnit 3 uses the <code>ProcessModel</code> enumeration to specify how assemblies are split across processes. The <code>ProcessModel</code> for a run may specified either on the console command-line or in the NUnit project file.</p>
+<p>NUnit 3 uses the <code>ProcessModel</code> enumeration to specify how assemblies are split across processes. The <code>ProcessModel</code> for
+a run may specified either on the console command-line or in the NUnit project file.</p>
 <p>As in NUnit V2, three values are defined:</p>
 <ul>
 <li><code>ProcessModel.Single</code> causes all tests to be run within the NUnit process itself.</li>
 <li><code>ProcessModel.Separate</code> loads and runs all the tests in a single separate process.</li>
 <li><code>ProcessModel.Multiple</code> loads and runs each test assembly in a separate process.</li>
 </ul>
-<p>In NUnit 3, if <code>ProcessModel.Multiple</code> is used, the processes are executed in parallel. This is also the default if the <code>ProcessModel</code> is not specified.</p>
+<p>In NUnit 3, if <code>ProcessModel.Multiple</code> is used, the processes are executed in parallel. This is also the default if the
+<code>ProcessModel</code> is not specified.</p>
+
 </article>
           </div>
-          
+
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/nunit/docs/blob/master/docs/articles/nunit/technical-notes/usage/Engine-Parallel-Test-Execution.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/stevenaw/docs/blob/master/docs/articles/nunit/technical-notes/usage/Engine-Parallel-Test-Execution.md/#L1" class="contribution-link">Edit this page</a>
                   </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-                <h5>In This Article</h5>
+                <h5>In this article</h5>
                 <div></div>
               </nav>
             </div>
           </div>
         </div>
       </div>
-      
+
       <footer>
         <div class="grad-bottom"></div>
         <div class="footer">
@@ -141,14 +143,14 @@
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            
-            <span>Generated by <strong>DocFX</strong></span> | Copyright (c) 2018-<span id="currentYear"></span> The NUnit Project - Licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>
+      <span>Generated by <strong>DocFX</strong></span> | Copyright (c) 2018-<span id="currentYear"></span> The NUnit Project - Licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>
+      
           </div>
         </div>
       </footer>
     </div>
-    
-    <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
+
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.min.js"></script>
     <script type="text/javascript" src="../../../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../../../styles/main.js"></script>
   </body>

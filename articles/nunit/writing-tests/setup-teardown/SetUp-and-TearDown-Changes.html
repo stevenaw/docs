@@ -1,47 +1,36 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <!--[if IE]><![endif]-->
-<html>
-  
+<html lang="en">
+
   <head>
-    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-PCB5BYBNM2"></script>
+    <meta charset="utf-8">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PCB5BYBNM2"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+      function gtag() { dataLayer.push(arguments); }
       gtag('js', new Date());
-  
       gtag('config', 'G-PCB5BYBNM2');
     </script>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>SetUp And TearDown Changes | NUnit Docs </title>
-    <meta name="viewport" content="width=device-width">
-    <meta name="title" content="SetUp And TearDown Changes | NUnit Docs ">
-    <meta name="generator" content="docfx 2.58.9.0">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>SetUp And TearDown Changes | NUnit Docs </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="SetUp And TearDown Changes | NUnit Docs ">
     
-  
-    <link rel="apple-touch-icon" sizes="180x180" href="../../../../favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../../../../favicons/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../../../../favicons/favicon-32x32.png">
-    <link rel="shortcut icon" type="image/x-icon" href="../../../../favicon.ico">
-    <link rel="manifest" href="../../../../favicons/manifest.json">
-    <link rel="mask-icon" href="../../../../favicons/safari-pinned-tab.svg" color="#222222">
-    <meta name="msapplication-config" content="../../../../favicons/browserconfig.xml">
-    <meta name="msapplication-TileColor" content="#222222">
-    <meta name="theme-color" content="#222222">
-  
-    <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
-    <link rel="stylesheet" href="../../../../styles/docfx.css">
-    <link rel="stylesheet" href="../../../../styles/main.css">
-    <meta property="docfx:navrel" content="../../../../toc.html">
-    <meta property="docfx:tocrel" content="../../../toc.html">
+    
+      <link rel="shortcut icon" href="../../../../favicon.ico">
+      <link rel="stylesheet" href="../../../../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../../../../styles/docfx.css">
+      <link rel="stylesheet" href="../../../../styles/main.css">
+      <meta property="docfx:navrel" content="../../../../toc.html">
+      <meta property="docfx:tocrel" content="../../../toc.html">
     
     <meta property="docfx:rel" content="../../../../">
     
   </head>
-  `  <body data-spy="scroll" data-target="#affix" data-offset="120">
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
-        
+
         <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
           <div class="container">
             <div class="navbar-header">
@@ -51,7 +40,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              
+
               <a class="navbar-brand" href="../../../../index.html">
                 <img id="logo" class="svg" src="../../../../logo.svg" alt="">
               </a>
@@ -65,7 +54,7 @@
             </div>
           </div>
         </nav>
-        
+
         <div class="subnav navbar navbar-default">
           <div class="container hide-when-search" id="breadcrumb">
             <ul class="breadcrumb">
@@ -75,17 +64,17 @@
         </div>
       </header>
       <div class="container body-content">
-        
+
         <div id="search-results">
           <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+          <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
-        
+
         <div class="sidenav hide-when-search">
           <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
           <div class="sidetoggle collapse" id="sidetoggle">
@@ -106,21 +95,27 @@
 <li>TestFixtureTearDownAttribute</li>
 <li>SetUpFixtureAttribute</li>
 </ul>
-<p>Taken together, these attributes provided per-test setup and teardown at the fixture level and one-time setup and teardown at the fixture, namespace and assembly levels.</p>
+<p>Taken together, these attributes provided per-test setup and teardown at the fixture level and one-time setup and
+teardown at the fixture, namespace and assembly levels.</p>
 <p>These features were somewhat confusing:</p>
 <ul>
 <li>SetUpFixture seems not very well understood by users in general.</li>
 <li>TestFixtureSetUp and TestFixtureTearDown could do with better names.</li>
-<li>SetUp and TearDown designate per-test setup/teardown within a test fixture, one-time setup/teardown within a setup fixture</li>
+<li>SetUp and TearDown designate per-test setup/teardown within a test fixture, one-time setup/teardown within a setup
+fixture</li>
 </ul>
-<p>For NUnit 3.0 we standardized the use of attributes for setup and teardown and renamed some of them to make their function clearer.</p>
+<p>For NUnit 3.0 we standardized the use of attributes for setup and teardown and renamed some of them to make their
+function clearer.</p>
 <h2 id="attribute-usage">Attribute Usage</h2>
 <ul>
 <li><a class="xref" href="../attributes/setup.html">SetUpAttribute</a> is now used exclusively for per-test setup.</li>
 <li><a class="xref" href="../attributes/teardown.html">TearDownAttribute</a> is now used exclusively for per-test teardown.</li>
-<li><a class="xref" href="../attributes/onetimesetup.html">OneTimeSetUpAttribute</a> is used for one-time setup per test-run. If you run <em>n</em> tests, this event will only occur once.</li>
-<li><a class="xref" href="../attributes/onetimeteardown.html">OneTimeTearDownAttribute</a> is used for one-time teardown per test-run. If you run <em>n</em> tests, this event will only occur once</li>
-<li><a class="xref" href="../attributes/setupfixture.html">SetUpFixtureAttribute</a> continues to be used as at before, but with changed method attributes.</li>
+<li><a class="xref" href="../attributes/onetimesetup.html">OneTimeSetUpAttribute</a> is used for one-time setup per test-run. If you run <em>n</em> tests,
+this event will only occur once.</li>
+<li><a class="xref" href="../attributes/onetimeteardown.html">OneTimeTearDownAttribute</a> is used for one-time teardown per test-run. If you run <em>n</em>
+tests, this event will only occur once</li>
+<li><a class="xref" href="../attributes/setupfixture.html">SetUpFixtureAttribute</a> continues to be used as at before, but with changed method
+attributes.</li>
 </ul>
 <h3 id="attribute-usage-by-fixture-type">Attribute Usage by Fixture Type</h3>
 <table>
@@ -165,13 +160,22 @@
 </tbody>
 </table>
 <h2 id="backward-compatibility">Backward Compatibility</h2>
-<p><strong>TestFixtureSetUpAttribute</strong> and <strong>TestFixtureTearDownAttribute</strong> continue to be supported as synonyms for <strong>OneTimeSetUpAttribute</strong> and <strong>OneTimeTearDownAttribute</strong> in test fixtures, but are deprecated.</p>
-<p>Since <strong>SetUpAttribute</strong> and <strong>TearDownAttribute</strong> are used in two different ways, it's not possible to simply deprecate their usage in SetUpFixture. They have been disallowed in that context, which is a <a class="xref" href="../../release-notes/breaking-changes.html">breaking change</a>.</p>
+<p><strong>TestFixtureSetUpAttribute</strong> and <strong>TestFixtureTearDownAttribute</strong> continue to be supported as synonyms for
+<strong>OneTimeSetUpAttribute</strong> and <strong>OneTimeTearDownAttribute</strong> in test fixtures, but are deprecated.</p>
+<p>Since <strong>SetUpAttribute</strong> and <strong>TearDownAttribute</strong> are used in two different ways, it's not possible to simply deprecate
+their usage in SetUpFixture. They have been disallowed in that context, which is a <a class="xref" href="../../release-notes/breaking-changes.html">breaking
+change</a>.</p>
 <h2 id="how-setup-and-teardown-methods-are-called">How Setup and TearDown Methods Are Called</h2>
-<p>Multiple SetUp, OneTimeSetUp, TearDown and OneTimeTearDown methods may exist within a class. The rules for how the setup methods are called will be the same in NUnit 3.0 as in NUnit 2.6. However, there is a change in the calling of the teardown methods.</p>
-<p>Setup methods (both types) are called on base classes first, then on derived classes. If any setup method throws an exception, no further setups are called. This is the same as in NUnit 2.6.</p>
-<p>Teardown methods (again, both types) are called on derived classes first, then on the base class. In NUnit 2.6, all teardown methods were called so long as <strong>any</strong> setup method was called. It was entirely up to the teardown method to determine how much of the initialization took place.</p>
-<p>In NUnit 3.0, the teardown methods at any level in the inheritance hierarchy will be called only if a setup method <strong>at the same level</strong> was called. The following example is illustrates the difference.</p>
+<p>Multiple SetUp, OneTimeSetUp, TearDown and OneTimeTearDown methods may exist within a class. The rules for how the setup
+methods are called will be the same in NUnit 3.0 as in NUnit 2.6. However, there is a change in the calling of the
+teardown methods.</p>
+<p>Setup methods (both types) are called on base classes first, then on derived classes. If any setup method throws an
+exception, no further setups are called. This is the same as in NUnit 2.6.</p>
+<p>Teardown methods (again, both types) are called on derived classes first, then on the base class. In NUnit 2.6, all
+teardown methods were called so long as <strong>any</strong> setup method was called. It was entirely up to the teardown method to
+determine how much of the initialization took place.</p>
+<p>In NUnit 3.0, the teardown methods at any level in the inheritance hierarchy will be called only if a setup method <strong>at
+the same level</strong> was called. The following example is illustrates the difference.</p>
 <pre><code class="lang-csharp">public class BaseClass
 {
    [SetUp]
@@ -208,29 +212,31 @@ public class DerivedClass : BaseClass
 <p>This is potentially a <a class="xref" href="../../release-notes/breaking-changes.html">breaking change</a> for some users.</p>
 <h2 id="unresolved-issues">Unresolved Issues</h2>
 <ul>
-<li>We need to define how setup and teardown methods are ordered with respect to the newly introduced <a class="xref" href="../../extending-nunit/Action-Attributes.html">Action Attributes</a> and how they interact.</li>
+<li>We need to define how setup and teardown methods are ordered with respect to the newly introduced <a class="xref" href="../../extending-nunit/Action-Attributes.html">Action
+Attributes</a> and how they interact.</li>
 </ul>
+
 </article>
           </div>
-          
+
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/nunit/docs/blob/master/docs/articles/nunit/writing-tests/setup-teardown/SetUp-and-TearDown-Changes.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/stevenaw/docs/blob/master/docs/articles/nunit/writing-tests/setup-teardown/SetUp-and-TearDown-Changes.md/#L1" class="contribution-link">Edit this page</a>
                   </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-                <h5>In This Article</h5>
+                <h5>In this article</h5>
                 <div></div>
               </nav>
             </div>
           </div>
         </div>
       </div>
-      
+
       <footer>
         <div class="grad-bottom"></div>
         <div class="footer">
@@ -238,14 +244,14 @@ public class DerivedClass : BaseClass
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            
-            <span>Generated by <strong>DocFX</strong></span> | Copyright (c) 2018-<span id="currentYear"></span> The NUnit Project - Licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>
+      <span>Generated by <strong>DocFX</strong></span> | Copyright (c) 2018-<span id="currentYear"></span> The NUnit Project - Licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>
+      
           </div>
         </div>
       </footer>
     </div>
-    
-    <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
+
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.min.js"></script>
     <script type="text/javascript" src="../../../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../../../styles/main.js"></script>
   </body>

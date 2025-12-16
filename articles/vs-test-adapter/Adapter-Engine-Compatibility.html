@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PCB5BYBNM2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+      gtag('config', 'G-PCB5BYBNM2');
+    </script>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Compatibility of the Test Adapter with the Test Engine | NUnit Docs </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Compatibility of the Test Adapter with the Test Engine | NUnit Docs ">
+    
+    
+      <link rel="shortcut icon" href="../../favicon.ico">
+      <link rel="stylesheet" href="../../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../../styles/docfx.css">
+      <link rel="stylesheet" href="../../styles/main.css">
+      <meta property="docfx:navrel" content="../../toc.html">
+      <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="compatibility-of-the-test-adapter-with-the-test-engine">Compatibility of the Test Adapter with the Test Engine</h1>
+
+<p>The <code>NUnit3TestAdapter</code> has an embedded <code>NUnit.Engine</code> package. This means that you don't need to install the engine
+separately, and you don't need to add a reference to the engine in your test project.</p>
+<p>You should <strong>never</strong> add an extra reference to the <code>NUnit.Engine</code> when using the adapter in a project, as that may cause
+the adapter to malfunction.</p>
+<p><a href="https://github.com/charliepoole">@CharliePoole</a> has written a <a href="http://charliepoole.com/technical/nunit-engine-version-conflicts-in-visual-studio.html">blog
+post</a> about the compatibility of
+the adapter with the engine, explaining how it works and how you should work with both the console, engine and adapter.</p>
+<p>The table below shows the embedded engine versions for the different adapter versions, extended from Charlie's blog
+post.</p>
+<table>
+<thead>
+<tr>
+<th>Adapter version</th>
+<th>Embedded engine version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>6.0.0</td>
+<td>3.21.0</td>
+</tr>
+<tr>
+<td>5.2.0</td>
+<td>3.18.1</td>
+</tr>
+<tr>
+<td>5.1.0</td>
+<td>3.18.1</td>
+</tr>
+<tr>
+<td>5.0.0</td>
+<td>3.18.1</td>
+</tr>
+<tr>
+<td>4.6.0</td>
+<td>3.18.1</td>
+</tr>
+<tr>
+<td>4.5.0</td>
+<td>3.15.4</td>
+</tr>
+<tr>
+<td>4.4.2</td>
+<td>3.15.3-dev-build</td>
+</tr>
+<tr>
+<td>4.4.0</td>
+<td>3.16.3</td>
+</tr>
+<tr>
+<td>4.3.2</td>
+<td>3.15.5</td>
+</tr>
+<tr>
+<td>4.3.1</td>
+<td>3.15.2</td>
+</tr>
+<tr>
+<td>4.2.1</td>
+<td>3.13.2</td>
+</tr>
+<tr>
+<td>4.2</td>
+<td>3.13</td>
+</tr>
+<tr>
+<td>4.0-4.1</td>
+<td>3.12</td>
+</tr>
+<tr>
+<td>3.17</td>
+<td>3.11.1</td>
+</tr>
+<tr>
+<td>3.14-3.16.1</td>
+<td>3.10</td>
+</tr>
+<tr>
+<td>3.8-3.13</td>
+<td>3.10</td>
+</tr>
+<tr>
+<td>3.7</td>
+<td>3.6</td>
+</tr>
+<tr>
+<td>3.5-3.6.1</td>
+<td>3.5</td>
+</tr>
+<tr>
+<td>3.4</td>
+<td>3.4.1</td>
+</tr>
+<tr>
+<td>3.2</td>
+<td>3.2.1</td>
+</tr>
+<tr>
+<td>3.0</td>
+<td>3.0.1</td>
+</tr>
+</tbody>
+</table>
+<h2 id="using-the-console">Using the console</h2>
+<p>If, for some unknown reason, you really badly want to use the NUnit.Console, and you really want to add it as a package
+reference instead of just installing it globally, you should use the exact same version as listed for the engine in the
+table above.</p>
+<p>Note that most of what the console can do, can be done using the <code>dotnet test</code> command with the appropriate runsettings
+added, see <a href="https://docs.nunit.org/articles/vs-test-adapter/Tips-And-Tricks.html">Tips&amp;Tricks</a>.</p>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>If you try to add another engine version package, it may seem that the adapter and test are still working.  That is just
+by luck, and it does so because the interfaces between the version you have added are the same as the embedded version.
+But if you try to use a feature that is not in the embedded version, it will fail.</p>
+<p>Most likely you will see messages about &quot;no tests found&quot;, or it may simply crash during test.</p>
+</div>
+<!-- markdownlint-disable MD028 -->
+<div class="WARNING">
+<h5>Warning</h5>
+<p>Version 4.4.1 use an engine version that is not released yet.  This is because the engine has a bug that prevents it
+from working with the adapter.  The bug is fixed in the engine, but the fix is not yet released.  The adapter will be
+updated to use the released engine version as soon as it is released. You may try to use 3.15.2, but we can currently
+not confirm that it works.</p>
+</div>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/stevenaw/docs/blob/master/docs/articles/vs-test-adapter/Adapter-Engine-Compatibility.md/#L1" class="contribution-link">Edit this page</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      <span>Generated by <strong>DocFX</strong></span> | Copyright (c) 2018-<span id="currentYear"></span> The NUnit Project - Licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>
+      
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

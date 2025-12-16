@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PCB5BYBNM2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+      gtag('config', 'G-PCB5BYBNM2');
+    </script>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Migration Guidance | NUnit Docs </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Migration Guidance | NUnit Docs ">
+    
+    
+      <link rel="shortcut icon" href="../../../favicon.ico">
+      <link rel="stylesheet" href="../../../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../../../styles/docfx.css">
+      <link rel="stylesheet" href="../../../styles/main.css">
+      <meta property="docfx:navrel" content="../../../toc.html">
+      <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="migrationguidance">
+<h1 id="migration-guidance">Migration Guidance</h1>
+
+<h2 id="compatibility">Compatibility</h2>
+<p>Ensure you use a compatible runner for NUnit Version 4.</p>
+<table>
+<thead>
+<tr>
+<th>Runner</th>
+<th>Minimum Version</th>
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NUnit3TestAdapter</td>
+<td>4.5.0</td>
+<td>Used by Visual Studio and dotnet test</td>
+</tr>
+<tr>
+<td>NUnit.Console</td>
+<td>3.15.5</td>
+<td>Note:  The 3.16.X series don't work with NUnit version 4</td>
+</tr>
+<tr>
+<td>Rider/Resharper</td>
+<td>2023.3</td>
+<td>Dec 5, 2023, is in EAP, due to release RSN</td>
+</tr>
+</tbody>
+</table>
+<h2 id="3x---4x">3.x -&gt; 4.x</h2>
+<p>NUnit 4.0 has a few <a href="breaking-changes.html#nunit-40">breaking changes</a> making it neither binary nor
+source code compatible with NUnit 3.14.0</p>
+<ul>
+<li>Change to <a href="../writing-tests/assertions/assertion-models/classic.html">Classic Asserts</a></li>
+<li>Removal of <code>Assert.That</code> overloads with <em>format</em> specification and <code>params</code>.</li>
+</ul>
+<h3 id="classic-assert-migration">Classic Assert migration</h3>
+<p>There are different ways to migrate these to NUnit 4.0</p>
+<ul>
+<li>Convert Classic Assert to the <a href="../writing-tests/assertions/assertion-models/constraint.html">Constraint model</a></li>
+<li>Update source code to new namespace and class name</li>
+<li>Using <code>global using</code> aliases
+<ul>
+<li>In own source file</li>
+<li>In project file or <code>Directory.Build.props</code></li>
+</ul>
+</li>
+</ul>
+<p>In the sections below we use the following simple test as an example:</p>
+<pre><code class="lang-csharp">public class Tests
+{
+    [Test]
+    public void TestSomeCalculation()
+    {
+        int actual = SomeCalculation();
+        Assert.AreEqual(42, actual, &quot;Expected {0} to be 42&quot;, actual);
+        StringAssert.StartsWith(&quot;42&quot;, actualText, &quot;Expected '{0}' to start with '42'&quot;, actualText);
+    }
+
+    private static int SomeCalculation() =&gt; 42;
+}
+</code></pre>
+<h4 id="convert-classic-assert-to-constraint-model">Convert Classic Assert to Constraint Model</h4>
+<p>Although the code can be converted manually, that is a lot of work.</p>
+<p>Luckily, the <a href="https://www.nuget.org/packages/NUnit.Analyzers">NUnit.Analyzer</a> has had rules and associated code fixes
+for a while now. Version <em>3.10.0</em> knows about the 2nd non-backward compatible change and will convert the <em>format</em>
+specification and <code>params</code> into a <code>FormattableString</code>.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p><strong>Caveat</strong>: The analyzers only run when the code compiles, so execute and act on the analyzer <em>before</em>
+upgrading <code>nunit</code> to version <code>4.0.0</code>!</p>
+</div>
+<p>In our example code, the analyzer will flag the <code>Assert.AreEqual</code> as shown below:</p>
+<p><img src="../../../images/NUnit.Analyzer-ClassicAssert-Warning.png" alt="NUnit.Analyzer Classic Assert Warning"></p>
+<p>Running the associated <code>Transform to constraint model</code> code fix in Visual Studio will convert the code into:</p>
+<pre><code class="lang-csharp">public class Tests
+{
+    [Test]
+    public void TestSomeCalculation()
+    {
+        int actual = SomeCalculation();
+        Assert.That(actual, Is.EqualTo(42), $&quot;Expected {actual} to be 42&quot;);
+    }
+
+    private static int SomeCalculation() =&gt; 42;
+}
+</code></pre>
+<p>The analyzer code fix supports <em>Batch Fixing</em>:</p>
+<p><img src="../../../images/NUnit.Analyzer-ClassicAssert-CodeFix.png" alt="NUnit.Analyzer Classic Assert CodeFix"></p>
+<p>This allows changing all corresponding <code>Assert</code> usages for a document, project or a complete solution.</p>
+<p>There are many classic asserts and most of these come with a separate code analyzer rule and code fix. Although it
+allows full configuration to what classic asserts to keep or convert, it means that a developer has to repeat this
+process multiple times, once for each assert method.</p>
+<p>NUnit.Analyzer also has code fixers for <code>CollectionAssert</code> and <code>StringAssert</code>.</p>
+<pre><code class="lang-csharp">string actualText = actual.ToString();
+StringAssert.StartsWith(&quot;42&quot;, actualText, &quot;Expected '{0}' to start with '42'&quot;, actualText);
+</code></pre>
+<p>Will be converted into:</p>
+<pre><code class="lang-csharp">string actualText = actual.ToString();
+Assert.That(actualText, Does.StartWith(&quot;42&quot;), $&quot;Expected '{actualText}' to start with '42'&quot;);
+</code></pre>
+<p>There are no code fixers for <code>FileAssert</code> and <code>DirectoryAssert</code>. They could be added, but we don't expect these to be
+used too much.</p>
+<p>Should you be migrating a larger number of repositories to the constraint model
+the following script can be used as a good starting point:</p>
+<pre><code class="lang-bash">#!/bin/bash
+
+# This script automates the process of adding and configuring the NUnit.Analyzers package to .NET projects.
+# It performs the following steps:
+# - Checks if a directory is provided as an argument, and defaults to the current directory if not.
+# - Changes to the target directory to ensure all operations are performed within the correct git repository.
+# - Creates a dedicated branch that will contain the changes
+# - Searches for Directory.Packages.props in the target directory and its subdirectories.
+#   - Fails the script when multiple are found
+#   - If one is found it adds the NUnit.Analyzer there and makes sure the modifications to the project files follow the nomenclature
+#     for centralized packages
+# - Searches for all .csproj files in the target directory.
+# - For each .csproj file:
+#   - Checks if NUnit.Analyzers is already referenced, skipping if it is.
+#   - Adds NUnit.Analyzers after the NUnit reference if not already present.
+#   - Skips the .csproj file if no NUnit reference is found.
+# - Stages the modified .csproj and/or Directory.Packages.props files for commit and prompts the user to review before committing.
+# - Restores NuGet packages for all .sln files found in the directory.
+# - Applies each diagnostic rule sequantially to the projects in parallel:
+#   - Checks for NUnit.Analyzers reference, and creates or modifies .editor_config for each .csproj file.
+#   - Applies the formatting using dotnet format for each diagnostic.
+#   - Discards or deletes changes to .editor_config.
+#   - Commits the changes for each diagnostic.
+# - Returns to the original directory after completing the operations.
+#
+# Usage:
+# chmod +x nunit-analyzer-automation.sh
+# ./nunit-analyzer-automation.sh target/directory/path
+#
+# Requirements:
+# - sed
+# - git
+# - gh
+#
+# Installation Requirements MacOS: 
+# - brew install gnused
+#   - Make it the default sed as outlined in the hints in the installation step of the brew package or replaced &quot;sed&quot; with &quot;gsed&quot; in the script in case you don't want to override the default sed of MacOS
+# - brew install gh
+#   - gh auth login
+#     The gh client needs to be authenticated
+#   - gh auth refresh -s project
+#     The gh client requires project scope
+
+# Check if a directory is provided as an argument, if not, use the current directory
+TARGET_DIR=&quot;${1:-.}&quot;
+
+PACKAGE_NAME=&quot;NUnit.Analyzers&quot;
+PACKAGE_VERSION=&quot;4.3.0&quot;  # Replace with the desired version
+BRANCH_NAME=&quot;nunit-assertions-migration&quot;
+PROJECT_ID=&quot;XXX&quot;
+ORG=&quot;ZZZ&quot;
+
+# Define the XML snippet to insert
+INSERT_SNIPPET_CSPROJ=&quot;    &lt;PackageReference Include=\&quot;$PACKAGE_NAME\&quot; Version=\&quot;$PACKAGE_VERSION\&quot; /&gt;&quot;
+INSERT_SNIPPET_CSPROJ_PROPS=&quot;    &lt;PackageReference Include=\&quot;$PACKAGE_NAME\&quot; /&gt;&quot;
+INSERT_SNIPPET_PROPS=&quot;    &lt;PackageVersion Include=\&quot;$PACKAGE_NAME\&quot; Version=\&quot;$PACKAGE_VERSION\&quot; /&gt;&quot;
+
+# Change to the TARGET_DIR to ensure all commands are executed in the context of its git repository
+pushd &quot;$TARGET_DIR&quot; || { echo &quot;Failed to change directory to $TARGET_DIR&quot;; exit 1; }
+
+git checkout -b $BRANCH_NAME
+
+# Find all Directory.Packages.props files in the target directory and its subdirectories
+prop_files=($(find . -name &quot;Directory.Packages.props&quot;))
+prop_file=
+
+# Check if there are multiple Directory.Packages.props files
+if [ ${#prop_files[@]} -gt 1 ]; then
+    echo &quot;Error: Multiple Directory.Packages.props files found. The script cannot proceed.&quot;
+    exit 1
+elif [ ${#prop_files[@]} -eq 1 ]; then
+    prop_file=&quot;${prop_files[0]}&quot;
+    echo &quot;Found Directory.Packages.props: $prop_file&quot;
+    # Check if the project already has NUnit.Analyzers
+    if grep -qi &quot;&lt;PackageVersion Include=\&quot;$PACKAGE_NAME\&quot;&quot; &quot;$prop_file&quot;; then
+        echo &quot;Skipping $prop_file - $PACKAGE_NAME already present&quot;
+    else
+        echo &quot;Adding $PACKAGE_NAME to $prop_file&quot;
+        # Insert the PackageReference after the NUnit reference to preserve the item groups that got added
+        sed -i &quot;/&lt;PackageVersion Include=\&quot;NUnit\&quot;/Ia\\
+$INSERT_SNIPPET_PROPS&quot; &quot;$prop_file&quot;
+        INSERT_SNIPPET_CSPROJ=$INSERT_SNIPPET_CSPROJ_PROPS
+    fi
+else
+    echo &quot;No Directory.Packages.props found&quot;
+fi
+
+# Find all .csproj files in the target directory
+find . -name &quot;*.csproj&quot; | while read -r csproj; do
+    # Check if the project already has NUnit.Analyzers
+    if grep -qi &quot;&lt;PackageReference Include=\&quot;$PACKAGE_NAME\&quot;&quot; &quot;$csproj&quot;; then
+        echo &quot;Skipping $csproj - $PACKAGE_NAME already present&quot;
+    # Check if the project references NUnit and add NUnit.Analyzers if not already present
+    elif grep -qi '&lt;PackageReference Include=&quot;NUnit&quot;' &quot;$csproj&quot;; then
+        echo &quot;Adding $PACKAGE_NAME to $csproj&quot;
+        
+        # Insert the PackageReference after the NUnit reference to preserve the item groups that got added
+        sed -i &quot;/&lt;PackageReference Include=\&quot;NUnit\&quot;/Ia\\
+$INSERT_SNIPPET_CSPROJ&quot; &quot;$csproj&quot;
+    else
+        echo &quot;Skipping $csproj - No NUnit reference found&quot;
+    fi
+done
+
+# Stage .csproj files for commit
+git add &quot;*.csproj&quot;
+if [ -f &quot;$prop_file&quot; ]; then
+    git add &quot;$prop_file&quot;
+fi
+
+echo &quot;Verify the changes and do the necessary resets with git. For example test projects that are shipped should either not have the analzyer or the the PrivateAssets set to All. Hit any key to commit the staged files&quot;
+read -sn1
+
+git commit -m &quot;Add Nunit.Analyzer to test projects&quot;
+
+# Restore NuGet packages for all .sln files
+find . -name &quot;*.sln&quot; | while read -r solution; do
+    echo &quot;Restoring nuget packages in $solution&quot;
+    dotnet restore $solution
+done
+
+nunit_analyzer_diagnostics=($(seq -f &quot;NUnit%g&quot; 2001 2050))
+# For manual purposes use the explicitely declared diagnostic IDs
+# nunit_analyzer_diagnostics=(
+#   &quot;NUnit2001&quot; &quot;NUnit2002&quot; &quot;NUnit2003&quot; &quot;NUnit2004&quot; &quot;NUnit2005&quot;
+#   &quot;NUnit2006&quot; &quot;NUnit2007&quot; &quot;NUnit2008&quot; &quot;NUnit2009&quot; &quot;NUnit2010&quot;
+#   &quot;NUnit2011&quot; &quot;NUnit2012&quot; &quot;NUnit2013&quot; &quot;NUnit2014&quot; &quot;NUnit2015&quot;
+#   &quot;NUnit2016&quot; &quot;NUnit2017&quot; &quot;NUnit2018&quot; &quot;NUnit2019&quot; &quot;NUnit2020&quot;
+#   &quot;NUnit2021&quot; &quot;NUnit2022&quot; &quot;NUnit2023&quot; &quot;NUnit2024&quot; &quot;NUnit2025&quot;
+#   &quot;NUnit2026&quot; &quot;NUnit2027&quot; &quot;NUnit2028&quot; &quot;NUnit2029&quot; &quot;NUnit2030&quot;
+#   &quot;NUnit2031&quot; &quot;NUnit2032&quot; &quot;NUnit2033&quot; &quot;NUnit2034&quot; &quot;NUnit2035&quot;
+#   &quot;NUnit2036&quot; &quot;NUnit2037&quot; &quot;NUnit2038&quot; &quot;NUnit2039&quot; &quot;NUnit2040&quot;
+#   &quot;NUnit2041&quot; &quot;NUnit2042&quot; &quot;NUnit2043&quot; &quot;NUnit2044&quot; &quot;NUnit2045&quot;
+#   &quot;NUnit2046&quot; &quot;NUnit2047&quot; &quot;NUnit2048&quot; &quot;NUnit2049&quot; &quot;NUnit2050&quot;
+# )
+
+for diagnostic in ${nunit_analyzer_diagnostics[@]}; do
+    echo &quot;Applying rule $diagnostic&quot;
+
+    formatting_jobs=()
+
+    while IFS= read -r csproj; do
+        (
+            # Check if the project already has NUnit.Analyzers
+            if grep -q &quot;&lt;PackageReference Include=\&quot;$PACKAGE_NAME\&quot;&quot; &quot;$csproj&quot;; then
+                csproj_dir=$(dirname &quot;$csproj&quot;)
+                editor_config=&quot;$csproj_dir/.editorconfig&quot;
+
+                if [ ! -f &quot;$editor_config&quot; ]; then
+                    echo &quot;Creating .editor_config in $editor_config&quot;
+                    touch &quot;$editor_config&quot;
+                    echo &quot;[*.cs]&quot; &gt;&gt; &quot;$editor_config&quot;
+                fi
+
+                echo &quot;Appending to $editor_config&quot;
+                echo -e &quot;\ndotnet_diagnostic.$diagnostic.severity = warning&quot; &gt;&gt; &quot;$editor_config&quot;
+
+                echo &quot;Formatting $csproj with diagnostic $diagnostic&quot;
+                dotnet format analyzers $csproj --diagnostics $diagnostic --severity info --no-restore --verbosity diagnostic
+
+            else
+                echo &quot;Skipping $csproj - No NUnit.Analyzer reference found&quot;
+            fi
+        ) &amp;
+        
+        formatting_jobs+=($!)
+    done &lt; &lt;(find . -name &quot;*.csproj&quot;)
+
+    echo &quot;Waiting for formatting jobs to complete&quot;
+    for formatting_job in &quot;${formatting_jobs[@]}&quot;; do
+        wait $formatting_job
+    done
+
+    echo &quot;Committing formatting changes&quot;
+    git add &quot;*.cs&quot;
+    git commit -m &quot;Autoformat of test projects for $diagnostic&quot;
+
+    echo &quot;Discarding all unrelated changes&quot;
+    git reset --hard
+    git clean -f
+
+    formatting_jobs=()
+done
+
+echo &quot;Pushing the branch upstream&quot;
+git push --set-upstream origin $BRANCH_NAME
+
+echo &quot;Creating the pull request&quot;
+pull_request_url=$(gh pr create --title &quot;Migrate NUnit assertions to the constraint model in preparation of the NUnit 4 upgrade&quot; --body &quot;
+This PR contains all changes related to assertion model according to the [constraint assertion model](https://docs.nunit.org/articles/nunit/writing-tests/assertions/assertion-models/constraint.html).
+
+Using a script, we apply all [assertion rules](https://docs.nunit.org/articles/nunit-analyzers/NUnit-Analyzers.html#assertion-rules-nunit2001---) provided by the NUnit.Analyzers package. In addition, some manual interventions are done when applicable.
+
+## Plan of action
+
+- [ ] ⚠️ Build the solution and resolve any remaining errors or warnings
+- [ ] ✅ Review the assertions commit by commit
+- [ ] 👀 Invite another pair of eyes to re-review
+&quot; --assignee &quot;@me&quot; --head $BRANCH_NAME)
+
+gh project item-add $PROJECT_ID --owner $ORG --url $pull_request_url
+gh pr merge $pull_request_url --auto --squash
+
+popd
+</code></pre>
+<p>The script is provided as is and might require further tweaks to the specific use cases.
+It was written assuming a few structural conventions that might not apply to every use case.</p>
+<h4 id="updating-from-classic-asserts-in-nunit-4x">Updating from Classic Asserts in NUnit 4.x</h4>
+<p>If you want to keep the Classic Asserts and not convert them to the constraint model -- but do want to use the new NUnit
+4.x naming -- you'll need to update the code manually.</p>
+<p>The NUnit.Analyzer can't help here as the code either doesn't compile before the change or after, depending on what
+version of <code>nunit</code> you are compiling with.</p>
+<p>If you <em>only</em> use classic asserts, you can get away with a couple of global substitutes:</p>
+<ol>
+<li><p>Convert <code>using NUnit.Framework;</code> into <em>both</em> <code>using NUnit.Framework;using NUnit.Framework.Legacy;</code></p>
+<p>Depending on your editor you can automatically insert a newline between the two <code>using</code> statements.</p>
+</li>
+<li><p>Convert <code>Assert</code> into <code>ClassicAssert</code>.</p>
+<p>This global substitute will also convert those asserts that have not changed. You can narrow the scope of this
+substitute to do only the asserts that need converting, but there are quite a lot.</p>
+<ol>
+<li>Convert <code>Assert.AreEqual</code> into <code>ClassicAssert.AreEqual</code>.</li>
+<li>Convert <code>Assert.True</code> into <code>ClassicAssert.True</code>.</li>
+<li>Similar for <code>IsTrue</code>, <code>False</code>, <code>IsFalse</code>, <code>Greater</code>, <code>Less</code>, ...</li>
+</ol>
+<p>Depending on what is less work, alternatively you can reverse the substitution of those that shouldn't have been
+changed:</p>
+<ol>
+<li>Convert <code>ClassicAssert.That</code> into <code>Assert.That</code>.</li>
+<li>Convert <code>ClassicAssert.Fail</code> into <code>Assert.Fail</code>.</li>
+<li>Convert <code>ClassicAssert.Throws</code> into <code>Assert.Throws</code>.</li>
+<li>Etc.</li>
+</ol>
+<p>Or if you use Visual Studio, it will raise an
+<a href="https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/style-rules/ide0002">IDE0002</a> with a code fix
+that can convert all of those that are not considered <em>classic</em> back to assert in one swoop:</p>
+<p><img src="../../../images/IDE0002-ClassicAssert-into-Assert.png" alt="ClassicAssert to Assert"></p>
+</li>
+</ol>
+<h4 id="use-global-using-aliases">Use <code>global using</code> aliases</h4>
+<p>If you use SDK 6.0 or newer that supports C#10, you can upgrade without modifying any actual tests by adding the
+following aliases to <code>GlobalUsings.cs</code></p>
+<pre><code class="lang-csharp">global using Assert = NUnit.Framework.Legacy.ClassicAssert;
+global using CollectionAssert = NUnit.Framework.Legacy.CollectionAssert;
+global using StringAssert = NUnit.Framework.Legacy.StringAssert;
+global using DirectoryAssert = NUnit.Framework.Legacy.DirectoryAssert;
+global using FileAssert = NUnit.Framework.Legacy.FileAssert;
+</code></pre>
+<p>Note that this doesn't mean you have to target .NET 6.0. This also works if targeting .NET Framework as it is purely
+done on the source code level.</p>
+<p>If you have to do this for multiple projects in a repository, this is not handy.
+It seems <a href="https://github.com/dotnet/msbuild/issues/6745">somebody else thought of that</a> and
+it is now possible to add global usings in a
+<a href="https://learn.microsoft.com/en-us/visualstudio/msbuild/customize-by-directory?view=vs-2022#directorybuildprops-and-directorybuildtargets"><code>Directory.Build.props</code></a>
+file which will be used by all projects in a repository:</p>
+<pre><code class="lang-xml">&lt;ItemGroup&gt;
+  &lt;Using Include=&quot;NUnit.Framework.Legacy.ClassicAssert&quot; Alias=&quot;Assert&quot; /&gt;
+  &lt;Using Include=&quot;NUnit.Framework.Legacy.CollectionAssert&quot; Alias=&quot;CollectionAssert&quot; /&gt;
+  &lt;Using Include=&quot;NUnit.Framework.Legacy.StringAssert&quot; Alias=&quot;StringAssert&quot; /&gt;
+  &lt;Using Include=&quot;NUnit.Framework.Legacy.DirectoryAssert&quot; Alias=&quot;DirectoryAssert&quot; /&gt;
+  &lt;Using Include=&quot;NUnit.Framework.Legacy.FileAssert&quot; Alias=&quot;FileAssert&quot; /&gt;
+&lt;/ItemGroup&gt;
+</code></pre>
+<p>The build process now automatically creates a <code>${Project}.GlobalUsings.g.cs</code> file
+for each project with a contents similar to the one shown above.</p>
+<h3 id="assertthat-with-format-specification-and-params-overload-conversion">Assert.That with <em>format</em> specification and <code>params</code> overload conversion</h3>
+<p>These overloads were removed to allow for better messages in case of failure. See <a href="../Towards-NUnit4.html#improved-assert-result-messages">The &quot;Towards NUnit 4&quot;
+article</a> for more information.</p>
+<p>NUnit 4.x has been optimized such that these formattable strings only get formatted in case the test is failing.</p>
+<pre><code class="lang-csharp">int actual = SomeCalculation();
+Assert.That(actual, Is.EqualTo(42), &quot;Expected {0} to be 42&quot;, actual);
+</code></pre>
+<p>Needs to be converted into:</p>
+<pre><code class="lang-csharp">int actual = SomeCalculation();
+Assert.That(actual, Is.EqualTo(42), $&quot;Expected {actual} to be 42&quot;);
+</code></pre>
+<p>To make this transition easier, the Nunit.Analyzer has been updated with a new rule and corresponding code-fix:</p>
+<p><img src="../../../images/NUnit.Analyzer-ReplaceFormatSpecification.png" alt="Replace Format Specification with Formattable String"></p>
+<h3 id="using-nunit-extension-libraries">Using NUnit Extension libraries</h3>
+<p>If your code doesn't call <code>nunit</code> asserts directly but uses a local <code>NUnitExtension</code> library or a 3rd party one then
+that dependency needs to be upgraded <em>before</em> you can upgrade your own code.</p>
+<p>If the library is not NUnit 4.0 compliant, you will get error messages like:</p>
+<pre><code class="lang-txt">System.MissingMethodException : Method not found: 'Void NUnit.Framework.Assert.That(!!0, NUnit.Framework.Constraints.IResolveConstraint, System.String, System.Object[])'.
+</code></pre>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/stevenaw/docs/blob/master/docs/articles/nunit/release-notes/Nunit4.0-MigrationGuide.md/#L1" class="contribution-link">Edit this page</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      <span>Generated by <strong>DocFX</strong></span> | Copyright (c) 2018-<span id="currentYear"></span> The NUnit Project - Licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>
+      
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../../../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

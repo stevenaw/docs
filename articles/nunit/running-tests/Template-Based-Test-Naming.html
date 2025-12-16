@@ -1,47 +1,36 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <!--[if IE]><![endif]-->
-<html>
-  
+<html lang="en">
+
   <head>
-    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-PCB5BYBNM2"></script>
+    <meta charset="utf-8">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PCB5BYBNM2"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+      function gtag() { dataLayer.push(arguments); }
       gtag('js', new Date());
-  
       gtag('config', 'G-PCB5BYBNM2');
     </script>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Template-Based Test Naming | NUnit Docs </title>
-    <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Template-Based Test Naming | NUnit Docs ">
-    <meta name="generator" content="docfx 2.58.9.0">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Template-Based Test Naming | NUnit Docs </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Template-Based Test Naming | NUnit Docs ">
     
-  
-    <link rel="apple-touch-icon" sizes="180x180" href="../../../favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../../../favicons/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../../../favicons/favicon-32x32.png">
-    <link rel="shortcut icon" type="image/x-icon" href="../../../favicon.ico">
-    <link rel="manifest" href="../../../favicons/manifest.json">
-    <link rel="mask-icon" href="../../../favicons/safari-pinned-tab.svg" color="#222222">
-    <meta name="msapplication-config" content="../../../favicons/browserconfig.xml">
-    <meta name="msapplication-TileColor" content="#222222">
-    <meta name="theme-color" content="#222222">
-  
-    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
-    <link rel="stylesheet" href="../../../styles/docfx.css">
-    <link rel="stylesheet" href="../../../styles/main.css">
-    <meta property="docfx:navrel" content="../../../toc.html">
-    <meta property="docfx:tocrel" content="../../toc.html">
+    
+      <link rel="shortcut icon" href="../../../favicon.ico">
+      <link rel="stylesheet" href="../../../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../../../styles/docfx.css">
+      <link rel="stylesheet" href="../../../styles/main.css">
+      <meta property="docfx:navrel" content="../../../toc.html">
+      <meta property="docfx:tocrel" content="../../toc.html">
     
     <meta property="docfx:rel" content="../../../">
     
   </head>
-  `  <body data-spy="scroll" data-target="#affix" data-offset="120">
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
-        
+
         <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
           <div class="container">
             <div class="navbar-header">
@@ -51,7 +40,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              
+
               <a class="navbar-brand" href="../../../index.html">
                 <img id="logo" class="svg" src="../../../logo.svg" alt="">
               </a>
@@ -65,7 +54,7 @@
             </div>
           </div>
         </nav>
-        
+
         <div class="subnav navbar navbar-default">
           <div class="container hide-when-search" id="breadcrumb">
             <ul class="breadcrumb">
@@ -75,17 +64,17 @@
         </div>
       </header>
       <div class="container body-content">
-        
+
         <div id="search-results">
           <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+          <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
-        
+
         <div class="sidenav hide-when-search">
           <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
           <div class="sidetoggle collapse" id="sidetoggle">
@@ -97,39 +86,55 @@
             <article class="content wrap" id="_content" data-uid="templatebasedtestnaming">
 <h1 id="template-based-test-naming">Template-Based Test Naming</h1>
 
-<p>NUnit uses a standard naming convention for all tests - however, this can be overridden by the user if required. TestName generation is driven by a name formatting string, which may contain any of the following format specifiers:</p>
+<p>NUnit uses a standard naming convention for all tests, which in the language described below corresponds to <code>{m}{a}</code>.
+The most used runners, Visual Studio and dotnet depends on this being the default, and trying to change this will cause
+display issues in these runners.</p>
+<p><strong>We strongly recommend you to NOT change the test naming.</strong></p>
+<h2 id="if-you-still-want-to-do-it">If you still want to do it</h2>
+<p>However, if you're out on your own, the naming <em>can</em> be overridden by the user if required. TestName generation is
+driven by a name formatting string, which may contain any of the following format specifiers:</p>
 <ul>
 <li><p><code>{n}</code> The namespace of the test or empty if there is no namespace. If empty, any immediately following '.' is ignored.</p>
 </li>
-<li><p><code>{c}</code> The class name of the test or empty if there is no class. This name includes any type arguments, enclosed in angle braces and separated by commas.</p>
+<li><p><code>{c}</code> The class name of the test or empty if there is no class. This name includes any type arguments, enclosed in
+angle braces and separated by commas.</p>
 </li>
 <li><p><code>{C}</code> The full name of the class. Equivalent to <code>{n}.{c}</code></p>
 </li>
-<li><p><code>{m}</code> The method name of the test or empty if there is no method. The name includes any type arguments, enclosed in angle braces and separated by commas.</p>
+<li><p><code>{m}</code> The method name of the test or empty if there is no method. The name includes any type arguments, enclosed in
+angle braces and separated by commas.</p>
 </li>
 <li><p><code>{M}</code> The full name of the method.</p>
 </li>
-<li><p><code>{a}</code> The full argument representation, enclosed in parentheses and separated by commas. Each argument is represented by the standard NUnit format for certain types, otherwise by the result of ToString().</p>
+<li><p><code>{a}</code> The full argument representation, enclosed in parentheses and separated by commas. Each argument is represented
+by the standard NUnit format for certain types, otherwise by the result of ToString().</p>
 </li>
-<li><p><code>{p}</code> Same as <code>{a}</code> but with a parameter name before each argument in the same style as the <a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/named-and-optional-arguments#named-arguments"><em>named arguments</em> C# language feature</a>.</p>
+<li><p><code>{p}</code> Same as <code>{a}</code> but with a parameter name before each argument in the same style as the <a href="https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/named-and-optional-arguments#named-arguments"><em>named arguments</em> C#
+language
+feature</a>.</p>
 </li>
-<li><p><code>{0}</code>, <code>{1}</code>...<code>{9}</code>. An individual argument. This form is only useful when setting the name of an individual test case. If used in the default format string, any arguments not used will be ignored.</p>
+<li><p><code>{0}</code>, <code>{1}</code>...<code>{9}</code>. An individual argument. This form is only useful when setting the name of an individual test
+case. If used in the default format string, any arguments not used will be ignored.</p>
 </li>
 <li><p><code>{i}</code> The test id, which is normally of the form mmm-nnn.</p>
 </li>
 <li><p>Any text not included between curly braces is copied to the name as is.</p>
 </li>
 </ul>
-<p>After the name is formatted, any leading or trailing '.' characters are removed. Otherwise, all non-format characters in the string are included as is.</p>
-<p>String arguments may be truncated to a maximum length. Either the {a} specifier or any of the individual argument specifiers may be followed by a colon and a length:</p>
+<p>After the name is formatted, any leading or trailing '.' characters are removed. Otherwise, all non-format characters in
+the string are included as is.</p>
+<p>String arguments may be truncated to a maximum length. Either the {a} specifier or any of the individual argument
+specifiers may be followed by a colon and a length:</p>
 <ul>
-<li><p><code>{a:40}</code> Truncate <strong>each string argument</strong> to 40 characters. All strings more than 37 characters are truncated to the first 37 followed by &quot;...&quot;</p>
+<li><p><code>{a:40}</code> Truncate <strong>each string argument</strong> to 40 characters. All strings more than 37 characters are truncated to the
+first 37 followed by &quot;...&quot;</p>
 </li>
 <li><p><code>{0:20}</code> Truncate argument zero to 20 characters.</p>
 </li>
 </ul>
 <h2 id="standard-name-formats">Standard Name Formats</h2>
-<p>Internally, NUnit uses certain standard formats unless overridden by the user. The standard format for generating a name from a test method and its arguments is:</p>
+<p>Internally, NUnit uses certain standard formats unless overridden by the user. The standard format for generating a name
+from a test method and its arguments is:</p>
 <pre><code class="lang-text">         {m}{a} // Name
 </code></pre>
 <p>This leads to test names like:</p>
@@ -139,35 +144,40 @@
          Test4(&quot;This is quite long argument, so it is...&quot;)
 </code></pre>
 <h2 id="modifying-the-name-format">Modifying the Name Format</h2>
-<p>The <code>SetName</code> method of <code>TestCaseData</code> allows setting the name of an individual test case. In normal use, the provided string simply becomes the name of the test.</p>
-<p>However, if one of the template format specifiers is used in the argument to <code>SetName</code>, the name is regenerated using that format. For example, if the user wishes to specify only the argument portion of the name of a test method, while still retaining the method name, the name could be set to</p>
+<p>The <code>SetName</code> method of <code>TestCaseData</code> allows setting the name of an individual test case. In normal use, the provided
+string simply becomes the name of the test.</p>
+<p>However, if one of the template format specifiers is used in the argument to <code>SetName</code>, the name is regenerated using
+that format. For example, if the user wishes to specify only the argument portion of the name of a test method, while
+still retaining the method name, the name could be set to</p>
 <pre><code class="lang-text">         {m}(User argument)
 </code></pre>
 <p>This would result in the display of the test name as</p>
 <pre><code class="lang-text">         SomeMethod(User Argument)
 </code></pre>
-<p>Note that in this usage, it will generally only make sense to use <code>{m}</code>, <code>{a}</code> or <code>{0}</code> through <code>{9}</code> specifiers. However, NUnit will use whatever is provided.</p>
+<p>Note that in this usage, it will generally only make sense to use <code>{m}</code>, <code>{a}</code> or <code>{0}</code> through <code>{9}</code> specifiers.
+However, NUnit will use whatever is provided.</p>
+
 </article>
           </div>
-          
+
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/nunit/docs/blob/master/docs/articles/nunit/running-tests/Template-Based-Test-Naming.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/stevenaw/docs/blob/master/docs/articles/nunit/running-tests/Template-Based-Test-Naming.md/#L1" class="contribution-link">Edit this page</a>
                   </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-                <h5>In This Article</h5>
+                <h5>In this article</h5>
                 <div></div>
               </nav>
             </div>
           </div>
         </div>
       </div>
-      
+
       <footer>
         <div class="grad-bottom"></div>
         <div class="footer">
@@ -175,14 +185,14 @@
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            
-            <span>Generated by <strong>DocFX</strong></span> | Copyright (c) 2018-<span id="currentYear"></span> The NUnit Project - Licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>
+      <span>Generated by <strong>DocFX</strong></span> | Copyright (c) 2018-<span id="currentYear"></span> The NUnit Project - Licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>
+      
           </div>
         </div>
       </footer>
     </div>
-    
-    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+
+    <script type="text/javascript" src="../../../styles/docfx.vendor.min.js"></script>
     <script type="text/javascript" src="../../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../../styles/main.js"></script>
   </body>

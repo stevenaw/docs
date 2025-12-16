@@ -1,47 +1,36 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <!--[if IE]><![endif]-->
-<html>
-  
+<html lang="en">
+
   <head>
-    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-PCB5BYBNM2"></script>
+    <meta charset="utf-8">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PCB5BYBNM2"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+      function gtag() { dataLayer.push(arguments); }
       gtag('js', new Date());
-  
       gtag('config', 'G-PCB5BYBNM2');
     </script>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Framework Drivers | NUnit Docs </title>
-    <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Framework Drivers | NUnit Docs ">
-    <meta name="generator" content="docfx 2.58.9.0">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Framework Drivers | NUnit Docs </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Framework Drivers | NUnit Docs ">
     
-  
-    <link rel="apple-touch-icon" sizes="180x180" href="../../../../favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../../../../favicons/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../../../../favicons/favicon-32x32.png">
-    <link rel="shortcut icon" type="image/x-icon" href="../../../../favicon.ico">
-    <link rel="manifest" href="../../../../favicons/manifest.json">
-    <link rel="mask-icon" href="../../../../favicons/safari-pinned-tab.svg" color="#222222">
-    <meta name="msapplication-config" content="../../../../favicons/browserconfig.xml">
-    <meta name="msapplication-TileColor" content="#222222">
-    <meta name="theme-color" content="#222222">
-  
-    <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
-    <link rel="stylesheet" href="../../../../styles/docfx.css">
-    <link rel="stylesheet" href="../../../../styles/main.css">
-    <meta property="docfx:navrel" content="../../../../toc.html">
-    <meta property="docfx:tocrel" content="../../../toc.html">
+    
+      <link rel="shortcut icon" href="../../../../favicon.ico">
+      <link rel="stylesheet" href="../../../../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../../../../styles/docfx.css">
+      <link rel="stylesheet" href="../../../../styles/main.css">
+      <meta property="docfx:navrel" content="../../../../toc.html">
+      <meta property="docfx:tocrel" content="../../../toc.html">
     
     <meta property="docfx:rel" content="../../../../">
     
   </head>
-  `  <body data-spy="scroll" data-target="#affix" data-offset="120">
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
-        
+
         <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
           <div class="container">
             <div class="navbar-header">
@@ -51,7 +40,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              
+
               <a class="navbar-brand" href="../../../../index.html">
                 <img id="logo" class="svg" src="../../../../logo.svg" alt="">
               </a>
@@ -65,7 +54,7 @@
             </div>
           </div>
         </nav>
-        
+
         <div class="subnav navbar navbar-default">
           <div class="container hide-when-search" id="breadcrumb">
             <ul class="breadcrumb">
@@ -75,17 +64,17 @@
         </div>
       </header>
       <div class="container body-content">
-        
+
         <div id="search-results">
           <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+          <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
-        
+
         <div class="sidenav hide-when-search">
           <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
           <div class="sidetoggle collapse" id="sidetoggle">
@@ -97,12 +86,20 @@
             <article class="content wrap" id="_content" data-uid="frameworkdrivers">
 <h1 id="framework-drivers">Framework Drivers</h1>
 
-<p><strong>Framework Drivers</strong> are extensions that know how to create a driver for a particular framework. These allow the NUnit Engine to run tests for multiple different test frameworks. The NUnit engine provides drivers for both NUnit 3.x, whilst a separate extension can be installed to run NUnit 2.x frameworks. Third parties may provide drivers for other frameworks by creating extensions.</p>
+<p><strong>Framework Drivers</strong> are extensions that know how to create a driver for a particular framework. These allow the NUnit
+Engine to run tests for multiple different test frameworks. The NUnit engine provides drivers for both NUnit 3.x, whilst
+a separate extension can be installed to run NUnit 2.x frameworks. Third parties may provide drivers for other
+frameworks by creating extensions.</p>
 <h2 id="implementation-details">Implementation Details</h2>
-<p>The framework driver API is encapsulated in the <code>IDriverFactory</code> and <code>IFrameworkDriver</code> interfaces, which must be implemented by all framework driver extensions to the engine.</p>
+<p>The framework driver API is encapsulated in the <code>IDriverFactory</code> and <code>IFrameworkDriver</code> interfaces, which must be
+implemented by all framework driver extensions to the engine.</p>
 <h3 id="idriverfactory">IDriverFactory</h3>
-<p>The <code>IDriverFactory</code> interface is called by the engine to determine if a particular extension is able to create a driver for a particular framework assembly. The engine passes the AssemblyName of each assembly referenced by the test assembly to the factory to see if it is a supported framework. If it finds one, then it uses that driver. If not, it goes on to check the next driver extension.</p>
-<p>The <code>ExtensionPoint</code> for framework drivers uses the Path &quot;NUnit.Engine.DriverService&quot; and accepts an extension of Type <code>NUnit.Engine.Extensibility.IDriverFactory</code>. The definition of a driver factory might look like this:</p>
+<p>The <code>IDriverFactory</code> interface is called by the engine to determine if a particular extension is able to create a driver
+for a particular framework assembly. The engine passes the AssemblyName of each assembly referenced by the test assembly
+to the factory to see if it is a supported framework. If it finds one, then it uses that driver. If not, it goes on to
+check the next driver extension.</p>
+<p>The <code>ExtensionPoint</code> for framework drivers uses the Path &quot;NUnit.Engine.DriverService&quot; and accepts an extension of Type
+<code>NUnit.Engine.Extensibility.IDriverFactory</code>. The definition of a driver factory might look like this:</p>
 <pre><code class="lang-csharp">[Extension]
 public class MyOwnFrameworkDriverFactory : IDriverFactory
 {
@@ -121,8 +118,11 @@ public class MyOwnFrameworkDriverFactory : IDriverFactory
 }
 </code></pre>
 <h3 id="iframeworkdriver">IFrameworkDriver</h3>
-<p>The <code>IFrameworkDriver</code> interface is returned from <code>IDriverFactory</code> and is the key interface for actually loading, exploring and running the tests in the test assembly. In theory, a single driver factory could return different drivers in different situations, but we expect a one-to-one mapping of factories to drivers to be most commonly used.</p>
-<p>As designed, the <code>IFrameworkDriver</code> interface maps most directly to the requirements of the NUnit 3 framework. Drivers for other frameworks need to function as an adapter to run tests and return understandable results to the engine.</p>
+<p>The <code>IFrameworkDriver</code> interface is returned from <code>IDriverFactory</code> and is the key interface for actually loading,
+exploring and running the tests in the test assembly. In theory, a single driver factory could return different drivers
+in different situations, but we expect a one-to-one mapping of factories to drivers to be most commonly used.</p>
+<p>As designed, the <code>IFrameworkDriver</code> interface maps most directly to the requirements of the NUnit 3 framework. Drivers
+for other frameworks need to function as an adapter to run tests and return understandable results to the engine.</p>
 <p>The <code>IFrameworkDriver</code> interface is defined as follows:</p>
 <pre><code class="lang-csharp">public interface IFrameworkDriver
 {
@@ -144,10 +144,14 @@ public class MyOwnFrameworkDriverFactory : IDriverFactory
     // Cancels an ongoing test run.
     void StopRun(bool force);
 </code></pre>
-<p>The strings returned by Run and Explore are XML representations and the filter is also in XML format. See the source code for NUnit3FrameworkDriver and NUnit2FrameworkDriver for sample code.</p>
-<p>The filter argument passed to several of the interface methods is an XML string representing the filter. See <a class="xref" href="../../../nunit/technical-notes/usage/Test-Filters.html">Test Filters</a> for a description of the format, which is directly understood by the NUnit 3 framework, but which must be converted by the driver to something that is understood by other frameworks.</p>
+<p>The strings returned by Run and Explore are XML representations and the filter is also in XML format. See the source
+code for NUnit3FrameworkDriver and NUnit2FrameworkDriver for sample code.</p>
+<p>The filter argument passed to several of the interface methods is an XML string representing the filter. See <a class="xref" href="../../../nunit/technical-notes/usage/Test-Filters.html">Test
+Filters</a> for a description of the format, which is directly understood by the NUnit 3 framework, but
+which must be converted by the driver to something that is understood by other frameworks.</p>
 <h3 id="itesteventlistener">ITestEventListener</h3>
-<p>The <code>ITestEventListener</code> interface is implemented by the Engine and used by each driver to report significant events during the execution of tests.</p>
+<p>The <code>ITestEventListener</code> interface is implemented by the Engine and used by each driver to report significant events
+during the execution of tests.</p>
 <pre><code class="lang-csharp">namespace NUnit.Engine
 {
     /// &lt;summary&gt;
@@ -169,27 +173,28 @@ public class MyOwnFrameworkDriverFactory : IDriverFactory
     }
 }
 </code></pre>
+
 </article>
           </div>
-          
+
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/nunit/docs/blob/master/docs/articles/nunit-engine/extensions/creating-extensions/Framework-Drivers.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/stevenaw/docs/blob/master/docs/articles/nunit-engine/extensions/creating-extensions/Framework-Drivers.md/#L1" class="contribution-link">Edit this page</a>
                   </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-                <h5>In This Article</h5>
+                <h5>In this article</h5>
                 <div></div>
               </nav>
             </div>
           </div>
         </div>
       </div>
-      
+
       <footer>
         <div class="grad-bottom"></div>
         <div class="footer">
@@ -197,14 +202,14 @@ public class MyOwnFrameworkDriverFactory : IDriverFactory
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            
-            <span>Generated by <strong>DocFX</strong></span> | Copyright (c) 2018-<span id="currentYear"></span> The NUnit Project - Licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>
+      <span>Generated by <strong>DocFX</strong></span> | Copyright (c) 2018-<span id="currentYear"></span> The NUnit Project - Licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>
+      
           </div>
         </div>
       </footer>
     </div>
-    
-    <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
+
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.min.js"></script>
     <script type="text/javascript" src="../../../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../../../styles/main.js"></script>
   </body>

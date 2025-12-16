@@ -1,35 +1,44 @@
-﻿
+
 <div id="sidetoggle">
   <div>
     <div class="sidefilter">
       <form class="toc-filter">
         <span class="glyphicon glyphicon-filter filter-icon"></span>
         <span class="glyphicon glyphicon-remove clear-icon" id="toc_filter_clear"></span>
-        <input type="text" id="toc_filter_input" placeholder="Enter here to filter..." onkeypress="if(event.keyCode==13) {return false;}">
+        <input type="text" id="toc_filter_input" placeholder="Filter by title" onkeypress="if(event.keyCode==13) {return false;}">
       </form>
     </div>
     <div class="sidetoc">
       <div class="toc" id="toc">
-          
+
           <ul class="nav level1">
                 <li>
                     <span class="expand-stub"></span>
                     <a href="nunit/intro.html" name="" title="NUnit">NUnit</a>
-                    
+
                     <ul class="nav level2">
                           <li>
                               <a href="nunit/intro.html" name="" title="Introduction">Introduction</a>
                           </li>
                           <li>
+                              <a href="nunit/Towards-NUnit4.html" name="" title="NUnit 4 plans">NUnit 4 plans</a>
+                          </li>
+                          <li>
+                              <a href="nunit/release-notes/Nunit4.0-MigrationGuide.html" name="" title="Migration Guidance">Migration Guidance</a>
+                          </li>
+                          <li>
                               <span class="expand-stub"></span>
                               <a href="nunit/release-notes/framework.html" name="" title="Release Notes">Release Notes</a>
-                              
+
                               <ul class="nav level3">
                                     <li>
                                         <a href="nunit/release-notes/framework.html" name="" title="Framework">Framework</a>
                                     </li>
                                     <li>
                                         <a href="nunit-engine/release-notes.html" name="" title="Console and Engine">Console and Engine</a>
+                                    </li>
+                                    <li>
+                                        <a href="nunit/release-notes/Nunit4.0-MigrationGuide.html" name="" title="Migration Guidance">Migration Guidance</a>
                                     </li>
                                     <li>
                                         <a href="nunit/release-notes/breaking-changes.html" name="" title="Breaking Changes">Breaking Changes</a>
@@ -45,7 +54,7 @@
                           <li>
                               <span class="expand-stub"></span>
                               <a href="nunit/getting-started/installation.html" name="" title="Getting Started">Getting Started</a>
-                              
+
                               <ul class="nav level3">
                                     <li>
                                         <a href="nunit/getting-started/installation.html" name="" title="Installation">Installation</a>
@@ -54,20 +63,20 @@
                                         <a href="nunit/getting-started/upgrading.html" name="" title="Upgrading">Upgrading</a>
                                     </li>
                                     <li>
-                                        <a href="nunit/getting-started/dotnet-core-and-dotnet-standard.html" name="" title=".NET Core and .NET Standard">.NET Core and .NET Standard</a>
-                                    </li>
-                                    <li>
                                         <a href="nunit/getting-started/samples.html" name="" title="Samples">Samples</a>
                                     </li>
                                     <li>
                                         <a href="nunit/release-notes/breaking-changes.html" name="" title="Breaking Changes">Breaking Changes</a>
+                                    </li>
+                                    <li>
+                                        <a href="nunit/getting-started/dotnet-core-and-dotnet-standard.html" name="" title=".NET Core and .NET Standard">.NET Core and .NET Standard</a>
                                     </li>
                               </ul>
                           </li>
                           <li>
                               <span class="expand-stub"></span>
                               <a href="nunit/writing-tests/attributes.html" name="" title="Writing Tests">Writing Tests</a>
-                              
+
                               <ul class="nav level3">
                                     <li>
                                         <a href="nunit/writing-tests/attributes.html" name="" title="Attributes">Attributes</a>
@@ -75,7 +84,7 @@
                                     <li>
                                         <span class="expand-stub"></span>
                                         <a href="nunit/writing-tests/attributes/apartment.html" name="" title="Attribute Descriptions">Attribute Descriptions</a>
-                                        
+
                                         <ul class="nav level4">
                                               <li>
                                                   <a href="nunit/writing-tests/attributes/apartment.html" name="" title="[Apartment]">[Apartment]</a>
@@ -171,7 +180,7 @@
                                                   <a href="nunit/writing-tests/attributes/setuiculture.html" name="" title="[SetUICulture]">[SetUICulture]</a>
                                               </li>
                                               <li>
-                                                  <a href="nunit/writing-tests/attributes/setup.html" name="" title="[Setup]">[Setup]</a>
+                                                  <a href="nunit/writing-tests/attributes/setup.html" name="" title="[SetUp]">[SetUp]</a>
                                               </li>
                                               <li>
                                                   <a href="nunit/writing-tests/attributes/setupfixture.html" name="" title="[SetUpFixture]">[SetUpFixture]</a>
@@ -223,7 +232,7 @@
                                     <li>
                                         <span class="expand-stub"></span>
                                         <a href="nunit/writing-tests/assertions/assertions.html" name="" title="Assertions">Assertions</a>
-                                        
+
                                         <ul class="nav level4">
                                               <li>
                                                   <a href="nunit/writing-tests/assertions/assertions.html" name="" title="Assertions">Assertions</a>
@@ -231,13 +240,16 @@
                                               <li>
                                                   <span class="expand-stub"></span>
                                                   <a href="nunit/writing-tests/assertions/assertion-models/classic.html" name="" title="Assertion Models">Assertion Models</a>
-                                                  
+
                                                   <ul class="nav level5">
                                                         <li>
-                                                            <a href="nunit/writing-tests/assertions/assertion-models/classic.html" name="" title="Classic Model">Classic Model</a>
+                                                            <a href="nunit/writing-tests/assertions/assertion-models/constraint.html" name="" title="Constraint Model (Assert.That)">Constraint Model (Assert.That)</a>
                                                         </li>
                                                         <li>
-                                                            <a href="nunit/writing-tests/assertions/assertion-models/constraint.html" name="" title="Constraint Model (Assert.That)">Constraint Model (Assert.That)</a>
+                                                            <a href="nunit/writing-tests/assertions/assertion-models/special.html" name="" title="Special Asserts">Special Asserts</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="nunit/writing-tests/assertions/assertion-models/classic.html" name="" title="Classic Model">Classic Model</a>
                                                         </li>
                                                   </ul>
                                               </li>
@@ -246,80 +258,99 @@
                                               </li>
                                               <li>
                                                   <span class="expand-stub"></span>
-                                                  <a>Classic Assertions</a>
-                                                  
+                                                  <a href="nunit/writing-tests/assertions/assertions.html" name="" title="Special Assertions">Special Assertions</a>
+
                                                   <ul class="nav level5">
                                                         <li>
-                                                            <a href="nunit/writing-tests/assertions/classic-assertions/Assert.True.html" name="" title="Assert.True">Assert.True</a>
+                                                            <a href="nunit/writing-tests/assertions/special-assertions/Assert.Pass.html" name="" title="Assert.Pass">Assert.Pass</a>
                                                         </li>
                                                         <li>
-                                                            <a href="nunit/writing-tests/assertions/classic-assertions/Assert.False.html" name="" title="Assert.False">Assert.False</a>
+                                                            <a href="nunit/writing-tests/assertions/special-assertions/Assert.Fail.html" name="" title="Assert.Fail">Assert.Fail</a>
                                                         </li>
                                                         <li>
-                                                            <a href="nunit/writing-tests/assertions/classic-assertions/Assert.Null.html" name="" title="Assert.Null">Assert.Null</a>
+                                                            <a href="nunit/writing-tests/assertions/special-assertions/Assert.Ignore.html" name="" title="Assert.Ignore">Assert.Ignore</a>
                                                         </li>
                                                         <li>
-                                                            <a href="nunit/writing-tests/assertions/classic-assertions/Assert.NotNull.html" name="" title="Assert.NotNull">Assert.NotNull</a>
+                                                            <a href="nunit/writing-tests/assertions/special-assertions/Assert.Inconclusive.html" name="" title="Assert.Inconclusive">Assert.Inconclusive</a>
+                                                        </li>
+                                                  </ul>
+                                              </li>
+                                              <li>
+                                                  <span class="expand-stub"></span>
+                                                  <a href="nunit/writing-tests/assertions/assertions.html" name="" title="Classic Assertions">Classic Assertions</a>
+
+                                                  <ul class="nav level5">
+                                                        <li>
+                                                            <a href="nunit/writing-tests/assertions/classic-assertions/Assert.True.html" name="" title="ClassicAssert.True">ClassicAssert.True</a>
                                                         </li>
                                                         <li>
-                                                            <a href="nunit/writing-tests/assertions/classic-assertions/Assert.Zero.html" name="" title="Assert.Zero">Assert.Zero</a>
+                                                            <a href="nunit/writing-tests/assertions/classic-assertions/Assert.False.html" name="" title="ClassicAssert.False">ClassicAssert.False</a>
                                                         </li>
                                                         <li>
-                                                            <a href="nunit/writing-tests/assertions/classic-assertions/Assert.NotZero.html" name="" title="Assert.NotZero">Assert.NotZero</a>
+                                                            <a href="nunit/writing-tests/assertions/classic-assertions/Assert.Null.html" name="" title="ClassicAssert.Null">ClassicAssert.Null</a>
                                                         </li>
                                                         <li>
-                                                            <a href="nunit/writing-tests/assertions/classic-assertions/Assert.IsNaN.html" name="" title="Assert.IsNaN">Assert.IsNaN</a>
+                                                            <a href="nunit/writing-tests/assertions/classic-assertions/Assert.NotNull.html" name="" title="ClassicAssert.NotNull">ClassicAssert.NotNull</a>
                                                         </li>
                                                         <li>
-                                                            <a href="nunit/writing-tests/assertions/classic-assertions/Assert.IsEmpty.html" name="" title="Assert.IsEmpty">Assert.IsEmpty</a>
+                                                            <a href="nunit/writing-tests/assertions/classic-assertions/Assert.Zero.html" name="" title="ClassicAssert.Zero">ClassicAssert.Zero</a>
                                                         </li>
                                                         <li>
-                                                            <a href="nunit/writing-tests/assertions/classic-assertions/Assert.IsNotEmpty.html" name="" title="Assert.IsNotEmpty">Assert.IsNotEmpty</a>
+                                                            <a href="nunit/writing-tests/assertions/classic-assertions/Assert.NotZero.html" name="" title="ClassicAssert.NotZero">ClassicAssert.NotZero</a>
                                                         </li>
                                                         <li>
-                                                            <a href="nunit/writing-tests/assertions/classic-assertions/Assert.AreEqual.html" name="" title="Assert.AreEqual">Assert.AreEqual</a>
+                                                            <a href="nunit/writing-tests/assertions/classic-assertions/Assert.IsNaN.html" name="" title="ClassicAssert.IsNaN">ClassicAssert.IsNaN</a>
                                                         </li>
                                                         <li>
-                                                            <a href="nunit/writing-tests/assertions/classic-assertions/Assert.AreNotEqual.html" name="" title="Assert.AreNotEqual">Assert.AreNotEqual</a>
+                                                            <a href="nunit/writing-tests/assertions/classic-assertions/Assert.IsEmpty.html" name="" title="ClassicAssert.IsEmpty">ClassicAssert.IsEmpty</a>
                                                         </li>
                                                         <li>
-                                                            <a href="nunit/writing-tests/assertions/classic-assertions/Assert.AreSame.html" name="" title="Assert.AreSame">Assert.AreSame</a>
+                                                            <a href="nunit/writing-tests/assertions/classic-assertions/Assert.IsNotEmpty.html" name="" title="ClassicAssert.IsNotEmpty">ClassicAssert.IsNotEmpty</a>
                                                         </li>
                                                         <li>
-                                                            <a href="nunit/writing-tests/assertions/classic-assertions/Assert.AreNotSame.html" name="" title="Assert.AreNotSame">Assert.AreNotSame</a>
+                                                            <a href="nunit/writing-tests/assertions/classic-assertions/Assert.AreEqual.html" name="" title="ClassicAssert.AreEqual">ClassicAssert.AreEqual</a>
                                                         </li>
                                                         <li>
-                                                            <a href="nunit/writing-tests/assertions/classic-assertions/Assert.Contains.html" name="" title="Assert.Contains">Assert.Contains</a>
+                                                            <a href="nunit/writing-tests/assertions/classic-assertions/Assert.AreNotEqual.html" name="" title="ClassicAssert.AreNotEqual">ClassicAssert.AreNotEqual</a>
                                                         </li>
                                                         <li>
-                                                            <a href="nunit/writing-tests/assertions/classic-assertions/Assert.Greater.html" name="" title="Assert.Greater">Assert.Greater</a>
+                                                            <a href="nunit/writing-tests/assertions/classic-assertions/Assert.AreSame.html" name="" title="ClassicAssert.AreSame">ClassicAssert.AreSame</a>
                                                         </li>
                                                         <li>
-                                                            <a href="nunit/writing-tests/assertions/classic-assertions/Assert.GreaterOrEqual.html" name="" title="Assert.GreaterOrEqual">Assert.GreaterOrEqual</a>
+                                                            <a href="nunit/writing-tests/assertions/classic-assertions/Assert.AreNotSame.html" name="" title="ClassicAssert.AreNotSame">ClassicAssert.AreNotSame</a>
                                                         </li>
                                                         <li>
-                                                            <a href="nunit/writing-tests/assertions/classic-assertions/Assert.Less.html" name="" title="Assert.Less">Assert.Less</a>
+                                                            <a href="nunit/writing-tests/assertions/classic-assertions/Assert.Contains.html" name="" title="ClassicAssert.Contains">ClassicAssert.Contains</a>
                                                         </li>
                                                         <li>
-                                                            <a href="nunit/writing-tests/assertions/classic-assertions/Assert.LessOrEqual.html" name="" title="Assert.LessOrEqual">Assert.LessOrEqual</a>
+                                                            <a href="nunit/writing-tests/assertions/classic-assertions/Assert.Greater.html" name="" title="ClassicAssert.Greater">ClassicAssert.Greater</a>
                                                         </li>
                                                         <li>
-                                                            <a href="nunit/writing-tests/assertions/classic-assertions/Assert.Positive.html" name="" title="Assert.Positive">Assert.Positive</a>
+                                                            <a href="nunit/writing-tests/assertions/classic-assertions/Assert.GreaterOrEqual.html" name="" title="ClassicAssert.GreaterOrEqual">ClassicAssert.GreaterOrEqual</a>
                                                         </li>
                                                         <li>
-                                                            <a href="nunit/writing-tests/assertions/classic-assertions/Assert.Negative.html" name="" title="Assert.Negative">Assert.Negative</a>
+                                                            <a href="nunit/writing-tests/assertions/classic-assertions/Assert.Less.html" name="" title="ClassicAssert.Less">ClassicAssert.Less</a>
                                                         </li>
                                                         <li>
-                                                            <a href="nunit/writing-tests/assertions/classic-assertions/Assert.IsInstanceOf.html" name="" title="Assert.IsInstanceOf">Assert.IsInstanceOf</a>
+                                                            <a href="nunit/writing-tests/assertions/classic-assertions/Assert.LessOrEqual.html" name="" title="ClassicAssert.LessOrEqual">ClassicAssert.LessOrEqual</a>
                                                         </li>
                                                         <li>
-                                                            <a href="nunit/writing-tests/assertions/classic-assertions/Assert.IsNotInstanceOf.html" name="" title="Assert.IsNotInstanceOf">Assert.IsNotInstanceOf</a>
+                                                            <a href="nunit/writing-tests/assertions/classic-assertions/Assert.Positive.html" name="" title="ClassicAssert.Positive">ClassicAssert.Positive</a>
                                                         </li>
                                                         <li>
-                                                            <a href="nunit/writing-tests/assertions/classic-assertions/Assert.IsAssignableFrom.html" name="" title="Assert.IsAssignableFrom">Assert.IsAssignableFrom</a>
+                                                            <a href="nunit/writing-tests/assertions/classic-assertions/Assert.Negative.html" name="" title="ClassicAssert.Negative">ClassicAssert.Negative</a>
                                                         </li>
                                                         <li>
-                                                            <a href="nunit/writing-tests/assertions/classic-assertions/Assert.IsNotAssignableFrom.html" name="" title="Assert.IsNotAssignableFrom">Assert.IsNotAssignableFrom</a>
+                                                            <a href="nunit/writing-tests/assertions/classic-assertions/Assert.IsInstanceOf.html" name="" title="ClassicAssert.IsInstanceOf">ClassicAssert.IsInstanceOf</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="nunit/writing-tests/assertions/classic-assertions/Assert.IsNotInstanceOf.html" name="" title="ClassicAssert.IsNotInstanceOf">ClassicAssert.IsNotInstanceOf</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="nunit/writing-tests/assertions/classic-assertions/Assert.IsAssignableFrom.html" name="" title="ClassicAssert.IsAssignableFrom">ClassicAssert.IsAssignableFrom</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="nunit/writing-tests/assertions/classic-assertions/Assert.IsNotAssignableFrom.html" name="" title="ClassicAssert.IsNotAssignableFrom">ClassicAssert.IsNotAssignableFrom</a>
                                                         </li>
                                                         <li>
                                                             <a href="nunit/writing-tests/assertions/classic-assertions/Assert.Throws.html" name="" title="Assert.Throws">Assert.Throws</a>
@@ -338,18 +369,6 @@
                                                         </li>
                                                         <li>
                                                             <a href="nunit/writing-tests/assertions/classic-assertions/Assert.CatchAsync.html" name="" title="Assert.CatchAsync">Assert.CatchAsync</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="nunit/writing-tests/assertions/classic-assertions/Assert.Pass.html" name="" title="Assert.Pass">Assert.Pass</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="nunit/writing-tests/assertions/classic-assertions/Assert.Fail.html" name="" title="Assert.Fail">Assert.Fail</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="nunit/writing-tests/assertions/classic-assertions/Assert.Ignore.html" name="" title="Assert.Ignore">Assert.Ignore</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="nunit/writing-tests/assertions/classic-assertions/Assert.Inconclusive.html" name="" title="Assert.Inconclusive">Assert.Inconclusive</a>
                                                         </li>
                                                         <li>
                                                             <a href="nunit/writing-tests/assertions/classic-assertions/String-Assert.html" name="" title="String Assert">String Assert</a>
@@ -376,7 +395,7 @@
                                     <li>
                                         <span class="expand-stub"></span>
                                         <a href="nunit/writing-tests/constraints/Constraints.html" name="" title="Constraints">Constraints</a>
-                                        
+
                                         <ul class="nav level4">
                                               <li>
                                                   <a href="nunit/writing-tests/constraints/Constraints.html" name="" title="Constraints">Constraints</a>
@@ -406,9 +425,6 @@
                                                   <a href="nunit/writing-tests/constraints/BinarySerializableConstraint.html" name="" title="BinarySerializableConstraint">BinarySerializableConstraint</a>
                                               </li>
                                               <li>
-                                                  <a href="nunit/writing-tests/constraints/CollectionContainsConstraint.html" name="" title="CollectionContainsConstraint">CollectionContainsConstraint</a>
-                                              </li>
-                                              <li>
                                                   <a href="nunit/writing-tests/constraints/CollectionEquivalentConstraint.html" name="" title="CollectionEquivalentConstraint">CollectionEquivalentConstraint</a>
                                               </li>
                                               <li>
@@ -419,6 +435,9 @@
                                               </li>
                                               <li>
                                                   <a href="nunit/writing-tests/constraints/CollectionSupersetConstraint.html" name="" title="CollectionSupersetConstraint">CollectionSupersetConstraint</a>
+                                              </li>
+                                              <li>
+                                                  <a href="nunit/writing-tests/constraints/DefaultConstraint.html" name="" title="DefaultConstraint">DefaultConstraint</a>
                                               </li>
                                               <li>
                                                   <a href="nunit/writing-tests/constraints/DelayedConstraint.html" name="" title="DelayedConstraint">DelayedConstraint</a>
@@ -541,6 +560,9 @@
                                                   <a href="nunit/writing-tests/constraints/UniqueItemsConstraint.html" name="" title="UniqueItemsConstraint">UniqueItemsConstraint</a>
                                               </li>
                                               <li>
+                                                  <a href="nunit/writing-tests/constraints/WhiteSpaceConstraint.html" name="" title="WhiteSpaceConstraint">WhiteSpaceConstraint</a>
+                                              </li>
+                                              <li>
                                                   <a href="nunit/writing-tests/constraints/XmlSerializableConstraint.html" name="" title="XmlSerializableConstraint">XmlSerializableConstraint</a>
                                               </li>
                                         </ul>
@@ -548,7 +570,7 @@
                                     <li>
                                         <span class="expand-stub"></span>
                                         <a href="nunit/writing-tests/setup-teardown/index.html" name="" title="[SetUp] and [TearDown]">[SetUp] and [TearDown]</a>
-                                        
+
                                         <ul class="nav level4">
                                               <li>
                                                   <a href="nunit/writing-tests/setup-teardown/index.html" name="" title="Index">Index</a>
@@ -581,7 +603,7 @@
                           <li>
                               <span class="expand-stub"></span>
                               <a href="nunit/running-tests/Index.html" name="" title="Running Tests">Running Tests</a>
-                              
+
                               <ul class="nav level3">
                                     <li>
                                         <a href="nunit/running-tests/Console-Runner.html" name="" title="Console Runner">Console Runner</a>
@@ -609,26 +631,23 @@
                           <li>
                               <span class="expand-stub"></span>
                               <a href="nunit/extending-nunit/Index.html" name="" title="Extending NUnit">Extending NUnit</a>
-                              
+
                               <ul class="nav level3">
                                     <li>
-                                        <a>Engine Extensibility</a>
+                                        <a href="nunit/extending-nunit/Index.html" name="" title="Engine Extensibility">Engine Extensibility</a>
                                     </li>
                                     <li>
                                         <span class="expand-stub"></span>
                                         <a href="nunit/extending-nunit/Framework-Extensibility.html" name="" title="Framework Extensibility">Framework Extensibility</a>
-                                        
+
                                         <ul class="nav level4">
                                               <li>
                                                   <a href="nunit/extending-nunit/Action-Attributes.html" name="" title="Action Attributes">Action Attributes</a>
                                               </li>
                                               <li>
-                                                  <a href="nunit/extending-nunit/Custom-Asserts.html" name="" title="Custom Asserts">Custom Asserts</a>
-                                              </li>
-                                              <li>
                                                   <span class="expand-stub"></span>
                                                   <a href="nunit/extending-nunit/Custom-Attributes.html" name="" title="Custom Attributes">Custom Attributes</a>
-                                                  
+
                                                   <ul class="nav level5">
                                                         <li>
                                                             <a href="nunit/extending-nunit/IApplyToContext-Interface.html" name="" title="IApplyToContext Interface">IApplyToContext Interface</a>
@@ -659,6 +678,9 @@
                                               <li>
                                                   <a href="nunit/extending-nunit/Custom-Constraints.html" name="" title="Custom Constraints">Custom Constraints</a>
                                               </li>
+                                              <li>
+                                                  <a href="nunit/extending-nunit/Execution-Hooks.html" name="" title="Execution Hooks">Execution Hooks</a>
+                                              </li>
                                         </ul>
                                     </li>
                               </ul>
@@ -666,12 +688,12 @@
                           <li>
                               <span class="expand-stub"></span>
                               <a href="nunit/technical-notes/usage/Usage-Notes.html" name="" title="Technical Notes">Technical Notes</a>
-                              
+
                               <ul class="nav level3">
                                     <li>
                                         <span class="expand-stub"></span>
                                         <a href="nunit/technical-notes/usage/Usage-Notes.html" name="" title="Usage Notes">Usage Notes</a>
-                                        
+
                                         <ul class="nav level4">
                                               <li>
                                                   <a href="nunit/technical-notes/usage/Usage-Notes.html" name="" title="Usage Notes">Usage Notes</a>
@@ -687,6 +709,9 @@
                                               </li>
                                               <li>
                                                   <a href="nunit/technical-notes/usage/Counting-Tests.html" name="" title="Counting Tests">Counting Tests</a>
+                                              </li>
+                                              <li>
+                                                  <a href="nunit/technical-notes/usage/Debugging-Support.html" name="" title="Debugging Support">Debugging Support</a>
                                               </li>
                                               <li>
                                                   <a href="nunit/technical-notes/usage/Engine-Parallel-Test-Execution.html" name="" title="Engine Parallel Test Execution">Engine Parallel Test Execution</a>
@@ -716,6 +741,9 @@
                                                   <a href="nunit/technical-notes/usage/Test-Result-XML-Format.html" name="" title="Test Result XML Format">Test Result XML Format</a>
                                               </li>
                                               <li>
+                                                  <a href="nunit/technical-notes/usage/Trace-and-Debug-Output.html" name="" title="Trace and Debug Output">Trace and Debug Output</a>
+                                              </li>
+                                              <li>
                                                   <a href="nunit/technical-notes/usage/Visual-Studio-Support.html" name="" title="Visual Studio Support">Visual Studio Support</a>
                                               </li>
                                               <li>
@@ -726,7 +754,7 @@
                                     <li>
                                         <span class="expand-stub"></span>
                                         <a href="nunit/technical-notes/nunit-internals/NUnit-Internals.html" name="" title="NUnit Internals">NUnit Internals</a>
-                                        
+
                                         <ul class="nav level4">
                                               <li>
                                                   <a href="nunit/technical-notes/nunit-internals/NUnit-Internals.html" name="" title="NUnit Internals">NUnit Internals</a>
@@ -737,13 +765,13 @@
                                               <li>
                                                   <span class="expand-stub"></span>
                                                   <a href="nunit/technical-notes/nunit-internals/NUnit-APIs.html" name="" title="NUnit APIs">NUnit APIs</a>
-                                                  
+
                                                   <ul class="nav level5">
                                                         <li>
-                                                            <a>Test Engine API</a>
+                                                            <a href="nunit/technical-notes/nunit-internals/NUnit-APIs.html" name="" title="Test Engine API">Test Engine API</a>
                                                         </li>
                                                         <li>
-                                                            <a>Engine Driver API</a>
+                                                            <a href="nunit/technical-notes/nunit-internals/NUnit-APIs.html" name="" title="Engine Driver API">Engine Driver API</a>
                                                         </li>
                                                         <li>
                                                             <a href="nunit/technical-notes/nunit-internals/Framework-Api.html" name="" title="Framework API">Framework API</a>
@@ -768,7 +796,7 @@
                                               <li>
                                                   <span class="expand-stub"></span>
                                                   <a href="nunit/technical-notes/nunit-internals/specs/Specifications.html" name="" title="Specifications">Specifications</a>
-                                                  
+
                                                   <ul class="nav level5">
                                                         <li>
                                                             <a href="nunit/technical-notes/nunit-internals/specs/Specifications.html" name="" title="Specifications">Specifications</a>
@@ -805,7 +833,7 @@
                 <li>
                     <span class="expand-stub"></span>
                     <a href="vs-test-adapter/Index.html" name="" title="VS Test Adapter">VS Test Adapter</a>
-                    
+
                     <ul class="nav level2">
                           <li>
                               <a href="vs-test-adapter/Index.html" name="" title="Visual Studio Test Adapter">Visual Studio Test Adapter</a>
@@ -823,13 +851,19 @@
                               <a href="vs-test-adapter/Known-Problems.html" name="" title="Known Problems">Known Problems</a>
                           </li>
                           <li>
-                              <a href="vs-test-adapter/Tips-And-Tricks.html" name="" title="Tips and Tricks">Tips and Tricks</a>
+                              <a href="vs-test-adapter/Tips-And-Tricks.html" name="" title="Configuration with runsettings">Configuration with runsettings</a>
+                          </li>
+                          <li>
+                              <a href="vs-test-adapter/NUnit-And-Microsoft-Test-Platform.html" name="" title="Microsoft.Testing.Platform (MTP)">Microsoft.Testing.Platform (MTP)</a>
                           </li>
                           <li>
                               <a href="vs-test-adapter/Trace-and-Debug.html" name="" title="Trace And Debug Output">Trace And Debug Output</a>
                           </li>
                           <li>
                               <a href="vs-test-adapter/Supported-Frameworks.html" name="" title="Supported Frameworks">Supported Frameworks</a>
+                          </li>
+                          <li>
+                              <a href="vs-test-adapter/Adapter-Engine-Compatibility.html" name="" title="Adapter-Engine Compatibility">Adapter-Engine Compatibility</a>
                           </li>
                           <li>
                               <a href="vs-test-adapter/Debugging.html" name="" title="Debugging the Adapter">Debugging the Adapter</a>
@@ -854,7 +888,7 @@
                 <li>
                     <span class="expand-stub"></span>
                     <a href="nunit-engine/Index.html" name="" title="NUnit Engine">NUnit Engine</a>
-                    
+
                     <ul class="nav level2">
                           <li>
                               <a href="nunit-engine/Index.html" name="" title="Introduction">Introduction</a>
@@ -868,7 +902,7 @@
                           <li>
                               <span class="expand-stub"></span>
                               <a href="nunit-engine/extensions/Index.html" name="" title="Engine Extensions">Engine Extensions</a>
-                              
+
                               <ul class="nav level3">
                                     <li>
                                         <a href="nunit-engine/extensions/Index.html" name="" title="Introduction">Introduction</a>
@@ -882,7 +916,7 @@
                                     <li>
                                         <span class="expand-stub"></span>
                                         <a href="nunit-engine/extensions/creating-extensions/Index.html" name="" title="Creating Engine Extensions">Creating Engine Extensions</a>
-                                        
+
                                         <ul class="nav level4">
                                               <li>
                                                   <a href="nunit-engine/extensions/creating-extensions/Index.html" name="" title="Introduction">Introduction</a>
@@ -914,7 +948,7 @@
                 <li>
                     <span class="expand-stub"></span>
                     <a href="xamarin-runners/index.html" name="" title="NUnit Xamarin Runners">NUnit Xamarin Runners</a>
-                    
+
                     <ul class="nav level2">
                           <li>
                               <a href="xamarin-runners/index.html" name="" title="Index &amp; Options">Index &amp; Options</a>
@@ -930,7 +964,7 @@
                 <li>
                     <span class="expand-stub"></span>
                     <a href="vs-test-generator/Visual-Studio-Test-Generator.html" name="" title="VS Test Generator">VS Test Generator</a>
-                    
+
                     <ul class="nav level2">
                           <li>
                               <a href="vs-test-generator/Visual-Studio-Test-Generator.html" name="" title="Visual Studio Test Generator">Visual Studio Test Generator</a>
@@ -939,7 +973,10 @@
                               <a href="vs-test-generator/TestGenerator-Installation.html" name="" title="Installation">Installation</a>
                           </li>
                           <li>
-                              <a href="vs-test-generator/TestGenerator-Release-Notes.html" name="" title="Release Notes VS2017/VS2019">Release Notes VS2017/VS2019</a>
+                              <a href="vs-test-generator/TestGenerator-Release-Notes.html" name="" title="Release Notes">Release Notes</a>
+                          </li>
+                          <li>
+                              <a href="vs-test-generator/TestGenerator-Release-Notes-VS2017-VS2019.html" name="" title="Release Notes VS2017/VS2019">Release Notes VS2017/VS2019</a>
                           </li>
                           <li>
                               <a href="vs-test-generator/TestGenerator-Release-Notes-VS2015.html" name="" title="Release Notes VS2015">Release Notes VS2015</a>
@@ -949,12 +986,12 @@
                 <li>
                     <span class="expand-stub"></span>
                     <a href="nunit-analyzers/NUnit-Analyzers.html" name="" title="NUnit Analyzers">NUnit Analyzers</a>
-                    
+
                     <ul class="nav level2">
                           <li>
                               <span class="expand-stub"></span>
                               <a href="nunit-analyzers/NUnit-Analyzers.html" name="" title="NUnit Analyzers">NUnit Analyzers</a>
-                              
+
                               <ul class="nav level3">
                                     <li>
                                         <a href="nunit-analyzers/NUnit1001.html" name="" title="NUnit1001">NUnit1001</a>
@@ -1039,6 +1076,36 @@
                                     </li>
                                     <li>
                                         <a href="nunit-analyzers/NUnit1028.html" name="" title="NUnit1028">NUnit1028</a>
+                                    </li>
+                                    <li>
+                                        <a href="nunit-analyzers/NUnit1029.html" name="" title="NUnit1029">NUnit1029</a>
+                                    </li>
+                                    <li>
+                                        <a href="nunit-analyzers/NUnit1030.html" name="" title="NUnit1030">NUnit1030</a>
+                                    </li>
+                                    <li>
+                                        <a href="nunit-analyzers/NUnit1031.html" name="" title="NUnit1031">NUnit1031</a>
+                                    </li>
+                                    <li>
+                                        <a href="nunit-analyzers/NUnit1032.html" name="" title="NUnit1032">NUnit1032</a>
+                                    </li>
+                                    <li>
+                                        <a href="nunit-analyzers/NUnit1033.html" name="" title="NUnit1033">NUnit1033</a>
+                                    </li>
+                                    <li>
+                                        <a href="nunit-analyzers/NUnit1034.html" name="" title="NUnit1034">NUnit1034</a>
+                                    </li>
+                                    <li>
+                                        <a href="nunit-analyzers/NUnit1035.html" name="" title="NUnit1035">NUnit1035</a>
+                                    </li>
+                                    <li>
+                                        <a href="nunit-analyzers/NUnit1036.html" name="" title="NUnit1036">NUnit1036</a>
+                                    </li>
+                                    <li>
+                                        <a href="nunit-analyzers/NUnit1037.html" name="" title="NUnit1037">NUnit1037</a>
+                                    </li>
+                                    <li>
+                                        <a href="nunit-analyzers/NUnit1038.html" name="" title="NUnit1038">NUnit1038</a>
                                     </li>
                                     <li>
                                         <a href="nunit-analyzers/NUnit2001.html" name="" title="NUnit2001">NUnit2001</a>
@@ -1166,6 +1233,66 @@
                                     <li>
                                         <a href="nunit-analyzers/NUnit2042.html" name="" title="NUnit2042">NUnit2042</a>
                                     </li>
+                                    <li>
+                                        <a href="nunit-analyzers/NUnit2043.html" name="" title="NUnit2043">NUnit2043</a>
+                                    </li>
+                                    <li>
+                                        <a href="nunit-analyzers/NUnit2044.html" name="" title="NUnit2044">NUnit2044</a>
+                                    </li>
+                                    <li>
+                                        <a href="nunit-analyzers/NUnit2045.html" name="" title="NUnit2045">NUnit2045</a>
+                                    </li>
+                                    <li>
+                                        <a href="nunit-analyzers/NUnit2046.html" name="" title="NUnit2046">NUnit2046</a>
+                                    </li>
+                                    <li>
+                                        <a href="nunit-analyzers/NUnit2047.html" name="" title="NUnit2047">NUnit2047</a>
+                                    </li>
+                                    <li>
+                                        <a href="nunit-analyzers/NUnit2048.html" name="" title="NUnit2048">NUnit2048</a>
+                                    </li>
+                                    <li>
+                                        <a href="nunit-analyzers/NUnit2049.html" name="" title="NUnit2049">NUnit2049</a>
+                                    </li>
+                                    <li>
+                                        <a href="nunit-analyzers/NUnit2050.html" name="" title="NUnit2050">NUnit2050</a>
+                                    </li>
+                                    <li>
+                                        <a href="nunit-analyzers/NUnit2051.html" name="" title="NUnit2051">NUnit2051</a>
+                                    </li>
+                                    <li>
+                                        <a href="nunit-analyzers/NUnit2052.html" name="" title="NUnit2052">NUnit2052</a>
+                                    </li>
+                                    <li>
+                                        <a href="nunit-analyzers/NUnit2053.html" name="" title="NUnit2053">NUnit2053</a>
+                                    </li>
+                                    <li>
+                                        <a href="nunit-analyzers/NUnit2054.html" name="" title="NUnit2054">NUnit2054</a>
+                                    </li>
+                                    <li>
+                                        <a href="nunit-analyzers/NUnit2055.html" name="" title="NUnit2055">NUnit2055</a>
+                                    </li>
+                                    <li>
+                                        <a href="nunit-analyzers/NUnit2056.html" name="" title="NUnit2056">NUnit2056</a>
+                                    </li>
+                                    <li>
+                                        <a href="nunit-analyzers/NUnit3001.html" name="" title="NUnit3001">NUnit3001</a>
+                                    </li>
+                                    <li>
+                                        <a href="nunit-analyzers/NUnit3002.html" name="" title="NUnit3002">NUnit3002</a>
+                                    </li>
+                                    <li>
+                                        <a href="nunit-analyzers/NUnit3003.html" name="" title="NUnit3003">NUnit3003</a>
+                                    </li>
+                                    <li>
+                                        <a href="nunit-analyzers/NUnit3004.html" name="" title="NUnit3004">NUnit3004</a>
+                                    </li>
+                                    <li>
+                                        <a href="nunit-analyzers/NUnit4001.html" name="" title="NUnit4001">NUnit4001</a>
+                                    </li>
+                                    <li>
+                                        <a href="nunit-analyzers/NUnit4002.html" name="" title="NUnit4002">NUnit4002</a>
+                                    </li>
                               </ul>
                           </li>
                     </ul>
@@ -1173,7 +1300,7 @@
                 <li>
                     <span class="expand-stub"></span>
                     <a>Related Project Links</a>
-                    
+
                     <ul class="nav level2">
                           <li>
                               <a href="https://github.com/TestCentric/testcentric-gui/wiki" name="" title="TestCentric GUI">TestCentric GUI</a>
@@ -1186,8 +1313,11 @@
                 <li>
                     <span class="expand-stub"></span>
                     <a>Developer Info</a>
-                    
+
                     <ul class="nav level2">
+                          <li>
+                              <a href="developer-info/The-Teams.html" name="" title="The Teams">The Teams</a>
+                          </li>
                           <li>
                               <a href="developer-info/Team-Practices.html" name="" title="Team Practices">Team Practices</a>
                           </li>
@@ -1225,9 +1355,12 @@
                               <a href="developer-info/Packaging-the-V2-Adapter.html" name="" title="Packaging the V2 Adapter">Packaging the V2 Adapter</a>
                           </li>
                           <li>
-                              <a href="developer-info/Packaging-the-V3-Adapter.html" name="" title="Packaging the V3 Adapter">Packaging the V3 Adapter</a>
+                              <a href="developer-info/Packaging-the-V3-and-V4-Adapter.html" name="" title="Packaging the V3/V4 Adapter">Packaging the V3/V4 Adapter</a>
                           </li>
                     </ul>
+                </li>
+                <li>
+                    <a href="legacy/index.html" name="" title="Legacy (2.x) Docs">Legacy (2.x) Docs</a>
                 </li>
           </ul>
       </div>

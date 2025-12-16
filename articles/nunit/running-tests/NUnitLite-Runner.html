@@ -1,47 +1,36 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <!--[if IE]><![endif]-->
-<html>
-  
+<html lang="en">
+
   <head>
-    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-PCB5BYBNM2"></script>
+    <meta charset="utf-8">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PCB5BYBNM2"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+      function gtag() { dataLayer.push(arguments); }
       gtag('js', new Date());
-  
       gtag('config', 'G-PCB5BYBNM2');
     </script>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>NUnite Lite Runner | NUnit Docs </title>
-    <meta name="viewport" content="width=device-width">
-    <meta name="title" content="NUnite Lite Runner | NUnit Docs ">
-    <meta name="generator" content="docfx 2.58.9.0">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>NUnite Lite Runner | NUnit Docs </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="NUnite Lite Runner | NUnit Docs ">
     
-  
-    <link rel="apple-touch-icon" sizes="180x180" href="../../../favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../../../favicons/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../../../favicons/favicon-32x32.png">
-    <link rel="shortcut icon" type="image/x-icon" href="../../../favicon.ico">
-    <link rel="manifest" href="../../../favicons/manifest.json">
-    <link rel="mask-icon" href="../../../favicons/safari-pinned-tab.svg" color="#222222">
-    <meta name="msapplication-config" content="../../../favicons/browserconfig.xml">
-    <meta name="msapplication-TileColor" content="#222222">
-    <meta name="theme-color" content="#222222">
-  
-    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
-    <link rel="stylesheet" href="../../../styles/docfx.css">
-    <link rel="stylesheet" href="../../../styles/main.css">
-    <meta property="docfx:navrel" content="../../../toc.html">
-    <meta property="docfx:tocrel" content="../../toc.html">
+    
+      <link rel="shortcut icon" href="../../../favicon.ico">
+      <link rel="stylesheet" href="../../../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../../../styles/docfx.css">
+      <link rel="stylesheet" href="../../../styles/main.css">
+      <meta property="docfx:navrel" content="../../../toc.html">
+      <meta property="docfx:tocrel" content="../../toc.html">
     
     <meta property="docfx:rel" content="../../../">
     
   </head>
-  `  <body data-spy="scroll" data-target="#affix" data-offset="120">
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
-        
+
         <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
           <div class="container">
             <div class="navbar-header">
@@ -51,7 +40,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              
+
               <a class="navbar-brand" href="../../../index.html">
                 <img id="logo" class="svg" src="../../../logo.svg" alt="">
               </a>
@@ -65,7 +54,7 @@
             </div>
           </div>
         </nav>
-        
+
         <div class="subnav navbar navbar-default">
           <div class="container hide-when-search" id="breadcrumb">
             <ul class="breadcrumb">
@@ -75,17 +64,17 @@
         </div>
       </header>
       <div class="container body-content">
-        
+
         <div id="search-results">
           <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+          <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
-        
+
         <div class="sidenav hide-when-search">
           <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
           <div class="sidetoggle collapse" id="sidetoggle">
@@ -94,56 +83,83 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="">
+            <article class="content wrap" id="_content" data-uid="nunitlite">
 <h1 id="nunite-lite-runner">NUnite Lite Runner</h1>
 
-<p>NUnitLite started out life as a separate version of the NUnit framework, with fewer features and a built-in test runner. It ran on devices as well as on desktop .NET and mono and allowed users to create executable tests without the overhead of a full NUnit installation.</p>
-<p>With NUnit 3.0, the NUnitLite framework has been merged with the full NUnit framework. There
-is now only one framework, <strong>nunit.framework.dll</strong>. The built-in runner, which was a part of the old NUnitLite, is now packaged as <strong>nunitlite.dll</strong>.</p>
+<p>NUnitLite started out life as a separate version of the NUnit framework, with fewer features and a built-in test runner.
+It ran on devices as well as on desktop .NET and mono and allowed users to create executable tests without the overhead
+of a full NUnit installation.</p>
+<p>With NUnit 3.0, the NUnitLite framework has been merged with the full NUnit framework. There is now only one framework,
+<strong>nunit.framework.dll</strong>. The built-in runner, which was a part of the old NUnitLite, is now packaged as
+<strong>nunitlite.dll</strong>.</p>
 <h2 id="using-nunitlite">Using NUnitLite</h2>
 <p>To run tests under NUnitLite, proceed as follows:</p>
 <ul>
-<li><p>Create a console application to use as your test assembly. If you have already placed tests in a dll, you can change the project so that it produces a console application and reload it.</p>
-</li>
-<li><p>Make sure your test assembly references both <strong>nunit.framework</strong> and <strong>nunitlite</strong>.</p>
-</li>
-<li><p>The Main() for your console application should look something like this...</p>
-</li>
+<li>You can use your existing unit test project (created with the <code>dotnet new nunit</code> command or from Visual Studio) or
+create a new console application.  If you use an existing test project you will get a warning about duplicate entry
+points. This can be ignored.</li>
 </ul>
-<pre><code class="lang-csharp">public static int Main(string[] args)
-{
-  return new AutoRun().Execute(args);
-}
+<p>Using a standard test project has the benefit that you can use both the standard <code>dotnet test</code> command, the Visual
+Studio Test Explorer and the NUnitLite runner to run your tests.</p>
+<ul>
+<li>Make sure your test assembly references both <strong>nunit.framework</strong> and <strong>nunitlite</strong>.</li>
+</ul>
+<pre><code class="lang-xml">&lt;PackageReference Include=&quot;NUnitLite&quot; Version=&quot;4.0.1&quot; /&gt;
+&lt;PackageReference Include=&quot;NUnit&quot; Version=&quot;4.0.1&quot; /&gt;
 </code></pre>
+<p>Optionally you can set the <code>OutputType</code> in a <code>PropertyGroup</code> to <code>Exe</code>, which allows you to run the tests directly and
+without the <code>dotnet run</code>.</p>
+<pre><code class="lang-xml">  &lt;OutputType&gt;Exe&lt;/OutputType&gt;
+</code></pre>
+<ul>
+<li>Add a <code>Program.cs</code> containing a top level statements main routine like:</li>
+</ul>
+<pre><code class="lang-csharp" name="ProgramCS">using NUnitLite;
+
+return new AutoRun().Execute(args);
+</code></pre>
+<p>If you don't use top-level statements, then just create a standard main routine with the same code.</p>
 <ul>
 <li>Execute your test application in order to run the tests.</li>
 </ul>
-<p>If you install the NUnitLite runner via the NuGet package, steps 2 is handled
-automatically. Both assemblies are installed and referenced for you.</p>
+<pre><code class="lang-cmd">dotnet run
+</code></pre>
+<p>If you install the NUnitLite runner via the NuGet package, steps 2 is handled automatically. Both assemblies are
+installed and referenced for you.</p>
 <h2 id="nunitlite-output">NUnitLite Output</h2>
 <p>As seen in the following screen shot, the output from an NUnitLite run is quite similar to that from the console runner.</p>
 <p><img src="../../../images/nunitlite-mock.png" alt="Screenshot of NUnitLite"></p>
+<h2 id="tips">Tips</h2>
+<h3 id="testing-an-executable-application">Testing an executable application</h3>
+<p>When testing an executable application, you can use the NUnitLite runner to execute your tests.
+However, this approach will result in having two Main methods in your application. To resolve this,
+you need to specify which Main method to use — specifically, the Main method from the test project.
+You do this by stating which class contains this method.</p>
+<p>You do this by adding a <code>StartupObject</code> to your project file:</p>
+<pre><code class="lang-xml">  &lt;StartupObject&gt;TestProject.Program&lt;/StartupObject&gt;
+</code></pre>
+
 </article>
           </div>
-          
+
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/nunit/docs/blob/master/docs/articles/nunit/running-tests/NUnitLite-Runner.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/stevenaw/docs/blob/master/docs/articles/nunit/running-tests/NUnitLite-Runner.md/#L1" class="contribution-link">Edit this page</a>
                   </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-                <h5>In This Article</h5>
+                <h5>In this article</h5>
                 <div></div>
               </nav>
             </div>
           </div>
         </div>
       </div>
-      
+
       <footer>
         <div class="grad-bottom"></div>
         <div class="footer">
@@ -151,14 +167,14 @@ automatically. Both assemblies are installed and referenced for you.</p>
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            
-            <span>Generated by <strong>DocFX</strong></span> | Copyright (c) 2018-<span id="currentYear"></span> The NUnit Project - Licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>
+      <span>Generated by <strong>DocFX</strong></span> | Copyright (c) 2018-<span id="currentYear"></span> The NUnit Project - Licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>
+      
           </div>
         </div>
       </footer>
     </div>
-    
-    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+
+    <script type="text/javascript" src="../../../styles/docfx.vendor.min.js"></script>
     <script type="text/javascript" src="../../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../../styles/main.js"></script>
   </body>

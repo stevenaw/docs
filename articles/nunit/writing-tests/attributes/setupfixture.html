@@ -1,47 +1,36 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <!--[if IE]><![endif]-->
-<html>
-  
+<html lang="en">
+
   <head>
-    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-PCB5BYBNM2"></script>
+    <meta charset="utf-8">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PCB5BYBNM2"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+      function gtag() { dataLayer.push(arguments); }
       gtag('js', new Date());
-  
       gtag('config', 'G-PCB5BYBNM2');
     </script>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>SetUpFixture | NUnit Docs </title>
-    <meta name="viewport" content="width=device-width">
-    <meta name="title" content="SetUpFixture | NUnit Docs ">
-    <meta name="generator" content="docfx 2.58.9.0">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>SetUpFixture | NUnit Docs </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="SetUpFixture | NUnit Docs ">
     
-  
-    <link rel="apple-touch-icon" sizes="180x180" href="../../../../favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../../../../favicons/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../../../../favicons/favicon-32x32.png">
-    <link rel="shortcut icon" type="image/x-icon" href="../../../../favicon.ico">
-    <link rel="manifest" href="../../../../favicons/manifest.json">
-    <link rel="mask-icon" href="../../../../favicons/safari-pinned-tab.svg" color="#222222">
-    <meta name="msapplication-config" content="../../../../favicons/browserconfig.xml">
-    <meta name="msapplication-TileColor" content="#222222">
-    <meta name="theme-color" content="#222222">
-  
-    <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
-    <link rel="stylesheet" href="../../../../styles/docfx.css">
-    <link rel="stylesheet" href="../../../../styles/main.css">
-    <meta property="docfx:navrel" content="../../../../toc.html">
-    <meta property="docfx:tocrel" content="../../../toc.html">
+    
+      <link rel="shortcut icon" href="../../../../favicon.ico">
+      <link rel="stylesheet" href="../../../../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../../../../styles/docfx.css">
+      <link rel="stylesheet" href="../../../../styles/main.css">
+      <meta property="docfx:navrel" content="../../../../toc.html">
+      <meta property="docfx:tocrel" content="../../../toc.html">
     
     <meta property="docfx:rel" content="../../../../">
     
   </head>
-  `  <body data-spy="scroll" data-target="#affix" data-offset="120">
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
-        
+
         <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
           <div class="container">
             <div class="navbar-header">
@@ -51,7 +40,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              
+
               <a class="navbar-brand" href="../../../../index.html">
                 <img id="logo" class="svg" src="../../../../logo.svg" alt="">
               </a>
@@ -65,7 +54,7 @@
             </div>
           </div>
         </nav>
-        
+
         <div class="subnav navbar navbar-default">
           <div class="container hide-when-search" id="breadcrumb">
             <ul class="breadcrumb">
@@ -75,17 +64,17 @@
         </div>
       </header>
       <div class="container body-content">
-        
+
         <div id="search-results">
           <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+          <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
-        
+
         <div class="sidenav hide-when-search">
           <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
           <div class="sidetoggle collapse" id="sidetoggle">
@@ -98,8 +87,9 @@
 <h1 id="setupfixture">SetUpFixture</h1>
 
 <p>This is the attribute that marks a class that contains the one-time
-setup or teardown methods for all the test fixtures under a given
-namespace. The class may contain at most one method marked with the
+setup or teardown methods for all the test fixtures in a given
+namespace including nested namespaces below, within an assembly.</p>
+<p>The class may contain at most one method marked with the
 OneTimeSetUpAttribute and one method marked with the OneTimeTearDownAttribute.</p>
 <p>There are a few restrictions on a class that is used as a setup fixture.</p>
 <ul>
@@ -114,7 +104,12 @@ RunAfterAnyTests() is called after all the tests in the namespace as well as the
 individual or fixture teardowns have completed execution.</p>
 <p>Multiple SetUpFixtures may be created in a given namespace. The order of execution
 of such fixtures is indeterminate.</p>
-<p>A SetUpFixture outside of any namespace provides SetUp and TearDown for the entire assembly.</p>
+<h2 id="notes">Notes</h2>
+<ul>
+<li>The scope of a SetUpFixture is limited to an assembly.</li>
+<li>A SetUpFixture in a namespace will apply to all tests in that namespace and all contained namespaces within the assembly.</li>
+<li>A SetUpFixture outside of any namespace provides SetUp and TearDown for the entire assembly.</li>
+</ul>
 <h2 id="example">Example</h2>
 <pre><code class="lang-csharp">using System;
 using NUnit.Framework;
@@ -138,11 +133,35 @@ namespace NUnit.Tests
   }
 }
 </code></pre>
-<div class="NOTE">
-<h5>Note</h5>
-<p>Prior to NUnit 3.0, SetUpFixture used the SetUp and TearDown attributes rather than OneTimeSetUp and OneTimeTearDown.
-The older attributes are no longer supported in SetUpFixtures in NUnit 3.0 and later.</p>
-</div>
+<h2 id="detailed-explanation">Detailed explanation</h2>
+<p>With respect to the order of execution of setup (also one-time setup) it's deterministic between namespaces (including
+nested namespaces) but non-deterministic if you have two setups at the same level, e.g. two methods in the same class
+marked [SetUp]. That's, however, a usage that should only come up in limited situations and is easy to avoid.</p>
+<p>The defined order is as follows...</p>
+<ol>
+<li>Setup starts at the assembly level SetUpFixture, outside of any namespace.</li>
+<li>It continues with the top level of any SetUpFixtures in a namespace , proceeds downward into any nested namespaces.</li>
+<li>Setup code in a TestFixture comes after any SetUpFixtures that control the namespace of the fixture.</li>
+<li>At each of the above levels, inheritance may also come into play. Base class setups are run before those of the
+derived class.</li>
+<li>Teardown for any of the above executes in the reverse order.</li>
+<li>Ordering of TestFixtures or SetUpFixtures within the same namespace is indeterminate.</li>
+<li>Ordering of multiple setup methods within the same class is indeterminate.</li>
+</ol>
+<p>[Items 6 and 7 rarely come into play but the features are available for situations like code generation, where it may
+be more convenient to have multiple setup fixtures and/or methods.]</p>
+<h2 id="notes-1">Notes</h2>
+<ol>
+<li><p>About filtering on <code>SetUpFixture</code>s:
+A <code>SetUpFixture</code> is normally not used for filtering tests.  However, if that is done, one should be aware that a
+<code>SetUpFixture</code> encapsulates all tests to which it belongs.
+If placed in a namespace it will encapsulate all tests in that namespace and contained namespaces.
+If placed on the assembly level, it will encapsulate all tests in the assembly.</p>
+</li>
+<li><p>Prior to NUnit 3.0, <code>SetUpFixture</code> used the <code>SetUp</code> and <code>TearDown</code> attributes rather than <code>OneTimeSetUp</code> and
+<code>OneTimeTearDown</code>. The older attributes are no longer supported in SetUpFixtures in NUnit 3.0 and later.</p>
+</li>
+</ol>
 <h2 id="see-also">See also</h2>
 <ul>
 <li><a href="setup.html">SetUp Attribute</a></li>
@@ -150,27 +169,28 @@ The older attributes are no longer supported in SetUpFixtures in NUnit 3.0 and l
 <li><a href="onetimesetup.html">OneTimeSetUp Attribute</a></li>
 <li><a href="onetimeteardown.html">OneTimeTearDown Attribute</a></li>
 </ul>
+
 </article>
           </div>
-          
+
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/nunit/docs/blob/master/docs/articles/nunit/writing-tests/attributes/setupfixture.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/stevenaw/docs/blob/master/docs/articles/nunit/writing-tests/attributes/setupfixture.md/#L1" class="contribution-link">Edit this page</a>
                   </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-                <h5>In This Article</h5>
+                <h5>In this article</h5>
                 <div></div>
               </nav>
             </div>
           </div>
         </div>
       </div>
-      
+
       <footer>
         <div class="grad-bottom"></div>
         <div class="footer">
@@ -178,14 +198,14 @@ The older attributes are no longer supported in SetUpFixtures in NUnit 3.0 and l
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            
-            <span>Generated by <strong>DocFX</strong></span> | Copyright (c) 2018-<span id="currentYear"></span> The NUnit Project - Licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>
+      <span>Generated by <strong>DocFX</strong></span> | Copyright (c) 2018-<span id="currentYear"></span> The NUnit Project - Licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>
+      
           </div>
         </div>
       </footer>
     </div>
-    
-    <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
+
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.min.js"></script>
     <script type="text/javascript" src="../../../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../../../styles/main.js"></script>
   </body>
