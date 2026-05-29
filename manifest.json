@@ -13069,6 +13069,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/NUnit.Framework.Constraints.SameAsConstraint-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NUnit.Framework.Constraints.SameAsConstraint-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NUnit.Framework.Constraints.SameAsConstraint<T>",
+      "Summary": "<p sourcefile=\"api/NUnit.Framework.Constraints.SameAsConstraint-1.yml\" sourcestartlinenumber=\"1\">SameAsConstraint tests whether an object is identical to\nthe object passed to its constructor</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/NUnit.Framework.Constraints.SameAsConstraint.yml",
       "output": {
         ".html": {
@@ -14609,6 +14623,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/NUnit.Framework.NoTestsAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NUnit.Framework.NoTestsAttribute.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NUnit.Framework.NoTestsAttribute",
+      "Summary": "<p sourcefile=\"api/NUnit.Framework.NoTestsAttribute.yml\" sourcestartlinenumber=\"1\">Indicates the default status of a parameterized test method or test fixture containing no executable child tests.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/NUnit.Framework.NonParallelizableAttribute.yml",
       "output": {
         ".html": {
@@ -14718,6 +14746,20 @@
       "IsMRef": true,
       "Title": "NUnit.Framework.PlatformAttribute",
       "Summary": "<p sourcefile=\"api/NUnit.Framework.PlatformAttribute.yml\" sourcestartlinenumber=\"1\">Marks an assembly, test fixture or test method as applying to a specific platform.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NUnit.Framework.PlatformNames.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NUnit.Framework.PlatformNames.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NUnit.Framework.PlatformNames",
+      "Summary": "<p>\nCanonical platform names for use with <xref href=\"NUnit.Framework.PlatformAttribute\" data-throw-if-not-resolved=\"false\"></xref>. Note that\nthe <code>platforms</code> argument to <xref href=\"NUnit.Framework.PlatformAttribute\" data-throw-if-not-resolved=\"false\"></xref> supports\nsyntax beyond just naming platforms, such as comma-delimited lists, but using\nthese constants ensure that the precise name of a platform cannot be mistyped\nor misspelled.\n</p>\n<pre><code class=\"lang-csharp\">[Platform(Include = PlatformNames.Linux)]\n\n// or\n\n[Platform(Excludes = [PlatformNames.Mono,PlatformNames.MonoTouch])]</code></pre>\n"
     },
     {
       "type": "ManagedReference",
@@ -15407,6 +15449,34 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/NUnit.Framework.UnhandledExceptionHandling.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NUnit.Framework.UnhandledExceptionHandling.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NUnit.Framework.UnhandledExceptionHandling",
+      "Summary": "<p sourcefile=\"api/NUnit.Framework.UnhandledExceptionHandling.yml\" sourcestartlinenumber=\"1\">Flag to change how NUnit deals with exceptions unhandled by the test code.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NUnit.Framework.UnhandledExceptionHandlingAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NUnit.Framework.UnhandledExceptionHandlingAttribute.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NUnit.Framework.UnhandledExceptionHandlingAttribute",
+      "Summary": "<p sourcefile=\"api/NUnit.Framework.UnhandledExceptionHandlingAttribute.yml\" sourcestartlinenumber=\"1\">Specifies the handling behavior for unhandled exceptions in the assembly, class, or method.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/NUnit.Framework.ValueSourceAttribute.yml",
       "output": {
         ".html": {
@@ -15815,11 +15885,11 @@
       "type": "Toc",
       "source_relative_path": "api/toc.yml",
       "output": {
-        ".html": {
-          "relative_path": "api/toc.html"
-        },
         ".json": {
           "relative_path": "api/toc.json"
+        },
+        ".html": {
+          "relative_path": "api/toc.html"
         }
       },
       "version": ""
@@ -15968,11 +16038,11 @@
       "type": "Toc",
       "source_relative_path": "articles/developer-info/toc.yml",
       "output": {
-        ".html": {
-          "relative_path": "articles/developer-info/toc.html"
-        },
         ".json": {
           "relative_path": "articles/developer-info/toc.json"
+        },
+        ".html": {
+          "relative_path": "articles/developer-info/toc.html"
         }
       },
       "version": ""
@@ -17021,11 +17091,11 @@
       "type": "Toc",
       "source_relative_path": "articles/nunit-analyzers/toc.yml",
       "output": {
-        ".html": {
-          "relative_path": "articles/nunit-analyzers/toc.html"
-        },
         ".json": {
           "relative_path": "articles/nunit-analyzers/toc.json"
+        },
+        ".html": {
+          "relative_path": "articles/nunit-analyzers/toc.html"
         }
       },
       "version": ""
@@ -17154,11 +17224,11 @@
       "type": "Toc",
       "source_relative_path": "articles/nunit-engine/extensions/creating-extensions/toc.yml",
       "output": {
-        ".html": {
-          "relative_path": "articles/nunit-engine/extensions/creating-extensions/toc.html"
-        },
         ".json": {
           "relative_path": "articles/nunit-engine/extensions/creating-extensions/toc.json"
+        },
+        ".html": {
+          "relative_path": "articles/nunit-engine/extensions/creating-extensions/toc.html"
         }
       },
       "version": ""
@@ -17167,11 +17237,11 @@
       "type": "Toc",
       "source_relative_path": "articles/nunit-engine/extensions/toc.yml",
       "output": {
-        ".html": {
-          "relative_path": "articles/nunit-engine/extensions/toc.html"
-        },
         ".json": {
           "relative_path": "articles/nunit-engine/extensions/toc.json"
+        },
+        ".html": {
+          "relative_path": "articles/nunit-engine/extensions/toc.html"
         }
       },
       "version": ""
@@ -17190,11 +17260,11 @@
       "type": "Toc",
       "source_relative_path": "articles/nunit-engine/toc.yml",
       "output": {
-        ".html": {
-          "relative_path": "articles/nunit-engine/toc.html"
-        },
         ".json": {
           "relative_path": "articles/nunit-engine/toc.json"
+        },
+        ".html": {
+          "relative_path": "articles/nunit-engine/toc.html"
         }
       },
       "version": ""
@@ -17353,11 +17423,11 @@
       "type": "Toc",
       "source_relative_path": "articles/nunit/extending-nunit/toc.yml",
       "output": {
-        ".html": {
-          "relative_path": "articles/nunit/extending-nunit/toc.html"
-        },
         ".json": {
           "relative_path": "articles/nunit/extending-nunit/toc.json"
+        },
+        ".html": {
+          "relative_path": "articles/nunit/extending-nunit/toc.html"
         }
       },
       "version": ""
@@ -17396,11 +17466,11 @@
       "type": "Toc",
       "source_relative_path": "articles/nunit/getting-started/toc.yml",
       "output": {
-        ".html": {
-          "relative_path": "articles/nunit/getting-started/toc.html"
-        },
         ".json": {
           "relative_path": "articles/nunit/getting-started/toc.json"
+        },
+        ".html": {
+          "relative_path": "articles/nunit/getting-started/toc.html"
         }
       },
       "version": ""
@@ -17479,11 +17549,11 @@
       "type": "Toc",
       "source_relative_path": "articles/nunit/release-notes/toc.yml",
       "output": {
-        ".html": {
-          "relative_path": "articles/nunit/release-notes/toc.html"
-        },
         ".json": {
           "relative_path": "articles/nunit/release-notes/toc.json"
+        },
+        ".html": {
+          "relative_path": "articles/nunit/release-notes/toc.html"
         }
       },
       "version": ""
@@ -17572,11 +17642,11 @@
       "type": "Toc",
       "source_relative_path": "articles/nunit/running-tests/toc.yml",
       "output": {
-        ".html": {
-          "relative_path": "articles/nunit/running-tests/toc.html"
-        },
         ".json": {
           "relative_path": "articles/nunit/running-tests/toc.json"
+        },
+        ".html": {
+          "relative_path": "articles/nunit/running-tests/toc.html"
         }
       },
       "version": ""
@@ -17765,11 +17835,11 @@
       "type": "Toc",
       "source_relative_path": "articles/nunit/technical-notes/nunit-internals/specs/toc.yml",
       "output": {
-        ".html": {
-          "relative_path": "articles/nunit/technical-notes/nunit-internals/specs/toc.html"
-        },
         ".json": {
           "relative_path": "articles/nunit/technical-notes/nunit-internals/specs/toc.json"
+        },
+        ".html": {
+          "relative_path": "articles/nunit/technical-notes/nunit-internals/specs/toc.html"
         }
       },
       "version": ""
@@ -17778,11 +17848,11 @@
       "type": "Toc",
       "source_relative_path": "articles/nunit/technical-notes/nunit-internals/toc.yml",
       "output": {
-        ".html": {
-          "relative_path": "articles/nunit/technical-notes/nunit-internals/toc.html"
-        },
         ".json": {
           "relative_path": "articles/nunit/technical-notes/nunit-internals/toc.json"
+        },
+        ".html": {
+          "relative_path": "articles/nunit/technical-notes/nunit-internals/toc.html"
         }
       },
       "version": ""
@@ -17791,11 +17861,11 @@
       "type": "Toc",
       "source_relative_path": "articles/nunit/technical-notes/toc.yml",
       "output": {
-        ".html": {
-          "relative_path": "articles/nunit/technical-notes/toc.html"
-        },
         ".json": {
           "relative_path": "articles/nunit/technical-notes/toc.json"
+        },
+        ".html": {
+          "relative_path": "articles/nunit/technical-notes/toc.html"
         }
       },
       "version": ""
@@ -17984,11 +18054,11 @@
       "type": "Toc",
       "source_relative_path": "articles/nunit/technical-notes/usage/toc.yml",
       "output": {
-        ".html": {
-          "relative_path": "articles/nunit/technical-notes/usage/toc.html"
-        },
         ".json": {
           "relative_path": "articles/nunit/technical-notes/usage/toc.json"
+        },
+        ".html": {
+          "relative_path": "articles/nunit/technical-notes/usage/toc.html"
         }
       },
       "version": ""
@@ -17997,11 +18067,11 @@
       "type": "Toc",
       "source_relative_path": "articles/nunit/toc.yml",
       "output": {
-        ".html": {
-          "relative_path": "articles/nunit/toc.html"
-        },
         ".json": {
           "relative_path": "articles/nunit/toc.json"
+        },
+        ".html": {
+          "relative_path": "articles/nunit/toc.html"
         }
       },
       "version": ""
@@ -18130,11 +18200,11 @@
       "type": "Toc",
       "source_relative_path": "articles/nunit/writing-tests/assertions/assertion-models/toc.yml",
       "output": {
-        ".html": {
-          "relative_path": "articles/nunit/writing-tests/assertions/assertion-models/toc.html"
-        },
         ".json": {
           "relative_path": "articles/nunit/writing-tests/assertions/assertion-models/toc.json"
+        },
+        ".html": {
+          "relative_path": "articles/nunit/writing-tests/assertions/assertion-models/toc.html"
         }
       },
       "version": ""
@@ -18533,11 +18603,11 @@
       "type": "Toc",
       "source_relative_path": "articles/nunit/writing-tests/assertions/classic-assertions/toc.yml",
       "output": {
-        ".html": {
-          "relative_path": "articles/nunit/writing-tests/assertions/classic-assertions/toc.html"
-        },
         ".json": {
           "relative_path": "articles/nunit/writing-tests/assertions/classic-assertions/toc.json"
+        },
+        ".html": {
+          "relative_path": "articles/nunit/writing-tests/assertions/classic-assertions/toc.html"
         }
       },
       "version": ""
@@ -18596,11 +18666,11 @@
       "type": "Toc",
       "source_relative_path": "articles/nunit/writing-tests/assertions/special-assertions/toc.yml",
       "output": {
-        ".html": {
-          "relative_path": "articles/nunit/writing-tests/assertions/special-assertions/toc.html"
-        },
         ".json": {
           "relative_path": "articles/nunit/writing-tests/assertions/special-assertions/toc.json"
+        },
+        ".html": {
+          "relative_path": "articles/nunit/writing-tests/assertions/special-assertions/toc.html"
         }
       },
       "version": ""
@@ -18609,11 +18679,11 @@
       "type": "Toc",
       "source_relative_path": "articles/nunit/writing-tests/assertions/toc.yml",
       "output": {
-        ".html": {
-          "relative_path": "articles/nunit/writing-tests/assertions/toc.html"
-        },
         ".json": {
           "relative_path": "articles/nunit/writing-tests/assertions/toc.json"
+        },
+        ".html": {
+          "relative_path": "articles/nunit/writing-tests/assertions/toc.html"
         }
       },
       "version": ""
@@ -18780,6 +18850,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/nunit/writing-tests/attributes/netplatform.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/nunit/writing-tests/attributes/netplatform.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/nunit/writing-tests/attributes/nonparallelizable.md",
       "output": {
         ".html": {
@@ -18794,6 +18874,16 @@
       "output": {
         ".html": {
           "relative_path": "articles/nunit/writing-tests/attributes/nontestassembly.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/nunit/writing-tests/attributes/notests.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/nunit/writing-tests/attributes/notests.html"
         }
       },
       "version": ""
@@ -19000,6 +19090,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/nunit/writing-tests/attributes/testassemblydirectoryresolve.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/nunit/writing-tests/attributes/testassemblydirectoryresolve.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/nunit/writing-tests/attributes/testcase.md",
       "output": {
         ".html": {
@@ -19092,11 +19192,21 @@
       "type": "Toc",
       "source_relative_path": "articles/nunit/writing-tests/attributes/toc.yml",
       "output": {
-        ".html": {
-          "relative_path": "articles/nunit/writing-tests/attributes/toc.html"
-        },
         ".json": {
           "relative_path": "articles/nunit/writing-tests/attributes/toc.json"
+        },
+        ".html": {
+          "relative_path": "articles/nunit/writing-tests/attributes/toc.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/nunit/writing-tests/attributes/unhandledexceptionhandling.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/nunit/writing-tests/attributes/unhandledexceptionhandling.html"
         }
       },
       "version": ""
@@ -19167,6 +19277,16 @@
       "output": {
         ".html": {
           "relative_path": "articles/nunit/writing-tests/constraints/AssignableToConstraint.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/nunit/writing-tests/constraints/AsyncConstraints.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/nunit/writing-tests/constraints/AsyncConstraints.html"
         }
       },
       "version": ""
@@ -19247,6 +19367,26 @@
       "output": {
         ".html": {
           "relative_path": "articles/nunit/writing-tests/constraints/Constraints.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/nunit/writing-tests/constraints/ContainsConstraint.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/nunit/writing-tests/constraints/ContainsConstraint.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/nunit/writing-tests/constraints/ContainsHelper.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/nunit/writing-tests/constraints/ContainsHelper.html"
         }
       },
       "version": ""
@@ -19447,6 +19587,16 @@
       "output": {
         ".html": {
           "relative_path": "articles/nunit/writing-tests/constraints/LessThanOrEqualConstraint.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/nunit/writing-tests/constraints/MultipleOfConstraint.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/nunit/writing-tests/constraints/MultipleOfConstraint.html"
         }
       },
       "version": ""
@@ -19685,11 +19835,11 @@
       "type": "Toc",
       "source_relative_path": "articles/nunit/writing-tests/constraints/toc.yml",
       "output": {
-        ".html": {
-          "relative_path": "articles/nunit/writing-tests/constraints/toc.html"
-        },
         ".json": {
           "relative_path": "articles/nunit/writing-tests/constraints/toc.json"
+        },
+        ".html": {
+          "relative_path": "articles/nunit/writing-tests/constraints/toc.html"
         }
       },
       "version": ""
@@ -19718,11 +19868,11 @@
       "type": "Toc",
       "source_relative_path": "articles/nunit/writing-tests/setup-teardown/toc.yml",
       "output": {
-        ".html": {
-          "relative_path": "articles/nunit/writing-tests/setup-teardown/toc.html"
-        },
         ".json": {
           "relative_path": "articles/nunit/writing-tests/setup-teardown/toc.json"
+        },
+        ".html": {
+          "relative_path": "articles/nunit/writing-tests/setup-teardown/toc.html"
         }
       },
       "version": ""
@@ -19731,11 +19881,11 @@
       "type": "Toc",
       "source_relative_path": "articles/nunit/writing-tests/toc.yml",
       "output": {
-        ".html": {
-          "relative_path": "articles/nunit/writing-tests/toc.html"
-        },
         ".json": {
           "relative_path": "articles/nunit/writing-tests/toc.json"
+        },
+        ".html": {
+          "relative_path": "articles/nunit/writing-tests/toc.html"
         }
       },
       "version": ""
@@ -19744,11 +19894,11 @@
       "type": "Toc",
       "source_relative_path": "articles/toc.yml",
       "output": {
-        ".html": {
-          "relative_path": "articles/toc.html"
-        },
         ".json": {
           "relative_path": "articles/toc.json"
+        },
+        ".html": {
+          "relative_path": "articles/toc.html"
         }
       },
       "version": ""
@@ -19927,11 +20077,11 @@
       "type": "Toc",
       "source_relative_path": "articles/vs-test-adapter/toc.yml",
       "output": {
-        ".html": {
-          "relative_path": "articles/vs-test-adapter/toc.html"
-        },
         ".json": {
           "relative_path": "articles/vs-test-adapter/toc.json"
+        },
+        ".html": {
+          "relative_path": "articles/vs-test-adapter/toc.html"
         }
       },
       "version": ""
@@ -19990,11 +20140,11 @@
       "type": "Toc",
       "source_relative_path": "articles/vs-test-generator/toc.yml",
       "output": {
-        ".html": {
-          "relative_path": "articles/vs-test-generator/toc.html"
-        },
         ".json": {
           "relative_path": "articles/vs-test-generator/toc.json"
+        },
+        ".html": {
+          "relative_path": "articles/vs-test-generator/toc.html"
         }
       },
       "version": ""
@@ -20033,11 +20183,11 @@
       "type": "Toc",
       "source_relative_path": "articles/xamarin-runners/toc.yml",
       "output": {
-        ".html": {
-          "relative_path": "articles/xamarin-runners/toc.html"
-        },
         ".json": {
           "relative_path": "articles/xamarin-runners/toc.json"
+        },
+        ".html": {
+          "relative_path": "articles/xamarin-runners/toc.html"
         }
       },
       "version": ""
@@ -48086,11 +48236,11 @@
       "type": "Toc",
       "source_relative_path": "toc.yml",
       "output": {
-        ".html": {
-          "relative_path": "toc.html"
-        },
         ".json": {
           "relative_path": "toc.json"
+        },
+        ".html": {
+          "relative_path": "toc.html"
         }
       },
       "version": ""

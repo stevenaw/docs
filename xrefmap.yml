@@ -116481,6 +116481,18 @@ references:
   commentId: Overload:NUnit.Common.CommandLineOptions.PreFilters
   fullName: NUnit.Common.CommandLineOptions.PreFilters
   nameWithType: CommandLineOptions.PreFilters
+- uid: NUnit.Common.CommandLineOptions.Quiet
+  name: Quiet
+  href: api/NUnit.Common.CommandLineOptions.html#NUnit_Common_CommandLineOptions_Quiet
+  commentId: P:NUnit.Common.CommandLineOptions.Quiet
+  fullName: NUnit.Common.CommandLineOptions.Quiet
+  nameWithType: CommandLineOptions.Quiet
+- uid: NUnit.Common.CommandLineOptions.Quiet*
+  name: Quiet
+  href: api/NUnit.Common.CommandLineOptions.html#NUnit_Common_CommandLineOptions_Quiet_
+  commentId: Overload:NUnit.Common.CommandLineOptions.Quiet
+  fullName: NUnit.Common.CommandLineOptions.Quiet
+  nameWithType: CommandLineOptions.Quiet
 - uid: NUnit.Common.CommandLineOptions.RandomSeed
   name: RandomSeed
   href: api/NUnit.Common.CommandLineOptions.html#NUnit_Common_CommandLineOptions_RandomSeed
@@ -116547,6 +116559,18 @@ references:
   commentId: Overload:NUnit.Common.CommandLineOptions.ResultOutputSpecifications
   fullName: NUnit.Common.CommandLineOptions.ResultOutputSpecifications
   nameWithType: CommandLineOptions.ResultOutputSpecifications
+- uid: NUnit.Common.CommandLineOptions.RunOnMainThread
+  name: RunOnMainThread
+  href: api/NUnit.Common.CommandLineOptions.html#NUnit_Common_CommandLineOptions_RunOnMainThread
+  commentId: P:NUnit.Common.CommandLineOptions.RunOnMainThread
+  fullName: NUnit.Common.CommandLineOptions.RunOnMainThread
+  nameWithType: CommandLineOptions.RunOnMainThread
+- uid: NUnit.Common.CommandLineOptions.RunOnMainThread*
+  name: RunOnMainThread
+  href: api/NUnit.Common.CommandLineOptions.html#NUnit_Common_CommandLineOptions_RunOnMainThread_
+  commentId: Overload:NUnit.Common.CommandLineOptions.RunOnMainThread
+  fullName: NUnit.Common.CommandLineOptions.RunOnMainThread
+  nameWithType: CommandLineOptions.RunOnMainThread
 - uid: NUnit.Common.CommandLineOptions.ShowHelp
   name: ShowHelp
   href: api/NUnit.Common.CommandLineOptions.html#NUnit_Common_CommandLineOptions_ShowHelp
@@ -118371,6 +118395,21 @@ references:
   fullName.vb: NUnit.Framework.Assert.Catch(NUnit.Framework.TestDelegate, String, ParamArray Object())
   nameWithType: Assert.Catch(TestDelegate, string, params object?[]?)
   nameWithType.vb: Assert.Catch(TestDelegate, String, ParamArray Object())
+- uid: NUnit.Framework.Assert.Catch(System.Action)
+  name: Catch(Action)
+  href: api/NUnit.Framework.Assert.html#NUnit_Framework_Assert_Catch_System_Action_
+  commentId: M:NUnit.Framework.Assert.Catch(System.Action)
+  fullName: NUnit.Framework.Assert.Catch(System.Action)
+  nameWithType: Assert.Catch(Action)
+- uid: NUnit.Framework.Assert.Catch(System.Action,System.String,System.Object[])
+  name: Catch(Action, string, params object?[]?)
+  href: api/NUnit.Framework.Assert.html#NUnit_Framework_Assert_Catch_System_Action_System_String_System_Object___
+  commentId: M:NUnit.Framework.Assert.Catch(System.Action,System.String,System.Object[])
+  name.vb: Catch(Action, String, ParamArray Object())
+  fullName: NUnit.Framework.Assert.Catch(System.Action, string, params object?[]?)
+  fullName.vb: NUnit.Framework.Assert.Catch(System.Action, String, ParamArray Object())
+  nameWithType: Assert.Catch(Action, string, params object?[]?)
+  nameWithType.vb: Assert.Catch(Action, String, ParamArray Object())
 - uid: NUnit.Framework.Assert.Catch(System.Type,NUnit.Framework.TestDelegate)
   name: Catch(Type, TestDelegate)
   href: api/NUnit.Framework.Assert.html#NUnit_Framework_Assert_Catch_System_Type_NUnit_Framework_TestDelegate_
@@ -118386,6 +118425,21 @@ references:
   fullName.vb: NUnit.Framework.Assert.Catch(System.Type, NUnit.Framework.TestDelegate, String, ParamArray Object())
   nameWithType: Assert.Catch(Type, TestDelegate, string, params object?[]?)
   nameWithType.vb: Assert.Catch(Type, TestDelegate, String, ParamArray Object())
+- uid: NUnit.Framework.Assert.Catch(System.Type,System.Action)
+  name: Catch(Type, Action)
+  href: api/NUnit.Framework.Assert.html#NUnit_Framework_Assert_Catch_System_Type_System_Action_
+  commentId: M:NUnit.Framework.Assert.Catch(System.Type,System.Action)
+  fullName: NUnit.Framework.Assert.Catch(System.Type, System.Action)
+  nameWithType: Assert.Catch(Type, Action)
+- uid: NUnit.Framework.Assert.Catch(System.Type,System.Action,System.String,System.Object[])
+  name: Catch(Type, Action, string, params object?[]?)
+  href: api/NUnit.Framework.Assert.html#NUnit_Framework_Assert_Catch_System_Type_System_Action_System_String_System_Object___
+  commentId: M:NUnit.Framework.Assert.Catch(System.Type,System.Action,System.String,System.Object[])
+  name.vb: Catch(Type, Action, String, ParamArray Object())
+  fullName: NUnit.Framework.Assert.Catch(System.Type, System.Action, string, params object?[]?)
+  fullName.vb: NUnit.Framework.Assert.Catch(System.Type, System.Action, String, ParamArray Object())
+  nameWithType: Assert.Catch(Type, Action, string, params object?[]?)
+  nameWithType.vb: Assert.Catch(Type, Action, String, ParamArray Object())
 - uid: NUnit.Framework.Assert.Catch*
   name: Catch
   href: api/NUnit.Framework.Assert.html#NUnit_Framework_Assert_Catch_
@@ -118407,6 +118461,24 @@ references:
   fullName.vb: NUnit.Framework.Assert.CatchAsync(NUnit.Framework.AsyncTestDelegate, String, ParamArray Object())
   nameWithType: Assert.CatchAsync(AsyncTestDelegate, string, params object?[]?)
   nameWithType.vb: Assert.CatchAsync(AsyncTestDelegate, String, ParamArray Object())
+- uid: NUnit.Framework.Assert.CatchAsync(System.Func{System.Threading.Tasks.Task})
+  name: CatchAsync(Func<Task>)
+  href: api/NUnit.Framework.Assert.html#NUnit_Framework_Assert_CatchAsync_System_Func_System_Threading_Tasks_Task__
+  commentId: M:NUnit.Framework.Assert.CatchAsync(System.Func{System.Threading.Tasks.Task})
+  name.vb: CatchAsync(Func(Of Task))
+  fullName: NUnit.Framework.Assert.CatchAsync(System.Func<System.Threading.Tasks.Task>)
+  fullName.vb: NUnit.Framework.Assert.CatchAsync(System.Func(Of System.Threading.Tasks.Task))
+  nameWithType: Assert.CatchAsync(Func<Task>)
+  nameWithType.vb: Assert.CatchAsync(Func(Of Task))
+- uid: NUnit.Framework.Assert.CatchAsync(System.Func{System.Threading.Tasks.Task},System.String,System.Object[])
+  name: CatchAsync(Func<Task>, string, params object?[]?)
+  href: api/NUnit.Framework.Assert.html#NUnit_Framework_Assert_CatchAsync_System_Func_System_Threading_Tasks_Task__System_String_System_Object___
+  commentId: M:NUnit.Framework.Assert.CatchAsync(System.Func{System.Threading.Tasks.Task},System.String,System.Object[])
+  name.vb: CatchAsync(Func(Of Task), String, ParamArray Object())
+  fullName: NUnit.Framework.Assert.CatchAsync(System.Func<System.Threading.Tasks.Task>, string, params object?[]?)
+  fullName.vb: NUnit.Framework.Assert.CatchAsync(System.Func(Of System.Threading.Tasks.Task), String, ParamArray Object())
+  nameWithType: Assert.CatchAsync(Func<Task>, string, params object?[]?)
+  nameWithType.vb: Assert.CatchAsync(Func(Of Task), String, ParamArray Object())
 - uid: NUnit.Framework.Assert.CatchAsync(System.Type,NUnit.Framework.AsyncTestDelegate)
   name: CatchAsync(Type, AsyncTestDelegate)
   href: api/NUnit.Framework.Assert.html#NUnit_Framework_Assert_CatchAsync_System_Type_NUnit_Framework_AsyncTestDelegate_
@@ -118422,6 +118494,24 @@ references:
   fullName.vb: NUnit.Framework.Assert.CatchAsync(System.Type, NUnit.Framework.AsyncTestDelegate, String, ParamArray Object())
   nameWithType: Assert.CatchAsync(Type, AsyncTestDelegate, string, params object?[]?)
   nameWithType.vb: Assert.CatchAsync(Type, AsyncTestDelegate, String, ParamArray Object())
+- uid: NUnit.Framework.Assert.CatchAsync(System.Type,System.Func{System.Threading.Tasks.Task})
+  name: CatchAsync(Type, Func<Task>)
+  href: api/NUnit.Framework.Assert.html#NUnit_Framework_Assert_CatchAsync_System_Type_System_Func_System_Threading_Tasks_Task__
+  commentId: M:NUnit.Framework.Assert.CatchAsync(System.Type,System.Func{System.Threading.Tasks.Task})
+  name.vb: CatchAsync(Type, Func(Of Task))
+  fullName: NUnit.Framework.Assert.CatchAsync(System.Type, System.Func<System.Threading.Tasks.Task>)
+  fullName.vb: NUnit.Framework.Assert.CatchAsync(System.Type, System.Func(Of System.Threading.Tasks.Task))
+  nameWithType: Assert.CatchAsync(Type, Func<Task>)
+  nameWithType.vb: Assert.CatchAsync(Type, Func(Of Task))
+- uid: NUnit.Framework.Assert.CatchAsync(System.Type,System.Func{System.Threading.Tasks.Task},System.String,System.Object[])
+  name: CatchAsync(Type, Func<Task>, string, params object?[]?)
+  href: api/NUnit.Framework.Assert.html#NUnit_Framework_Assert_CatchAsync_System_Type_System_Func_System_Threading_Tasks_Task__System_String_System_Object___
+  commentId: M:NUnit.Framework.Assert.CatchAsync(System.Type,System.Func{System.Threading.Tasks.Task},System.String,System.Object[])
+  name.vb: CatchAsync(Type, Func(Of Task), String, ParamArray Object())
+  fullName: NUnit.Framework.Assert.CatchAsync(System.Type, System.Func<System.Threading.Tasks.Task>, string, params object?[]?)
+  fullName.vb: NUnit.Framework.Assert.CatchAsync(System.Type, System.Func(Of System.Threading.Tasks.Task), String, ParamArray Object())
+  nameWithType: Assert.CatchAsync(Type, Func<Task>, string, params object?[]?)
+  nameWithType.vb: Assert.CatchAsync(Type, Func(Of Task), String, ParamArray Object())
 - uid: NUnit.Framework.Assert.CatchAsync*
   name: CatchAsync
   href: api/NUnit.Framework.Assert.html#NUnit_Framework_Assert_CatchAsync_
@@ -118446,24 +118536,60 @@ references:
   fullName.vb: NUnit.Framework.Assert.CatchAsync(Of TActual)(NUnit.Framework.AsyncTestDelegate, String, ParamArray Object())
   nameWithType: Assert.CatchAsync<TActual>(AsyncTestDelegate, string, params object?[]?)
   nameWithType.vb: Assert.CatchAsync(Of TActual)(AsyncTestDelegate, String, ParamArray Object())
+- uid: NUnit.Framework.Assert.CatchAsync``1(System.Func{System.Threading.Tasks.Task})
+  name: CatchAsync<TActual>(Func<Task>)
+  href: api/NUnit.Framework.Assert.html#NUnit_Framework_Assert_CatchAsync__1_System_Func_System_Threading_Tasks_Task__
+  commentId: M:NUnit.Framework.Assert.CatchAsync``1(System.Func{System.Threading.Tasks.Task})
+  name.vb: CatchAsync(Of TActual)(Func(Of Task))
+  fullName: NUnit.Framework.Assert.CatchAsync<TActual>(System.Func<System.Threading.Tasks.Task>)
+  fullName.vb: NUnit.Framework.Assert.CatchAsync(Of TActual)(System.Func(Of System.Threading.Tasks.Task))
+  nameWithType: Assert.CatchAsync<TActual>(Func<Task>)
+  nameWithType.vb: Assert.CatchAsync(Of TActual)(Func(Of Task))
+- uid: NUnit.Framework.Assert.CatchAsync``1(System.Func{System.Threading.Tasks.Task},System.String,System.Object[])
+  name: CatchAsync<TActual>(Func<Task>, string, params object?[]?)
+  href: api/NUnit.Framework.Assert.html#NUnit_Framework_Assert_CatchAsync__1_System_Func_System_Threading_Tasks_Task__System_String_System_Object___
+  commentId: M:NUnit.Framework.Assert.CatchAsync``1(System.Func{System.Threading.Tasks.Task},System.String,System.Object[])
+  name.vb: CatchAsync(Of TActual)(Func(Of Task), String, ParamArray Object())
+  fullName: NUnit.Framework.Assert.CatchAsync<TActual>(System.Func<System.Threading.Tasks.Task>, string, params object?[]?)
+  fullName.vb: NUnit.Framework.Assert.CatchAsync(Of TActual)(System.Func(Of System.Threading.Tasks.Task), String, ParamArray Object())
+  nameWithType: Assert.CatchAsync<TActual>(Func<Task>, string, params object?[]?)
+  nameWithType.vb: Assert.CatchAsync(Of TActual)(Func(Of Task), String, ParamArray Object())
 - uid: NUnit.Framework.Assert.Catch``1(NUnit.Framework.TestDelegate)
-  name: Catch<TActual>(TestDelegate)
+  name: Catch<TExpected>(TestDelegate)
   href: api/NUnit.Framework.Assert.html#NUnit_Framework_Assert_Catch__1_NUnit_Framework_TestDelegate_
   commentId: M:NUnit.Framework.Assert.Catch``1(NUnit.Framework.TestDelegate)
-  name.vb: Catch(Of TActual)(TestDelegate)
-  fullName: NUnit.Framework.Assert.Catch<TActual>(NUnit.Framework.TestDelegate)
-  fullName.vb: NUnit.Framework.Assert.Catch(Of TActual)(NUnit.Framework.TestDelegate)
-  nameWithType: Assert.Catch<TActual>(TestDelegate)
-  nameWithType.vb: Assert.Catch(Of TActual)(TestDelegate)
+  name.vb: Catch(Of TExpected)(TestDelegate)
+  fullName: NUnit.Framework.Assert.Catch<TExpected>(NUnit.Framework.TestDelegate)
+  fullName.vb: NUnit.Framework.Assert.Catch(Of TExpected)(NUnit.Framework.TestDelegate)
+  nameWithType: Assert.Catch<TExpected>(TestDelegate)
+  nameWithType.vb: Assert.Catch(Of TExpected)(TestDelegate)
 - uid: NUnit.Framework.Assert.Catch``1(NUnit.Framework.TestDelegate,System.String,System.Object[])
-  name: Catch<TActual>(TestDelegate, string, params object?[]?)
+  name: Catch<TExpected>(TestDelegate, string, params object?[]?)
   href: api/NUnit.Framework.Assert.html#NUnit_Framework_Assert_Catch__1_NUnit_Framework_TestDelegate_System_String_System_Object___
   commentId: M:NUnit.Framework.Assert.Catch``1(NUnit.Framework.TestDelegate,System.String,System.Object[])
-  name.vb: Catch(Of TActual)(TestDelegate, String, ParamArray Object())
-  fullName: NUnit.Framework.Assert.Catch<TActual>(NUnit.Framework.TestDelegate, string, params object?[]?)
-  fullName.vb: NUnit.Framework.Assert.Catch(Of TActual)(NUnit.Framework.TestDelegate, String, ParamArray Object())
-  nameWithType: Assert.Catch<TActual>(TestDelegate, string, params object?[]?)
-  nameWithType.vb: Assert.Catch(Of TActual)(TestDelegate, String, ParamArray Object())
+  name.vb: Catch(Of TExpected)(TestDelegate, String, ParamArray Object())
+  fullName: NUnit.Framework.Assert.Catch<TExpected>(NUnit.Framework.TestDelegate, string, params object?[]?)
+  fullName.vb: NUnit.Framework.Assert.Catch(Of TExpected)(NUnit.Framework.TestDelegate, String, ParamArray Object())
+  nameWithType: Assert.Catch<TExpected>(TestDelegate, string, params object?[]?)
+  nameWithType.vb: Assert.Catch(Of TExpected)(TestDelegate, String, ParamArray Object())
+- uid: NUnit.Framework.Assert.Catch``1(System.Action)
+  name: Catch<TExpected>(Action)
+  href: api/NUnit.Framework.Assert.html#NUnit_Framework_Assert_Catch__1_System_Action_
+  commentId: M:NUnit.Framework.Assert.Catch``1(System.Action)
+  name.vb: Catch(Of TExpected)(Action)
+  fullName: NUnit.Framework.Assert.Catch<TExpected>(System.Action)
+  fullName.vb: NUnit.Framework.Assert.Catch(Of TExpected)(System.Action)
+  nameWithType: Assert.Catch<TExpected>(Action)
+  nameWithType.vb: Assert.Catch(Of TExpected)(Action)
+- uid: NUnit.Framework.Assert.Catch``1(System.Action,System.String,System.Object[])
+  name: Catch<TExpected>(Action, string, params object?[]?)
+  href: api/NUnit.Framework.Assert.html#NUnit_Framework_Assert_Catch__1_System_Action_System_String_System_Object___
+  commentId: M:NUnit.Framework.Assert.Catch``1(System.Action,System.String,System.Object[])
+  name.vb: Catch(Of TExpected)(Action, String, ParamArray Object())
+  fullName: NUnit.Framework.Assert.Catch<TExpected>(System.Action, string, params object?[]?)
+  fullName.vb: NUnit.Framework.Assert.Catch(Of TExpected)(System.Action, String, ParamArray Object())
+  nameWithType: Assert.Catch<TExpected>(Action, string, params object?[]?)
+  nameWithType.vb: Assert.Catch(Of TExpected)(Action, String, ParamArray Object())
 - uid: NUnit.Framework.Assert.Charlie
   name: Charlie()
   href: api/NUnit.Framework.Assert.html#NUnit_Framework_Assert_Charlie
@@ -118491,6 +118617,21 @@ references:
   fullName.vb: NUnit.Framework.Assert.DoesNotThrow(NUnit.Framework.TestDelegate, String, ParamArray Object())
   nameWithType: Assert.DoesNotThrow(TestDelegate, string, params object?[]?)
   nameWithType.vb: Assert.DoesNotThrow(TestDelegate, String, ParamArray Object())
+- uid: NUnit.Framework.Assert.DoesNotThrow(System.Action)
+  name: DoesNotThrow(Action)
+  href: api/NUnit.Framework.Assert.html#NUnit_Framework_Assert_DoesNotThrow_System_Action_
+  commentId: M:NUnit.Framework.Assert.DoesNotThrow(System.Action)
+  fullName: NUnit.Framework.Assert.DoesNotThrow(System.Action)
+  nameWithType: Assert.DoesNotThrow(Action)
+- uid: NUnit.Framework.Assert.DoesNotThrow(System.Action,System.String,System.Object[])
+  name: DoesNotThrow(Action, string, params object?[]?)
+  href: api/NUnit.Framework.Assert.html#NUnit_Framework_Assert_DoesNotThrow_System_Action_System_String_System_Object___
+  commentId: M:NUnit.Framework.Assert.DoesNotThrow(System.Action,System.String,System.Object[])
+  name.vb: DoesNotThrow(Action, String, ParamArray Object())
+  fullName: NUnit.Framework.Assert.DoesNotThrow(System.Action, string, params object?[]?)
+  fullName.vb: NUnit.Framework.Assert.DoesNotThrow(System.Action, String, ParamArray Object())
+  nameWithType: Assert.DoesNotThrow(Action, string, params object?[]?)
+  nameWithType.vb: Assert.DoesNotThrow(Action, String, ParamArray Object())
 - uid: NUnit.Framework.Assert.DoesNotThrow*
   name: DoesNotThrow
   href: api/NUnit.Framework.Assert.html#NUnit_Framework_Assert_DoesNotThrow_
@@ -118512,6 +118653,24 @@ references:
   fullName.vb: NUnit.Framework.Assert.DoesNotThrowAsync(NUnit.Framework.AsyncTestDelegate, String, ParamArray Object())
   nameWithType: Assert.DoesNotThrowAsync(AsyncTestDelegate, string, params object?[]?)
   nameWithType.vb: Assert.DoesNotThrowAsync(AsyncTestDelegate, String, ParamArray Object())
+- uid: NUnit.Framework.Assert.DoesNotThrowAsync(System.Func{System.Threading.Tasks.Task})
+  name: DoesNotThrowAsync(Func<Task>)
+  href: api/NUnit.Framework.Assert.html#NUnit_Framework_Assert_DoesNotThrowAsync_System_Func_System_Threading_Tasks_Task__
+  commentId: M:NUnit.Framework.Assert.DoesNotThrowAsync(System.Func{System.Threading.Tasks.Task})
+  name.vb: DoesNotThrowAsync(Func(Of Task))
+  fullName: NUnit.Framework.Assert.DoesNotThrowAsync(System.Func<System.Threading.Tasks.Task>)
+  fullName.vb: NUnit.Framework.Assert.DoesNotThrowAsync(System.Func(Of System.Threading.Tasks.Task))
+  nameWithType: Assert.DoesNotThrowAsync(Func<Task>)
+  nameWithType.vb: Assert.DoesNotThrowAsync(Func(Of Task))
+- uid: NUnit.Framework.Assert.DoesNotThrowAsync(System.Func{System.Threading.Tasks.Task},System.String,System.Object[])
+  name: DoesNotThrowAsync(Func<Task>, string, params object?[]?)
+  href: api/NUnit.Framework.Assert.html#NUnit_Framework_Assert_DoesNotThrowAsync_System_Func_System_Threading_Tasks_Task__System_String_System_Object___
+  commentId: M:NUnit.Framework.Assert.DoesNotThrowAsync(System.Func{System.Threading.Tasks.Task},System.String,System.Object[])
+  name.vb: DoesNotThrowAsync(Func(Of Task), String, ParamArray Object())
+  fullName: NUnit.Framework.Assert.DoesNotThrowAsync(System.Func<System.Threading.Tasks.Task>, string, params object?[]?)
+  fullName.vb: NUnit.Framework.Assert.DoesNotThrowAsync(System.Func(Of System.Threading.Tasks.Task), String, ParamArray Object())
+  nameWithType: Assert.DoesNotThrowAsync(Func<Task>, string, params object?[]?)
+  nameWithType.vb: Assert.DoesNotThrowAsync(Func(Of Task), String, ParamArray Object())
 - uid: NUnit.Framework.Assert.DoesNotThrowAsync*
   name: DoesNotThrowAsync
   href: api/NUnit.Framework.Assert.html#NUnit_Framework_Assert_DoesNotThrowAsync_
@@ -118605,6 +118764,21 @@ references:
   commentId: M:NUnit.Framework.Assert.Multiple(NUnit.Framework.TestDelegate)
   fullName: NUnit.Framework.Assert.Multiple(NUnit.Framework.TestDelegate)
   nameWithType: Assert.Multiple(TestDelegate)
+- uid: NUnit.Framework.Assert.Multiple(System.Action)
+  name: Multiple(Action)
+  href: api/NUnit.Framework.Assert.html#NUnit_Framework_Assert_Multiple_System_Action_
+  commentId: M:NUnit.Framework.Assert.Multiple(System.Action)
+  fullName: NUnit.Framework.Assert.Multiple(System.Action)
+  nameWithType: Assert.Multiple(Action)
+- uid: NUnit.Framework.Assert.Multiple(System.Func{System.Threading.Tasks.Task})
+  name: Multiple(Func<Task>)
+  href: api/NUnit.Framework.Assert.html#NUnit_Framework_Assert_Multiple_System_Func_System_Threading_Tasks_Task__
+  commentId: M:NUnit.Framework.Assert.Multiple(System.Func{System.Threading.Tasks.Task})
+  name.vb: Multiple(Func(Of Task))
+  fullName: NUnit.Framework.Assert.Multiple(System.Func<System.Threading.Tasks.Task>)
+  fullName.vb: NUnit.Framework.Assert.Multiple(System.Func(Of System.Threading.Tasks.Task))
+  nameWithType: Assert.Multiple(Func<Task>)
+  nameWithType.vb: Assert.Multiple(Func(Of Task))
 - uid: NUnit.Framework.Assert.Multiple*
   name: Multiple
   href: api/NUnit.Framework.Assert.html#NUnit_Framework_Assert_Multiple_
@@ -118617,6 +118791,15 @@ references:
   commentId: M:NUnit.Framework.Assert.MultipleAsync(NUnit.Framework.AsyncTestDelegate)
   fullName: NUnit.Framework.Assert.MultipleAsync(NUnit.Framework.AsyncTestDelegate)
   nameWithType: Assert.MultipleAsync(AsyncTestDelegate)
+- uid: NUnit.Framework.Assert.MultipleAsync(System.Func{System.Threading.Tasks.Task})
+  name: MultipleAsync(Func<Task>)
+  href: api/NUnit.Framework.Assert.html#NUnit_Framework_Assert_MultipleAsync_System_Func_System_Threading_Tasks_Task__
+  commentId: M:NUnit.Framework.Assert.MultipleAsync(System.Func{System.Threading.Tasks.Task})
+  name.vb: MultipleAsync(Func(Of Task))
+  fullName: NUnit.Framework.Assert.MultipleAsync(System.Func<System.Threading.Tasks.Task>)
+  fullName.vb: NUnit.Framework.Assert.MultipleAsync(System.Func(Of System.Threading.Tasks.Task))
+  nameWithType: Assert.MultipleAsync(Func<Task>)
+  nameWithType.vb: Assert.MultipleAsync(Func(Of Task))
 - uid: NUnit.Framework.Assert.MultipleAsync*
   name: MultipleAsync
   href: api/NUnit.Framework.Assert.html#NUnit_Framework_Assert_MultipleAsync_
@@ -118671,6 +118854,33 @@ references:
   fullName.vb: NUnit.Framework.Assert.That(NUnit.Framework.TestDelegate, NUnit.Framework.Constraints.IResolveConstraint, System.Func(Of String), String, String)
   nameWithType: Assert.That(TestDelegate, IResolveConstraint, Func<string>, string, string)
   nameWithType.vb: Assert.That(TestDelegate, IResolveConstraint, Func(Of String), String, String)
+- uid: NUnit.Framework.Assert.That(System.Action,NUnit.Framework.Constraints.IResolveConstraint,NUnit.Framework.NUnitString,System.String,System.String)
+  name: That(Action, IResolveConstraint, NUnitString, string, string)
+  href: api/NUnit.Framework.Assert.html#NUnit_Framework_Assert_That_System_Action_NUnit_Framework_Constraints_IResolveConstraint_NUnit_Framework_NUnitString_System_String_System_String_
+  commentId: M:NUnit.Framework.Assert.That(System.Action,NUnit.Framework.Constraints.IResolveConstraint,NUnit.Framework.NUnitString,System.String,System.String)
+  name.vb: That(Action, IResolveConstraint, NUnitString, String, String)
+  fullName: NUnit.Framework.Assert.That(System.Action, NUnit.Framework.Constraints.IResolveConstraint, NUnit.Framework.NUnitString, string, string)
+  fullName.vb: NUnit.Framework.Assert.That(System.Action, NUnit.Framework.Constraints.IResolveConstraint, NUnit.Framework.NUnitString, String, String)
+  nameWithType: Assert.That(Action, IResolveConstraint, NUnitString, string, string)
+  nameWithType.vb: Assert.That(Action, IResolveConstraint, NUnitString, String, String)
+- uid: NUnit.Framework.Assert.That(System.Action,NUnit.Framework.Constraints.IResolveConstraint,System.FormattableString,System.String,System.String)
+  name: That(Action, IResolveConstraint, FormattableString, string, string)
+  href: api/NUnit.Framework.Assert.html#NUnit_Framework_Assert_That_System_Action_NUnit_Framework_Constraints_IResolveConstraint_System_FormattableString_System_String_System_String_
+  commentId: M:NUnit.Framework.Assert.That(System.Action,NUnit.Framework.Constraints.IResolveConstraint,System.FormattableString,System.String,System.String)
+  name.vb: That(Action, IResolveConstraint, FormattableString, String, String)
+  fullName: NUnit.Framework.Assert.That(System.Action, NUnit.Framework.Constraints.IResolveConstraint, System.FormattableString, string, string)
+  fullName.vb: NUnit.Framework.Assert.That(System.Action, NUnit.Framework.Constraints.IResolveConstraint, System.FormattableString, String, String)
+  nameWithType: Assert.That(Action, IResolveConstraint, FormattableString, string, string)
+  nameWithType.vb: Assert.That(Action, IResolveConstraint, FormattableString, String, String)
+- uid: NUnit.Framework.Assert.That(System.Action,NUnit.Framework.Constraints.IResolveConstraint,System.Func{System.String},System.String,System.String)
+  name: That(Action, IResolveConstraint, Func<string>, string, string)
+  href: api/NUnit.Framework.Assert.html#NUnit_Framework_Assert_That_System_Action_NUnit_Framework_Constraints_IResolveConstraint_System_Func_System_String__System_String_System_String_
+  commentId: M:NUnit.Framework.Assert.That(System.Action,NUnit.Framework.Constraints.IResolveConstraint,System.Func{System.String},System.String,System.String)
+  name.vb: That(Action, IResolveConstraint, Func(Of String), String, String)
+  fullName: NUnit.Framework.Assert.That(System.Action, NUnit.Framework.Constraints.IResolveConstraint, System.Func<string>, string, string)
+  fullName.vb: NUnit.Framework.Assert.That(System.Action, NUnit.Framework.Constraints.IResolveConstraint, System.Func(Of String), String, String)
+  nameWithType: Assert.That(Action, IResolveConstraint, Func<string>, string, string)
+  nameWithType.vb: Assert.That(Action, IResolveConstraint, Func(Of String), String, String)
 - uid: NUnit.Framework.Assert.That(System.Boolean,NUnit.Framework.NUnitString,System.String)
   name: That(bool, NUnitString, string)
   href: api/NUnit.Framework.Assert.html#NUnit_Framework_Assert_That_System_Boolean_NUnit_Framework_NUnitString_System_String_
@@ -118749,6 +118959,24 @@ references:
   fullName.vb: NUnit.Framework.Assert.ThatAsync(NUnit.Framework.AsyncTestDelegate, NUnit.Framework.Constraints.IResolveConstraint, System.FormattableString, String, String)
   nameWithType: Assert.ThatAsync(AsyncTestDelegate, IResolveConstraint, FormattableString, string, string)
   nameWithType.vb: Assert.ThatAsync(AsyncTestDelegate, IResolveConstraint, FormattableString, String, String)
+- uid: NUnit.Framework.Assert.ThatAsync(System.Func{System.Threading.Tasks.Task},NUnit.Framework.Constraints.IResolveConstraint,NUnit.Framework.NUnitString,System.String,System.String)
+  name: ThatAsync(Func<Task>, IResolveConstraint, NUnitString, string, string)
+  href: api/NUnit.Framework.Assert.html#NUnit_Framework_Assert_ThatAsync_System_Func_System_Threading_Tasks_Task__NUnit_Framework_Constraints_IResolveConstraint_NUnit_Framework_NUnitString_System_String_System_String_
+  commentId: M:NUnit.Framework.Assert.ThatAsync(System.Func{System.Threading.Tasks.Task},NUnit.Framework.Constraints.IResolveConstraint,NUnit.Framework.NUnitString,System.String,System.String)
+  name.vb: ThatAsync(Func(Of Task), IResolveConstraint, NUnitString, String, String)
+  fullName: NUnit.Framework.Assert.ThatAsync(System.Func<System.Threading.Tasks.Task>, NUnit.Framework.Constraints.IResolveConstraint, NUnit.Framework.NUnitString, string, string)
+  fullName.vb: NUnit.Framework.Assert.ThatAsync(System.Func(Of System.Threading.Tasks.Task), NUnit.Framework.Constraints.IResolveConstraint, NUnit.Framework.NUnitString, String, String)
+  nameWithType: Assert.ThatAsync(Func<Task>, IResolveConstraint, NUnitString, string, string)
+  nameWithType.vb: Assert.ThatAsync(Func(Of Task), IResolveConstraint, NUnitString, String, String)
+- uid: NUnit.Framework.Assert.ThatAsync(System.Func{System.Threading.Tasks.Task},NUnit.Framework.Constraints.IResolveConstraint,System.FormattableString,System.String,System.String)
+  name: ThatAsync(Func<Task>, IResolveConstraint, FormattableString, string, string)
+  href: api/NUnit.Framework.Assert.html#NUnit_Framework_Assert_ThatAsync_System_Func_System_Threading_Tasks_Task__NUnit_Framework_Constraints_IResolveConstraint_System_FormattableString_System_String_System_String_
+  commentId: M:NUnit.Framework.Assert.ThatAsync(System.Func{System.Threading.Tasks.Task},NUnit.Framework.Constraints.IResolveConstraint,System.FormattableString,System.String,System.String)
+  name.vb: ThatAsync(Func(Of Task), IResolveConstraint, FormattableString, String, String)
+  fullName: NUnit.Framework.Assert.ThatAsync(System.Func<System.Threading.Tasks.Task>, NUnit.Framework.Constraints.IResolveConstraint, System.FormattableString, string, string)
+  fullName.vb: NUnit.Framework.Assert.ThatAsync(System.Func(Of System.Threading.Tasks.Task), NUnit.Framework.Constraints.IResolveConstraint, System.FormattableString, String, String)
+  nameWithType: Assert.ThatAsync(Func<Task>, IResolveConstraint, FormattableString, string, string)
+  nameWithType.vb: Assert.ThatAsync(Func(Of Task), IResolveConstraint, FormattableString, String, String)
 - uid: NUnit.Framework.Assert.ThatAsync*
   name: ThatAsync
   href: api/NUnit.Framework.Assert.html#NUnit_Framework_Assert_ThatAsync_
@@ -118800,6 +119028,33 @@ references:
   fullName.vb: NUnit.Framework.Assert.That(Of TActual)(NUnit.Framework.Constraints.ActualValueDelegate(Of TActual), NUnit.Framework.Constraints.IResolveConstraint, System.Func(Of String), String, String)
   nameWithType: Assert.That<TActual>(ActualValueDelegate<TActual>, IResolveConstraint, Func<string>, string, string)
   nameWithType.vb: Assert.That(Of TActual)(ActualValueDelegate(Of TActual), IResolveConstraint, Func(Of String), String, String)
+- uid: NUnit.Framework.Assert.That``1(System.Func{``0},NUnit.Framework.Constraints.IResolveConstraint,NUnit.Framework.NUnitString,System.String,System.String)
+  name: That<TActual>(Func<TActual>, IResolveConstraint, NUnitString, string, string)
+  href: api/NUnit.Framework.Assert.html#NUnit_Framework_Assert_That__1_System_Func___0__NUnit_Framework_Constraints_IResolveConstraint_NUnit_Framework_NUnitString_System_String_System_String_
+  commentId: M:NUnit.Framework.Assert.That``1(System.Func{``0},NUnit.Framework.Constraints.IResolveConstraint,NUnit.Framework.NUnitString,System.String,System.String)
+  name.vb: That(Of TActual)(Func(Of TActual), IResolveConstraint, NUnitString, String, String)
+  fullName: NUnit.Framework.Assert.That<TActual>(System.Func<TActual>, NUnit.Framework.Constraints.IResolveConstraint, NUnit.Framework.NUnitString, string, string)
+  fullName.vb: NUnit.Framework.Assert.That(Of TActual)(System.Func(Of TActual), NUnit.Framework.Constraints.IResolveConstraint, NUnit.Framework.NUnitString, String, String)
+  nameWithType: Assert.That<TActual>(Func<TActual>, IResolveConstraint, NUnitString, string, string)
+  nameWithType.vb: Assert.That(Of TActual)(Func(Of TActual), IResolveConstraint, NUnitString, String, String)
+- uid: NUnit.Framework.Assert.That``1(System.Func{``0},NUnit.Framework.Constraints.IResolveConstraint,System.FormattableString,System.String,System.String)
+  name: That<TActual>(Func<TActual>, IResolveConstraint, FormattableString, string, string)
+  href: api/NUnit.Framework.Assert.html#NUnit_Framework_Assert_That__1_System_Func___0__NUnit_Framework_Constraints_IResolveConstraint_System_FormattableString_System_String_System_String_
+  commentId: M:NUnit.Framework.Assert.That``1(System.Func{``0},NUnit.Framework.Constraints.IResolveConstraint,System.FormattableString,System.String,System.String)
+  name.vb: That(Of TActual)(Func(Of TActual), IResolveConstraint, FormattableString, String, String)
+  fullName: NUnit.Framework.Assert.That<TActual>(System.Func<TActual>, NUnit.Framework.Constraints.IResolveConstraint, System.FormattableString, string, string)
+  fullName.vb: NUnit.Framework.Assert.That(Of TActual)(System.Func(Of TActual), NUnit.Framework.Constraints.IResolveConstraint, System.FormattableString, String, String)
+  nameWithType: Assert.That<TActual>(Func<TActual>, IResolveConstraint, FormattableString, string, string)
+  nameWithType.vb: Assert.That(Of TActual)(Func(Of TActual), IResolveConstraint, FormattableString, String, String)
+- uid: NUnit.Framework.Assert.That``1(System.Func{``0},NUnit.Framework.Constraints.IResolveConstraint,System.Func{System.String},System.String,System.String)
+  name: That<TActual>(Func<TActual>, IResolveConstraint, Func<string>, string, string)
+  href: api/NUnit.Framework.Assert.html#NUnit_Framework_Assert_That__1_System_Func___0__NUnit_Framework_Constraints_IResolveConstraint_System_Func_System_String__System_String_System_String_
+  commentId: M:NUnit.Framework.Assert.That``1(System.Func{``0},NUnit.Framework.Constraints.IResolveConstraint,System.Func{System.String},System.String,System.String)
+  name.vb: That(Of TActual)(Func(Of TActual), IResolveConstraint, Func(Of String), String, String)
+  fullName: NUnit.Framework.Assert.That<TActual>(System.Func<TActual>, NUnit.Framework.Constraints.IResolveConstraint, System.Func<string>, string, string)
+  fullName.vb: NUnit.Framework.Assert.That(Of TActual)(System.Func(Of TActual), NUnit.Framework.Constraints.IResolveConstraint, System.Func(Of String), String, String)
+  nameWithType: Assert.That<TActual>(Func<TActual>, IResolveConstraint, Func<string>, string, string)
+  nameWithType.vb: Assert.That(Of TActual)(Func(Of TActual), IResolveConstraint, Func(Of String), String, String)
 - uid: NUnit.Framework.Assert.That``1(``0,NUnit.Framework.Constraints.IResolveConstraint,NUnit.Framework.NUnitString,System.String,System.String)
   name: That<TActual>(TActual, IResolveConstraint, NUnitString, string, string)
   href: api/NUnit.Framework.Assert.html#NUnit_Framework_Assert_That__1___0_NUnit_Framework_Constraints_IResolveConstraint_NUnit_Framework_NUnitString_System_String_System_String_
@@ -118842,6 +119097,21 @@ references:
   fullName.vb: NUnit.Framework.Assert.Throws(NUnit.Framework.Constraints.IResolveConstraint, NUnit.Framework.TestDelegate, String, ParamArray Object())
   nameWithType: Assert.Throws(IResolveConstraint, TestDelegate, string, params object?[]?)
   nameWithType.vb: Assert.Throws(IResolveConstraint, TestDelegate, String, ParamArray Object())
+- uid: NUnit.Framework.Assert.Throws(NUnit.Framework.Constraints.IResolveConstraint,System.Action)
+  name: Throws(IResolveConstraint, Action)
+  href: api/NUnit.Framework.Assert.html#NUnit_Framework_Assert_Throws_NUnit_Framework_Constraints_IResolveConstraint_System_Action_
+  commentId: M:NUnit.Framework.Assert.Throws(NUnit.Framework.Constraints.IResolveConstraint,System.Action)
+  fullName: NUnit.Framework.Assert.Throws(NUnit.Framework.Constraints.IResolveConstraint, System.Action)
+  nameWithType: Assert.Throws(IResolveConstraint, Action)
+- uid: NUnit.Framework.Assert.Throws(NUnit.Framework.Constraints.IResolveConstraint,System.Action,System.String,System.Object[])
+  name: Throws(IResolveConstraint, Action, string, params object?[]?)
+  href: api/NUnit.Framework.Assert.html#NUnit_Framework_Assert_Throws_NUnit_Framework_Constraints_IResolveConstraint_System_Action_System_String_System_Object___
+  commentId: M:NUnit.Framework.Assert.Throws(NUnit.Framework.Constraints.IResolveConstraint,System.Action,System.String,System.Object[])
+  name.vb: Throws(IResolveConstraint, Action, String, ParamArray Object())
+  fullName: NUnit.Framework.Assert.Throws(NUnit.Framework.Constraints.IResolveConstraint, System.Action, string, params object?[]?)
+  fullName.vb: NUnit.Framework.Assert.Throws(NUnit.Framework.Constraints.IResolveConstraint, System.Action, String, ParamArray Object())
+  nameWithType: Assert.Throws(IResolveConstraint, Action, string, params object?[]?)
+  nameWithType.vb: Assert.Throws(IResolveConstraint, Action, String, ParamArray Object())
 - uid: NUnit.Framework.Assert.Throws(System.Type,NUnit.Framework.TestDelegate)
   name: Throws(Type, TestDelegate)
   href: api/NUnit.Framework.Assert.html#NUnit_Framework_Assert_Throws_System_Type_NUnit_Framework_TestDelegate_
@@ -118857,6 +119127,21 @@ references:
   fullName.vb: NUnit.Framework.Assert.Throws(System.Type, NUnit.Framework.TestDelegate, String, ParamArray Object())
   nameWithType: Assert.Throws(Type, TestDelegate, string, params object?[]?)
   nameWithType.vb: Assert.Throws(Type, TestDelegate, String, ParamArray Object())
+- uid: NUnit.Framework.Assert.Throws(System.Type,System.Action)
+  name: Throws(Type, Action)
+  href: api/NUnit.Framework.Assert.html#NUnit_Framework_Assert_Throws_System_Type_System_Action_
+  commentId: M:NUnit.Framework.Assert.Throws(System.Type,System.Action)
+  fullName: NUnit.Framework.Assert.Throws(System.Type, System.Action)
+  nameWithType: Assert.Throws(Type, Action)
+- uid: NUnit.Framework.Assert.Throws(System.Type,System.Action,System.String,System.Object[])
+  name: Throws(Type, Action, string, params object?[]?)
+  href: api/NUnit.Framework.Assert.html#NUnit_Framework_Assert_Throws_System_Type_System_Action_System_String_System_Object___
+  commentId: M:NUnit.Framework.Assert.Throws(System.Type,System.Action,System.String,System.Object[])
+  name.vb: Throws(Type, Action, String, ParamArray Object())
+  fullName: NUnit.Framework.Assert.Throws(System.Type, System.Action, string, params object?[]?)
+  fullName.vb: NUnit.Framework.Assert.Throws(System.Type, System.Action, String, ParamArray Object())
+  nameWithType: Assert.Throws(Type, Action, string, params object?[]?)
+  nameWithType.vb: Assert.Throws(Type, Action, String, ParamArray Object())
 - uid: NUnit.Framework.Assert.Throws*
   name: Throws
   href: api/NUnit.Framework.Assert.html#NUnit_Framework_Assert_Throws_
@@ -118878,6 +119163,24 @@ references:
   fullName.vb: NUnit.Framework.Assert.ThrowsAsync(NUnit.Framework.Constraints.IResolveConstraint, NUnit.Framework.AsyncTestDelegate, String, ParamArray Object())
   nameWithType: Assert.ThrowsAsync(IResolveConstraint, AsyncTestDelegate, string, params object?[]?)
   nameWithType.vb: Assert.ThrowsAsync(IResolveConstraint, AsyncTestDelegate, String, ParamArray Object())
+- uid: NUnit.Framework.Assert.ThrowsAsync(NUnit.Framework.Constraints.IResolveConstraint,System.Func{System.Threading.Tasks.Task})
+  name: ThrowsAsync(IResolveConstraint, Func<Task>)
+  href: api/NUnit.Framework.Assert.html#NUnit_Framework_Assert_ThrowsAsync_NUnit_Framework_Constraints_IResolveConstraint_System_Func_System_Threading_Tasks_Task__
+  commentId: M:NUnit.Framework.Assert.ThrowsAsync(NUnit.Framework.Constraints.IResolveConstraint,System.Func{System.Threading.Tasks.Task})
+  name.vb: ThrowsAsync(IResolveConstraint, Func(Of Task))
+  fullName: NUnit.Framework.Assert.ThrowsAsync(NUnit.Framework.Constraints.IResolveConstraint, System.Func<System.Threading.Tasks.Task>)
+  fullName.vb: NUnit.Framework.Assert.ThrowsAsync(NUnit.Framework.Constraints.IResolveConstraint, System.Func(Of System.Threading.Tasks.Task))
+  nameWithType: Assert.ThrowsAsync(IResolveConstraint, Func<Task>)
+  nameWithType.vb: Assert.ThrowsAsync(IResolveConstraint, Func(Of Task))
+- uid: NUnit.Framework.Assert.ThrowsAsync(NUnit.Framework.Constraints.IResolveConstraint,System.Func{System.Threading.Tasks.Task},System.String,System.Object[])
+  name: ThrowsAsync(IResolveConstraint, Func<Task>, string, params object?[]?)
+  href: api/NUnit.Framework.Assert.html#NUnit_Framework_Assert_ThrowsAsync_NUnit_Framework_Constraints_IResolveConstraint_System_Func_System_Threading_Tasks_Task__System_String_System_Object___
+  commentId: M:NUnit.Framework.Assert.ThrowsAsync(NUnit.Framework.Constraints.IResolveConstraint,System.Func{System.Threading.Tasks.Task},System.String,System.Object[])
+  name.vb: ThrowsAsync(IResolveConstraint, Func(Of Task), String, ParamArray Object())
+  fullName: NUnit.Framework.Assert.ThrowsAsync(NUnit.Framework.Constraints.IResolveConstraint, System.Func<System.Threading.Tasks.Task>, string, params object?[]?)
+  fullName.vb: NUnit.Framework.Assert.ThrowsAsync(NUnit.Framework.Constraints.IResolveConstraint, System.Func(Of System.Threading.Tasks.Task), String, ParamArray Object())
+  nameWithType: Assert.ThrowsAsync(IResolveConstraint, Func<Task>, string, params object?[]?)
+  nameWithType.vb: Assert.ThrowsAsync(IResolveConstraint, Func(Of Task), String, ParamArray Object())
 - uid: NUnit.Framework.Assert.ThrowsAsync(System.Type,NUnit.Framework.AsyncTestDelegate)
   name: ThrowsAsync(Type, AsyncTestDelegate)
   href: api/NUnit.Framework.Assert.html#NUnit_Framework_Assert_ThrowsAsync_System_Type_NUnit_Framework_AsyncTestDelegate_
@@ -118893,6 +119196,24 @@ references:
   fullName.vb: NUnit.Framework.Assert.ThrowsAsync(System.Type, NUnit.Framework.AsyncTestDelegate, String, ParamArray Object())
   nameWithType: Assert.ThrowsAsync(Type, AsyncTestDelegate, string, params object?[]?)
   nameWithType.vb: Assert.ThrowsAsync(Type, AsyncTestDelegate, String, ParamArray Object())
+- uid: NUnit.Framework.Assert.ThrowsAsync(System.Type,System.Func{System.Threading.Tasks.Task})
+  name: ThrowsAsync(Type, Func<Task>)
+  href: api/NUnit.Framework.Assert.html#NUnit_Framework_Assert_ThrowsAsync_System_Type_System_Func_System_Threading_Tasks_Task__
+  commentId: M:NUnit.Framework.Assert.ThrowsAsync(System.Type,System.Func{System.Threading.Tasks.Task})
+  name.vb: ThrowsAsync(Type, Func(Of Task))
+  fullName: NUnit.Framework.Assert.ThrowsAsync(System.Type, System.Func<System.Threading.Tasks.Task>)
+  fullName.vb: NUnit.Framework.Assert.ThrowsAsync(System.Type, System.Func(Of System.Threading.Tasks.Task))
+  nameWithType: Assert.ThrowsAsync(Type, Func<Task>)
+  nameWithType.vb: Assert.ThrowsAsync(Type, Func(Of Task))
+- uid: NUnit.Framework.Assert.ThrowsAsync(System.Type,System.Func{System.Threading.Tasks.Task},System.String,System.Object[])
+  name: ThrowsAsync(Type, Func<Task>, string, params object?[]?)
+  href: api/NUnit.Framework.Assert.html#NUnit_Framework_Assert_ThrowsAsync_System_Type_System_Func_System_Threading_Tasks_Task__System_String_System_Object___
+  commentId: M:NUnit.Framework.Assert.ThrowsAsync(System.Type,System.Func{System.Threading.Tasks.Task},System.String,System.Object[])
+  name.vb: ThrowsAsync(Type, Func(Of Task), String, ParamArray Object())
+  fullName: NUnit.Framework.Assert.ThrowsAsync(System.Type, System.Func<System.Threading.Tasks.Task>, string, params object?[]?)
+  fullName.vb: NUnit.Framework.Assert.ThrowsAsync(System.Type, System.Func(Of System.Threading.Tasks.Task), String, ParamArray Object())
+  nameWithType: Assert.ThrowsAsync(Type, Func<Task>, string, params object?[]?)
+  nameWithType.vb: Assert.ThrowsAsync(Type, Func(Of Task), String, ParamArray Object())
 - uid: NUnit.Framework.Assert.ThrowsAsync*
   name: ThrowsAsync
   href: api/NUnit.Framework.Assert.html#NUnit_Framework_Assert_ThrowsAsync_
@@ -118917,24 +119238,60 @@ references:
   fullName.vb: NUnit.Framework.Assert.ThrowsAsync(Of TActual)(NUnit.Framework.AsyncTestDelegate, String, ParamArray Object())
   nameWithType: Assert.ThrowsAsync<TActual>(AsyncTestDelegate, string, params object?[]?)
   nameWithType.vb: Assert.ThrowsAsync(Of TActual)(AsyncTestDelegate, String, ParamArray Object())
+- uid: NUnit.Framework.Assert.ThrowsAsync``1(System.Func{System.Threading.Tasks.Task})
+  name: ThrowsAsync<TActual>(Func<Task>)
+  href: api/NUnit.Framework.Assert.html#NUnit_Framework_Assert_ThrowsAsync__1_System_Func_System_Threading_Tasks_Task__
+  commentId: M:NUnit.Framework.Assert.ThrowsAsync``1(System.Func{System.Threading.Tasks.Task})
+  name.vb: ThrowsAsync(Of TActual)(Func(Of Task))
+  fullName: NUnit.Framework.Assert.ThrowsAsync<TActual>(System.Func<System.Threading.Tasks.Task>)
+  fullName.vb: NUnit.Framework.Assert.ThrowsAsync(Of TActual)(System.Func(Of System.Threading.Tasks.Task))
+  nameWithType: Assert.ThrowsAsync<TActual>(Func<Task>)
+  nameWithType.vb: Assert.ThrowsAsync(Of TActual)(Func(Of Task))
+- uid: NUnit.Framework.Assert.ThrowsAsync``1(System.Func{System.Threading.Tasks.Task},System.String,System.Object[])
+  name: ThrowsAsync<TActual>(Func<Task>, string, params object?[]?)
+  href: api/NUnit.Framework.Assert.html#NUnit_Framework_Assert_ThrowsAsync__1_System_Func_System_Threading_Tasks_Task__System_String_System_Object___
+  commentId: M:NUnit.Framework.Assert.ThrowsAsync``1(System.Func{System.Threading.Tasks.Task},System.String,System.Object[])
+  name.vb: ThrowsAsync(Of TActual)(Func(Of Task), String, ParamArray Object())
+  fullName: NUnit.Framework.Assert.ThrowsAsync<TActual>(System.Func<System.Threading.Tasks.Task>, string, params object?[]?)
+  fullName.vb: NUnit.Framework.Assert.ThrowsAsync(Of TActual)(System.Func(Of System.Threading.Tasks.Task), String, ParamArray Object())
+  nameWithType: Assert.ThrowsAsync<TActual>(Func<Task>, string, params object?[]?)
+  nameWithType.vb: Assert.ThrowsAsync(Of TActual)(Func(Of Task), String, ParamArray Object())
 - uid: NUnit.Framework.Assert.Throws``1(NUnit.Framework.TestDelegate)
-  name: Throws<TActual>(TestDelegate)
+  name: Throws<TExpected>(TestDelegate)
   href: api/NUnit.Framework.Assert.html#NUnit_Framework_Assert_Throws__1_NUnit_Framework_TestDelegate_
   commentId: M:NUnit.Framework.Assert.Throws``1(NUnit.Framework.TestDelegate)
-  name.vb: Throws(Of TActual)(TestDelegate)
-  fullName: NUnit.Framework.Assert.Throws<TActual>(NUnit.Framework.TestDelegate)
-  fullName.vb: NUnit.Framework.Assert.Throws(Of TActual)(NUnit.Framework.TestDelegate)
-  nameWithType: Assert.Throws<TActual>(TestDelegate)
-  nameWithType.vb: Assert.Throws(Of TActual)(TestDelegate)
+  name.vb: Throws(Of TExpected)(TestDelegate)
+  fullName: NUnit.Framework.Assert.Throws<TExpected>(NUnit.Framework.TestDelegate)
+  fullName.vb: NUnit.Framework.Assert.Throws(Of TExpected)(NUnit.Framework.TestDelegate)
+  nameWithType: Assert.Throws<TExpected>(TestDelegate)
+  nameWithType.vb: Assert.Throws(Of TExpected)(TestDelegate)
 - uid: NUnit.Framework.Assert.Throws``1(NUnit.Framework.TestDelegate,System.String,System.Object[])
-  name: Throws<TActual>(TestDelegate, string, params object?[]?)
+  name: Throws<TExpected>(TestDelegate, string, params object?[]?)
   href: api/NUnit.Framework.Assert.html#NUnit_Framework_Assert_Throws__1_NUnit_Framework_TestDelegate_System_String_System_Object___
   commentId: M:NUnit.Framework.Assert.Throws``1(NUnit.Framework.TestDelegate,System.String,System.Object[])
-  name.vb: Throws(Of TActual)(TestDelegate, String, ParamArray Object())
-  fullName: NUnit.Framework.Assert.Throws<TActual>(NUnit.Framework.TestDelegate, string, params object?[]?)
-  fullName.vb: NUnit.Framework.Assert.Throws(Of TActual)(NUnit.Framework.TestDelegate, String, ParamArray Object())
-  nameWithType: Assert.Throws<TActual>(TestDelegate, string, params object?[]?)
-  nameWithType.vb: Assert.Throws(Of TActual)(TestDelegate, String, ParamArray Object())
+  name.vb: Throws(Of TExpected)(TestDelegate, String, ParamArray Object())
+  fullName: NUnit.Framework.Assert.Throws<TExpected>(NUnit.Framework.TestDelegate, string, params object?[]?)
+  fullName.vb: NUnit.Framework.Assert.Throws(Of TExpected)(NUnit.Framework.TestDelegate, String, ParamArray Object())
+  nameWithType: Assert.Throws<TExpected>(TestDelegate, string, params object?[]?)
+  nameWithType.vb: Assert.Throws(Of TExpected)(TestDelegate, String, ParamArray Object())
+- uid: NUnit.Framework.Assert.Throws``1(System.Action)
+  name: Throws<TExpected>(Action)
+  href: api/NUnit.Framework.Assert.html#NUnit_Framework_Assert_Throws__1_System_Action_
+  commentId: M:NUnit.Framework.Assert.Throws``1(System.Action)
+  name.vb: Throws(Of TExpected)(Action)
+  fullName: NUnit.Framework.Assert.Throws<TExpected>(System.Action)
+  fullName.vb: NUnit.Framework.Assert.Throws(Of TExpected)(System.Action)
+  nameWithType: Assert.Throws<TExpected>(Action)
+  nameWithType.vb: Assert.Throws(Of TExpected)(Action)
+- uid: NUnit.Framework.Assert.Throws``1(System.Action,System.String,System.Object[])
+  name: Throws<TExpected>(Action, string, params object?[]?)
+  href: api/NUnit.Framework.Assert.html#NUnit_Framework_Assert_Throws__1_System_Action_System_String_System_Object___
+  commentId: M:NUnit.Framework.Assert.Throws``1(System.Action,System.String,System.Object[])
+  name.vb: Throws(Of TExpected)(Action, String, ParamArray Object())
+  fullName: NUnit.Framework.Assert.Throws<TExpected>(System.Action, string, params object?[]?)
+  fullName.vb: NUnit.Framework.Assert.Throws(Of TExpected)(System.Action, String, ParamArray Object())
+  nameWithType: Assert.Throws<TExpected>(Action, string, params object?[]?)
+  nameWithType.vb: Assert.Throws(Of TExpected)(Action, String, ParamArray Object())
 - uid: NUnit.Framework.Assert.Warn(System.String)
   name: Warn(string)
   href: api/NUnit.Framework.Assert.html#NUnit_Framework_Assert_Warn_System_String_
@@ -119160,6 +119517,33 @@ references:
   fullName.vb: NUnit.Framework.Assume.That(Of TActual)(NUnit.Framework.Constraints.ActualValueDelegate(Of TActual), NUnit.Framework.Constraints.IResolveConstraint, System.Func(Of String), String, String)
   nameWithType: Assume.That<TActual>(ActualValueDelegate<TActual>, IResolveConstraint, Func<string>, string, string)
   nameWithType.vb: Assume.That(Of TActual)(ActualValueDelegate(Of TActual), IResolveConstraint, Func(Of String), String, String)
+- uid: NUnit.Framework.Assume.That``1(System.Func{``0},NUnit.Framework.Constraints.IResolveConstraint,NUnit.Framework.NUnitString,System.String,System.String)
+  name: That<TActual>(Func<TActual>, IResolveConstraint, NUnitString, string, string)
+  href: api/NUnit.Framework.Assume.html#NUnit_Framework_Assume_That__1_System_Func___0__NUnit_Framework_Constraints_IResolveConstraint_NUnit_Framework_NUnitString_System_String_System_String_
+  commentId: M:NUnit.Framework.Assume.That``1(System.Func{``0},NUnit.Framework.Constraints.IResolveConstraint,NUnit.Framework.NUnitString,System.String,System.String)
+  name.vb: That(Of TActual)(Func(Of TActual), IResolveConstraint, NUnitString, String, String)
+  fullName: NUnit.Framework.Assume.That<TActual>(System.Func<TActual>, NUnit.Framework.Constraints.IResolveConstraint, NUnit.Framework.NUnitString, string, string)
+  fullName.vb: NUnit.Framework.Assume.That(Of TActual)(System.Func(Of TActual), NUnit.Framework.Constraints.IResolveConstraint, NUnit.Framework.NUnitString, String, String)
+  nameWithType: Assume.That<TActual>(Func<TActual>, IResolveConstraint, NUnitString, string, string)
+  nameWithType.vb: Assume.That(Of TActual)(Func(Of TActual), IResolveConstraint, NUnitString, String, String)
+- uid: NUnit.Framework.Assume.That``1(System.Func{``0},NUnit.Framework.Constraints.IResolveConstraint,System.FormattableString,System.String,System.String)
+  name: That<TActual>(Func<TActual>, IResolveConstraint, FormattableString, string, string)
+  href: api/NUnit.Framework.Assume.html#NUnit_Framework_Assume_That__1_System_Func___0__NUnit_Framework_Constraints_IResolveConstraint_System_FormattableString_System_String_System_String_
+  commentId: M:NUnit.Framework.Assume.That``1(System.Func{``0},NUnit.Framework.Constraints.IResolveConstraint,System.FormattableString,System.String,System.String)
+  name.vb: That(Of TActual)(Func(Of TActual), IResolveConstraint, FormattableString, String, String)
+  fullName: NUnit.Framework.Assume.That<TActual>(System.Func<TActual>, NUnit.Framework.Constraints.IResolveConstraint, System.FormattableString, string, string)
+  fullName.vb: NUnit.Framework.Assume.That(Of TActual)(System.Func(Of TActual), NUnit.Framework.Constraints.IResolveConstraint, System.FormattableString, String, String)
+  nameWithType: Assume.That<TActual>(Func<TActual>, IResolveConstraint, FormattableString, string, string)
+  nameWithType.vb: Assume.That(Of TActual)(Func(Of TActual), IResolveConstraint, FormattableString, String, String)
+- uid: NUnit.Framework.Assume.That``1(System.Func{``0},NUnit.Framework.Constraints.IResolveConstraint,System.Func{System.String},System.String,System.String)
+  name: That<TActual>(Func<TActual>, IResolveConstraint, Func<string>, string, string)
+  href: api/NUnit.Framework.Assume.html#NUnit_Framework_Assume_That__1_System_Func___0__NUnit_Framework_Constraints_IResolveConstraint_System_Func_System_String__System_String_System_String_
+  commentId: M:NUnit.Framework.Assume.That``1(System.Func{``0},NUnit.Framework.Constraints.IResolveConstraint,System.Func{System.String},System.String,System.String)
+  name.vb: That(Of TActual)(Func(Of TActual), IResolveConstraint, Func(Of String), String, String)
+  fullName: NUnit.Framework.Assume.That<TActual>(System.Func<TActual>, NUnit.Framework.Constraints.IResolveConstraint, System.Func<string>, string, string)
+  fullName.vb: NUnit.Framework.Assume.That(Of TActual)(System.Func(Of TActual), NUnit.Framework.Constraints.IResolveConstraint, System.Func(Of String), String, String)
+  nameWithType: Assume.That<TActual>(Func<TActual>, IResolveConstraint, Func<string>, string, string)
+  nameWithType.vb: Assume.That(Of TActual)(Func(Of TActual), IResolveConstraint, Func(Of String), String, String)
 - uid: NUnit.Framework.Assume.That``1(``0,NUnit.Framework.Constraints.IResolveConstraint,NUnit.Framework.NUnitString,System.String,System.String)
   name: That<TActual>(TActual, IResolveConstraint, NUnitString, string, string)
   href: api/NUnit.Framework.Assume.html#NUnit_Framework_Assume_That__1___0_NUnit_Framework_Constraints_IResolveConstraint_NUnit_Framework_NUnitString_System_String_System_String_
@@ -122873,13 +123257,13 @@ references:
   fullName: NUnit.Framework.Constraints.CollectionTally.CollectionTallyResult
   nameWithType: CollectionTally.CollectionTallyResult
 - uid: NUnit.Framework.Constraints.CollectionTally.CollectionTallyResult.#ctor(System.Collections.Generic.List{System.Object},System.Collections.Generic.List{System.Object})
-  name: CollectionTallyResult(List<object>, List<object>)
+  name: CollectionTallyResult(List<object?>, List<object?>)
   href: api/NUnit.Framework.Constraints.CollectionTally.CollectionTallyResult.html#NUnit_Framework_Constraints_CollectionTally_CollectionTallyResult__ctor_System_Collections_Generic_List_System_Object__System_Collections_Generic_List_System_Object__
   commentId: M:NUnit.Framework.Constraints.CollectionTally.CollectionTallyResult.#ctor(System.Collections.Generic.List{System.Object},System.Collections.Generic.List{System.Object})
   name.vb: New(List(Of Object), List(Of Object))
-  fullName: NUnit.Framework.Constraints.CollectionTally.CollectionTallyResult.CollectionTallyResult(System.Collections.Generic.List<object>, System.Collections.Generic.List<object>)
+  fullName: NUnit.Framework.Constraints.CollectionTally.CollectionTallyResult.CollectionTallyResult(System.Collections.Generic.List<object?>, System.Collections.Generic.List<object?>)
   fullName.vb: NUnit.Framework.Constraints.CollectionTally.CollectionTallyResult.New(System.Collections.Generic.List(Of Object), System.Collections.Generic.List(Of Object))
-  nameWithType: CollectionTally.CollectionTallyResult.CollectionTallyResult(List<object>, List<object>)
+  nameWithType: CollectionTally.CollectionTallyResult.CollectionTallyResult(List<object?>, List<object?>)
   nameWithType.vb: CollectionTally.CollectionTallyResult.New(List(Of Object), List(Of Object))
 - uid: NUnit.Framework.Constraints.CollectionTally.CollectionTallyResult.#ctor*
   name: CollectionTallyResult
@@ -123241,6 +123625,15 @@ references:
   fullName.vb: NUnit.Framework.Constraints.Constraint.ApplyTo(Of TActual)(NUnit.Framework.Constraints.ActualValueDelegate(Of TActual))
   nameWithType: Constraint.ApplyTo<TActual>(ActualValueDelegate<TActual>)
   nameWithType.vb: Constraint.ApplyTo(Of TActual)(ActualValueDelegate(Of TActual))
+- uid: NUnit.Framework.Constraints.Constraint.ApplyTo``1(System.Func{``0})
+  name: ApplyTo<TActual>(Func<TActual>)
+  href: api/NUnit.Framework.Constraints.Constraint.html#NUnit_Framework_Constraints_Constraint_ApplyTo__1_System_Func___0__
+  commentId: M:NUnit.Framework.Constraints.Constraint.ApplyTo``1(System.Func{``0})
+  name.vb: ApplyTo(Of TActual)(Func(Of TActual))
+  fullName: NUnit.Framework.Constraints.Constraint.ApplyTo<TActual>(System.Func<TActual>)
+  fullName.vb: NUnit.Framework.Constraints.Constraint.ApplyTo(Of TActual)(System.Func(Of TActual))
+  nameWithType: Constraint.ApplyTo<TActual>(Func<TActual>)
+  nameWithType.vb: Constraint.ApplyTo(Of TActual)(Func(Of TActual))
 - uid: NUnit.Framework.Constraints.Constraint.ApplyTo``1(``0)
   name: ApplyTo<TActual>(TActual)
   href: api/NUnit.Framework.Constraints.Constraint.html#NUnit_Framework_Constraints_Constraint_ApplyTo__1___0_
@@ -123249,15 +123642,6 @@ references:
   fullName: NUnit.Framework.Constraints.Constraint.ApplyTo<TActual>(TActual)
   fullName.vb: NUnit.Framework.Constraints.Constraint.ApplyTo(Of TActual)(TActual)
   nameWithType: Constraint.ApplyTo<TActual>(TActual)
-  nameWithType.vb: Constraint.ApplyTo(Of TActual)(TActual)
-- uid: NUnit.Framework.Constraints.Constraint.ApplyTo``1(``0@)
-  name: ApplyTo<TActual>(ref TActual)
-  href: api/NUnit.Framework.Constraints.Constraint.html#NUnit_Framework_Constraints_Constraint_ApplyTo__1___0__
-  commentId: M:NUnit.Framework.Constraints.Constraint.ApplyTo``1(``0@)
-  name.vb: ApplyTo(Of TActual)(TActual)
-  fullName: NUnit.Framework.Constraints.Constraint.ApplyTo<TActual>(ref TActual)
-  fullName.vb: NUnit.Framework.Constraints.Constraint.ApplyTo(Of TActual)(TActual)
-  nameWithType: Constraint.ApplyTo<TActual>(ref TActual)
   nameWithType.vb: Constraint.ApplyTo(Of TActual)(TActual)
 - uid: NUnit.Framework.Constraints.Constraint.Arguments
   name: Arguments
@@ -123340,6 +123724,15 @@ references:
   fullName.vb: NUnit.Framework.Constraints.Constraint.GetTestObject(Of TActual)(NUnit.Framework.Constraints.ActualValueDelegate(Of TActual))
   nameWithType: Constraint.GetTestObject<TActual>(ActualValueDelegate<TActual>)
   nameWithType.vb: Constraint.GetTestObject(Of TActual)(ActualValueDelegate(Of TActual))
+- uid: NUnit.Framework.Constraints.Constraint.GetTestObject``1(System.Func{``0})
+  name: GetTestObject<TActual>(Func<TActual>)
+  href: api/NUnit.Framework.Constraints.Constraint.html#NUnit_Framework_Constraints_Constraint_GetTestObject__1_System_Func___0__
+  commentId: M:NUnit.Framework.Constraints.Constraint.GetTestObject``1(System.Func{``0})
+  name.vb: GetTestObject(Of TActual)(Func(Of TActual))
+  fullName: NUnit.Framework.Constraints.Constraint.GetTestObject<TActual>(System.Func<TActual>)
+  fullName.vb: NUnit.Framework.Constraints.Constraint.GetTestObject(Of TActual)(System.Func(Of TActual))
+  nameWithType: Constraint.GetTestObject<TActual>(Func<TActual>)
+  nameWithType.vb: Constraint.GetTestObject(Of TActual)(Func(Of TActual))
 - uid: NUnit.Framework.Constraints.Constraint.Or
   name: Or
   href: api/NUnit.Framework.Constraints.Constraint.html#NUnit_Framework_Constraints_Constraint_Or
@@ -124519,6 +124912,15 @@ references:
   commentId: Overload:NUnit.Framework.Constraints.ConstraintExpression.SameAs
   fullName: NUnit.Framework.Constraints.ConstraintExpression.SameAs
   nameWithType: ConstraintExpression.SameAs
+- uid: NUnit.Framework.Constraints.ConstraintExpression.SameAs``1(``0)
+  name: SameAs<T>(T?)
+  href: api/NUnit.Framework.Constraints.ConstraintExpression.html#NUnit_Framework_Constraints_ConstraintExpression_SameAs__1___0_
+  commentId: M:NUnit.Framework.Constraints.ConstraintExpression.SameAs``1(``0)
+  name.vb: SameAs(Of T)(T)
+  fullName: NUnit.Framework.Constraints.ConstraintExpression.SameAs<T>(T?)
+  fullName.vb: NUnit.Framework.Constraints.ConstraintExpression.SameAs(Of T)(T)
+  nameWithType: ConstraintExpression.SameAs<T>(T?)
+  nameWithType.vb: ConstraintExpression.SameAs(Of T)(T)
 - uid: NUnit.Framework.Constraints.ConstraintExpression.SamePath(System.String)
   name: SamePath(string)
   href: api/NUnit.Framework.Constraints.ConstraintExpression.html#NUnit_Framework_Constraints_ConstraintExpression_SamePath_System_String_
@@ -125263,6 +125665,15 @@ references:
   fullName.vb: NUnit.Framework.Constraints.DelayedConstraint.ApplyTo(Of TActual)(NUnit.Framework.Constraints.ActualValueDelegate(Of TActual))
   nameWithType: DelayedConstraint.ApplyTo<TActual>(ActualValueDelegate<TActual>)
   nameWithType.vb: DelayedConstraint.ApplyTo(Of TActual)(ActualValueDelegate(Of TActual))
+- uid: NUnit.Framework.Constraints.DelayedConstraint.ApplyTo``1(System.Func{``0})
+  name: ApplyTo<TActual>(Func<TActual>)
+  href: api/NUnit.Framework.Constraints.DelayedConstraint.html#NUnit_Framework_Constraints_DelayedConstraint_ApplyTo__1_System_Func___0__
+  commentId: M:NUnit.Framework.Constraints.DelayedConstraint.ApplyTo``1(System.Func{``0})
+  name.vb: ApplyTo(Of TActual)(Func(Of TActual))
+  fullName: NUnit.Framework.Constraints.DelayedConstraint.ApplyTo<TActual>(System.Func<TActual>)
+  fullName.vb: NUnit.Framework.Constraints.DelayedConstraint.ApplyTo(Of TActual)(System.Func(Of TActual))
+  nameWithType: DelayedConstraint.ApplyTo<TActual>(Func<TActual>)
+  nameWithType.vb: DelayedConstraint.ApplyTo(Of TActual)(Func(Of TActual))
 - uid: NUnit.Framework.Constraints.DelayedConstraint.ApplyTo``1(``0)
   name: ApplyTo<TActual>(TActual)
   href: api/NUnit.Framework.Constraints.DelayedConstraint.html#NUnit_Framework_Constraints_DelayedConstraint_ApplyTo__1___0_
@@ -128046,6 +128457,15 @@ references:
   fullName.vb: NUnit.Framework.Constraints.IConstraint.ApplyTo(Of TActual)(NUnit.Framework.Constraints.ActualValueDelegate(Of TActual))
   nameWithType: IConstraint.ApplyTo<TActual>(ActualValueDelegate<TActual>)
   nameWithType.vb: IConstraint.ApplyTo(Of TActual)(ActualValueDelegate(Of TActual))
+- uid: NUnit.Framework.Constraints.IConstraint.ApplyTo``1(System.Func{``0})
+  name: ApplyTo<TActual>(Func<TActual>)
+  href: api/NUnit.Framework.Constraints.IConstraint.html#NUnit_Framework_Constraints_IConstraint_ApplyTo__1_System_Func___0__
+  commentId: M:NUnit.Framework.Constraints.IConstraint.ApplyTo``1(System.Func{``0})
+  name.vb: ApplyTo(Of TActual)(Func(Of TActual))
+  fullName: NUnit.Framework.Constraints.IConstraint.ApplyTo<TActual>(System.Func<TActual>)
+  fullName.vb: NUnit.Framework.Constraints.IConstraint.ApplyTo(Of TActual)(System.Func(Of TActual))
+  nameWithType: IConstraint.ApplyTo<TActual>(Func<TActual>)
+  nameWithType.vb: IConstraint.ApplyTo(Of TActual)(Func(Of TActual))
 - uid: NUnit.Framework.Constraints.IConstraint.ApplyTo``1(``0)
   name: ApplyTo<TActual>(TActual)
   href: api/NUnit.Framework.Constraints.IConstraint.html#NUnit_Framework_Constraints_IConstraint_ApplyTo__1___0_
@@ -128054,15 +128474,6 @@ references:
   fullName: NUnit.Framework.Constraints.IConstraint.ApplyTo<TActual>(TActual)
   fullName.vb: NUnit.Framework.Constraints.IConstraint.ApplyTo(Of TActual)(TActual)
   nameWithType: IConstraint.ApplyTo<TActual>(TActual)
-  nameWithType.vb: IConstraint.ApplyTo(Of TActual)(TActual)
-- uid: NUnit.Framework.Constraints.IConstraint.ApplyTo``1(``0@)
-  name: ApplyTo<TActual>(ref TActual)
-  href: api/NUnit.Framework.Constraints.IConstraint.html#NUnit_Framework_Constraints_IConstraint_ApplyTo__1___0__
-  commentId: M:NUnit.Framework.Constraints.IConstraint.ApplyTo``1(``0@)
-  name.vb: ApplyTo(Of TActual)(TActual)
-  fullName: NUnit.Framework.Constraints.IConstraint.ApplyTo<TActual>(ref TActual)
-  fullName.vb: NUnit.Framework.Constraints.IConstraint.ApplyTo(Of TActual)(TActual)
-  nameWithType: IConstraint.ApplyTo<TActual>(ref TActual)
   nameWithType.vb: IConstraint.ApplyTo(Of TActual)(TActual)
 - uid: NUnit.Framework.Constraints.IConstraint.Arguments
   name: Arguments
@@ -129846,6 +130257,21 @@ references:
   commentId: Overload:NUnit.Framework.Constraints.PropertiesComparerConfigurationUntyped.Using
   fullName: NUnit.Framework.Constraints.PropertiesComparerConfigurationUntyped.Using
   nameWithType: PropertiesComparerConfigurationUntyped.Using
+- uid: NUnit.Framework.Constraints.PropertiesComparerConfigurationUntyped.WithMaximumGraphDepth(System.Int32)
+  name: WithMaximumGraphDepth(int)
+  href: api/NUnit.Framework.Constraints.PropertiesComparerConfigurationUntyped.html#NUnit_Framework_Constraints_PropertiesComparerConfigurationUntyped_WithMaximumGraphDepth_System_Int32_
+  commentId: M:NUnit.Framework.Constraints.PropertiesComparerConfigurationUntyped.WithMaximumGraphDepth(System.Int32)
+  name.vb: WithMaximumGraphDepth(Integer)
+  fullName: NUnit.Framework.Constraints.PropertiesComparerConfigurationUntyped.WithMaximumGraphDepth(int)
+  fullName.vb: NUnit.Framework.Constraints.PropertiesComparerConfigurationUntyped.WithMaximumGraphDepth(Integer)
+  nameWithType: PropertiesComparerConfigurationUntyped.WithMaximumGraphDepth(int)
+  nameWithType.vb: PropertiesComparerConfigurationUntyped.WithMaximumGraphDepth(Integer)
+- uid: NUnit.Framework.Constraints.PropertiesComparerConfigurationUntyped.WithMaximumGraphDepth*
+  name: WithMaximumGraphDepth
+  href: api/NUnit.Framework.Constraints.PropertiesComparerConfigurationUntyped.html#NUnit_Framework_Constraints_PropertiesComparerConfigurationUntyped_WithMaximumGraphDepth_
+  commentId: Overload:NUnit.Framework.Constraints.PropertiesComparerConfigurationUntyped.WithMaximumGraphDepth
+  fullName: NUnit.Framework.Constraints.PropertiesComparerConfigurationUntyped.WithMaximumGraphDepth
+  nameWithType: PropertiesComparerConfigurationUntyped.WithMaximumGraphDepth
 - uid: NUnit.Framework.Constraints.PropertiesComparerConfigurationUntyped.Within(System.Object)
   name: Within(object)
   href: api/NUnit.Framework.Constraints.PropertiesComparerConfigurationUntyped.html#NUnit_Framework_Constraints_PropertiesComparerConfigurationUntyped_Within_System_Object_
@@ -130025,6 +130451,23 @@ references:
   fullName.vb: NUnit.Framework.Constraints.PropertiesComparerConfiguration(Of T).Using(Of TFrom)(ParamArray System.Linq.Expressions.Expression(Of System.Func(Of TFrom, Object))())
   nameWithType: PropertiesComparerConfiguration<T>.Using<TFrom>(params Expression<Func<TFrom, object?>>[])
   nameWithType.vb: PropertiesComparerConfiguration(Of T).Using(Of TFrom)(ParamArray Expression(Of Func(Of TFrom, Object))())
+- uid: NUnit.Framework.Constraints.PropertiesComparerConfiguration`1.WithMaximumGraphDepth(System.Int32)
+  name: WithMaximumGraphDepth(int)
+  href: api/NUnit.Framework.Constraints.PropertiesComparerConfiguration-1.html#NUnit_Framework_Constraints_PropertiesComparerConfiguration_1_WithMaximumGraphDepth_System_Int32_
+  commentId: M:NUnit.Framework.Constraints.PropertiesComparerConfiguration`1.WithMaximumGraphDepth(System.Int32)
+  name.vb: WithMaximumGraphDepth(Integer)
+  fullName: NUnit.Framework.Constraints.PropertiesComparerConfiguration<T>.WithMaximumGraphDepth(int)
+  fullName.vb: NUnit.Framework.Constraints.PropertiesComparerConfiguration(Of T).WithMaximumGraphDepth(Integer)
+  nameWithType: PropertiesComparerConfiguration<T>.WithMaximumGraphDepth(int)
+  nameWithType.vb: PropertiesComparerConfiguration(Of T).WithMaximumGraphDepth(Integer)
+- uid: NUnit.Framework.Constraints.PropertiesComparerConfiguration`1.WithMaximumGraphDepth*
+  name: WithMaximumGraphDepth
+  href: api/NUnit.Framework.Constraints.PropertiesComparerConfiguration-1.html#NUnit_Framework_Constraints_PropertiesComparerConfiguration_1_WithMaximumGraphDepth_
+  commentId: Overload:NUnit.Framework.Constraints.PropertiesComparerConfiguration`1.WithMaximumGraphDepth
+  fullName: NUnit.Framework.Constraints.PropertiesComparerConfiguration<T>.WithMaximumGraphDepth
+  fullName.vb: NUnit.Framework.Constraints.PropertiesComparerConfiguration(Of T).WithMaximumGraphDepth
+  nameWithType: PropertiesComparerConfiguration<T>.WithMaximumGraphDepth
+  nameWithType.vb: PropertiesComparerConfiguration(Of T).WithMaximumGraphDepth
 - uid: NUnit.Framework.Constraints.PropertiesComparerConfiguration`1.Within(System.Object)
   name: Within(object)
   href: api/NUnit.Framework.Constraints.PropertiesComparerConfiguration-1.html#NUnit_Framework_Constraints_PropertiesComparerConfiguration_1_Within_System_Object_
@@ -130484,6 +130927,33 @@ references:
   commentId: Overload:NUnit.Framework.Constraints.SameAsConstraint.Description
   fullName: NUnit.Framework.Constraints.SameAsConstraint.Description
   nameWithType: SameAsConstraint.Description
+- uid: NUnit.Framework.Constraints.SameAsConstraint`1
+  name: SameAsConstraint<T>
+  href: api/NUnit.Framework.Constraints.SameAsConstraint-1.html
+  commentId: T:NUnit.Framework.Constraints.SameAsConstraint`1
+  name.vb: SameAsConstraint(Of T)
+  fullName: NUnit.Framework.Constraints.SameAsConstraint<T>
+  fullName.vb: NUnit.Framework.Constraints.SameAsConstraint(Of T)
+  nameWithType: SameAsConstraint<T>
+  nameWithType.vb: SameAsConstraint(Of T)
+- uid: NUnit.Framework.Constraints.SameAsConstraint`1.#ctor(`0)
+  name: SameAsConstraint(T?)
+  href: api/NUnit.Framework.Constraints.SameAsConstraint-1.html#NUnit_Framework_Constraints_SameAsConstraint_1__ctor__0_
+  commentId: M:NUnit.Framework.Constraints.SameAsConstraint`1.#ctor(`0)
+  name.vb: New(T)
+  fullName: NUnit.Framework.Constraints.SameAsConstraint<T>.SameAsConstraint(T?)
+  fullName.vb: NUnit.Framework.Constraints.SameAsConstraint(Of T).New(T)
+  nameWithType: SameAsConstraint<T>.SameAsConstraint(T?)
+  nameWithType.vb: SameAsConstraint(Of T).New(T)
+- uid: NUnit.Framework.Constraints.SameAsConstraint`1.#ctor*
+  name: SameAsConstraint
+  href: api/NUnit.Framework.Constraints.SameAsConstraint-1.html#NUnit_Framework_Constraints_SameAsConstraint_1__ctor_
+  commentId: Overload:NUnit.Framework.Constraints.SameAsConstraint`1.#ctor
+  name.vb: New
+  fullName: NUnit.Framework.Constraints.SameAsConstraint<T>.SameAsConstraint
+  fullName.vb: NUnit.Framework.Constraints.SameAsConstraint(Of T).New
+  nameWithType: SameAsConstraint<T>.SameAsConstraint
+  nameWithType.vb: SameAsConstraint(Of T).New
 - uid: NUnit.Framework.Constraints.SamePathConstraint
   name: SamePathConstraint
   href: api/NUnit.Framework.Constraints.SamePathConstraint.html
@@ -131224,6 +131694,15 @@ references:
   fullName.vb: NUnit.Framework.Constraints.ThrowsConstraint.ApplyTo(Of TActual)(NUnit.Framework.Constraints.ActualValueDelegate(Of TActual))
   nameWithType: ThrowsConstraint.ApplyTo<TActual>(ActualValueDelegate<TActual>)
   nameWithType.vb: ThrowsConstraint.ApplyTo(Of TActual)(ActualValueDelegate(Of TActual))
+- uid: NUnit.Framework.Constraints.ThrowsConstraint.ApplyTo``1(System.Func{``0})
+  name: ApplyTo<TActual>(Func<TActual>)
+  href: api/NUnit.Framework.Constraints.ThrowsConstraint.html#NUnit_Framework_Constraints_ThrowsConstraint_ApplyTo__1_System_Func___0__
+  commentId: M:NUnit.Framework.Constraints.ThrowsConstraint.ApplyTo``1(System.Func{``0})
+  name.vb: ApplyTo(Of TActual)(Func(Of TActual))
+  fullName: NUnit.Framework.Constraints.ThrowsConstraint.ApplyTo<TActual>(System.Func<TActual>)
+  fullName.vb: NUnit.Framework.Constraints.ThrowsConstraint.ApplyTo(Of TActual)(System.Func(Of TActual))
+  nameWithType: ThrowsConstraint.ApplyTo<TActual>(Func<TActual>)
+  nameWithType.vb: ThrowsConstraint.ApplyTo(Of TActual)(Func(Of TActual))
 - uid: NUnit.Framework.Constraints.ThrowsConstraint.ApplyTo``1(``0)
   name: ApplyTo<TActual>(TActual)
   href: api/NUnit.Framework.Constraints.ThrowsConstraint.html#NUnit_Framework_Constraints_ThrowsConstraint_ApplyTo__1___0_
@@ -131299,6 +131778,15 @@ references:
   fullName.vb: NUnit.Framework.Constraints.ThrowsExceptionConstraint.ApplyTo(Of TActual)(NUnit.Framework.Constraints.ActualValueDelegate(Of TActual))
   nameWithType: ThrowsExceptionConstraint.ApplyTo<TActual>(ActualValueDelegate<TActual>)
   nameWithType.vb: ThrowsExceptionConstraint.ApplyTo(Of TActual)(ActualValueDelegate(Of TActual))
+- uid: NUnit.Framework.Constraints.ThrowsExceptionConstraint.ApplyTo``1(System.Func{``0})
+  name: ApplyTo<TActual>(Func<TActual>)
+  href: api/NUnit.Framework.Constraints.ThrowsExceptionConstraint.html#NUnit_Framework_Constraints_ThrowsExceptionConstraint_ApplyTo__1_System_Func___0__
+  commentId: M:NUnit.Framework.Constraints.ThrowsExceptionConstraint.ApplyTo``1(System.Func{``0})
+  name.vb: ApplyTo(Of TActual)(Func(Of TActual))
+  fullName: NUnit.Framework.Constraints.ThrowsExceptionConstraint.ApplyTo<TActual>(System.Func<TActual>)
+  fullName.vb: NUnit.Framework.Constraints.ThrowsExceptionConstraint.ApplyTo(Of TActual)(System.Func(Of TActual))
+  nameWithType: ThrowsExceptionConstraint.ApplyTo<TActual>(Func<TActual>)
+  nameWithType.vb: ThrowsExceptionConstraint.ApplyTo(Of TActual)(Func(Of TActual))
 - uid: NUnit.Framework.Constraints.ThrowsExceptionConstraint.ApplyTo``1(``0)
   name: ApplyTo<TActual>(TActual)
   href: api/NUnit.Framework.Constraints.ThrowsExceptionConstraint.html#NUnit_Framework_Constraints_ThrowsExceptionConstraint_ApplyTo__1___0_
@@ -131374,6 +131862,15 @@ references:
   fullName.vb: NUnit.Framework.Constraints.ThrowsNothingConstraint.ApplyTo(Of TActual)(NUnit.Framework.Constraints.ActualValueDelegate(Of TActual))
   nameWithType: ThrowsNothingConstraint.ApplyTo<TActual>(ActualValueDelegate<TActual>)
   nameWithType.vb: ThrowsNothingConstraint.ApplyTo(Of TActual)(ActualValueDelegate(Of TActual))
+- uid: NUnit.Framework.Constraints.ThrowsNothingConstraint.ApplyTo``1(System.Func{``0})
+  name: ApplyTo<TActual>(Func<TActual>)
+  href: api/NUnit.Framework.Constraints.ThrowsNothingConstraint.html#NUnit_Framework_Constraints_ThrowsNothingConstraint_ApplyTo__1_System_Func___0__
+  commentId: M:NUnit.Framework.Constraints.ThrowsNothingConstraint.ApplyTo``1(System.Func{``0})
+  name.vb: ApplyTo(Of TActual)(Func(Of TActual))
+  fullName: NUnit.Framework.Constraints.ThrowsNothingConstraint.ApplyTo<TActual>(System.Func<TActual>)
+  fullName.vb: NUnit.Framework.Constraints.ThrowsNothingConstraint.ApplyTo(Of TActual)(System.Func(Of TActual))
+  nameWithType: ThrowsNothingConstraint.ApplyTo<TActual>(Func<TActual>)
+  nameWithType.vb: ThrowsNothingConstraint.ApplyTo(Of TActual)(Func(Of TActual))
 - uid: NUnit.Framework.Constraints.ThrowsNothingConstraint.ApplyTo``1(``0)
   name: ApplyTo<TActual>(TActual)
   href: api/NUnit.Framework.Constraints.ThrowsNothingConstraint.html#NUnit_Framework_Constraints_ThrowsNothingConstraint_ApplyTo__1___0_
@@ -133506,6 +134003,15 @@ references:
   fullName.vb: NUnit.Framework.IncludeExcludeAttribute.New(String)
   nameWithType: IncludeExcludeAttribute.IncludeExcludeAttribute(string?)
   nameWithType.vb: IncludeExcludeAttribute.New(String)
+- uid: NUnit.Framework.IncludeExcludeAttribute.#ctor(System.String[])
+  name: IncludeExcludeAttribute(string[])
+  href: api/NUnit.Framework.IncludeExcludeAttribute.html#NUnit_Framework_IncludeExcludeAttribute__ctor_System_String___
+  commentId: M:NUnit.Framework.IncludeExcludeAttribute.#ctor(System.String[])
+  name.vb: New(String())
+  fullName: NUnit.Framework.IncludeExcludeAttribute.IncludeExcludeAttribute(string[])
+  fullName.vb: NUnit.Framework.IncludeExcludeAttribute.New(String())
+  nameWithType: IncludeExcludeAttribute.IncludeExcludeAttribute(string[])
+  nameWithType.vb: IncludeExcludeAttribute.New(String())
 - uid: NUnit.Framework.IncludeExcludeAttribute.#ctor*
   name: IncludeExcludeAttribute
   href: api/NUnit.Framework.IncludeExcludeAttribute.html#NUnit_Framework_IncludeExcludeAttribute__ctor_
@@ -133527,6 +134033,18 @@ references:
   commentId: Overload:NUnit.Framework.IncludeExcludeAttribute.Exclude
   fullName: NUnit.Framework.IncludeExcludeAttribute.Exclude
   nameWithType: IncludeExcludeAttribute.Exclude
+- uid: NUnit.Framework.IncludeExcludeAttribute.Excludes
+  name: Excludes
+  href: api/NUnit.Framework.IncludeExcludeAttribute.html#NUnit_Framework_IncludeExcludeAttribute_Excludes
+  commentId: P:NUnit.Framework.IncludeExcludeAttribute.Excludes
+  fullName: NUnit.Framework.IncludeExcludeAttribute.Excludes
+  nameWithType: IncludeExcludeAttribute.Excludes
+- uid: NUnit.Framework.IncludeExcludeAttribute.Excludes*
+  name: Excludes
+  href: api/NUnit.Framework.IncludeExcludeAttribute.html#NUnit_Framework_IncludeExcludeAttribute_Excludes_
+  commentId: Overload:NUnit.Framework.IncludeExcludeAttribute.Excludes
+  fullName: NUnit.Framework.IncludeExcludeAttribute.Excludes
+  nameWithType: IncludeExcludeAttribute.Excludes
 - uid: NUnit.Framework.IncludeExcludeAttribute.Include
   name: Include
   href: api/NUnit.Framework.IncludeExcludeAttribute.html#NUnit_Framework_IncludeExcludeAttribute_Include
@@ -133539,6 +134057,18 @@ references:
   commentId: Overload:NUnit.Framework.IncludeExcludeAttribute.Include
   fullName: NUnit.Framework.IncludeExcludeAttribute.Include
   nameWithType: IncludeExcludeAttribute.Include
+- uid: NUnit.Framework.IncludeExcludeAttribute.Includes
+  name: Includes
+  href: api/NUnit.Framework.IncludeExcludeAttribute.html#NUnit_Framework_IncludeExcludeAttribute_Includes
+  commentId: P:NUnit.Framework.IncludeExcludeAttribute.Includes
+  fullName: NUnit.Framework.IncludeExcludeAttribute.Includes
+  nameWithType: IncludeExcludeAttribute.Includes
+- uid: NUnit.Framework.IncludeExcludeAttribute.Includes*
+  name: Includes
+  href: api/NUnit.Framework.IncludeExcludeAttribute.html#NUnit_Framework_IncludeExcludeAttribute_Includes_
+  commentId: Overload:NUnit.Framework.IncludeExcludeAttribute.Includes
+  fullName: NUnit.Framework.IncludeExcludeAttribute.Includes
+  nameWithType: IncludeExcludeAttribute.Includes
 - uid: NUnit.Framework.IncludeExcludeAttribute.Reason
   name: Reason
   href: api/NUnit.Framework.IncludeExcludeAttribute.html#NUnit_Framework_IncludeExcludeAttribute_Reason
@@ -137091,6 +137621,15 @@ references:
   commentId: Overload:NUnit.Framework.Is.SameAs
   fullName: NUnit.Framework.Is.SameAs
   nameWithType: Is.SameAs
+- uid: NUnit.Framework.Is.SameAs``1(``0)
+  name: SameAs<T>(T?)
+  href: api/NUnit.Framework.Is.html#NUnit_Framework_Is_SameAs__1___0_
+  commentId: M:NUnit.Framework.Is.SameAs``1(``0)
+  name.vb: SameAs(Of T)(T)
+  fullName: NUnit.Framework.Is.SameAs<T>(T?)
+  fullName.vb: NUnit.Framework.Is.SameAs(Of T)(T)
+  nameWithType: Is.SameAs<T>(T?)
+  nameWithType.vb: Is.SameAs(Of T)(T)
 - uid: NUnit.Framework.Is.SamePath(System.String)
   name: SamePath(string)
   href: api/NUnit.Framework.Is.html#NUnit_Framework_Is_SamePath_System_String_
@@ -140530,6 +141069,30 @@ references:
   commentId: Overload:NUnit.Framework.NetPlatformAttribute.ApplyToTest
   fullName: NUnit.Framework.NetPlatformAttribute.ApplyToTest
   nameWithType: NetPlatformAttribute.ApplyToTest
+- uid: NUnit.Framework.NoTestsAttribute
+  name: NoTestsAttribute
+  href: api/NUnit.Framework.NoTestsAttribute.html
+  commentId: T:NUnit.Framework.NoTestsAttribute
+  fullName: NUnit.Framework.NoTestsAttribute
+  nameWithType: NoTestsAttribute
+- uid: NUnit.Framework.NoTestsAttribute.#ctor(NUnit.Framework.Interfaces.TestStatus)
+  name: NoTestsAttribute(TestStatus)
+  href: api/NUnit.Framework.NoTestsAttribute.html#NUnit_Framework_NoTestsAttribute__ctor_NUnit_Framework_Interfaces_TestStatus_
+  commentId: M:NUnit.Framework.NoTestsAttribute.#ctor(NUnit.Framework.Interfaces.TestStatus)
+  name.vb: New(TestStatus)
+  fullName: NUnit.Framework.NoTestsAttribute.NoTestsAttribute(NUnit.Framework.Interfaces.TestStatus)
+  fullName.vb: NUnit.Framework.NoTestsAttribute.New(NUnit.Framework.Interfaces.TestStatus)
+  nameWithType: NoTestsAttribute.NoTestsAttribute(TestStatus)
+  nameWithType.vb: NoTestsAttribute.New(TestStatus)
+- uid: NUnit.Framework.NoTestsAttribute.#ctor*
+  name: NoTestsAttribute
+  href: api/NUnit.Framework.NoTestsAttribute.html#NUnit_Framework_NoTestsAttribute__ctor_
+  commentId: Overload:NUnit.Framework.NoTestsAttribute.#ctor
+  name.vb: New
+  fullName: NUnit.Framework.NoTestsAttribute.NoTestsAttribute
+  fullName.vb: NUnit.Framework.NoTestsAttribute.New
+  nameWithType: NoTestsAttribute.NoTestsAttribute
+  nameWithType.vb: NoTestsAttribute.New
 - uid: NUnit.Framework.NonParallelizableAttribute
   name: NonParallelizableAttribute
   href: api/NUnit.Framework.NonParallelizableAttribute.html
@@ -140803,6 +141366,15 @@ references:
   fullName.vb: NUnit.Framework.PlatformAttribute.New(String)
   nameWithType: PlatformAttribute.PlatformAttribute(string?)
   nameWithType.vb: PlatformAttribute.New(String)
+- uid: NUnit.Framework.PlatformAttribute.#ctor(System.String[])
+  name: PlatformAttribute(string[])
+  href: api/NUnit.Framework.PlatformAttribute.html#NUnit_Framework_PlatformAttribute__ctor_System_String___
+  commentId: M:NUnit.Framework.PlatformAttribute.#ctor(System.String[])
+  name.vb: New(String())
+  fullName: NUnit.Framework.PlatformAttribute.PlatformAttribute(string[])
+  fullName.vb: NUnit.Framework.PlatformAttribute.New(String())
+  nameWithType: PlatformAttribute.PlatformAttribute(string[])
+  nameWithType.vb: PlatformAttribute.New(String())
 - uid: NUnit.Framework.PlatformAttribute.#ctor*
   name: PlatformAttribute
   href: api/NUnit.Framework.PlatformAttribute.html#NUnit_Framework_PlatformAttribute__ctor_
@@ -140824,6 +141396,306 @@ references:
   commentId: Overload:NUnit.Framework.PlatformAttribute.ApplyToTest
   fullName: NUnit.Framework.PlatformAttribute.ApplyToTest
   nameWithType: PlatformAttribute.ApplyToTest
+- uid: NUnit.Framework.PlatformNames
+  name: PlatformNames
+  href: api/NUnit.Framework.PlatformNames.html
+  commentId: T:NUnit.Framework.PlatformNames
+  fullName: NUnit.Framework.PlatformNames
+  nameWithType: PlatformNames
+- uid: NUnit.Framework.PlatformNames.DotNET
+  name: DotNET
+  href: api/NUnit.Framework.PlatformNames.html#NUnit_Framework_PlatformNames_DotNET
+  commentId: F:NUnit.Framework.PlatformNames.DotNET
+  fullName: NUnit.Framework.PlatformNames.DotNET
+  nameWithType: PlatformNames.DotNET
+- uid: NUnit.Framework.PlatformNames.DotNETCore
+  name: DotNETCore
+  href: api/NUnit.Framework.PlatformNames.html#NUnit_Framework_PlatformNames_DotNETCore
+  commentId: F:NUnit.Framework.PlatformNames.DotNETCore
+  fullName: NUnit.Framework.PlatformNames.DotNETCore
+  nameWithType: PlatformNames.DotNETCore
+- uid: NUnit.Framework.PlatformNames.Linux
+  name: Linux
+  href: api/NUnit.Framework.PlatformNames.html#NUnit_Framework_PlatformNames_Linux
+  commentId: F:NUnit.Framework.PlatformNames.Linux
+  fullName: NUnit.Framework.PlatformNames.Linux
+  nameWithType: PlatformNames.Linux
+- uid: NUnit.Framework.PlatformNames.MacOSX
+  name: MacOSX
+  href: api/NUnit.Framework.PlatformNames.html#NUnit_Framework_PlatformNames_MacOSX
+  commentId: F:NUnit.Framework.PlatformNames.MacOSX
+  fullName: NUnit.Framework.PlatformNames.MacOSX
+  nameWithType: PlatformNames.MacOSX
+- uid: NUnit.Framework.PlatformNames.Mono
+  name: Mono
+  href: api/NUnit.Framework.PlatformNames.html#NUnit_Framework_PlatformNames_Mono
+  commentId: F:NUnit.Framework.PlatformNames.Mono
+  fullName: NUnit.Framework.PlatformNames.Mono
+  nameWithType: PlatformNames.Mono
+- uid: NUnit.Framework.PlatformNames.MonoTouch
+  name: MonoTouch
+  href: api/NUnit.Framework.PlatformNames.html#NUnit_Framework_PlatformNames_MonoTouch
+  commentId: F:NUnit.Framework.PlatformNames.MonoTouch
+  fullName: NUnit.Framework.PlatformNames.MonoTouch
+  nameWithType: PlatformNames.MonoTouch
+- uid: NUnit.Framework.PlatformNames.NET
+  name: NET
+  href: api/NUnit.Framework.PlatformNames.html#NUnit_Framework_PlatformNames_NET
+  commentId: F:NUnit.Framework.PlatformNames.NET
+  fullName: NUnit.Framework.PlatformNames.NET
+  nameWithType: PlatformNames.NET
+- uid: NUnit.Framework.PlatformNames.NETCore
+  name: NETCore
+  href: api/NUnit.Framework.PlatformNames.html#NUnit_Framework_PlatformNames_NETCore
+  commentId: F:NUnit.Framework.PlatformNames.NETCore
+  fullName: NUnit.Framework.PlatformNames.NETCore
+  nameWithType: PlatformNames.NETCore
+- uid: NUnit.Framework.PlatformNames.NT3
+  name: NT3
+  href: api/NUnit.Framework.PlatformNames.html#NUnit_Framework_PlatformNames_NT3
+  commentId: F:NUnit.Framework.PlatformNames.NT3
+  fullName: NUnit.Framework.PlatformNames.NT3
+  nameWithType: PlatformNames.NT3
+- uid: NUnit.Framework.PlatformNames.NT4
+  name: NT4
+  href: api/NUnit.Framework.PlatformNames.html#NUnit_Framework_PlatformNames_NT4
+  commentId: F:NUnit.Framework.PlatformNames.NT4
+  fullName: NUnit.Framework.PlatformNames.NT4
+  nameWithType: PlatformNames.NT4
+- uid: NUnit.Framework.PlatformNames.NT5
+  name: NT5
+  href: api/NUnit.Framework.PlatformNames.html#NUnit_Framework_PlatformNames_NT5
+  commentId: F:NUnit.Framework.PlatformNames.NT5
+  fullName: NUnit.Framework.PlatformNames.NT5
+  nameWithType: PlatformNames.NT5
+- uid: NUnit.Framework.PlatformNames.NT6
+  name: NT6
+  href: api/NUnit.Framework.PlatformNames.html#NUnit_Framework_PlatformNames_NT6
+  commentId: F:NUnit.Framework.PlatformNames.NT6
+  fullName: NUnit.Framework.PlatformNames.NT6
+  nameWithType: PlatformNames.NT6
+- uid: NUnit.Framework.PlatformNames.Rotor
+  name: Rotor
+  href: api/NUnit.Framework.PlatformNames.html#NUnit_Framework_PlatformNames_Rotor
+  commentId: F:NUnit.Framework.PlatformNames.Rotor
+  fullName: NUnit.Framework.PlatformNames.Rotor
+  nameWithType: PlatformNames.Rotor
+- uid: NUnit.Framework.PlatformNames.SSCLI
+  name: SSCLI
+  href: api/NUnit.Framework.PlatformNames.html#NUnit_Framework_PlatformNames_SSCLI
+  commentId: F:NUnit.Framework.PlatformNames.SSCLI
+  fullName: NUnit.Framework.PlatformNames.SSCLI
+  nameWithType: PlatformNames.SSCLI
+- uid: NUnit.Framework.PlatformNames.UNIX
+  name: UNIX
+  href: api/NUnit.Framework.PlatformNames.html#NUnit_Framework_PlatformNames_UNIX
+  commentId: F:NUnit.Framework.PlatformNames.UNIX
+  fullName: NUnit.Framework.PlatformNames.UNIX
+  nameWithType: PlatformNames.UNIX
+- uid: NUnit.Framework.PlatformNames.Vista
+  name: Vista
+  href: api/NUnit.Framework.PlatformNames.html#NUnit_Framework_PlatformNames_Vista
+  commentId: F:NUnit.Framework.PlatformNames.Vista
+  fullName: NUnit.Framework.PlatformNames.Vista
+  nameWithType: PlatformNames.Vista
+- uid: NUnit.Framework.PlatformNames.Win
+  name: Win
+  href: api/NUnit.Framework.PlatformNames.html#NUnit_Framework_PlatformNames_Win
+  commentId: F:NUnit.Framework.PlatformNames.Win
+  fullName: NUnit.Framework.PlatformNames.Win
+  nameWithType: PlatformNames.Win
+- uid: NUnit.Framework.PlatformNames.Win10
+  name: Win10
+  href: api/NUnit.Framework.PlatformNames.html#NUnit_Framework_PlatformNames_Win10
+  commentId: F:NUnit.Framework.PlatformNames.Win10
+  fullName: NUnit.Framework.PlatformNames.Win10
+  nameWithType: PlatformNames.Win10
+- uid: NUnit.Framework.PlatformNames.Win11
+  name: Win11
+  href: api/NUnit.Framework.PlatformNames.html#NUnit_Framework_PlatformNames_Win11
+  commentId: F:NUnit.Framework.PlatformNames.Win11
+  fullName: NUnit.Framework.PlatformNames.Win11
+  nameWithType: PlatformNames.Win11
+- uid: NUnit.Framework.PlatformNames.Win2003Server
+  name: Win2003Server
+  href: api/NUnit.Framework.PlatformNames.html#NUnit_Framework_PlatformNames_Win2003Server
+  commentId: F:NUnit.Framework.PlatformNames.Win2003Server
+  fullName: NUnit.Framework.PlatformNames.Win2003Server
+  nameWithType: PlatformNames.Win2003Server
+- uid: NUnit.Framework.PlatformNames.Win2008Server
+  name: Win2008Server
+  href: api/NUnit.Framework.PlatformNames.html#NUnit_Framework_PlatformNames_Win2008Server
+  commentId: F:NUnit.Framework.PlatformNames.Win2008Server
+  fullName: NUnit.Framework.PlatformNames.Win2008Server
+  nameWithType: PlatformNames.Win2008Server
+- uid: NUnit.Framework.PlatformNames.Win2008ServerR2
+  name: Win2008ServerR2
+  href: api/NUnit.Framework.PlatformNames.html#NUnit_Framework_PlatformNames_Win2008ServerR2
+  commentId: F:NUnit.Framework.PlatformNames.Win2008ServerR2
+  fullName: NUnit.Framework.PlatformNames.Win2008ServerR2
+  nameWithType: PlatformNames.Win2008ServerR2
+- uid: NUnit.Framework.PlatformNames.Win2012Server
+  name: Win2012Server
+  href: api/NUnit.Framework.PlatformNames.html#NUnit_Framework_PlatformNames_Win2012Server
+  commentId: F:NUnit.Framework.PlatformNames.Win2012Server
+  fullName: NUnit.Framework.PlatformNames.Win2012Server
+  nameWithType: PlatformNames.Win2012Server
+- uid: NUnit.Framework.PlatformNames.Win2012ServerR2
+  name: Win2012ServerR2
+  href: api/NUnit.Framework.PlatformNames.html#NUnit_Framework_PlatformNames_Win2012ServerR2
+  commentId: F:NUnit.Framework.PlatformNames.Win2012ServerR2
+  fullName: NUnit.Framework.PlatformNames.Win2012ServerR2
+  nameWithType: PlatformNames.Win2012ServerR2
+- uid: NUnit.Framework.PlatformNames.Win2K
+  name: Win2K
+  href: api/NUnit.Framework.PlatformNames.html#NUnit_Framework_PlatformNames_Win2K
+  commentId: F:NUnit.Framework.PlatformNames.Win2K
+  fullName: NUnit.Framework.PlatformNames.Win2K
+  nameWithType: PlatformNames.Win2K
+- uid: NUnit.Framework.PlatformNames.Win32
+  name: Win32
+  href: api/NUnit.Framework.PlatformNames.html#NUnit_Framework_PlatformNames_Win32
+  commentId: F:NUnit.Framework.PlatformNames.Win32
+  fullName: NUnit.Framework.PlatformNames.Win32
+  nameWithType: PlatformNames.Win32
+- uid: NUnit.Framework.PlatformNames.Win32NT
+  name: Win32NT
+  href: api/NUnit.Framework.PlatformNames.html#NUnit_Framework_PlatformNames_Win32NT
+  commentId: F:NUnit.Framework.PlatformNames.Win32NT
+  fullName: NUnit.Framework.PlatformNames.Win32NT
+  nameWithType: PlatformNames.Win32NT
+- uid: NUnit.Framework.PlatformNames.Win32Windows
+  name: Win32Windows
+  href: api/NUnit.Framework.PlatformNames.html#NUnit_Framework_PlatformNames_Win32Windows
+  commentId: F:NUnit.Framework.PlatformNames.Win32Windows
+  fullName: NUnit.Framework.PlatformNames.Win32Windows
+  nameWithType: PlatformNames.Win32Windows
+- uid: NUnit.Framework.PlatformNames.Win32s
+  name: Win32s
+  href: api/NUnit.Framework.PlatformNames.html#NUnit_Framework_PlatformNames_Win32s
+  commentId: F:NUnit.Framework.PlatformNames.Win32s
+  fullName: NUnit.Framework.PlatformNames.Win32s
+  nameWithType: PlatformNames.Win32s
+- uid: NUnit.Framework.PlatformNames.Win7
+  name: Win7
+  href: api/NUnit.Framework.PlatformNames.html#NUnit_Framework_PlatformNames_Win7
+  commentId: F:NUnit.Framework.PlatformNames.Win7
+  fullName: NUnit.Framework.PlatformNames.Win7
+  nameWithType: PlatformNames.Win7
+- uid: NUnit.Framework.PlatformNames.Win8
+  name: Win8
+  href: api/NUnit.Framework.PlatformNames.html#NUnit_Framework_PlatformNames_Win8
+  commentId: F:NUnit.Framework.PlatformNames.Win8
+  fullName: NUnit.Framework.PlatformNames.Win8
+  nameWithType: PlatformNames.Win8
+- uid: NUnit.Framework.PlatformNames.Win81
+  name: Win81
+  href: api/NUnit.Framework.PlatformNames.html#NUnit_Framework_PlatformNames_Win81
+  commentId: F:NUnit.Framework.PlatformNames.Win81
+  fullName: NUnit.Framework.PlatformNames.Win81
+  nameWithType: PlatformNames.Win81
+- uid: NUnit.Framework.PlatformNames.Win95
+  name: Win95
+  href: api/NUnit.Framework.PlatformNames.html#NUnit_Framework_PlatformNames_Win95
+  commentId: F:NUnit.Framework.PlatformNames.Win95
+  fullName: NUnit.Framework.PlatformNames.Win95
+  nameWithType: PlatformNames.Win95
+- uid: NUnit.Framework.PlatformNames.Win98
+  name: Win98
+  href: api/NUnit.Framework.PlatformNames.html#NUnit_Framework_PlatformNames_Win98
+  commentId: F:NUnit.Framework.PlatformNames.Win98
+  fullName: NUnit.Framework.PlatformNames.Win98
+  nameWithType: PlatformNames.Win98
+- uid: NUnit.Framework.PlatformNames.WinME
+  name: WinME
+  href: api/NUnit.Framework.PlatformNames.html#NUnit_Framework_PlatformNames_WinME
+  commentId: F:NUnit.Framework.PlatformNames.WinME
+  fullName: NUnit.Framework.PlatformNames.WinME
+  nameWithType: PlatformNames.WinME
+- uid: NUnit.Framework.PlatformNames.WinXP
+  name: WinXP
+  href: api/NUnit.Framework.PlatformNames.html#NUnit_Framework_PlatformNames_WinXP
+  commentId: F:NUnit.Framework.PlatformNames.WinXP
+  fullName: NUnit.Framework.PlatformNames.WinXP
+  nameWithType: PlatformNames.WinXP
+- uid: NUnit.Framework.PlatformNames.Windows10
+  name: Windows10
+  href: api/NUnit.Framework.PlatformNames.html#NUnit_Framework_PlatformNames_Windows10
+  commentId: F:NUnit.Framework.PlatformNames.Windows10
+  fullName: NUnit.Framework.PlatformNames.Windows10
+  nameWithType: PlatformNames.Windows10
+- uid: NUnit.Framework.PlatformNames.Windows11
+  name: Windows11
+  href: api/NUnit.Framework.PlatformNames.html#NUnit_Framework_PlatformNames_Windows11
+  commentId: F:NUnit.Framework.PlatformNames.Windows11
+  fullName: NUnit.Framework.PlatformNames.Windows11
+  nameWithType: PlatformNames.Windows11
+- uid: NUnit.Framework.PlatformNames.Windows7
+  name: Windows7
+  href: api/NUnit.Framework.PlatformNames.html#NUnit_Framework_PlatformNames_Windows7
+  commentId: F:NUnit.Framework.PlatformNames.Windows7
+  fullName: NUnit.Framework.PlatformNames.Windows7
+  nameWithType: PlatformNames.Windows7
+- uid: NUnit.Framework.PlatformNames.Windows8
+  name: Windows8
+  href: api/NUnit.Framework.PlatformNames.html#NUnit_Framework_PlatformNames_Windows8
+  commentId: F:NUnit.Framework.PlatformNames.Windows8
+  fullName: NUnit.Framework.PlatformNames.Windows8
+  nameWithType: PlatformNames.Windows8
+- uid: NUnit.Framework.PlatformNames.Windows81
+  name: Windows81
+  href: api/NUnit.Framework.PlatformNames.html#NUnit_Framework_PlatformNames_Windows81
+  commentId: F:NUnit.Framework.PlatformNames.Windows81
+  fullName: NUnit.Framework.PlatformNames.Windows81
+  nameWithType: PlatformNames.Windows81
+- uid: NUnit.Framework.PlatformNames.WindowsServer10
+  name: WindowsServer10
+  href: api/NUnit.Framework.PlatformNames.html#NUnit_Framework_PlatformNames_WindowsServer10
+  commentId: F:NUnit.Framework.PlatformNames.WindowsServer10
+  fullName: NUnit.Framework.PlatformNames.WindowsServer10
+  nameWithType: PlatformNames.WindowsServer10
+- uid: NUnit.Framework.PlatformNames.X32Bit
+  name: X32Bit
+  href: api/NUnit.Framework.PlatformNames.html#NUnit_Framework_PlatformNames_X32Bit
+  commentId: F:NUnit.Framework.PlatformNames.X32Bit
+  fullName: NUnit.Framework.PlatformNames.X32Bit
+  nameWithType: PlatformNames.X32Bit
+- uid: NUnit.Framework.PlatformNames.X32BitOS
+  name: X32BitOS
+  href: api/NUnit.Framework.PlatformNames.html#NUnit_Framework_PlatformNames_X32BitOS
+  commentId: F:NUnit.Framework.PlatformNames.X32BitOS
+  fullName: NUnit.Framework.PlatformNames.X32BitOS
+  nameWithType: PlatformNames.X32BitOS
+- uid: NUnit.Framework.PlatformNames.X32BitProcess
+  name: X32BitProcess
+  href: api/NUnit.Framework.PlatformNames.html#NUnit_Framework_PlatformNames_X32BitProcess
+  commentId: F:NUnit.Framework.PlatformNames.X32BitProcess
+  fullName: NUnit.Framework.PlatformNames.X32BitProcess
+  nameWithType: PlatformNames.X32BitProcess
+- uid: NUnit.Framework.PlatformNames.X64Bit
+  name: X64Bit
+  href: api/NUnit.Framework.PlatformNames.html#NUnit_Framework_PlatformNames_X64Bit
+  commentId: F:NUnit.Framework.PlatformNames.X64Bit
+  fullName: NUnit.Framework.PlatformNames.X64Bit
+  nameWithType: PlatformNames.X64Bit
+- uid: NUnit.Framework.PlatformNames.X64BitOS
+  name: X64BitOS
+  href: api/NUnit.Framework.PlatformNames.html#NUnit_Framework_PlatformNames_X64BitOS
+  commentId: F:NUnit.Framework.PlatformNames.X64BitOS
+  fullName: NUnit.Framework.PlatformNames.X64BitOS
+  nameWithType: PlatformNames.X64BitOS
+- uid: NUnit.Framework.PlatformNames.X64BitProcess
+  name: X64BitProcess
+  href: api/NUnit.Framework.PlatformNames.html#NUnit_Framework_PlatformNames_X64BitProcess
+  commentId: F:NUnit.Framework.PlatformNames.X64BitProcess
+  fullName: NUnit.Framework.PlatformNames.X64BitProcess
+  nameWithType: PlatformNames.X64BitProcess
+- uid: NUnit.Framework.PlatformNames.XBox
+  name: XBox
+  href: api/NUnit.Framework.PlatformNames.html#NUnit_Framework_PlatformNames_XBox
+  commentId: F:NUnit.Framework.PlatformNames.XBox
+  fullName: NUnit.Framework.PlatformNames.XBox
+  nameWithType: PlatformNames.XBox
 - uid: NUnit.Framework.PropertyAttribute
   name: PropertyAttribute
   href: api/NUnit.Framework.PropertyAttribute.html
@@ -143329,6 +144201,18 @@ references:
   commentId: Overload:NUnit.Framework.TestContext.ResultAdapter.PassCount
   fullName: NUnit.Framework.TestContext.ResultAdapter.PassCount
   nameWithType: TestContext.ResultAdapter.PassCount
+- uid: NUnit.Framework.TestContext.ResultAdapter.RecordedException
+  name: RecordedException
+  href: api/NUnit.Framework.TestContext.ResultAdapter.html#NUnit_Framework_TestContext_ResultAdapter_RecordedException
+  commentId: P:NUnit.Framework.TestContext.ResultAdapter.RecordedException
+  fullName: NUnit.Framework.TestContext.ResultAdapter.RecordedException
+  nameWithType: TestContext.ResultAdapter.RecordedException
+- uid: NUnit.Framework.TestContext.ResultAdapter.RecordedException*
+  name: RecordedException
+  href: api/NUnit.Framework.TestContext.ResultAdapter.html#NUnit_Framework_TestContext_ResultAdapter_RecordedException_
+  commentId: Overload:NUnit.Framework.TestContext.ResultAdapter.RecordedException
+  fullName: NUnit.Framework.TestContext.ResultAdapter.RecordedException
+  nameWithType: TestContext.ResultAdapter.RecordedException
 - uid: NUnit.Framework.TestContext.ResultAdapter.SkipCount
   name: SkipCount
   href: api/NUnit.Framework.TestContext.ResultAdapter.html#NUnit_Framework_TestContext_ResultAdapter_SkipCount
@@ -144814,6 +145698,63 @@ references:
   fullName.vb: NUnit.Framework.TimeoutAttribute.New
   nameWithType: TimeoutAttribute.TimeoutAttribute
   nameWithType.vb: TimeoutAttribute.New
+- uid: NUnit.Framework.UnhandledExceptionHandling
+  name: UnhandledExceptionHandling
+  href: api/NUnit.Framework.UnhandledExceptionHandling.html
+  commentId: T:NUnit.Framework.UnhandledExceptionHandling
+  fullName: NUnit.Framework.UnhandledExceptionHandling
+  nameWithType: UnhandledExceptionHandling
+- uid: NUnit.Framework.UnhandledExceptionHandling.Default
+  name: Default
+  href: api/NUnit.Framework.UnhandledExceptionHandling.html#NUnit_Framework_UnhandledExceptionHandling_Default
+  commentId: F:NUnit.Framework.UnhandledExceptionHandling.Default
+  fullName: NUnit.Framework.UnhandledExceptionHandling.Default
+  nameWithType: UnhandledExceptionHandling.Default
+- uid: NUnit.Framework.UnhandledExceptionHandling.Error
+  name: Error
+  href: api/NUnit.Framework.UnhandledExceptionHandling.html#NUnit_Framework_UnhandledExceptionHandling_Error
+  commentId: F:NUnit.Framework.UnhandledExceptionHandling.Error
+  fullName: NUnit.Framework.UnhandledExceptionHandling.Error
+  nameWithType: UnhandledExceptionHandling.Error
+- uid: NUnit.Framework.UnhandledExceptionHandling.Ignore
+  name: Ignore
+  href: api/NUnit.Framework.UnhandledExceptionHandling.html#NUnit_Framework_UnhandledExceptionHandling_Ignore
+  commentId: F:NUnit.Framework.UnhandledExceptionHandling.Ignore
+  fullName: NUnit.Framework.UnhandledExceptionHandling.Ignore
+  nameWithType: UnhandledExceptionHandling.Ignore
+- uid: NUnit.Framework.UnhandledExceptionHandlingAttribute
+  name: UnhandledExceptionHandlingAttribute
+  href: api/NUnit.Framework.UnhandledExceptionHandlingAttribute.html
+  commentId: T:NUnit.Framework.UnhandledExceptionHandlingAttribute
+  fullName: NUnit.Framework.UnhandledExceptionHandlingAttribute
+  nameWithType: UnhandledExceptionHandlingAttribute
+- uid: NUnit.Framework.UnhandledExceptionHandlingAttribute.#ctor(NUnit.Framework.UnhandledExceptionHandling)
+  name: UnhandledExceptionHandlingAttribute(UnhandledExceptionHandling)
+  href: api/NUnit.Framework.UnhandledExceptionHandlingAttribute.html#NUnit_Framework_UnhandledExceptionHandlingAttribute__ctor_NUnit_Framework_UnhandledExceptionHandling_
+  commentId: M:NUnit.Framework.UnhandledExceptionHandlingAttribute.#ctor(NUnit.Framework.UnhandledExceptionHandling)
+  name.vb: New(UnhandledExceptionHandling)
+  fullName: NUnit.Framework.UnhandledExceptionHandlingAttribute.UnhandledExceptionHandlingAttribute(NUnit.Framework.UnhandledExceptionHandling)
+  fullName.vb: NUnit.Framework.UnhandledExceptionHandlingAttribute.New(NUnit.Framework.UnhandledExceptionHandling)
+  nameWithType: UnhandledExceptionHandlingAttribute.UnhandledExceptionHandlingAttribute(UnhandledExceptionHandling)
+  nameWithType.vb: UnhandledExceptionHandlingAttribute.New(UnhandledExceptionHandling)
+- uid: NUnit.Framework.UnhandledExceptionHandlingAttribute.#ctor(NUnit.Framework.UnhandledExceptionHandling,System.Type[])
+  name: UnhandledExceptionHandlingAttribute(UnhandledExceptionHandling, params Type[])
+  href: api/NUnit.Framework.UnhandledExceptionHandlingAttribute.html#NUnit_Framework_UnhandledExceptionHandlingAttribute__ctor_NUnit_Framework_UnhandledExceptionHandling_System_Type___
+  commentId: M:NUnit.Framework.UnhandledExceptionHandlingAttribute.#ctor(NUnit.Framework.UnhandledExceptionHandling,System.Type[])
+  name.vb: New(UnhandledExceptionHandling, ParamArray Type())
+  fullName: NUnit.Framework.UnhandledExceptionHandlingAttribute.UnhandledExceptionHandlingAttribute(NUnit.Framework.UnhandledExceptionHandling, params System.Type[])
+  fullName.vb: NUnit.Framework.UnhandledExceptionHandlingAttribute.New(NUnit.Framework.UnhandledExceptionHandling, ParamArray System.Type())
+  nameWithType: UnhandledExceptionHandlingAttribute.UnhandledExceptionHandlingAttribute(UnhandledExceptionHandling, params Type[])
+  nameWithType.vb: UnhandledExceptionHandlingAttribute.New(UnhandledExceptionHandling, ParamArray Type())
+- uid: NUnit.Framework.UnhandledExceptionHandlingAttribute.#ctor*
+  name: UnhandledExceptionHandlingAttribute
+  href: api/NUnit.Framework.UnhandledExceptionHandlingAttribute.html#NUnit_Framework_UnhandledExceptionHandlingAttribute__ctor_
+  commentId: Overload:NUnit.Framework.UnhandledExceptionHandlingAttribute.#ctor
+  name.vb: New
+  fullName: NUnit.Framework.UnhandledExceptionHandlingAttribute.UnhandledExceptionHandlingAttribute
+  fullName.vb: NUnit.Framework.UnhandledExceptionHandlingAttribute.New
+  nameWithType: UnhandledExceptionHandlingAttribute.UnhandledExceptionHandlingAttribute
+  nameWithType.vb: UnhandledExceptionHandlingAttribute.New
 - uid: NUnit.Framework.ValueSourceAttribute
   name: ValueSourceAttribute
   href: api/NUnit.Framework.ValueSourceAttribute.html
@@ -145072,6 +146013,33 @@ references:
   fullName.vb: NUnit.Framework.Warn.If(Of TActual)(NUnit.Framework.Constraints.ActualValueDelegate(Of TActual), NUnit.Framework.Constraints.IResolveConstraint, System.Func(Of String), String, String)
   nameWithType: Warn.If<TActual>(ActualValueDelegate<TActual>, IResolveConstraint, Func<string>, string, string)
   nameWithType.vb: Warn.If(Of TActual)(ActualValueDelegate(Of TActual), IResolveConstraint, Func(Of String), String, String)
+- uid: NUnit.Framework.Warn.If``1(System.Func{``0},NUnit.Framework.Constraints.IResolveConstraint,NUnit.Framework.NUnitString,System.String,System.String)
+  name: If<TActual>(Func<TActual>, IResolveConstraint, NUnitString, string, string)
+  href: api/NUnit.Framework.Warn.html#NUnit_Framework_Warn_If__1_System_Func___0__NUnit_Framework_Constraints_IResolveConstraint_NUnit_Framework_NUnitString_System_String_System_String_
+  commentId: M:NUnit.Framework.Warn.If``1(System.Func{``0},NUnit.Framework.Constraints.IResolveConstraint,NUnit.Framework.NUnitString,System.String,System.String)
+  name.vb: If(Of TActual)(Func(Of TActual), IResolveConstraint, NUnitString, String, String)
+  fullName: NUnit.Framework.Warn.If<TActual>(System.Func<TActual>, NUnit.Framework.Constraints.IResolveConstraint, NUnit.Framework.NUnitString, string, string)
+  fullName.vb: NUnit.Framework.Warn.If(Of TActual)(System.Func(Of TActual), NUnit.Framework.Constraints.IResolveConstraint, NUnit.Framework.NUnitString, String, String)
+  nameWithType: Warn.If<TActual>(Func<TActual>, IResolveConstraint, NUnitString, string, string)
+  nameWithType.vb: Warn.If(Of TActual)(Func(Of TActual), IResolveConstraint, NUnitString, String, String)
+- uid: NUnit.Framework.Warn.If``1(System.Func{``0},NUnit.Framework.Constraints.IResolveConstraint,System.FormattableString,System.String,System.String)
+  name: If<TActual>(Func<TActual>, IResolveConstraint, FormattableString, string, string)
+  href: api/NUnit.Framework.Warn.html#NUnit_Framework_Warn_If__1_System_Func___0__NUnit_Framework_Constraints_IResolveConstraint_System_FormattableString_System_String_System_String_
+  commentId: M:NUnit.Framework.Warn.If``1(System.Func{``0},NUnit.Framework.Constraints.IResolveConstraint,System.FormattableString,System.String,System.String)
+  name.vb: If(Of TActual)(Func(Of TActual), IResolveConstraint, FormattableString, String, String)
+  fullName: NUnit.Framework.Warn.If<TActual>(System.Func<TActual>, NUnit.Framework.Constraints.IResolveConstraint, System.FormattableString, string, string)
+  fullName.vb: NUnit.Framework.Warn.If(Of TActual)(System.Func(Of TActual), NUnit.Framework.Constraints.IResolveConstraint, System.FormattableString, String, String)
+  nameWithType: Warn.If<TActual>(Func<TActual>, IResolveConstraint, FormattableString, string, string)
+  nameWithType.vb: Warn.If(Of TActual)(Func(Of TActual), IResolveConstraint, FormattableString, String, String)
+- uid: NUnit.Framework.Warn.If``1(System.Func{``0},NUnit.Framework.Constraints.IResolveConstraint,System.Func{System.String},System.String,System.String)
+  name: If<TActual>(Func<TActual>, IResolveConstraint, Func<string>, string, string)
+  href: api/NUnit.Framework.Warn.html#NUnit_Framework_Warn_If__1_System_Func___0__NUnit_Framework_Constraints_IResolveConstraint_System_Func_System_String__System_String_System_String_
+  commentId: M:NUnit.Framework.Warn.If``1(System.Func{``0},NUnit.Framework.Constraints.IResolveConstraint,System.Func{System.String},System.String,System.String)
+  name.vb: If(Of TActual)(Func(Of TActual), IResolveConstraint, Func(Of String), String, String)
+  fullName: NUnit.Framework.Warn.If<TActual>(System.Func<TActual>, NUnit.Framework.Constraints.IResolveConstraint, System.Func<string>, string, string)
+  fullName.vb: NUnit.Framework.Warn.If(Of TActual)(System.Func(Of TActual), NUnit.Framework.Constraints.IResolveConstraint, System.Func(Of String), String, String)
+  nameWithType: Warn.If<TActual>(Func<TActual>, IResolveConstraint, Func<string>, string, string)
+  nameWithType.vb: Warn.If(Of TActual)(Func(Of TActual), IResolveConstraint, Func(Of String), String, String)
 - uid: NUnit.Framework.Warn.If``1(``0,NUnit.Framework.Constraints.IResolveConstraint,NUnit.Framework.NUnitString,System.String,System.String)
   name: If<TActual>(TActual, IResolveConstraint, NUnitString, string, string)
   href: api/NUnit.Framework.Warn.html#NUnit_Framework_Warn_If__1___0_NUnit_Framework_Constraints_IResolveConstraint_NUnit_Framework_NUnitString_System_String_System_String_
@@ -145186,6 +146154,33 @@ references:
   fullName.vb: NUnit.Framework.Warn.Unless(Of TActual)(NUnit.Framework.Constraints.ActualValueDelegate(Of TActual), NUnit.Framework.Constraints.IResolveConstraint, System.Func(Of String), String, String)
   nameWithType: Warn.Unless<TActual>(ActualValueDelegate<TActual>, IResolveConstraint, Func<string>, string, string)
   nameWithType.vb: Warn.Unless(Of TActual)(ActualValueDelegate(Of TActual), IResolveConstraint, Func(Of String), String, String)
+- uid: NUnit.Framework.Warn.Unless``1(System.Func{``0},NUnit.Framework.Constraints.IResolveConstraint,NUnit.Framework.NUnitString,System.String,System.String)
+  name: Unless<TActual>(Func<TActual>, IResolveConstraint, NUnitString, string, string)
+  href: api/NUnit.Framework.Warn.html#NUnit_Framework_Warn_Unless__1_System_Func___0__NUnit_Framework_Constraints_IResolveConstraint_NUnit_Framework_NUnitString_System_String_System_String_
+  commentId: M:NUnit.Framework.Warn.Unless``1(System.Func{``0},NUnit.Framework.Constraints.IResolveConstraint,NUnit.Framework.NUnitString,System.String,System.String)
+  name.vb: Unless(Of TActual)(Func(Of TActual), IResolveConstraint, NUnitString, String, String)
+  fullName: NUnit.Framework.Warn.Unless<TActual>(System.Func<TActual>, NUnit.Framework.Constraints.IResolveConstraint, NUnit.Framework.NUnitString, string, string)
+  fullName.vb: NUnit.Framework.Warn.Unless(Of TActual)(System.Func(Of TActual), NUnit.Framework.Constraints.IResolveConstraint, NUnit.Framework.NUnitString, String, String)
+  nameWithType: Warn.Unless<TActual>(Func<TActual>, IResolveConstraint, NUnitString, string, string)
+  nameWithType.vb: Warn.Unless(Of TActual)(Func(Of TActual), IResolveConstraint, NUnitString, String, String)
+- uid: NUnit.Framework.Warn.Unless``1(System.Func{``0},NUnit.Framework.Constraints.IResolveConstraint,System.FormattableString,System.String,System.String)
+  name: Unless<TActual>(Func<TActual>, IResolveConstraint, FormattableString, string, string)
+  href: api/NUnit.Framework.Warn.html#NUnit_Framework_Warn_Unless__1_System_Func___0__NUnit_Framework_Constraints_IResolveConstraint_System_FormattableString_System_String_System_String_
+  commentId: M:NUnit.Framework.Warn.Unless``1(System.Func{``0},NUnit.Framework.Constraints.IResolveConstraint,System.FormattableString,System.String,System.String)
+  name.vb: Unless(Of TActual)(Func(Of TActual), IResolveConstraint, FormattableString, String, String)
+  fullName: NUnit.Framework.Warn.Unless<TActual>(System.Func<TActual>, NUnit.Framework.Constraints.IResolveConstraint, System.FormattableString, string, string)
+  fullName.vb: NUnit.Framework.Warn.Unless(Of TActual)(System.Func(Of TActual), NUnit.Framework.Constraints.IResolveConstraint, System.FormattableString, String, String)
+  nameWithType: Warn.Unless<TActual>(Func<TActual>, IResolveConstraint, FormattableString, string, string)
+  nameWithType.vb: Warn.Unless(Of TActual)(Func(Of TActual), IResolveConstraint, FormattableString, String, String)
+- uid: NUnit.Framework.Warn.Unless``1(System.Func{``0},NUnit.Framework.Constraints.IResolveConstraint,System.Func{System.String},System.String,System.String)
+  name: Unless<TActual>(Func<TActual>, IResolveConstraint, Func<string>, string, string)
+  href: api/NUnit.Framework.Warn.html#NUnit_Framework_Warn_Unless__1_System_Func___0__NUnit_Framework_Constraints_IResolveConstraint_System_Func_System_String__System_String_System_String_
+  commentId: M:NUnit.Framework.Warn.Unless``1(System.Func{``0},NUnit.Framework.Constraints.IResolveConstraint,System.Func{System.String},System.String,System.String)
+  name.vb: Unless(Of TActual)(Func(Of TActual), IResolveConstraint, Func(Of String), String, String)
+  fullName: NUnit.Framework.Warn.Unless<TActual>(System.Func<TActual>, NUnit.Framework.Constraints.IResolveConstraint, System.Func<string>, string, string)
+  fullName.vb: NUnit.Framework.Warn.Unless(Of TActual)(System.Func(Of TActual), NUnit.Framework.Constraints.IResolveConstraint, System.Func(Of String), String, String)
+  nameWithType: Warn.Unless<TActual>(Func<TActual>, IResolveConstraint, Func<string>, string, string)
+  nameWithType.vb: Warn.Unless(Of TActual)(Func(Of TActual), IResolveConstraint, Func(Of String), String, String)
 - uid: NUnit.Framework.Warn.Unless``1(``0,NUnit.Framework.Constraints.IResolveConstraint,NUnit.Framework.NUnitString,System.String,System.String)
   name: Unless<TActual>(TActual, IResolveConstraint, NUnitString, string, string)
   href: api/NUnit.Framework.Warn.html#NUnit_Framework_Warn_Unless__1___0_NUnit_Framework_Constraints_IResolveConstraint_NUnit_Framework_NUnitString_System_String_System_String_
@@ -147449,33 +148444,279 @@ references:
 - uid: addinreplacementintheframework
   name: Addin Replacement In The Framework
   href: articles/nunit/technical-notes/usage/Addin-Replacement-in-the-Framework.html
-- uid: apartment-attribute
-  name: Apartment
-  href: articles/nunit/writing-tests/attributes/apartment.html
 - uid: assemblyisolation
   name: Assembly Isolation
   href: articles/nunit/technical-notes/usage/Assembly-Isolation.html
 - uid: assertions
   name: Assertions
   href: articles/nunit/writing-tests/assertions/assertions.html
-- uid: author-attribute
+- uid: attribute-apartment
+  name: Apartment
+  href: articles/nunit/writing-tests/attributes/apartment.html
+- uid: attribute-author
   name: Author
   href: articles/nunit/writing-tests/attributes/author.html
+- uid: attribute-cancelafter
+  name: CancelAfter
+  href: articles/nunit/writing-tests/attributes/cancelafter.html
+- uid: attribute-category
+  name: Category
+  href: articles/nunit/writing-tests/attributes/category.html
+- uid: attribute-combinatorial
+  name: Combinatorial
+  href: articles/nunit/writing-tests/attributes/combinatorial.html
+- uid: attribute-culture
+  name: Culture
+  href: articles/nunit/writing-tests/attributes/culture.html
+- uid: attribute-datapoint
+  name: Datapoint
+  href: articles/nunit/writing-tests/attributes/datapoint.html
+- uid: attribute-datapointsource
+  name: DatapointSource
+  href: articles/nunit/writing-tests/attributes/datapointsource.html
+- uid: attribute-defaultfloatingpointtolerance
+  name: DefaultFloatingPointTolerance
+  href: articles/nunit/writing-tests/attributes/defaultfloatingpointtolerance.html
+- uid: attribute-description
+  name: Description
+  href: articles/nunit/writing-tests/attributes/description.html
+- uid: attribute-explicit
+  name: Explicit
+  href: articles/nunit/writing-tests/attributes/explicit.html
+- uid: attribute-fixturelifecycle
+  name: FixtureLifeCycle
+  href: articles/nunit/writing-tests/attributes/fixturelifecycle.html
+- uid: attribute-ignore
+  name: Ignore
+  href: articles/nunit/writing-tests/attributes/ignore.html
+- uid: attribute-levelofparallelism
+  name: LevelOfParallelism
+  href: articles/nunit/writing-tests/attributes/levelofparallelism.html
+- uid: attribute-maxtime
+  name: MaxTime
+  href: articles/nunit/writing-tests/attributes/maxtime.html
+- uid: attribute-netplatform
+  name: NetPlatform
+  href: articles/nunit/writing-tests/attributes/netplatform.html
+- uid: attribute-nonparallelizable
+  name: NonParallelizable
+  href: articles/nunit/writing-tests/attributes/nonparallelizable.html
+- uid: attribute-nontestassembly
+  name: NonTestAssembly
+  href: articles/nunit/writing-tests/attributes/nontestassembly.html
+- uid: attribute-notests
+  name: NoTests
+  href: articles/nunit/writing-tests/attributes/notests.html
+- uid: attribute-onetimesetup
+  name: OneTimeSetUp
+  href: articles/nunit/writing-tests/attributes/onetimesetup.html
+- uid: attribute-onetimeteardown
+  name: OneTimeTearDown
+  href: articles/nunit/writing-tests/attributes/onetimeteardown.html
+- uid: attribute-order
+  name: Order
+  href: articles/nunit/writing-tests/attributes/order.html
+- uid: attribute-pairwise
+  name: Pairwise
+  href: articles/nunit/writing-tests/attributes/pairwise.html
+- uid: attribute-parallelizable
+  name: Parallelizable
+  href: articles/nunit/writing-tests/attributes/parallelizable.html
+- uid: attribute-platform
+  name: Platform
+  href: articles/nunit/writing-tests/attributes/platform.html
+- uid: attribute-property
+  name: Property
+  href: articles/nunit/writing-tests/attributes/property.html
+- uid: attribute-random
+  name: Random
+  href: articles/nunit/writing-tests/attributes/random.html
+- uid: attribute-range
+  name: Range
+  href: articles/nunit/writing-tests/attributes/range.html
+- uid: attribute-repeat
+  name: Repeat
+  href: articles/nunit/writing-tests/attributes/repeat.html
+- uid: attribute-requiresthread
+  name: RequiresThread
+  href: articles/nunit/writing-tests/attributes/requiresthread.html
+- uid: attribute-retry
+  name: Retry
+  href: articles/nunit/writing-tests/attributes/retry.html
+- uid: attribute-sequential
+  name: Sequential
+  href: articles/nunit/writing-tests/attributes/sequential.html
+- uid: attribute-setculture
+  name: SetCulture
+  href: articles/nunit/writing-tests/attributes/setculture.html
+- uid: attribute-setuiculture
+  name: SetUICulture
+  href: articles/nunit/writing-tests/attributes/setuiculture.html
+- uid: attribute-setup
+  name: SetUp
+  href: articles/nunit/writing-tests/attributes/setup.html
+- uid: attribute-setupfixture
+  name: SetUpFixture
+  href: articles/nunit/writing-tests/attributes/setupfixture.html
+- uid: attribute-singlethreaded
+  name: SingleThreaded
+  href: articles/nunit/writing-tests/attributes/singlethreaded.html
+- uid: attribute-teardown
+  name: TearDown
+  href: articles/nunit/writing-tests/attributes/teardown.html
+- uid: attribute-test
+  name: Test
+  href: articles/nunit/writing-tests/attributes/test.html
+- uid: attribute-testassemblydirectoryresolve
+  name: TestAssemblyDirectoryResolve
+  href: articles/nunit/writing-tests/attributes/testassemblydirectoryresolve.html
+- uid: attribute-testcase
+  name: TestCase
+  href: articles/nunit/writing-tests/attributes/testcase.html
+- uid: attribute-testcasesource
+  name: TestCaseSource
+  href: articles/nunit/writing-tests/attributes/testcasesource.html
+- uid: attribute-testfixture
+  name: TestFixture
+  href: articles/nunit/writing-tests/attributes/testfixture.html
+- uid: attribute-testfixturesetup
+  name: TestFixtureSetUp
+  href: articles/nunit/writing-tests/attributes/testfixturesetup.html
+- uid: attribute-testfixturesource
+  name: TestFixtureSource
+  href: articles/nunit/writing-tests/attributes/testfixturesource.html
+- uid: attribute-testfixtureteardown
+  name: TestFixtureTearDown
+  href: articles/nunit/writing-tests/attributes/testfixtureteardown.html
+- uid: attribute-testof
+  name: TestOf
+  href: articles/nunit/writing-tests/attributes/testof.html
+- uid: attribute-theory
+  name: Theory
+  href: articles/nunit/writing-tests/attributes/theory.html
+- uid: attribute-timeout
+  name: Timeout
+  href: articles/nunit/writing-tests/attributes/timeout.html
+- uid: attribute-unhandledexceptionhandling
+  name: UnhandledExceptionHandling
+  href: articles/nunit/writing-tests/attributes/unhandledexceptionhandling.html
+- uid: attribute-values
+  name: Values
+  href: articles/nunit/writing-tests/attributes/values.html
+- uid: attribute-valuesource
+  name: ValueSource
+  href: articles/nunit/writing-tests/attributes/valuesource.html
 - uid: availableengineextensions
   name: Available NUnit Engine Extensions
   href: articles/nunit-engine/extensions/AvailableExtensions.html
 - uid: breakingchanges
   name: Breaking Changes
   href: articles/nunit/release-notes/breaking-changes.html
-- uid: cancelafterattribute
-  name: CancelAfter
-  href: articles/nunit/writing-tests/attributes/cancelafter.html
+- uid: classic-assert-are-equal
+  name: Assert.AreEqual
+  href: articles/nunit/writing-tests/assertions/classic-assertions/Assert.AreEqual.html
+- uid: classic-assert-are-not-equal
+  name: Assert.AreNotEqual
+  href: articles/nunit/writing-tests/assertions/classic-assertions/Assert.AreNotEqual.html
+- uid: classic-assert-are-not-same
+  name: Assert.AreNotSame
+  href: articles/nunit/writing-tests/assertions/classic-assertions/Assert.AreNotSame.html
+- uid: classic-assert-are-same
+  name: Assert.AreSame
+  href: articles/nunit/writing-tests/assertions/classic-assertions/Assert.AreSame.html
+- uid: classic-assert-catch
+  name: Assert.Catch
+  href: articles/nunit/writing-tests/assertions/classic-assertions/Assert.Catch.html
+- uid: classic-assert-catch-async
+  name: Assert.CatchAsync
+  href: articles/nunit/writing-tests/assertions/classic-assertions/Assert.CatchAsync.html
+- uid: classic-assert-contains
+  name: Assert.Contains
+  href: articles/nunit/writing-tests/assertions/classic-assertions/Assert.Contains.html
+- uid: classic-assert-does-not-throw
+  name: Assert.DoesNotThrow
+  href: articles/nunit/writing-tests/assertions/classic-assertions/Assert.DoesNotThrow.html
+- uid: classic-assert-does-not-throw-async
+  name: Assert.DoesNotThrowAsync
+  href: articles/nunit/writing-tests/assertions/classic-assertions/Assert.DoesNotThrowAsync.html
+- uid: classic-assert-false
+  name: Assert.False
+  href: articles/nunit/writing-tests/assertions/classic-assertions/Assert.False.html
+- uid: classic-assert-greater
+  name: Assert.Greater
+  href: articles/nunit/writing-tests/assertions/classic-assertions/Assert.Greater.html
+- uid: classic-assert-greater-or-equal
+  name: Assert.GreaterOrEqual
+  href: articles/nunit/writing-tests/assertions/classic-assertions/Assert.GreaterOrEqual.html
+- uid: classic-assert-is-assignable-from
+  name: Assert.IsAssignableFrom
+  href: articles/nunit/writing-tests/assertions/classic-assertions/Assert.IsAssignableFrom.html
+- uid: classic-assert-is-empty
+  name: Assert.IsEmpty
+  href: articles/nunit/writing-tests/assertions/classic-assertions/Assert.IsEmpty.html
+- uid: classic-assert-is-instance-of
+  name: Assert.IsInstanceOf
+  href: articles/nunit/writing-tests/assertions/classic-assertions/Assert.IsInstanceOf.html
+- uid: classic-assert-is-nan
+  name: Assert.IsNaN
+  href: articles/nunit/writing-tests/assertions/classic-assertions/Assert.IsNaN.html
+- uid: classic-assert-is-not-assignable-from
+  name: Assert.IsNotAssignableFrom
+  href: articles/nunit/writing-tests/assertions/classic-assertions/Assert.IsNotAssignableFrom.html
+- uid: classic-assert-is-not-empty
+  name: Assert.IsNotEmpty
+  href: articles/nunit/writing-tests/assertions/classic-assertions/Assert.IsNotEmpty.html
+- uid: classic-assert-is-not-instance-of
+  name: Assert.IsNotInstanceOf
+  href: articles/nunit/writing-tests/assertions/classic-assertions/Assert.IsNotInstanceOf.html
+- uid: classic-assert-less
+  name: Assert.Less
+  href: articles/nunit/writing-tests/assertions/classic-assertions/Assert.Less.html
+- uid: classic-assert-less-or-equal
+  name: Assert.LessOrEqual
+  href: articles/nunit/writing-tests/assertions/classic-assertions/Assert.LessOrEqual.html
+- uid: classic-assert-negative
+  name: Assert.Negative
+  href: articles/nunit/writing-tests/assertions/classic-assertions/Assert.Negative.html
+- uid: classic-assert-not-null
+  name: Assert.NotNull
+  href: articles/nunit/writing-tests/assertions/classic-assertions/Assert.NotNull.html
+- uid: classic-assert-not-zero
+  name: Assert.NotZero
+  href: articles/nunit/writing-tests/assertions/classic-assertions/Assert.NotZero.html
+- uid: classic-assert-null
+  name: Assert.Null
+  href: articles/nunit/writing-tests/assertions/classic-assertions/Assert.Null.html
+- uid: classic-assert-positive
+  name: Assert.Positive
+  href: articles/nunit/writing-tests/assertions/classic-assertions/Assert.Positive.html
+- uid: classic-assert-throws
+  name: Assert.Throws
+  href: articles/nunit/writing-tests/assertions/classic-assertions/Assert.Throws.html
+- uid: classic-assert-throws-async
+  name: Assert.ThrowsAsync
+  href: articles/nunit/writing-tests/assertions/classic-assertions/Assert.ThrowsAsync.html
+- uid: classic-assert-true
+  name: Assert.True
+  href: articles/nunit/writing-tests/assertions/classic-assertions/Assert.True.html
+- uid: classic-assert-zero
+  name: Assert.Zero
+  href: articles/nunit/writing-tests/assertions/classic-assertions/Assert.Zero.html
+- uid: classic-collection-assert
+  name: CollectionAssert
+  href: articles/nunit/writing-tests/assertions/classic-assertions/Collection-Assert.html
+- uid: classic-directory-assert
+  name: DirectoryAssert
+  href: articles/nunit/writing-tests/assertions/classic-assertions/Directory-Assert.html
+- uid: classic-file-assert
+  name: FileAssert
+  href: articles/nunit/writing-tests/assertions/classic-assertions/File-Assert.html
+- uid: classic-string-assert
+  name: StringAssert
+  href: articles/nunit/writing-tests/assertions/classic-assertions/String-Assert.html
 - uid: classicmodel
   name: Classic Model
   href: articles/nunit/writing-tests/assertions/assertion-models/classic.html
-- uid: combinatorialattribute
-  name: Combinatorial
-  href: articles/nunit/writing-tests/attributes/combinatorial.html
 - uid: configurationfiles
   name: Configuration Files
   href: articles/nunit/technical-notes/usage/Configuration-Files.html
@@ -147485,6 +148726,183 @@ references:
 - uid: consoleenginereleasenotes
   name: Console and Engine Release Notes
   href: articles/nunit-engine/release-notes.html
+- uid: constraint-allitems
+  name: AllItems Constraint
+  href: articles/nunit/writing-tests/constraints/AllItemsConstraint.html
+- uid: constraint-and
+  name: And Constraint
+  href: articles/nunit/writing-tests/constraints/AndConstraint.html
+- uid: constraint-anyof
+  name: AnyOf Constraint
+  href: articles/nunit/writing-tests/constraints/AnyOfConstraint.html
+- uid: constraint-assignablefrom
+  name: AssignableFrom Constraint
+  href: articles/nunit/writing-tests/constraints/AssignableFromConstraint.html
+- uid: constraint-assignableto
+  name: AssignableTo Constraint
+  href: articles/nunit/writing-tests/constraints/AssignableToConstraint.html
+- uid: constraint-async
+  name: Async Constraint Support
+  href: articles/nunit/writing-tests/constraints/AsyncConstraints.html
+- uid: constraint-attribute
+  name: Attribute Constraint
+  href: articles/nunit/writing-tests/constraints/AttributeConstraint.html
+- uid: constraint-attributeexists
+  name: AttributeExists Constraint
+  href: articles/nunit/writing-tests/constraints/AttributeExistsConstraint.html
+- uid: constraint-binaryserializable
+  name: BinarySerializable Constraint
+  href: articles/nunit/writing-tests/constraints/BinarySerializableConstraint.html
+- uid: constraint-collectionequivalent
+  name: CollectionEquivalent Constraint
+  href: articles/nunit/writing-tests/constraints/CollectionEquivalentConstraint.html
+- uid: constraint-collectionordered
+  name: CollectionOrdered Constraint
+  href: articles/nunit/writing-tests/constraints/CollectionOrderedConstraint.html
+- uid: constraint-collectionsubset
+  name: CollectionSubset Constraint
+  href: articles/nunit/writing-tests/constraints/CollectionSubsetConstraint.html
+- uid: constraint-collectionsuperset
+  name: CollectionSuperset Constraint
+  href: articles/nunit/writing-tests/constraints/CollectionSupersetConstraint.html
+- uid: constraint-contains
+  name: Contains Constraint
+  href: articles/nunit/writing-tests/constraints/ContainsConstraint.html
+- uid: constraint-contains-helper
+  name: Contains Helper
+  href: articles/nunit/writing-tests/constraints/ContainsHelper.html
+- uid: constraint-default
+  name: DefaultConstraint
+  href: articles/nunit/writing-tests/constraints/DefaultConstraint.html
+- uid: constraint-delayed
+  name: Delayed Constraint
+  href: articles/nunit/writing-tests/constraints/DelayedConstraint.html
+- uid: constraint-dictionarycontainskey
+  name: DictionaryContainsKey Constraint
+  href: articles/nunit/writing-tests/constraints/DictionaryContainsKeyConstraint.html
+- uid: constraint-dictionarycontainskeyvaluepair
+  name: DictionaryContainsKeyValuePair Constraint
+  href: articles/nunit/writing-tests/constraints/DictionaryContainsKeyValuePairConstraint.html
+- uid: constraint-dictionarycontainsvalue
+  name: DictionaryContainsValue Constraint
+  href: articles/nunit/writing-tests/constraints/DictionaryContainsValueConstraint.html
+- uid: constraint-empty
+  name: Empty Constraint
+  href: articles/nunit/writing-tests/constraints/EmptyConstraint.html
+- uid: constraint-emptycollection
+  name: EmptyCollection Constraint
+  href: articles/nunit/writing-tests/constraints/EmptyCollectionConstraint.html
+- uid: constraint-emptydirectory
+  name: EmptyDirectory Constraint
+  href: articles/nunit/writing-tests/constraints/EmptyDirectoryConstraint.html
+- uid: constraint-emptystring
+  name: EmptyString Constraint
+  href: articles/nunit/writing-tests/constraints/EmptyStringConstraint.html
+- uid: constraint-endswith
+  name: EndsWith Constraint
+  href: articles/nunit/writing-tests/constraints/EndsWithConstraint.html
+- uid: constraint-equal
+  name: Equal Constraint
+  href: articles/nunit/writing-tests/constraints/EqualConstraint.html
+- uid: constraint-exactcount
+  name: ExactCount Constraint
+  href: articles/nunit/writing-tests/constraints/ExactCountConstraint.html
+- uid: constraint-exacttype
+  name: ExactType Constraint
+  href: articles/nunit/writing-tests/constraints/ExactTypeConstraint.html
+- uid: constraint-false
+  name: False Constraint
+  href: articles/nunit/writing-tests/constraints/FalseConstraint.html
+- uid: constraint-fileordirectoryexists
+  name: FileOrDirectoryExists Constraint
+  href: articles/nunit/writing-tests/constraints/FileOrDirectoryExistsConstraint.html
+- uid: constraint-greaterthan
+  name: GreaterThan Constraint
+  href: articles/nunit/writing-tests/constraints/GreaterThanConstraint.html
+- uid: constraint-greaterthanorequal
+  name: GreaterThanOrEqual Constraint
+  href: articles/nunit/writing-tests/constraints/GreaterThanOrEqualConstraint.html
+- uid: constraint-instanceoftype
+  name: InstanceOfType Constraint
+  href: articles/nunit/writing-tests/constraints/InstanceOfTypeConstraint.html
+- uid: constraint-lessthan
+  name: LessThan Constraint
+  href: articles/nunit/writing-tests/constraints/LessThanConstraint.html
+- uid: constraint-lessthanorequal
+  name: LessThanOrEqual Constraint
+  href: articles/nunit/writing-tests/constraints/LessThanOrEqualConstraint.html
+- uid: constraint-multipleof
+  name: MultipleOf Constraint
+  href: articles/nunit/writing-tests/constraints/MultipleOfConstraint.html
+- uid: constraint-nan
+  name: NaN Constraint
+  href: articles/nunit/writing-tests/constraints/NaNConstraint.html
+- uid: constraint-noitem
+  name: NoItem Constraint
+  href: articles/nunit/writing-tests/constraints/NoItemConstraint.html
+- uid: constraint-not
+  name: Not Constraint
+  href: articles/nunit/writing-tests/constraints/NotConstraint.html
+- uid: constraint-null
+  name: Null Constraint
+  href: articles/nunit/writing-tests/constraints/NullConstraint.html
+- uid: constraint-or
+  name: Or Constraint
+  href: articles/nunit/writing-tests/constraints/OrConstraint.html
+- uid: constraint-property
+  name: Property Constraint
+  href: articles/nunit/writing-tests/constraints/PropertyConstraint.html
+- uid: constraint-propertyexists
+  name: PropertyExists Constraint
+  href: articles/nunit/writing-tests/constraints/PropertyExistsConstraint.html
+- uid: constraint-range
+  name: Range Constraint
+  href: articles/nunit/writing-tests/constraints/RangeConstraint.html
+- uid: constraint-regex
+  name: Regex Constraint
+  href: articles/nunit/writing-tests/constraints/RegexConstraint.html
+- uid: constraint-reusable
+  name: Reusable Constraint
+  href: articles/nunit/writing-tests/constraints/ReusableConstraint.html
+- uid: constraint-sameas
+  name: SameAs Constraint
+  href: articles/nunit/writing-tests/constraints/SameAsConstraint.html
+- uid: constraint-samepath
+  name: SamePath Constraint
+  href: articles/nunit/writing-tests/constraints/SamePathConstraint.html
+- uid: constraint-samepathorunder
+  name: SamePathOrUnder Constraint
+  href: articles/nunit/writing-tests/constraints/SamePathOrUnderConstraint.html
+- uid: constraint-someitems
+  name: SomeItems Constraint
+  href: articles/nunit/writing-tests/constraints/SomeItemsConstraint.html
+- uid: constraint-startswith
+  name: StartsWith Constraint
+  href: articles/nunit/writing-tests/constraints/StartsWithConstraint.html
+- uid: constraint-subpath
+  name: SubPath Constraint
+  href: articles/nunit/writing-tests/constraints/SubPathConstraint.html
+- uid: constraint-substring
+  name: Substring Constraint
+  href: articles/nunit/writing-tests/constraints/SubstringConstraint.html
+- uid: constraint-throws
+  name: Throws Constraint
+  href: articles/nunit/writing-tests/constraints/ThrowsConstraint.html
+- uid: constraint-throwsnothing
+  name: ThrowsNothing Constraint
+  href: articles/nunit/writing-tests/constraints/ThrowsNothingConstraint.html
+- uid: constraint-true
+  name: True Constraint
+  href: articles/nunit/writing-tests/constraints/TrueConstraint.html
+- uid: constraint-uniqueitems
+  name: UniqueItems Constraint
+  href: articles/nunit/writing-tests/constraints/UniqueItemsConstraint.html
+- uid: constraint-whitespace
+  name: WhiteSpace Constraint
+  href: articles/nunit/writing-tests/constraints/WhiteSpaceConstraint.html
+- uid: constraint-xmlserializable
+  name: XmlSerializable Constraint
+  href: articles/nunit/writing-tests/constraints/XmlSerializableConstraint.html
 - uid: constraintmodel
   name: Constraint Model (Assert.That)
   href: articles/nunit/writing-tests/assertions/assertion-models/constraint.html
@@ -147500,15 +148918,9 @@ references:
 - uid: engineextensionsindex
   name: NUnit Engine Extensions
   href: articles/nunit-engine/extensions/Index.html
-- uid: equalconstraint
-  name: Equal Constraint
-  href: articles/nunit/writing-tests/constraints/EqualConstraint.html
 - uid: eventlisteners
   name: Event Listeners
   href: articles/nunit-engine/extensions/creating-extensions/Event-Listeners.html
-- uid: fixturelifecycleattribute
-  name: FixtureLifeCycle
-  href: articles/nunit/writing-tests/attributes/fixturelifecycle.html
 - uid: frameworkdrivers
   name: Framework Drivers
   href: articles/nunit-engine/extensions/creating-extensions/Framework-Drivers.html
@@ -147542,9 +148954,6 @@ references:
 - uid: multipleasserts
   name: Multiple Asserts
   href: articles/nunit/writing-tests/assertions/multiple-asserts.html
-- uid: nontestassembly
-  name: NonTestAssembly
-  href: articles/nunit/writing-tests/attributes/nontestassembly.html
 - uid: nunit3architecture2009
   name: NUnit 3.0 Architecture (2009)
   href: articles/nunit/technical-notes/nunit-internals/NUnit-3.0-Architecture-(2009).html
@@ -147555,7 +148964,7 @@ references:
   name: NUnit Engine
   href: articles/nunit-engine/Index.html
 - uid: nunitlite
-  name: NUnite Lite Runner
+  name: NUnitLite Runner
   href: articles/nunit/running-tests/NUnitLite-Runner.html
 - uid: nunitprojectxmlformat
   name: NUnit Project XML Format
@@ -147563,18 +148972,6 @@ references:
 - uid: nunittestprojects
   name: NUnit Test Projects
   href: articles/nunit/running-tests/NUnit-Test-Projects.html
-- uid: onetimesetup-attribute
-  name: OneTimeSetUp
-  href: articles/nunit/writing-tests/attributes/onetimesetup.html
-- uid: onetimeteardown-attribute
-  name: OneTimeTearDown
-  href: articles/nunit/writing-tests/attributes/onetimeteardown.html
-- uid: pairwiseattribute
-  name: Pairwise
-  href: articles/nunit/writing-tests/attributes/pairwise.html
-- uid: parallelizableattribute
-  name: Parallelizable
-  href: articles/nunit/writing-tests/attributes/parallelizable.html
 - uid: parameterizedtests
   name: Parameterized Tests
   href: articles/nunit/technical-notes/usage/Parameterized-Tests.html
@@ -147584,18 +148981,9 @@ references:
 - uid: projectloaders
   name: Project Loaders
   href: articles/nunit-engine/extensions/creating-extensions/Project-Loaders.html
-- uid: propertyattribute
-  name: Property
-  href: articles/nunit/writing-tests/attributes/property.html
-- uid: randomattribute
-  name: Random
-  href: articles/nunit/writing-tests/attributes/random.html
 - uid: randomizermethods
   name: Randomizer Methods
   href: articles/nunit/writing-tests/Randomizer-Methods.html
-- uid: rangeattribute
-  name: Range
-  href: articles/nunit/writing-tests/attributes/range.html
 - uid: resultwriters
   name: Result Writers
   href: articles/nunit-engine/extensions/creating-extensions/Result-Writers.html
@@ -147605,57 +148993,45 @@ references:
 - uid: runtimeselection
   name: Runtime Selection
   href: articles/nunit/technical-notes/usage/Runtime-Selection.html
-- uid: sameasconstraint
-  name: SameAs Constraint
-  href: articles/nunit/writing-tests/constraints/SameAsConstraint.html
-- uid: sequentialattribute
-  name: Sequential
-  href: articles/nunit/writing-tests/attributes/sequential.html
-- uid: setup-attribute
-  name: SetUp
-  href: articles/nunit/writing-tests/attributes/setup.html
-- uid: setupfixture-attribute
-  name: SetUpFixture
-  href: articles/nunit/writing-tests/attributes/setupfixture.html
 - uid: setupteardownchanges
   name: SetUp And TearDown Changes
   href: articles/nunit/writing-tests/setup-teardown/SetUp-and-TearDown-Changes.html
-- uid: someitemsconstraint
-  name: SomeItems Constraint
-  href: articles/nunit/writing-tests/constraints/SomeItemsConstraint.html
+- uid: special-assert-fail
+  name: Assert.Fail
+  href: articles/nunit/writing-tests/assertions/special-assertions/Assert.Fail.html
+- uid: special-assert-ignore
+  name: Assert.Ignore
+  href: articles/nunit/writing-tests/assertions/special-assertions/Assert.Ignore.html
+- uid: special-assert-inconclusive
+  name: Assert.Inconclusive
+  href: articles/nunit/writing-tests/assertions/special-assertions/Assert.Inconclusive.html
+- uid: special-assert-pass
+  name: Assert.Pass
+  href: articles/nunit/writing-tests/assertions/special-assertions/Assert.Pass.html
+- uid: specialmodel
+  name: Special Assertions
+  href: articles/nunit/writing-tests/assertions/assertion-models/special.html
 - uid: specifications
   name: Specifications
   href: articles/nunit/technical-notes/nunit-internals/specs/Specifications.html
 - uid: teampractices
   name: Team Practices
   href: articles/developer-info/Team-Practices.html
-- uid: teardown-attribute
-  name: TearDown
-  href: articles/nunit/writing-tests/attributes/teardown.html
 - uid: templatebasedtestnaming
   name: Template-Based Test Naming
   href: articles/nunit/running-tests/Template-Based-Test-Naming.html
 - uid: testFilters
   name: Test Filters
   href: articles/nunit/technical-notes/usage/Test-Filters.html
-- uid: testcaseattribute
-  name: TestCase
-  href: articles/nunit/writing-tests/attributes/testcase.html
 - uid: testcasedata
   name: TestCaseData
   href: articles/nunit/writing-tests/TestCaseData.html
-- uid: testcasesourceattribute
-  name: TestCaseSource
-  href: articles/nunit/writing-tests/attributes/testcasesource.html
 - uid: testcontext
   name: TestContext
   href: articles/nunit/writing-tests/TestContext.html
 - uid: testengineapi
   name: Test Engine API
   href: articles/nunit-engine/Test-Engine-API.html
-- uid: testfixtureattribute
-  name: TestFixture
-  href: articles/nunit/writing-tests/attributes/testfixture.html
 - uid: testfixturedata
   name: TestFixtureData
   href: articles/nunit/writing-tests/TestFixtureData.html
@@ -147665,12 +149041,6 @@ references:
 - uid: testselectionlanguage
   name: Test Selection Language
   href: articles/nunit/running-tests/Test-Selection-Language.html
-- uid: theoryattribute
-  name: Theory
-  href: articles/nunit/writing-tests/attributes/theory.html
-- uid: throwsconstraint
-  name: Throws Constraint
-  href: articles/nunit/writing-tests/constraints/ThrowsConstraint.html
 - uid: tipsandtricks
   name: Tips and Tricks
   href: articles/vs-test-adapter/Tips-And-Tricks.html
@@ -147680,12 +149050,6 @@ references:
 - uid: traceanddebugoutput
   name: How to enable Trace and Debug output
   href: articles/nunit/technical-notes/usage/Trace-and-Debug-Output.html
-- uid: valuesattribute
-  name: Values
-  href: articles/nunit/writing-tests/attributes/values.html
-- uid: valuesource
-  name: ValueSource
-  href: articles/nunit/writing-tests/attributes/valuesource.html
 - uid: visualstudiosupport
   name: Visual Studio Support
   href: articles/nunit/technical-notes/usage/Visual-Studio-Support.html
