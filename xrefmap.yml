@@ -148477,6 +148477,12 @@ references:
 - uid: attribute-defaultfloatingpointtolerance
   name: DefaultFloatingPointTolerance
   href: articles/nunit/writing-tests/attributes/defaultfloatingpointtolerance.html
+- uid: attribute-dependsonfixture
+  name: DependsOnFixture
+  href: articles/nunit/writing-tests/attributes/dependsonfixture.html
+- uid: attribute-dependsontest
+  name: DependsOnTest
+  href: articles/nunit/writing-tests/attributes/dependsontest.html
 - uid: attribute-description
   name: Description
   href: articles/nunit/writing-tests/attributes/description.html
@@ -148915,6 +148921,9 @@ references:
 - uid: customconstraints
   name: Custom Constraints
   href: articles/nunit/extending-nunit/Custom-Constraints.html
+- uid: downloading
+  name: Downloading
+  href: articles/nunit/getting-started/downloading.html
 - uid: engineextensionsindex
   name: NUnit Engine Extensions
   href: articles/nunit-engine/extensions/Index.html

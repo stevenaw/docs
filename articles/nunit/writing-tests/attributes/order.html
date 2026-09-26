@@ -86,6 +86,13 @@
             <article class="content wrap" id="_content" data-uid="attribute-order">
 <h1 id="order">Order</h1>
 
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p><code>OrderAttribute</code> is deprecated in NUnit 5 and may be removed in a future
+version. Prefer <a class="xref" href="dependsontest.html">DependsOnTest Attribute</a> or
+<a class="xref" href="dependsonfixture.html">DependsOnFixture Attribute</a> when the
+intended ordering reflects a true dependency.</p>
+</div>
 <p><code>OrderAttribute</code> is used on test methods or fixtures to specify the order in which tests are run within their containing suite. Tests are started in ascending order of the <code>order</code> value.</p>
 <h2 id="constructor">Constructor</h2>
 <pre><code class="lang-csharp">OrderAttribute(int order)
@@ -205,6 +212,8 @@ public class OrderWithGapsTests
 </ol>
 <h2 id="see-also">See Also</h2>
 <ul>
+<li><a class="xref" href="dependsontest.html">DependsOnTest Attribute</a></li>
+<li><a class="xref" href="dependsonfixture.html">DependsOnFixture Attribute</a></li>
 <li><a class="xref" href="parallelizable.html">Parallelizable Attribute</a></li>
 <li><a class="xref" href="nonparallelizable.html">NonParallelizable Attribute</a></li>
 </ul>
